@@ -1,0 +1,3 @@
+var/lib/update-manager
+var/lib/update-notifier
+usr/bin

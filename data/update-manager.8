@@ -1,0 +1,75 @@
+.\"	Title : update-manager
+.\"	Author : Bruno Mangin
+.\"	August, 2 2007
+.\"
+.\" First parameter, NAME, should be all caps
+.\" other parameters are allowed: see man(7), man(1)
+.TH UPDATE-MANAGER 8 "April 15, 2010"
+.\" Please adjust this date whenever revising the manpage.
+.\"
+.\" for manpage-specific macros, see man(7)
+.SH NAME
+update-manager \- graphical management of software packages updates
+.SH SYNOPSIS
+\fBupdate-manager\fP [options]
+.br
+.SH DESCRIPTION
+Update-manager is a frontend for the apt package management system. It allows you to perform some actions of the command line tool apt-get in a graphical environment.
+.PP
+Update-manager is especially designed for upgrading your system, or migrating your system towards a more recent version.
+
+.SH OPTIONS
+For a daily use, you may launch update-manager with no options so that your system is just upgraded.
+.PP
+For migration purposes, update-manager accepts some options:
+
+.TP
+\fB-h\fR, \fB\-\-help\fR
+Show a similar help message
+.TP
+\fB-V\fR, \fB\-\-version\fR
+Show version
+.TP
+\fB-\-data-dir=DATA_DIR\fR
+Directory that contains the data files
+.TP
+\fB-c\fR, \fB\-\-check-dist-upgrades\fR
+Check if a new distribution release is available
+.TP
+\fB-d\fR, \fB\-\-devel-release\fR
+Check if upgrading to the latest devel release is possible
+.TP
+\fB-p\fR, \fB\-\-proposed\fR
+Upgrade using the latest proposed version of the release upgrader
+.TP
+\fB-\-no-focus-on-map\fR
+Do not focus on map when starting
+.TP
+\fB-s\fR, \fB\-\-sandbox\fR
+Test the upgrade with a sandbox aufs overlay, without changing the filesystem.
+
+.SH ACTIONS PERFORMED DURING AN UPGRADE TO A NEW VERSION
+* eventually reinstall the package ubuntu-desktop
+
+* switch to an updated sources.list entries
+
+* adds the default user to new groups if needed
+
+
+.SH SEE ALSO
+\fBSynaptic\fR, \fBsources.list\fR, \fBaptitude\fR
+
+.SH AUTHORS
+update-manager was developed by Michael Vogt <mvo@ubuntu.com>
+with various contributors (see AUTHORS file)
+.PP
+This manual page was originally written by Bruno Mangin and
+Michael Vogt <mvo@ubuntu.com>.
+
+.SH COPYRIGHT
+Copyright  (C)  2006-2007 Canonical
+.PP
+There is NO warranty.  
+You may redistribute this software under the terms of  the  GNU
+General  Public License.  For more information about these matters, see
+the files named COPYING.

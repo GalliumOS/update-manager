@@ -1,0 +1,20 @@
+--- a/UpdateManager/UpdateManager.py
++++ b/UpdateManager/UpdateManager.py
+@@ -280,17 +280,6 @@
+         if not next or next.upgrade_broken:
+             return None
+ 
+-        # Check for end-of-life
+-        if self.meta_release.no_longer_supported:
+-            return UnsupportedDialog(self, self.meta_release)
+-
+-        # Check for new fresh release
+-        settings = Gio.Settings.new("com.ubuntu.update-manager")
+-        if (self.meta_release.new_dist and
+-                (self.options.check_dist_upgrades or
+-                 settings.get_boolean("check-dist-upgrades"))):
+-            return DistUpgradeDialog(self, self.meta_release)
+-
+         return None
+ 
+     def _meta_release_wait_idle(self):

@@ -1,0 +1,2673 @@
+# Bulgarian translation of update manager.
+# Copyright (C) 2005 THE update manager'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the update manager package.
+# Rostislav "zbrox" Raykov <zbrox@i-space.org>, 2005.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: update manager\n"
+"Report-Msgid-Bugs-To: sebastian.heinlein@web.de\n"
+"POT-Creation-Date: 2012-06-14 00:53+0100\n"
+"PO-Revision-Date: 2012-02-23 19:58+0000\n"
+"Last-Translator: Svetoslav Stefanov <svetlisashkov@yahoo.com>\n"
+"Language-Team: Bulgarian <dict@fsa-bg.org>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2012-04-17 13:41+0000\n"
+"X-Generator: Launchpad (build 15099)\n"
+
+#. TRANSLATORS: download size of small updates, e.g. "250 kB"
+#: ../DistUpgrade/utils.py:433 ../UpdateManager/Core/utils.py:433
+#, python-format
+msgid "%(size).0f kB"
+msgid_plural "%(size).0f kB"
+msgstr[0] ""
+msgstr[1] ""
+
+#. TRANSLATORS: download size of updates, e.g. "2.3 MB"
+#: ../DistUpgrade/utils.py:436 ../UpdateManager/Core/utils.py:436
+#, python-format
+msgid "%.1f MB"
+msgstr "%.1f МБ"
+
+#. TRANSLATORS: %s is a country
+#: ../DistUpgrade/distro.py:206 ../DistUpgrade/distro.py:436
+#, python-format
+msgid "Server for %s"
+msgstr "Сървър за %s"
+
+#. More than one server is used. Since we don't handle this case
+#. in the user interface we set "custom servers" to true and
+#. append a list of all used servers
+#: ../DistUpgrade/distro.py:224 ../DistUpgrade/distro.py:230
+#: ../DistUpgrade/distro.py:246
+msgid "Main server"
+msgstr "Основен сървър"
+
+#: ../DistUpgrade/distro.py:250
+msgid "Custom servers"
+msgstr "Сървъри по избор"
+
+#: ../DistUpgrade/DistUpgradeAptCdrom.py:142
+msgid "Could not calculate sources.list entry"
+msgstr "Не може да пресметне запис в sources.list"
+
+#: ../DistUpgrade/DistUpgradeAptCdrom.py:251
+msgid ""
+"Unable to locate any package files, perhaps this is not a Ubuntu Disc or the "
+"wrong architecture?"
+msgstr ""
+"Намирането на програмни пакети не бе успешно. Вероятно това не е диск с "
+"Убунту или е с неподходяща архитектура за вашата система?"
+
+#: ../DistUpgrade/DistUpgradeAptCdrom.py:294
+msgid "Failed to add the CD"
+msgstr "Грешка при добавяне на CD"
+
+#: ../DistUpgrade/DistUpgradeAptCdrom.py:295
+#, python-format
+msgid ""
+"There was a error adding the CD, the upgrade will abort. Please report this "
+"as a bug if this is a valid Ubuntu CD.\n"
+"\n"
+"The error message was:\n"
+"'%s'"
+msgstr ""
+"Възникна грека при добавянето на CD, надграждането ще бъде прекратено. Моля "
+"докладвайте това като грешка ако става въпрос за оригинален Убунту компакт "
+"диск.\n"
+"\n"
+"Съобщението за грешка беше:\n"
+"'%s'"
+
+#: ../DistUpgrade/DistUpgradeCache.py:151
+msgid "Remove package in bad state"
+msgid_plural "Remove packages in bad state"
+msgstr[0] "Премахване на пакет в лошо състояние"
+msgstr[1] "Премахване на пакети в лошо състояние"
+
+#: ../DistUpgrade/DistUpgradeCache.py:154
+#, python-format
+msgid ""
+"The package '%s' is in an inconsistent state and needs to be reinstalled, "
+"but no archive can be found for it. Do you want to remove this package now "
+"to continue?"
+msgid_plural ""
+"The packages '%s' are in an inconsistent state and need to be reinstalled, "
+"but no archives can be found for them. Do you want to remove these packages "
+"now to continue?"
+msgstr[0] ""
+"Пакетът '%s' е в нестабилно състояние и трябва да се преинсталира, но не "
+"може да се намери архив за него. Искате ли да премахнете този пакет сега, за "
+"да продължите?"
+msgstr[1] ""
+"Пакетите '%s' са в нестабилно състояние и трябва да се преинсталират, но не "
+"могат да се намерят архиви за тях. Искате ли да ги премахнете сега, за да "
+"продължите?"
+
+#. FIXME: not ideal error message, but we just reuse a
+#. existing one here to avoid a new string
+#: ../DistUpgrade/DistUpgradeCache.py:255
+msgid "The server may be overloaded"
+msgstr "Сървърът може би е претоварен"
+
+#: ../DistUpgrade/DistUpgradeCache.py:368
+msgid "Broken packages"
+msgstr "Повредени пакети"
+
+#: ../DistUpgrade/DistUpgradeCache.py:369
+msgid ""
+"Your system contains broken packages that couldn't be fixed with this "
+"software. Please fix them first using synaptic or apt-get before proceeding."
+msgstr ""
+"Системата Ви съдържа повредени пакети, които не могат да бъдат поправени с "
+"този софтуер. Моля, поправете ги със synaptic или apt-get преди да "
+"продължите."
+
+#. FIXME: change the text to something more useful
+#: ../DistUpgrade/DistUpgradeCache.py:693
+#, python-format
+msgid ""
+"An unresolvable problem occurred while calculating the upgrade:\n"
+"%s\n"
+"\n"
+" This can be caused by:\n"
+" * Upgrading to a pre-release version of Ubuntu\n"
+" * Running the current pre-release version of Ubuntu\n"
+" * Unofficial software packages not provided by Ubuntu\n"
+"\n"
+msgstr ""
+"При изчисляване на надграждането възникна нерешим проблем:\n"
+"%s\n"
+"\n"
+" Това може да се случи от:\n"
+" * Надграждане до преиздадена версия на Убунту\n"
+" * Изпълняване на преиздадена версия на Убунту\n"
+" * Неофициални пакети, които не са предоставени от Убунту\n"
+"\n"
+
+#: ../DistUpgrade/DistUpgradeCache.py:703
+msgid "This is most likely a transient problem, please try again later."
+msgstr "Това най-вероятно е временен проблем. Моля, опитайте отново по-късно."
+
+#: ../DistUpgrade/DistUpgradeCache.py:706
+msgid ""
+"If none of this applies, then please report this bug using the command "
+"'ubuntu-bug update-manager' in a terminal."
+msgstr ""
+"Ако нищо от това не се приложи, тогава моля докладвайте тази грешка "
+"използвайки командата 'ubuntu-bug update-manager' във терминал."
+
+#: ../DistUpgrade/DistUpgradeCache.py:711
+#: ../UpdateManager/UpdateManager.py:1031
+msgid "Could not calculate the upgrade"
+msgstr "Не може да бъде изчислено надграждането"
+
+#: ../DistUpgrade/DistUpgradeCache.py:762
+msgid "Error authenticating some packages"
+msgstr "Грешка при удостоверяването автентичността на някои пакети"
+
+#: ../DistUpgrade/DistUpgradeCache.py:763
+msgid ""
+"It was not possible to authenticate some packages. This may be a transient "
+"network problem. You may want to try again later. See below for a list of "
+"unauthenticated packages."
+msgstr ""
+"Не беше възможно да се удостовери автентичността на някои пакети. Това може "
+"да е временен проблем с мрежата. Може би бихте искали да опитате отново по-"
+"късно. Вижте по-долу списъка на неудоствоерените пакети."
+
+#: ../DistUpgrade/DistUpgradeCache.py:783
+#, python-format
+msgid ""
+"The package '%s' is marked for removal but it is in the removal blacklist."
+msgstr ""
+"Пакетът '%s' е маркиран за премахване, но е в черния списък за премахване."
+
+#: ../DistUpgrade/DistUpgradeCache.py:787
+#, python-format
+msgid "The essential package '%s' is marked for removal."
+msgstr "Важният пакет '%s' е маркиран за премахване."
+
+#: ../DistUpgrade/DistUpgradeCache.py:796
+#, python-format
+msgid "Trying to install blacklisted version '%s'"
+msgstr "Опит за инсталиране на забранена версия на '%s'"
+
+#: ../DistUpgrade/DistUpgradeCache.py:914
+#, python-format
+msgid "Can't install '%s'"
+msgstr "Не може да се инсталира '%s'"
+
+#: ../DistUpgrade/DistUpgradeCache.py:915
+msgid ""
+"It was impossible to install a required package. Please report this as a bug "
+"using 'ubuntu-bug update-manager' in a terminal."
+msgstr ""
+"Беше невъзможно да се инсталира исканият пакет. Моля докладвайте тази грешка "
+"използвайки 'ubuntu-bug update-manager' във терминал."
+
+#. FIXME: provide a list
+#: ../DistUpgrade/DistUpgradeCache.py:926
+msgid "Can't guess meta-package"
+msgstr "Не могат да бъдат предположени мета-пакети"
+
+#: ../DistUpgrade/DistUpgradeCache.py:927
+msgid ""
+"Your system does not contain a ubuntu-desktop, kubuntu-desktop, xubuntu-"
+"desktop or edubuntu-desktop package and it was not possible to detect which "
+"version of Ubuntu you are running.\n"
+" Please install one of the packages above first using synaptic or apt-get "
+"before proceeding."
+msgstr ""
+"Системата Ви няма инсталиран ubuntu-desktop, kubuntu-desktop, xubuntu-"
+"desktop или edubuntu-desktop пакет и не бе възможно засичането на версията "
+"на Убунту, която ползвате.\n"
+" Моля, преди да продължите, първо инсталирайте един от тези пакети, като "
+"използвате synaptic или apt-get!"
+
+#: ../DistUpgrade/DistUpgradeController.py:114
+msgid "Reading cache"
+msgstr "Четене от кеша"
+
+#: ../DistUpgrade/DistUpgradeController.py:223
+msgid "Unable to get exclusive lock"
+msgstr "Неуспех при получаване на изключителни права"
+
+#: ../DistUpgrade/DistUpgradeController.py:224
+msgid ""
+"This usually means that another package management application (like apt-get "
+"or aptitude) already running. Please close that application first."
+msgstr ""
+"Това обикновено означава, че е стартирана друга система за управление на "
+"пакети (като apt-get или aptitude). Първо спрете тази програма."
+
+#: ../DistUpgrade/DistUpgradeController.py:257
+msgid "Upgrading over remote connection not supported"
+msgstr "Надграждането през отдалечена връзка не се поддържа"
+
+#: ../DistUpgrade/DistUpgradeController.py:258
+msgid ""
+"You are running the upgrade over a remote ssh connection with a frontend "
+"that does not support this. Please try a text mode upgrade with 'do-release-"
+"upgrade'.\n"
+"\n"
+"The upgrade will abort now. Please try without ssh."
+msgstr ""
+"Вие пускатe надграждане през отдалечена ssh връзка с фронтенд, който не "
+"поддържа това. Моля опитайте надграждане в текстов режим с  'do-release-"
+"upgrade'.\n"
+"\n"
+"Надграждането ще бъде спряно сега. Моля опитайте отново без ssh."
+
+#: ../DistUpgrade/DistUpgradeController.py:272
+msgid "Continue running under SSH?"
+msgstr "Продължаване на работата със SSH?"
+
+#: ../DistUpgrade/DistUpgradeController.py:273
+#, python-format
+msgid ""
+"This session appears to be running under ssh. It is not recommended to "
+"perform a upgrade over ssh currently because in case of failure it is harder "
+"to recover.\n"
+"\n"
+"If you continue, an additional ssh daemon will be started at port '%s'.\n"
+"Do you want to continue?"
+msgstr ""
+"Тази сесия изглежда работи под ssh. Не е препоръчително да се изпълнява "
+"надграждане през ssh в момента, защото в случай на неуспех възстановяването "
+"е по-трудно. \n"
+"\n"
+"Ако продължите, допълнителен ssh демон ще бъде стартиран на порт '%s'.\n"
+"Искате ли да продължите?"
+
+#: ../DistUpgrade/DistUpgradeController.py:287
+msgid "Starting additional sshd"
+msgstr "Стартиране на допълнителен SSHD"
+
+#: ../DistUpgrade/DistUpgradeController.py:288
+#, python-format
+msgid ""
+"To make recovery in case of failure easier, an additional sshd will be "
+"started on port '%s'. If anything goes wrong with the running ssh you can "
+"still connect to the additional one.\n"
+msgstr ""
+"За да направите възстановяването по-лесно в случай на загуба на данни, ще "
+"бъде стартиран допълнителен sshd на порт '%s'. Ако нещо се обърка с "
+"изпълняващия се ssh, ще можете да се свържете към допълнителния ssh.\n"
+
+#: ../DistUpgrade/DistUpgradeController.py:296
+#, python-format
+msgid ""
+"If you run a firewall, you may need to temporarily open this port. As this "
+"is potentially dangerous it's not done automatically. You can open the port "
+"with e.g.:\n"
+"'%s'"
+msgstr ""
+"Ако използвате защитна стена, може да се наложи временно да отворите този "
+"порт. Тъй като това е потенциално опасно, не е направено автоматично. Може "
+"да отворите порта с например:\n"
+"'%s'"
+
+#: ../DistUpgrade/DistUpgradeController.py:368
+#: ../DistUpgrade/DistUpgradeController.py:413
+msgid "Can not upgrade"
+msgstr "Надграждането невъзможно"
+
+#: ../DistUpgrade/DistUpgradeController.py:369
+#, python-format
+msgid "An upgrade from '%s' to '%s' is not supported with this tool."
+msgstr "Надграждане от '%s' на '%s' не се поддържа с този инструмент."
+
+#: ../DistUpgrade/DistUpgradeController.py:378
+msgid "Sandbox setup failed"
+msgstr "Настройката на ограничителен режим е неуспешна"
+
+#: ../DistUpgrade/DistUpgradeController.py:379
+msgid "It was not possible to create the sandbox environment."
+msgstr "Не беше възможно да се създаде среда за ограничителен режим."
+
+#: ../DistUpgrade/DistUpgradeController.py:385
+msgid "Sandbox mode"
+msgstr "Ограничителен режим"
+
+#: ../DistUpgrade/DistUpgradeController.py:386
+#, python-format
+msgid ""
+"This upgrade is running in sandbox (test) mode. All changes are written to "
+"'%s' and will be lost on the next reboot.\n"
+"\n"
+"*No* changes written to a system directory from now until the next reboot "
+"are permanent."
+msgstr ""
+
+#: ../DistUpgrade/DistUpgradeController.py:414
+msgid ""
+"Your python install is corrupted. Please fix the '/usr/bin/python' symlink."
+msgstr ""
+"Инсталацията на Python е повредена. Моля, поправете симболната връзка „/usr/"
+"bin/python”!"
+
+#: ../DistUpgrade/DistUpgradeController.py:440
+msgid "Package 'debsig-verify' is installed"
+msgstr "Пакетът 'debsig-verify' е инсталиран"
+
+#: ../DistUpgrade/DistUpgradeController.py:441
+msgid ""
+"The upgrade can not continue with that package installed.\n"
+"Please remove it with synaptic or 'apt-get remove debsig-verify' first and "
+"run the upgrade again."
+msgstr ""
+"Надграждането не може да продължи с инсталиран този пакет.\n"
+"Моля, премахнете го със synaptic или 'apt-get remove debsig-verify' и после "
+"отново изпълнете надграждането."
+
+#: ../DistUpgrade/DistUpgradeController.py:453
+#, python-format
+msgid "Can not write to '%s'"
+msgstr ""
+
+#: ../DistUpgrade/DistUpgradeController.py:454
+#, python-format
+msgid ""
+"Its not possible to write to the system directory '%s' on your system. The "
+"upgrade can not continue.\n"
+"Please make sure that the system directory is writable."
+msgstr ""
+
+#: ../DistUpgrade/DistUpgradeController.py:465
+msgid "Include latest updates from the Internet?"
+msgstr "Включване на най-новите актуализации от Интернет?"
+
+#: ../DistUpgrade/DistUpgradeController.py:466
+msgid ""
+"The upgrade system can use the internet to automatically download the latest "
+"updates and install them during the upgrade.  If you have a network "
+"connection this is highly recommended.\n"
+"\n"
+"The upgrade will take longer, but when it is complete, your system will be "
+"fully up to date.  You can choose not to do this, but you should install the "
+"latest updates soon after upgrading.\n"
+"If you answer 'no' here, the network is not used at all."
+msgstr ""
+"Системата за надграждане може автоматично да използва Интернет, за да "
+"изтегли най-новите актуализации и да ги инсталира по време на надграждането. "
+"Ако имате връзка с Интернет, това се препоръчва.\n"
+"\n"
+"Това надграждане ще отнеме повече време, но когато завърши, вашата система "
+"ще бъде с инсталирани най-новите актуализации. Може да не искате да "
+"направите това, но трябва да инсталирате най-новите актуализации след като "
+"надграждането завърши.\n"
+"\n"
+"Ако отговора ви е 'Не', мрежата няма да се използва изобщо."
+
+#: ../DistUpgrade/DistUpgradeController.py:686
+#, python-format
+msgid "disabled on upgrade to %s"
+msgstr "забранен при надграждане до %s"
+
+#: ../DistUpgrade/DistUpgradeController.py:713
+msgid "No valid mirror found"
+msgstr "Не е открит валиден огледален сървър"
+
+#: ../DistUpgrade/DistUpgradeController.py:714
+#, python-format
+msgid ""
+"While scanning your repository information no mirror entry for the upgrade "
+"was found. This can happen if you run a internal mirror or if the mirror "
+"information is out of date.\n"
+"\n"
+"Do you want to rewrite your 'sources.list' file anyway? If you choose 'Yes' "
+"here it will update all '%s' to '%s' entries.\n"
+"If you select 'No' the upgrade will cancel."
+msgstr ""
+"При сканирането на хранилището, не беше намерено огледало за надграждане. "
+"Това може да се случи, когато използвате вътрешно огледало или информацията "
+"за огледалото е изтекла.\n"
+"\n"
+"Искате ли въпреки това да презапишете файла 'sources.list'? Ако натиснете "
+"'Да' ще се актуализират всички '%s' до '%s' записи.\n"
+"Ако натиснете 'Не', няма да се извърши надграждане."
+
+#. hm, still nothing useful ...
+#: ../DistUpgrade/DistUpgradeController.py:734
+msgid "Generate default sources?"
+msgstr "Генериране на източници по подразбиране?"
+
+#: ../DistUpgrade/DistUpgradeController.py:735
+#, python-format
+msgid ""
+"After scanning your 'sources.list' no valid entry for '%s' was found.\n"
+"\n"
+"Should default entries for '%s' be added? If you select 'No', the upgrade "
+"will cancel."
+msgstr ""
+"След сканирането на 'sources.list', не беше намерен валиден запис за '%s'.\n"
+"\n"
+"Да се добавят ли записите по подразбиране за '%s'? Ако натиснете 'Не', няма "
+"да се извърши надграждане."
+
+#: ../DistUpgrade/DistUpgradeController.py:770
+msgid "Repository information invalid"
+msgstr "Информацията от хранилището е невалидна"
+
+#: ../DistUpgrade/DistUpgradeController.py:771
+msgid ""
+"Upgrading the repository information resulted in a invalid file so a bug "
+"reporting process is being started."
+msgstr ""
+
+#: ../DistUpgrade/DistUpgradeController.py:778
+msgid "Third party sources disabled"
+msgstr "Забранени са източници от трети страни"
+
+#: ../DistUpgrade/DistUpgradeController.py:779
+msgid ""
+"Some third party entries in your sources.list were disabled. You can re-"
+"enable them after the upgrade with the 'software-properties' tool or your "
+"package manager."
+msgstr ""
+"Някои записи от трети страни във Вашия „sources.list” бяха забранени. Можете "
+"да ги разрешите отново след надграждането чрез инструмента „software-"
+"properties” или чрез диспечера Ви на пакети."
+
+#: ../DistUpgrade/DistUpgradeController.py:819
+msgid "Package in inconsistent state"
+msgid_plural "Packages in inconsistent state"
+msgstr[0] "Пакет в несъвместимо състояние"
+msgstr[1] "Пакети в несъвместимо състояние"
+
+#: ../DistUpgrade/DistUpgradeController.py:822
+#, python-format
+msgid ""
+"The package '%s' is in an inconsistent state and needs to be reinstalled, "
+"but no archive can be found for it. Please reinstall the package manually or "
+"remove it from the system."
+msgid_plural ""
+"The packages '%s' are in an inconsistent state and need to be reinstalled, "
+"but no archive can be found for them. Please reinstall the packages manually "
+"or remove them from the system."
+msgstr[0] ""
+"Пакетът '%s' е в несъвместимо състояние и трябва да се преинсталира, но не "
+"може да се намери архив. Моля, преинсталирайте пакета ръчно или го "
+"премахнете от системата."
+msgstr[1] ""
+"Пакетите '%s' са в несъвместимо състояние и трябва да се преинсталират, но "
+"не могат да се намерят архиви. Моля, преинсталирайте пакетите ръчно или ги "
+"премахнете от системата."
+
+#: ../DistUpgrade/DistUpgradeController.py:870
+msgid "Error during update"
+msgstr "Грешка по време на надграждане"
+
+#: ../DistUpgrade/DistUpgradeController.py:871
+msgid ""
+"A problem occurred during the update. This is usually some sort of network "
+"problem, please check your network connection and retry."
+msgstr ""
+"Възникна проблем при актуализиране. Това обикновено се дължи на мрежов "
+"проблем. Моля, проверете вашата мрежова връзка и опитайте отново."
+
+#. print("on_button_install_clicked")
+#: ../DistUpgrade/DistUpgradeController.py:880
+#: ../UpdateManager/UpdateManager.py:757
+msgid "Not enough free disk space"
+msgstr "Недостатъчно свободно място на диска"
+
+#: ../DistUpgrade/DistUpgradeController.py:881
+#, python-format
+msgid ""
+"The upgrade has aborted. The upgrade needs a total of %s free space on disk "
+"'%s'. Please free at least an additional %s of disk space on '%s'. Empty "
+"your trash and remove temporary packages of former installations using 'sudo "
+"apt-get clean'."
+msgstr ""
+"Надграждането бе прекъснато. Необходими са %s свободно пространство на диск "
+"'%s'. Моля, освободете поне %s допълнително пространство на диск '%s'. "
+"Изчистете си кошчето и премахнете временни пакети от предишни инсталации "
+"използвайки 'sudo apt-get clean'."
+
+#. calc the dist-upgrade and see if the removals are ok/expected
+#. do the dist-upgrade
+#: ../DistUpgrade/DistUpgradeController.py:910
+#: ../DistUpgrade/DistUpgradeController.py:1692
+msgid "Calculating the changes"
+msgstr "Пресмятане на промените"
+
+#. ask the user
+#: ../DistUpgrade/DistUpgradeController.py:942
+msgid "Do you want to start the upgrade?"
+msgstr "Желаете ли да започне надграждането?"
+
+#: ../DistUpgrade/DistUpgradeController.py:1008
+msgid "Upgrade canceled"
+msgstr "Надграждането е отменено"
+
+#: ../DistUpgrade/DistUpgradeController.py:1009
+msgid ""
+"The upgrade will cancel now and the original system state will be restored. "
+"You can resume the upgrade at a later time."
+msgstr ""
+"Сега надграждането ще бъде отказано и ще се възстанови оригиналното "
+"състояние на системата. Можете да продължите надграждането по-късно."
+
+#: ../DistUpgrade/DistUpgradeController.py:1015
+#: ../DistUpgrade/DistUpgradeController.py:1149
+msgid "Could not download the upgrades"
+msgstr "Не могат да бъдат свалени обновленията."
+
+#: ../DistUpgrade/DistUpgradeController.py:1016
+msgid ""
+"The upgrade has aborted. Please check your Internet connection or "
+"installation media and try again. All files downloaded so far have been kept."
+msgstr ""
+"Актуализацията беше прекъсната. Моля проверете интернет връзката си или "
+"медията, от която инсталирате и опитайте отново. Всички свалени файлове са "
+"запазени."
+
+#. FIXME: strings are not good, but we are in string freeze
+#. currently
+#: ../DistUpgrade/DistUpgradeController.py:1100
+#: ../DistUpgrade/DistUpgradeController.py:1137
+#: ../DistUpgrade/DistUpgradeController.py:1242
+msgid "Error during commit"
+msgstr "Грешка при прехвърляне"
+
+#. generate a new cache
+#: ../DistUpgrade/DistUpgradeController.py:1102
+#: ../DistUpgrade/DistUpgradeController.py:1139
+#: ../DistUpgrade/DistUpgradeController.py:1281
+msgid "Restoring original system state"
+msgstr "Възстановяване на първоначалното състояние на системата"
+
+#: ../DistUpgrade/DistUpgradeController.py:1103
+#: ../DistUpgrade/DistUpgradeController.py:1118
+#: ../DistUpgrade/DistUpgradeController.py:1140
+msgid "Could not install the upgrades"
+msgstr "Не можаха да бъдат инсталирани обновленията"
+
+#. invoke the frontend now and show a error message
+#: ../DistUpgrade/DistUpgradeController.py:1108
+msgid ""
+"The upgrade has aborted. Your system could be in an unusable state. A "
+"recovery will run now (dpkg --configure -a)."
+msgstr ""
+"Надграждането бе прекъснато. Системата ви може да е в нестабилно състояние. "
+"Сега ще се извърши възстановяване (dpkg --configure -a)."
+
+#: ../DistUpgrade/DistUpgradeController.py:1113
+#, python-format
+msgid ""
+"\n"
+"\n"
+"Please report this bug in a browser at http://bugs.launchpad.net/ubuntu/"
+"+source/update-manager/+filebug and attach the files in /var/log/dist-"
+"upgrade/ to the bug report.\n"
+"%s"
+msgstr ""
+
+#: ../DistUpgrade/DistUpgradeController.py:1150
+msgid ""
+"The upgrade has aborted. Please check your Internet connection or "
+"installation media and try again. "
+msgstr ""
+"Надграждането бе прекъснато. Моля, проверете Интернет връзката или "
+"инсталационната среда и опитайте отново. "
+
+#: ../DistUpgrade/DistUpgradeController.py:1230
+msgid "Remove obsolete packages?"
+msgstr "Премахване на остарелите пакети?"
+
+#: ../DistUpgrade/DistUpgradeController.py:1231
+#: ../DistUpgrade/DistUpgrade.ui.h:8
+msgid "_Keep"
+msgstr "_Задържане"
+
+#: ../DistUpgrade/DistUpgradeController.py:1231
+msgid "_Remove"
+msgstr "_Премахване"
+
+#: ../DistUpgrade/DistUpgradeController.py:1243
+msgid ""
+"A problem occurred during the clean-up. Please see the below message for "
+"more information. "
+msgstr ""
+"Възникна проблем при почистване. Моля, вижте съобщението отдолу за повече "
+"информация. "
+
+#. FIXME: instead of error out, fetch and install it
+#. here
+#: ../DistUpgrade/DistUpgradeController.py:1319
+msgid "Required depends is not installed"
+msgstr "Не е инсталирана изисквана зависимост"
+
+#: ../DistUpgrade/DistUpgradeController.py:1320
+#, python-format
+msgid "The required dependency '%s' is not installed. "
+msgstr "Изискваната зависимост „%s” не е инсталирана. "
+
+#. sanity check (check for ubuntu-desktop, brokenCache etc)
+#. then open the cache (again)
+#: ../DistUpgrade/DistUpgradeController.py:1588
+#: ../DistUpgrade/DistUpgradeController.py:1653
+msgid "Checking package manager"
+msgstr "Проверка на диспечера на пакети"
+
+#: ../DistUpgrade/DistUpgradeController.py:1593
+msgid "Preparing the upgrade failed"
+msgstr "Подготовката за надграждането неуспешна"
+
+#: ../DistUpgrade/DistUpgradeController.py:1594
+msgid ""
+"Preparing the system for the upgrade failed so a bug reporting process is "
+"being started."
+msgstr ""
+
+#: ../DistUpgrade/DistUpgradeController.py:1608
+msgid "Getting upgrade prerequisites failed"
+msgstr "Грешка при получаване на изискванията за надграждане"
+
+#: ../DistUpgrade/DistUpgradeController.py:1609
+msgid ""
+"The system was unable to get the prerequisites for the upgrade. The upgrade "
+"will abort now and restore the original system state.\n"
+"\n"
+"Additionally, a bug reporting process is being started."
+msgstr ""
+
+#: ../DistUpgrade/DistUpgradeController.py:1637
+msgid "Updating repository information"
+msgstr "Актуализиране информацията от хранилището"
+
+#: ../DistUpgrade/DistUpgradeController.py:1644
+msgid "Failed to add the cdrom"
+msgstr "Неуспех при добавянето на cdrom"
+
+#: ../DistUpgrade/DistUpgradeController.py:1645
+msgid "Sorry, adding the cdrom was not successful."
+msgstr "Съжаляваме, добавянето на cdrom не беше успешно."
+
+#: ../DistUpgrade/DistUpgradeController.py:1673
+msgid "Invalid package information"
+msgstr "Невалидна информация за пакета"
+
+#: ../DistUpgrade/DistUpgradeController.py:1674
+msgid "After updating your package "
+msgstr ""
+
+#: ../DistUpgrade/DistUpgradeController.py:1698
+#: ../DistUpgrade/DistUpgradeController.py:1750
+msgid "Fetching"
+msgstr "Получаване"
+
+#: ../DistUpgrade/DistUpgradeController.py:1704
+#: ../DistUpgrade/DistUpgradeController.py:1754
+msgid "Upgrading"
+msgstr "Надграждане"
+
+#. don't abort here, because it would restore the sources.list
+#: ../DistUpgrade/DistUpgradeController.py:1709
+#: ../DistUpgrade/DistUpgradeController.py:1756
+#: ../DistUpgrade/DistUpgradeController.py:1763
+#: ../DistUpgrade/DistUpgradeController.py:1774
+msgid "Upgrade complete"
+msgstr "Надграждането е завършено"
+
+#: ../DistUpgrade/DistUpgradeController.py:1710
+#: ../DistUpgrade/DistUpgradeController.py:1757
+#: ../DistUpgrade/DistUpgradeController.py:1764
+msgid ""
+"The upgrade has completed but there were errors during the upgrade process."
+msgstr ""
+"Надграждането беше завършено, но възникнаха грешки по време на този процес."
+
+#: ../DistUpgrade/DistUpgradeController.py:1717
+msgid "Searching for obsolete software"
+msgstr "Търсене на остарял софтуер"
+
+#: ../DistUpgrade/DistUpgradeController.py:1726
+msgid "System upgrade is complete."
+msgstr "Надграждането на системата завърши."
+
+#: ../DistUpgrade/DistUpgradeController.py:1775
+msgid "The partial upgrade was completed."
+msgstr "Частичното надграждане завърши."
+
+#: ../DistUpgrade/DistUpgradeQuirks.py:204
+msgid "evms in use"
+msgstr "evms се използва"
+
+#: ../DistUpgrade/DistUpgradeQuirks.py:205
+msgid ""
+"Your system uses the 'evms' volume manager in /proc/mounts. The 'evms' "
+"software is no longer supported, please switch it off and run the upgrade "
+"again when this is done."
+msgstr ""
+"Вашата система използва мениджър на устройства 'evms' в /proc/mounts. "
+"Софтуерът 'evms' вече не се поддържа. Моля изключете го и изпълнете "
+"надграждането отново."
+
+#: ../DistUpgrade/DistUpgradeQuirks.py:502
+msgid "Your graphics hardware may not be fully supported in Ubuntu 12.04 LTS."
+msgstr ""
+
+#: ../DistUpgrade/DistUpgradeQuirks.py:504
+msgid ""
+"The support in Ubuntu 12.04 LTS for your Intel graphics hardware is limited "
+"and you may encounter problems after the upgrade. For more information see "
+"https://wiki.ubuntu.com/X/Bugs/UpdateManagerWarningForI8xx Do you want to "
+"continue with the upgrade?"
+msgstr ""
+
+#: ../DistUpgrade/DistUpgradeQuirks.py:526
+#: ../DistUpgrade/DistUpgradeQuirks.py:554
+#: ../DistUpgrade/DistUpgradeQuirks.py:581
+msgid ""
+"Upgrading may reduce desktop effects, and performance in games and other "
+"graphically intensive programs."
+msgstr ""
+"Надграждането може да намали ефектите на работния плот и производителността "
+"в игрите и други графични програми."
+
+#: ../DistUpgrade/DistUpgradeQuirks.py:530
+#: ../DistUpgrade/DistUpgradeQuirks.py:558
+msgid ""
+"This computer is currently using the NVIDIA 'nvidia' graphics driver. No "
+"version of this driver is available that works with your video card in "
+"Ubuntu 10.04 LTS.\n"
+"\n"
+"Do you want to continue?"
+msgstr ""
+"Този компютър в момента използва графичния драйвер NVIDIA 'nvidia''. Няма "
+"версия на този драйвер, която да работи с вашата видео карта под Убунту "
+"10.04 LTS.\n"
+"\n"
+"Искате ли да продължите?"
+
+#: ../DistUpgrade/DistUpgradeQuirks.py:585
+msgid ""
+"This computer is currently using the AMD 'fglrx' graphics driver. No version "
+"of this driver is available that works with your hardware in Ubuntu 10.04 "
+"LTS.\n"
+"\n"
+"Do you want to continue?"
+msgstr ""
+"Този компютър използва графичния драйвер AMD 'fglrx'. Няма версия на този "
+"драйвер, която да работи с вашия хардуер под Убунту 10.04 LTS.\n"
+"\n"
+"Искате ли да продължите?"
+
+#: ../DistUpgrade/DistUpgradeQuirks.py:615
+msgid "No i686 CPU"
+msgstr "Не е i686 архитектура"
+
+#: ../DistUpgrade/DistUpgradeQuirks.py:616
+msgid ""
+"Your system uses an i586 CPU or a CPU that does not have the 'cmov' "
+"extension. All packages were built with optimizations requiring i686 as the "
+"minimal architecture. It is not possible to upgrade your system to a new "
+"Ubuntu release with this hardware."
+msgstr ""
+"Вашата система използва i586 процесор или такъв който няма разширение "
+"'cmov'. Всички пакети са създадени с оптимизации, изискващи i686 като "
+"минимална архитектура. Не е възможно да ъпгрейднете своята система към ново "
+"издание на Убунту с този хардуер."
+
+#: ../DistUpgrade/DistUpgradeQuirks.py:652
+msgid "No ARMv6 CPU"
+msgstr "Няма ARMv6 CPU"
+
+#: ../DistUpgrade/DistUpgradeQuirks.py:653
+msgid ""
+"Your system uses an ARM CPU that is older than the ARMv6 architecture. All "
+"packages in karmic were built with optimizations requiring ARMv6 as the "
+"minimal architecture. It is not possible to upgrade your system to a new "
+"Ubuntu release with this hardware."
+msgstr ""
+"Вашата система ползва ARM CPU, която е по-стара от ARMv6 архитектура. Всички "
+"пакети в Karmic бяха оптимизрани с изискване минимум ARMv6 архитектура. Не е "
+"възможно да надграждате вашата система с новата версия на Убунту с този "
+"хардуер."
+
+#: ../DistUpgrade/DistUpgradeQuirks.py:673
+msgid "No init available"
+msgstr "Няма достъпен init"
+
+#: ../DistUpgrade/DistUpgradeQuirks.py:674
+msgid ""
+"Your system appears to be a virtualised environment without an init daemon, "
+"e.g. Linux-VServer. Ubuntu 10.04 LTS cannot function within this type of "
+"environment, requiring an update to your virtual machine configuration "
+"first.\n"
+"\n"
+"Are you sure you want to continue?"
+msgstr ""
+"Вашата система изглежда, че е виртуализирана среда без init процес, т.е. "
+"Linux-VServer. Убунту 10.04 LTS не може да функционира в този тип среда, "
+"изисква се, първо, обновяване на настройката на Вашата виртуална машина.\n"
+"Сигурни ли сте, че искате да продължите?"
+
+#: ../DistUpgrade/DistUpgradeMain.py:65
+msgid "Sandbox upgrade using aufs"
+msgstr "Sandbox надграждане с помощта на aufs"
+
+#: ../DistUpgrade/DistUpgradeMain.py:67
+msgid "Use the given path to search for a cdrom with upgradable packages"
+msgstr ""
+"Ползване на зададения път за търсене на CD дискове с надграждаеми пакети"
+
+#: ../DistUpgrade/DistUpgradeMain.py:73
+msgid ""
+"Use frontend. Currently available: \n"
+"DistUpgradeViewText, DistUpgradeViewGtk, DistUpgradeViewKDE"
+msgstr ""
+"Ползване на фронтенд. Текущо налични:\n"
+"DistUpgradeViewText, DistUpgradeViewGtk, DistUpgradeViewKDE"
+
+#: ../DistUpgrade/DistUpgradeMain.py:76
+msgid "*DEPRECATED* this option will be ignored"
+msgstr "*НЕПРЕПОРЪЧИТЕЛНО* тази опция ще бъде игнорирана"
+
+#: ../DistUpgrade/DistUpgradeMain.py:79
+msgid "Perform a partial upgrade only (no sources.list rewriting)"
+msgstr ""
+"Извършване само на частично надграждане (без презаписване на sources.list)"
+
+#: ../DistUpgrade/DistUpgradeMain.py:82
+msgid "Disable GNU screen support"
+msgstr "Изключване поддръжката на GNU screen"
+
+#: ../DistUpgrade/DistUpgradeMain.py:84
+msgid "Set datadir"
+msgstr "Задаване на datadir"
+
+#. print("mediaChange %s %s" % (medium, drive))
+#: ../DistUpgrade/DistUpgradeViewGtk.py:114
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:117
+#: ../DistUpgrade/DistUpgradeViewKDE.py:195
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:155
+#, python-format
+msgid "Please insert '%s' into the drive '%s'"
+msgstr "Моля, поставете диск \"%s\" в устройство \"%s\""
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:135
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:138
+#: ../DistUpgrade/DistUpgradeViewKDE.py:209
+msgid "Fetching is complete"
+msgstr "Изтеглянето е завършено"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:146
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:149
+#: ../DistUpgrade/DistUpgradeViewKDE.py:222
+#, python-format
+msgid "Fetching file %li of %li at %sB/s"
+msgstr "Изтегляне на файл %li от %li с %sB/с"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:149
+#: ../DistUpgrade/DistUpgradeViewGtk.py:296
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:152
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:309
+#: ../DistUpgrade/DistUpgradeViewKDE.py:223
+#: ../DistUpgrade/DistUpgradeViewKDE.py:371
+#, python-format
+msgid "About %s remaining"
+msgstr "Остават около %s"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:152
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:155
+#: ../DistUpgrade/DistUpgradeViewKDE.py:225
+#, python-format
+msgid "Fetching file %li of %li"
+msgstr "Изтегляне на файл %li от %li"
+
+#. FIXME: add support for the timeout
+#. of the terminal (to display something useful then)
+#. -> longer term, move this code into python-apt
+#: ../DistUpgrade/DistUpgradeViewGtk.py:183
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:186
+#: ../DistUpgrade/DistUpgradeViewKDE.py:262
+msgid "Applying changes"
+msgstr "Прилагане на промените"
+
+#. we do not report followup errors from earlier failures
+#: ../DistUpgrade/DistUpgradeViewGtk.py:208
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:212
+#: ../DistUpgrade/DistUpgradeViewKDE.py:275
+msgid "dependency problems - leaving unconfigured"
+msgstr "проблеми със зависимости - остава не конфигуриран"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:213
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:217
+#: ../DistUpgrade/DistUpgradeViewKDE.py:277
+#, python-format
+msgid "Could not install '%s'"
+msgstr "Не можеше да бъде инсталиран \"%s\""
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:214
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:218
+#: ../DistUpgrade/DistUpgradeViewKDE.py:278
+#, python-format
+msgid ""
+"The upgrade will continue but the '%s' package may not be in a working "
+"state. Please consider submitting a bug report about it."
+msgstr ""
+"Надграждането ще продължи, но '%s\" пакетът може да не работи. Моля "
+"помислете за представянето на грешки"
+
+#. self.expander.set_expanded(True)
+#: ../DistUpgrade/DistUpgradeViewGtk.py:231
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:235
+#: ../DistUpgrade/DistUpgradeViewKDE.py:299
+#, python-format
+msgid ""
+"Replace the customized configuration file\n"
+"'%s'?"
+msgstr ""
+"Замяна на персонализиран конфигурационен файл\n"
+"'%s'?"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:232
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:236
+#: ../DistUpgrade/DistUpgradeViewKDE.py:300
+msgid ""
+"You will lose any changes you have made to this configuration file if you "
+"choose to replace it with a newer version."
+msgstr ""
+"Ще изгубите всички промени, които сте направили в този конфигурационен файл "
+"ако изберете да го замените с по-нова версия."
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:251
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:256
+#: ../DistUpgrade/DistUpgradeViewKDE.py:323
+msgid "The 'diff' command was not found"
+msgstr "Командата \"diff\" не бе намерена"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:464
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:477
+#: ../DistUpgrade/DistUpgradeViewText.py:92
+msgid "A fatal error occurred"
+msgstr "Възникна фатална грешка"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:465
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:478
+msgid ""
+"Please report this as a bug (if you haven't already) and include the files /"
+"var/log/dist-upgrade/main.log and /var/log/dist-upgrade/apt.log in your "
+"report. The upgrade has aborted.\n"
+"Your original sources.list was saved in /etc/apt/sources.list.distUpgrade."
+msgstr ""
+"Моля, докладвайте това като бъг (ако вече не сте) и включете файловете /var/"
+"log/dist-upgrade/main.log и /var/log/dist-upgrade/apt.log в доклада. "
+"Надграждането бе прекъснато.\n"
+"Оригиналният файл sources.list бе запазен в /etc/apt/sources.list."
+"distUpgrade."
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:482
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:495
+msgid "Ctrl-c pressed"
+msgstr "Ctrl-c натиснат"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:483
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:496
+msgid ""
+"This will abort the operation and may leave the system in a broken state. "
+"Are you sure you want to do that?"
+msgstr ""
+"Това ще прекрати операцията и може да остави системата в повредено "
+"състояние. Сигурни ли сте, че искате да направите това?"
+
+#. append warning
+#: ../DistUpgrade/DistUpgradeViewGtk.py:631
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:629
+msgid "To prevent data loss close all open applications and documents."
+msgstr ""
+"За да предодвратите загуба на данни, затворете всички отворени приложения и "
+"документи."
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:645
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:643
+#, python-format
+msgid "No longer supported by Canonical (%s)"
+msgstr "Вече не се поддържа от Каноникал. (%s)"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:646
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:644
+#, python-format
+msgid "<b>Downgrade (%s)</b>"
+msgstr "<b>Подграждане (%s)</b>"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:647
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:645
+#, python-format
+msgid "Remove (%s)"
+msgstr "Премахнете (%s)"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:648
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:646
+#, python-format
+msgid "No longer needed (%s)"
+msgstr "Вече не е необходим (%s)"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:649
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:647
+#, python-format
+msgid "Install (%s)"
+msgstr "Инсталирайте (%s)"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:650
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:648
+#, python-format
+msgid "Upgrade (%s)"
+msgstr "Надграждане (%s)"
+
+#. change = QMessageBox.question(None, _("Media Change"), msg, QMessageBox.Ok, QMessageBox.Cancel)
+#: ../DistUpgrade/DistUpgradeViewKDE.py:196
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:157
+msgid "Media Change"
+msgstr "Смяна на носител"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:335
+msgid "Show Difference >>>"
+msgstr "Показване на разлики >>>"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:338
+msgid "<<< Hide Difference"
+msgstr "<<< Скриване на разлики"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:554
+msgid "Error"
+msgstr "Грешка"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:568
+msgid "&Cancel"
+msgstr "&Отказ"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:572
+#: ../DistUpgrade/DistUpgradeViewKDE.py:813
+msgid "&Close"
+msgstr "&Затваряне"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:618
+msgid "Show Terminal >>>"
+msgstr "Показване на терминал >>>"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:621
+msgid "<<< Hide Terminal"
+msgstr "<<< Скриване на терминал"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:701
+msgid "Information"
+msgstr "Информация"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:751
+#: ../DistUpgrade/DistUpgradeViewKDE.py:796
+#: ../DistUpgrade/DistUpgradeViewKDE.py:799 ../DistUpgrade/DistUpgrade.ui.h:7
+msgid "Details"
+msgstr "Детайли"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:777
+#, python-format
+msgid "No longer supported %s"
+msgstr "Вече не се поддържа %s"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:779
+#, python-format
+msgid "Remove %s"
+msgstr "Премахване на %s"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:781
+#: ../DistUpgrade/DistUpgradeViewText.py:182
+#, python-format
+msgid "Remove (was auto installed) %s"
+msgstr "Премахване (на автоматично инсталиран) %s"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:783
+#, python-format
+msgid "Install %s"
+msgstr "Инсталиране на %s"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:785
+#, python-format
+msgid "Upgrade %s"
+msgstr "Надграждане на %s"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:809
+#: ../DistUpgrade/DistUpgradeViewText.py:230
+msgid "Restart required"
+msgstr "Нужно е рестартиране"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:809
+msgid "<b><big>Restart the system to complete the upgrade</big></b>"
+msgstr ""
+"<b><big>Рестратирайте системата, за да завършите надграждането</big></b>"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:812 ../DistUpgrade/DistUpgrade.ui.h:14
+#: ../data/gtkbuilder/UpdateManager.ui.h:26
+msgid "_Restart Now"
+msgstr "_Рестартирай сега"
+
+#. FIXME make this user friendly
+#: ../DistUpgrade/DistUpgradeViewKDE.py:830
+msgid ""
+"<b><big>Cancel the running upgrade?</big></b>\n"
+"\n"
+"The system could be in an unusable state if you cancel the upgrade. You are "
+"strongly advised to resume the upgrade."
+msgstr ""
+"<b><big>Отказване на изпълняващото се надграждане?</big></b>\n"
+"\n"
+"Ако откажете надграждането системата може да остане в състояние, в което е "
+"неизползваема. Силно ви препоръчваме да подължите надграждането."
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:834
+msgid "Cancel Upgrade?"
+msgstr "Отмяна на надграждането?"
+
+#: ../DistUpgrade/DistUpgradeView.py:61
+#, python-format
+msgid "%li day"
+msgid_plural "%li days"
+msgstr[0] "%li ден"
+msgstr[1] "%li дни"
+
+#: ../DistUpgrade/DistUpgradeView.py:63
+#, python-format
+msgid "%li hour"
+msgid_plural "%li hours"
+msgstr[0] "%li час"
+msgstr[1] "%li часа"
+
+#: ../DistUpgrade/DistUpgradeView.py:65
+#, python-format
+msgid "%li minute"
+msgid_plural "%li minutes"
+msgstr[0] "%li минута"
+msgstr[1] "%li минути"
+
+#: ../DistUpgrade/DistUpgradeView.py:66
+#, python-format
+msgid "%li second"
+msgid_plural "%li seconds"
+msgstr[0] "%li секунда"
+msgstr[1] "%li секунди"
+
+#. TRANSLATORS: you can alter the ordering of the remaining time
+#. information here if you shuffle %(str_days)s %(str_hours)s %(str_minutes)s
+#. around. Make sure to keep all '$(str_*)s' in the translated string
+#. and do NOT change anything appart from the ordering.
+#.
+#. %(str_hours)s will be either "1 hour" or "2 hours" depending on the
+#. plural form
+#.
+#. Note: most western languages will not need to change this
+#: ../DistUpgrade/DistUpgradeView.py:82
+#, python-format
+msgid "%(str_days)s %(str_hours)s"
+msgstr "%(str_days)s %(str_hours)s"
+
+#. TRANSLATORS: you can alter the ordering of the remaining time
+#. information here if you shuffle %(str_hours)s %(str_minutes)s
+#. around. Make sure to keep all '$(str_*)s' in the translated string
+#. and do NOT change anything appart from the ordering.
+#.
+#. %(str_hours)s will be either "1 hour" or "2 hours" depending on the
+#. plural form
+#.
+#. Note: most western languages will not need to change this
+#: ../DistUpgrade/DistUpgradeView.py:100
+#, python-format
+msgid "%(str_hours)s %(str_minutes)s"
+msgstr "%(str_hours)s %(str_minutes)s"
+
+#. 56 kbit
+#. 1Mbit = 1024 kbit
+#: ../DistUpgrade/DistUpgradeView.py:151
+#, python-format
+msgid ""
+"This download will take about %s with a 1Mbit DSL connection and about %s "
+"with a 56k modem."
+msgstr ""
+"Това изтегляне ще отнеме около %s с 1Mbit DSL връзка и около %s с 56k модем."
+
+#. if we have a estimated speed, use it
+#: ../DistUpgrade/DistUpgradeView.py:155
+#, python-format
+msgid "This download will take about %s with your connection. "
+msgstr "Това изтегляне ще отнеме около %s с вашата връзка. "
+
+#. Declare these translatable strings from the .ui files here so that
+#. xgettext picks them up.
+#: ../DistUpgrade/DistUpgradeView.py:259 ../DistUpgrade/DistUpgrade.ui.h:21
+msgid "Preparing to upgrade"
+msgstr "Подготовка за надграждане"
+
+#: ../DistUpgrade/DistUpgradeView.py:260
+msgid "Getting new software channels"
+msgstr "Получаване на нови софтуерни канали"
+
+#: ../DistUpgrade/DistUpgradeView.py:261 ../DistUpgrade/DistUpgrade.ui.h:23
+msgid "Getting new packages"
+msgstr "Получаване на нови пакети"
+
+#: ../DistUpgrade/DistUpgradeView.py:262 ../DistUpgrade/DistUpgrade.ui.h:26
+msgid "Installing the upgrades"
+msgstr "Инсталиране на надгражданията"
+
+#: ../DistUpgrade/DistUpgradeView.py:263 ../DistUpgrade/DistUpgrade.ui.h:25
+msgid "Cleaning up"
+msgstr "Почистване"
+
+#: ../DistUpgrade/DistUpgradeView.py:348
+#, python-format
+msgid ""
+"%(amount)d installed package is no longer supported by Canonical. You can "
+"still get support from the community."
+msgid_plural ""
+"%(amount)d installed packages are no longer supported by Canonical. You can "
+"still get support from the community."
+msgstr[0] ""
+"%(amount)d инсталиран пакет вече не се поддържа от Каноникал. Все още можете "
+"да получите поддръжка от обществеността."
+msgstr[1] ""
+"%(amount)d инсталирани пакета вече не се поддържат от Каноникал. Все още "
+"можете да получите поддръжка от обществеността"
+
+#. FIXME: make those two separate lines to make it clear
+#. that the "%" applies to the result of ngettext
+#: ../DistUpgrade/DistUpgradeView.py:357
+#, python-format
+msgid "%d package is going to be removed."
+msgid_plural "%d packages are going to be removed."
+msgstr[0] "%d пакет ще бъде премахнат."
+msgstr[1] "%d пакети ще бъдат премахнати."
+
+#: ../DistUpgrade/DistUpgradeView.py:362
+#, python-format
+msgid "%d new package is going to be installed."
+msgid_plural "%d new packages are going to be installed."
+msgstr[0] "%d нов пакет ще бъде инсталиран."
+msgstr[1] "%d нови пакети ще бъдат инталирани."
+
+#: ../DistUpgrade/DistUpgradeView.py:368
+#, python-format
+msgid "%d package is going to be upgraded."
+msgid_plural "%d packages are going to be upgraded."
+msgstr[0] "%d пакет ще бъде надграден."
+msgstr[1] "%d нови пакети ще бъдат надградени."
+
+#: ../DistUpgrade/DistUpgradeView.py:373
+#, python-format
+msgid ""
+"\n"
+"\n"
+"You have to download a total of %s. "
+msgstr ""
+"\n"
+"\n"
+"Ще трябва да бъдат изтеглени общо %s. "
+
+#: ../DistUpgrade/DistUpgradeView.py:378
+msgid ""
+"Installing the upgrade can take several hours. Once the download has "
+"finished, the process cannot be canceled."
+msgstr ""
+
+#: ../DistUpgrade/DistUpgradeView.py:382
+msgid ""
+"Fetching and installing the upgrade can take several hours. Once the "
+"download has finished, the process cannot be canceled."
+msgstr ""
+
+#: ../DistUpgrade/DistUpgradeView.py:387
+msgid "Removing the packages can take several hours. "
+msgstr ""
+
+#. FIXME: this should go into DistUpgradeController
+#: ../DistUpgrade/DistUpgradeView.py:392 ../UpdateManager/UpdateManager.py:676
+msgid "The software on this computer is up to date."
+msgstr ""
+
+#: ../DistUpgrade/DistUpgradeView.py:393
+msgid ""
+"There are no upgrades available for your system. The upgrade will now be "
+"canceled."
+msgstr ""
+"Няма налични надграждания за вашата система. Надграждането ще бъде "
+"прекратено."
+
+#: ../DistUpgrade/DistUpgradeView.py:406
+msgid "Reboot required"
+msgstr "Нужно е рестартиране"
+
+#: ../DistUpgrade/DistUpgradeView.py:407
+msgid ""
+"The upgrade is finished and a reboot is required. Do you want to do this now?"
+msgstr "Надграждането е завършено и има нужда от рестарт. Рестартиране сега?"
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:72
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:72
+#, python-format
+msgid "authenticate '%(file)s' against '%(signature)s' "
+msgstr ""
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:131
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:131
+#, python-format
+msgid "extracting '%s'"
+msgstr ""
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:151
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:152
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:151
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:152
+msgid "Could not run the upgrade tool"
+msgstr "Не може да бъде стартирана помощната програма за надграждане."
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:152
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:152
+msgid ""
+"This is most likely a bug in the upgrade tool. Please report it as a bug "
+"using the command 'ubuntu-bug update-manager'."
+msgstr ""
+"Това е най-вероятно грешка в инструмента за ъпгрейд. Моля докладвайте тази "
+"грешка използвайки командата 'ubuntu-bug update-manager'."
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:227
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:227
+msgid "Upgrade tool signature"
+msgstr "Подпис на помощната програма за надграждане"
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:234
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:234
+msgid "Upgrade tool"
+msgstr "Помощна програма за надграждане"
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:268
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:268
+msgid "Failed to fetch"
+msgstr "Грешка при доставянето"
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:269
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:269
+msgid "Fetching the upgrade failed. There may be a network problem. "
+msgstr ""
+"Доставянето на надграждането бе неуспешно. Възможно е да има проблем с "
+"мрежата. "
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:273
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:273
+msgid "Authentication failed"
+msgstr "Идентификацията неуспешна"
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:274
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:274
+msgid ""
+"Authenticating the upgrade failed. There may be a problem with the network "
+"or with the server. "
+msgstr ""
+"Идентификацията на надграждането е неуспешна. Възможно е да има проблем с "
+"мрежата или сървъра. "
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:279
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:279
+msgid "Failed to extract"
+msgstr "Грешка при извличането"
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:280
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:280
+msgid ""
+"Extracting the upgrade failed. There may be a problem with the network or "
+"with the server. "
+msgstr ""
+"Извличането на надграждането бе неуспешно. Възможно е да има проблем с "
+"мрежата или сървъра. "
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:285
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:285
+msgid "Verification failed"
+msgstr "Проверката е неуспешна"
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:286
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:286
+msgid ""
+"Verifying the upgrade failed.  There may be a problem with the network or "
+"with the server. "
+msgstr ""
+"Проверката на надграждането се провали. Възможно е да има проблем с мрежата "
+"или със сървъра. "
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:300
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:306
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:300
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:306
+msgid "Can not run the upgrade"
+msgstr "Не може да се изпълни надграждане"
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:301
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:301
+msgid ""
+"This usually is caused by a system where /tmp is mounted noexec. Please "
+"remount without noexec and run the upgrade again."
+msgstr ""
+"Това обикновенно е причинено от система, където /tmp е монтиран noexec. Моля "
+"ремонтирайте без noexec и стартирайте ъпгрейда отново."
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:307
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:307
+#, python-format
+msgid "The error message is '%s'."
+msgstr "Съобщението с грешка е '%s'."
+
+#: ../DistUpgrade/DistUpgradeViewText.py:93
+msgid ""
+"Please report this as a bug and include the files /var/log/dist-upgrade/main."
+"log and /var/log/dist-upgrade/apt.log in your report. The upgrade has "
+"aborted.\n"
+"Your original sources.list was saved in /etc/apt/sources.list.distUpgrade."
+msgstr ""
+"Моля, докладвайте това като бъг и включете файловете /var/log/dist-upgrade/"
+"main.log и /var/log/dist-upgrade/apt.lo в доклада. Надграждането бе "
+"прекъснато.\n"
+"Оригиналният файл sources.list бе запазен в /etc/apt/sources.list."
+"distUpgrade."
+
+#: ../DistUpgrade/DistUpgradeViewText.py:117
+msgid "Aborting"
+msgstr "Прекратяване"
+
+#: ../DistUpgrade/DistUpgradeViewText.py:122
+msgid "Demoted:\n"
+msgstr "Понижен:\n"
+
+#: ../DistUpgrade/DistUpgradeViewText.py:129
+msgid "To continue please press [ENTER]"
+msgstr "За да продължите моля натиснете [ENTER]"
+
+#: ../DistUpgrade/DistUpgradeViewText.py:157
+#: ../DistUpgrade/DistUpgradeViewText.py:196
+#: ../DistUpgrade/DistUpgradeViewText.py:203
+msgid "Continue [yN] "
+msgstr "Продъжаване [yN] "
+
+#: ../DistUpgrade/DistUpgradeViewText.py:157
+#: ../DistUpgrade/DistUpgradeViewText.py:196
+msgid "Details [d]"
+msgstr "Детайли [d]"
+
+#. TRANSLATORS: the "y" is "yes"
+#. TRANSLATORS: first letter of a positive (yes) answer
+#: ../DistUpgrade/DistUpgradeViewText.py:162
+#: ../DistUpgrade/DistUpgradeViewText.py:206
+msgid "y"
+msgstr "Y"
+
+#. TRANSLATORS: the "n" is "no"
+#. TRANSLATORS: first letter of a negative (no) answer
+#: ../DistUpgrade/DistUpgradeViewText.py:165
+#: ../DistUpgrade/DistUpgradeViewText.py:213
+msgid "n"
+msgstr "n"
+
+#. TRANSLATORS: the "d" is "details"
+#: ../DistUpgrade/DistUpgradeViewText.py:168
+msgid "d"
+msgstr "d"
+
+#: ../DistUpgrade/DistUpgradeViewText.py:173
+#, python-format
+msgid "No longer supported: %s\n"
+msgstr "Вече не се поддържа: %s\n"
+
+#: ../DistUpgrade/DistUpgradeViewText.py:178
+#, python-format
+msgid "Remove: %s\n"
+msgstr "Премахване на %s\n"
+
+#: ../DistUpgrade/DistUpgradeViewText.py:188
+#, python-format
+msgid "Install: %s\n"
+msgstr "Инсталиране: %s\n"
+
+#: ../DistUpgrade/DistUpgradeViewText.py:193
+#, python-format
+msgid "Upgrade: %s\n"
+msgstr "Надграждане на %s\n"
+
+#: ../DistUpgrade/DistUpgradeViewText.py:210
+msgid "Continue [Yn] "
+msgstr "Продължаване [Yn] "
+
+#: ../DistUpgrade/DistUpgradeViewText.py:231
+msgid ""
+"To finish the upgrade, a restart is required.\n"
+"If you select 'y' the system will be restarted."
+msgstr ""
+"За приключване на актуализирането е необходимо рестартиране.\n"
+"Ако изберете 'y' системата ще се рестартира."
+
+#: ../DistUpgrade/DistUpgrade.ui.h:1
+msgid "_Cancel Upgrade"
+msgstr "_Отмяна на надграждането"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:2
+msgid "_Resume Upgrade"
+msgstr "_Поднови надграждането"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:3
+msgid ""
+"<b><big>Cancel the running upgrade?</big></b>\n"
+"\n"
+"The system could be in an unusable state if you cancel the upgrade. You are "
+"strongly adviced to resume the upgrade."
+msgstr ""
+"<b><big>Отмяна на протичащото надграждане?</big></b>\n"
+"\n"
+"Системата Ви може да се окаже в неузползваемо състояние, ако отмените "
+"надграждането. Силно препоръчвано е да възобновите надграждането!"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:6
+msgid "_Start Upgrade"
+msgstr "_Стартиране на надграждането"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:9
+msgid "_Replace"
+msgstr "_Замяна"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:10
+msgid "Difference between the files"
+msgstr "Разлика между файловете"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:11
+msgid "_Report Bug"
+msgstr "_Съобщи грешка"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:12
+msgid "_Continue"
+msgstr "_Продъжаване"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:13
+msgid "<b><big>Start the upgrade?</big></b>"
+msgstr "<b><big>Започване на надграждането?</big></b>"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:15
+msgid ""
+"<b><big>Restart the system to complete the upgrade</big></b>\n"
+"\n"
+"Please save your work before continuing."
+msgstr ""
+"<b><big>Рестартирайте системата за да завършите надграждането</big></b>\n"
+"\n"
+"Моля запишете текущата си работа преди да продължите."
+
+#: ../DistUpgrade/DistUpgrade.ui.h:18
+msgid "Distribution Upgrade"
+msgstr "Надграждане на дистрибуцията"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:19
+#, fuzzy
+msgid "<b><big>Upgrading Ubuntu to version 12.10</big></b>"
+msgstr "<b><big>Актуализиране на Убунту до версия 11.10</big></b>"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:20
+msgid "    "
+msgstr "    "
+
+#: ../DistUpgrade/DistUpgrade.ui.h:22
+msgid "Setting new software channels"
+msgstr "Настройване на нови софтуерни канали"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:24
+msgid "Restarting the computer"
+msgstr "Рестартиране на компютъра"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:27
+msgid "Terminal"
+msgstr "Терминал"
+
+#: ../UpdateManager/backend/InstallBackendSynaptic.py:64
+msgid "Please wait, this can take some time."
+msgstr "Моля, изчакайте! Това може да отнеме известно време."
+
+#: ../UpdateManager/backend/InstallBackendSynaptic.py:66
+msgid "Update is complete"
+msgstr "Актуализацията е завършена"
+
+#: ../UpdateManager/DistUpgradeFetcher.py:114
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:109
+msgid "Could not find the release notes"
+msgstr "Не бяха открити бележки към изданието"
+
+#: ../UpdateManager/DistUpgradeFetcher.py:115
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:110
+msgid "The server may be overloaded. "
+msgstr "Сървърът може да е претоварен. "
+
+#: ../UpdateManager/DistUpgradeFetcher.py:125
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:114
+msgid "Could not download the release notes"
+msgstr "Не можеше да бъдат свалени бележките към изданието"
+
+#: ../UpdateManager/DistUpgradeFetcher.py:126
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:115
+msgid "Please check your internet connection."
+msgstr "Моля, проверете Интернет връзката си!"
+
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:68
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:91
+msgid "Upgrade"
+msgstr "Надграждане"
+
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:95
+#: ../data/gtkbuilder/UpdateManager.ui.h:20
+#: ../data/gtkbuilder/UpgradePromptDialog.ui.h:2
+msgid "Release Notes"
+msgstr "Бележки към изданието"
+
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:134
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:148
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:150
+msgid "Downloading additional package files..."
+msgstr "Изтегляне на допълнителни пакетни файлове..."
+
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:148
+#, python-format
+msgid "File %s of %s at %sB/s"
+msgstr "Файл %s от %s с %sB/с"
+
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:150
+#, python-format
+msgid "File %s of %s"
+msgstr "Файл %s от %s"
+
+#: ../UpdateManager/ChangelogViewer.py:75
+msgid "Open Link in Browser"
+msgstr "Отваряне на връзката в браузър"
+
+#: ../UpdateManager/ChangelogViewer.py:78
+msgid "Copy Link to Clipboard"
+msgstr "Копиране на връзката в клипборда"
+
+#: ../UpdateManager/GtkProgress.py:162
+#, python-format
+msgid "Downloading file %(current)li of %(total)li with %(speed)s/s"
+msgstr "Смъкване на файл %(current)li от %(total)li при %(speed)s/сек"
+
+#: ../UpdateManager/GtkProgress.py:167
+#, python-format
+msgid "Downloading file %(current)li of %(total)li"
+msgstr "Изтегляне на файл %(current)li от %(total)li"
+
+#: ../UpdateManager/UpdateManager.py:106 ../do-release-upgrade:100
+msgid "Your Ubuntu release is not supported anymore."
+msgstr "Вашата версия на Убунту вече не се поддържа."
+
+#: ../UpdateManager/UpdateManager.py:107
+msgid ""
+"You will not get any further security fixes or critical updates. Please "
+"upgrade to a later version of Ubuntu."
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:115
+msgid "Upgrade information"
+msgstr "Информация за надграждане"
+
+#: ../UpdateManager/UpdateManager.py:233
+#: ../UpdateManagerText/UpdateManagerText.py:35
+msgid "Install"
+msgstr "Инсталиране"
+
+#: ../UpdateManager/UpdateManager.py:235
+msgid "Name"
+msgstr ""
+
+#. upload_archive = version_match.group(2).strip()
+#: ../UpdateManager/UpdateManager.py:395
+#, python-format
+msgid "Version %s: \n"
+msgstr "Версия %s: \n"
+
+#: ../UpdateManager/UpdateManager.py:453
+msgid ""
+"No network connection detected, you can not download changelog information."
+msgstr ""
+"Не е засечена мрежова връзка. Не можете да изтеглите файла с промените."
+
+#: ../UpdateManager/UpdateManager.py:463
+msgid "Downloading list of changes..."
+msgstr "Изтегляне на списъка с промени..."
+
+#: ../UpdateManager/UpdateManager.py:507
+msgid "_Deselect All"
+msgstr "_Премахване на избора от всички"
+
+#: ../UpdateManager/UpdateManager.py:513
+msgid "Select _All"
+msgstr "Избери_Всичко"
+
+#: ../UpdateManager/UpdateManager.py:572
+#, python-format
+msgid "%s will be downloaded."
+msgstr "%s ще бъде изтеглено."
+
+#: ../UpdateManager/UpdateManager.py:584
+#, fuzzy
+msgid "The update has already been downloaded."
+msgid_plural "The updates have already been downloaded."
+msgstr[0] "Актуализацията вече е свалена, но не е инсталирана."
+msgstr[1] "Актуализациите вече са свалени, но не са инсталирани."
+
+#: ../UpdateManager/UpdateManager.py:589
+msgid "There are no updates to install."
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:598
+msgid "Unknown download size."
+msgstr "Неизвестен размер за изтегляне"
+
+#: ../UpdateManager/UpdateManager.py:624
+msgid ""
+"It is unknown when the package information was updated last. Please click "
+"the 'Check' button to update the information."
+msgstr ""
+"Не е известно кога последно е актуализирана пакетната информация. Моля, "
+"натиснете \"Провери\" бутона, за да актуализирате информацията."
+
+#: ../UpdateManager/UpdateManager.py:630
+#, python-format
+msgid ""
+"The package information was last updated %(days_ago)s days ago.\n"
+"Press the 'Check' button below to check for new software updates."
+msgstr ""
+"Информацията за пакетите беше обновена преди %(days_ago)s дни.\n"
+"Натиснете бутона 'Проверка', за да проверите за софтуерни обновления."
+
+#: ../UpdateManager/UpdateManager.py:635
+#, python-format
+msgid "The package information was last updated %(days_ago)s day ago."
+msgid_plural "The package information was last updated %(days_ago)s days ago."
+msgstr[0] "Пакетът информация бе последно обновен преди %(days_ago)s ден."
+msgstr[1] "Пакетът информация бе последно обновен преди %(days_ago)s дена."
+
+#: ../UpdateManager/UpdateManager.py:639
+#, python-format
+msgid "The package information was last updated %(hours_ago)s hour ago."
+msgid_plural ""
+"The package information was last updated %(hours_ago)s hours ago."
+msgstr[0] "Информацията за пакета последно е обновена преди %(hours_ago)s час."
+msgstr[1] ""
+"Информацията за пакета последно е обновена преди %(hours_ago)s часа."
+
+#. TRANSLATORS: only in plural form, as %s minutes ago is one of 15, 30, 45 minutes ago
+#: ../UpdateManager/UpdateManager.py:644 ../UpdateManager/UpdateManager.py:646
+#: ../UpdateManager/UpdateManager.py:648
+#, python-format
+msgid "The package information was last updated about %s minutes ago."
+msgstr "Пакетната информация беше актуализирана преди около %s минути."
+
+#: ../UpdateManager/UpdateManager.py:650
+msgid "The package information was just updated."
+msgstr "Пакетната информация беше току що актуализирана."
+
+#: ../UpdateManager/UpdateManager.py:689
+msgid "Software updates may be available for your computer."
+msgstr "Може да има актуализации за вашия компютър."
+
+#: ../UpdateManager/UpdateManager.py:697
+#, python-format
+msgid ""
+"Updated software has been issued since %s was released. Do you want to "
+"install it now?"
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:700
+msgid ""
+"Updated software is available for this computer. Do you want to install it "
+"now?"
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:758
+#, python-format
+msgid ""
+"The upgrade needs a total of %s free space on disk '%s'. Please free at "
+"least an additional %s of disk space on '%s'. Empty your trash and remove "
+"temporary packages of former installations using 'sudo apt-get clean'."
+msgstr ""
+"Надграждането се нуждае от общо %s свободно място на диск '%s'. Моля, "
+"освободете поне %s място на диск '%s'. Изпразнете вашето кошче и премахнете "
+"временните пакети от инсталации с командата 'sudo apt-get clean'."
+
+#: ../UpdateManager/UpdateManager.py:783
+msgid ""
+"The computer needs to restart to finish installing updates. Please save your "
+"work before continuing."
+msgstr ""
+"За да завърши инсталирането, компютъра трябва да се рестартира. Преди да "
+"продължите, моля, запазете вашата работа."
+
+#: ../UpdateManager/UpdateManager.py:847
+msgid "Reading package information"
+msgstr "Прочитане на информация за пакет"
+
+#: ../UpdateManager/UpdateManager.py:862
+msgid "Connecting..."
+msgstr "Свързване..."
+
+#: ../UpdateManager/UpdateManager.py:879
+msgid "You may not be able to check for updates or download new updates."
+msgstr ""
+"Възможно е да не можете да проверите за актуализации или изтегляне на нови "
+"такива."
+
+#: ../UpdateManager/UpdateManager.py:1002
+msgid "Could not initialize the package information"
+msgstr "Невъзможно инициирането на информацията за пакета"
+
+#: ../UpdateManager/UpdateManager.py:1003
+msgid ""
+"An unresolvable problem occurred while initializing the package "
+"information.\n"
+"\n"
+"Please report this bug against the 'update-manager' package and include the "
+"following error message:\n"
+msgstr ""
+"При инициализиране на информация за пакетите възникна нерешим проблем.\n"
+"\n"
+"Моля, докладвайте това като бъг в пакета 'update-manager' и включете "
+"следното съобщение с грешка:\n"
+
+#: ../UpdateManager/UpdateManager.py:1032
+msgid ""
+"An unresolvable problem occurred while calculating the upgrade.\n"
+"\n"
+"Please report this bug against the 'update-manager' package and include the "
+"following error message:"
+msgstr ""
+"При изчисляване на надграждането възникна нерешим проблем.\n"
+"\n"
+"Моля, докладвайте това като бъг в пакета 'update-manager' и включете "
+"следното съобщение с грешка:"
+
+#: ../UpdateManager/UpdateManager.py:1056
+msgid " (New install)"
+msgstr " (Нова инсталация)"
+
+#. TRANSLATORS: the b stands for Bytes
+#: ../UpdateManager/UpdateManager.py:1063
+#, python-format
+msgid "(Size: %s)"
+msgstr "(Размер: %s)"
+
+#: ../UpdateManager/UpdateManager.py:1067
+#, python-format
+msgid "From version %(old_version)s to %(new_version)s"
+msgstr "От версия %(old_version)s към %(new_version)s"
+
+#: ../UpdateManager/UpdateManager.py:1071
+#, python-format
+msgid "Version %s"
+msgstr "Версия %s"
+
+#: ../UpdateManager/UpdateManager.py:1104 ../do-release-upgrade:112
+msgid "Release upgrade not possible right now"
+msgstr "Надграждане към ново издание не е възможно в момента"
+
+#: ../UpdateManager/UpdateManager.py:1105 ../do-release-upgrade:113
+#, c-format, python-format
+msgid ""
+"The release upgrade can not be performed currently, please try again later. "
+"The server reported: '%s'"
+msgstr ""
+"Надграждането към ново издание понастоящем не може да се извърши, моля "
+"опитайте по-късно. Сървърът върна: \"%s\""
+
+#: ../UpdateManager/UpdateManager.py:1107 ../check-new-release-gtk:126
+msgid "Downloading the release upgrade tool"
+msgstr "Сваляне на инструмента за награждане на версията"
+
+#: ../UpdateManager/UpdateManager.py:1114
+#, python-format
+msgid "<b>New Ubuntu release '%s' is available</b>"
+msgstr "<b>Налично е ново издание на Убунту - '%s'</b>"
+
+#. we assert a clean cache
+#: ../UpdateManager/UpdateManager.py:1153
+msgid "Software index is broken"
+msgstr "Индексът на софтуера е повреден"
+
+#: ../UpdateManager/UpdateManager.py:1154
+msgid ""
+"It is impossible to install or remove any software. Please use the package "
+"manager \"Synaptic\" or run \"sudo apt-get install -f\" in a terminal to fix "
+"this issue at first."
+msgstr ""
+"Невъзможно е да бъде инсталиран или премахнат какъвто и да е софтуер. Моля, "
+"ползвайте диспечера на пакети \"Synaptic\" или първо задействайте \"sudo apt-"
+"get install -f\" в терминален прозорец, за да поправите този проблем!"
+
+#: ../UpdateManager/UnitySupport.py:57
+msgid "Check for Updates"
+msgstr "Провери за актуализации"
+
+#: ../UpdateManager/UnitySupport.py:66
+msgid "Install All Available Updates"
+msgstr "Инсталирай всички възможни актуализации"
+
+#: ../UpdateManagerText/UpdateManagerText.py:34
+msgid "Cancel"
+msgstr "Отказ"
+
+#: ../UpdateManagerText/UpdateManagerText.py:37
+msgid "Changelog"
+msgstr ""
+
+#: ../UpdateManagerText/UpdateManagerText.py:40
+msgid "Updates"
+msgstr ""
+
+#: ../UpdateManagerText/UpdateManagerText.py:53
+msgid "Building Updates List"
+msgstr "Изграждане на списък с актуализации"
+
+#: ../UpdateManagerText/UpdateManagerText.py:56
+msgid ""
+"\n"
+"A normal upgrade can not be calculated, please run: \n"
+"  sudo apt-get dist-upgrade\n"
+"\n"
+"\n"
+"This can be caused by:\n"
+" * A previous upgrade which didn't complete\n"
+" * Problems with some of the installed software\n"
+" * Unofficial software packages not provided by Ubuntu\n"
+" * Normal changes of a pre-release version of Ubuntu"
+msgstr ""
+"\n"
+"Нормално надграждане не може да бъде изчислено, моля изпълнете: \n"
+"  sudo apt-get dist-upgrade\n"
+"\n"
+"\n"
+"Това може да се случи поради:\n"
+" * Предишно надграждане, което не е завършило\n"
+" * Проблеми с част от инсталирания софтуер\n"
+" * Неофициални пакети, които не са предоставени от Убунту\n"
+" * Нормални промени в предварителна версия на Убунту"
+
+#: ../UpdateManagerText/UpdateManagerText.py:125
+msgid "Downloading changelog"
+msgstr "Изтегляне на отчет с промените"
+
+#: ../UpdateManager/Core/MyCache.py:147
+#, python-format
+msgid "Other updates (%s)"
+msgstr "Други актуализации (%s)"
+
+#: ../UpdateManager/Core/MyCache.py:325
+msgid "This update does not come from a source that supports changelogs."
+msgstr "Тази актуализация не идва от източник, който поддържа промени."
+
+#: ../UpdateManager/Core/MyCache.py:331 ../UpdateManager/Core/MyCache.py:359
+msgid ""
+"Failed to download the list of changes. \n"
+"Please check your Internet connection."
+msgstr ""
+"Неуспех при изтегляне на списъка с промени. \n"
+"Моля, проверете Интернет връзката си."
+
+#: ../UpdateManager/Core/MyCache.py:338
+#, python-format
+msgid ""
+"Changes for the versions:\n"
+"Installed version: %s\n"
+"Available version: %s\n"
+"\n"
+msgstr ""
+"Промени за версиите:\n"
+"Инсталирана версия: %s\n"
+"Възможна версия: %s\n"
+"\n"
+
+#: ../UpdateManager/Core/MyCache.py:348
+#, python-format
+msgid ""
+"The changelog does not contain any relevant changes.\n"
+"\n"
+"Please use http://launchpad.net/ubuntu/+source/%s/%s/+changelog\n"
+"until the changes become available or try again later."
+msgstr ""
+"Отчета с промени не съдържа никакви промени.\n"
+"\n"
+"Моля, използвайте http://launchpad.net/ubuntu/+source/%s/%s/+changelog\n"
+"докато промените станат достъпни или опитайте отново по-късно."
+
+#: ../UpdateManager/Core/MyCache.py:353
+#, python-format
+msgid ""
+"The list of changes is not available yet.\n"
+"\n"
+"Please use http://launchpad.net/ubuntu/+source/%s/%s/+changelog\n"
+"until the changes become available or try again later."
+msgstr ""
+"Списъкът с промени все още не е достъпен.\n"
+"\n"
+"Моля, използвайте http://launchpad.net/ubuntu/+source/%s/%s/+changelog\n"
+"докато промените станат достъпни или опитайте отново по-късно."
+
+#: ../UpdateManager/Core/UpdateList.py:51
+msgid "Failed to detect distribution"
+msgstr "Неуспешен опит за откриване на дистрибуцията"
+
+#: ../UpdateManager/Core/UpdateList.py:52
+#, python-format
+msgid "A error '%s' occurred while checking what system you are using."
+msgstr "Възникна грешка '%s' докато се проверяваше каква система използвате."
+
+#: ../UpdateManager/Core/UpdateList.py:63
+msgid "Important security updates"
+msgstr "Важни актуализации за сигурността"
+
+#: ../UpdateManager/Core/UpdateList.py:64
+msgid "Recommended updates"
+msgstr "Препоръчителни актуализации"
+
+#: ../UpdateManager/Core/UpdateList.py:65
+msgid "Proposed updates"
+msgstr "Предложени актуализации"
+
+#: ../UpdateManager/Core/UpdateList.py:66
+msgid "Backports"
+msgstr "Състарени версии"
+
+#: ../UpdateManager/Core/UpdateList.py:67
+msgid "Distribution updates"
+msgstr "Актуализации на дистрибуцията"
+
+#: ../UpdateManager/Core/UpdateList.py:72
+msgid "Other updates"
+msgstr "Други актуализации"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:1
+#, fuzzy
+msgid "<big><b>Starting Software Updater</b></big>"
+msgstr "<b><big>Стартиране на Диспечера на актуализации</big></b>"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:2
+msgid ""
+"Software updates correct errors, eliminate security vulnerabilities and "
+"provide new features."
+msgstr ""
+"Софтуерните актуализации поправят грешки, премахват уязвими места в "
+"сигурността и предлагат нови възможности."
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:3
+msgid "_Partial Upgrade"
+msgstr "_Частично надграждане"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:4
+msgid "<big><b>Not all updates can be installed</b></big>"
+msgstr ""
+"<big><b>Не всички актуализации могат да бъдат инсталирани</b></big>\r\n"
+"\r\n"
+"%s"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:5
+msgid ""
+"Run a partial upgrade, to install as many updates as possible. \n"
+"\n"
+"This can be caused by:\n"
+" * A previous upgrade which didn't complete\n"
+" * Problems with some of the installed software\n"
+" * Unofficial software packages not provided by Ubuntu\n"
+" * Normal changes of a pre-release version of Ubuntu"
+msgstr ""
+"Частично надграждане, за да се инсталират възможно най-много актуализации. \n"
+"\n"
+"Това може да се случи заради:\n"
+" * Предишно надграждане, което не е завършило\n"
+" * Проблеми с някой от инсталирания софтуер\n"
+" * Неофициални пакети, които не са предоставени от Убунту\n"
+" * Нормални промени от предварителна версия на Убунту"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:12
+msgid "Chec_k"
+msgstr "Провер_ка"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:13
+msgid ""
+"<b><big>You must check for updates manually</big></b>\n"
+"\n"
+"Your system does not check for updates automatically. You can configure this "
+"behavior in <i>Software Sources</i> on the <i>Updates</i> tab."
+msgstr ""
+"<b><big>Трябва ръчно да проверите за актуализации</big></b>\n"
+"\n"
+"Вашата система не проверява автоматично за актуализации. Можете да промените "
+"това в <i>Източници на софтуер</i> в раздела <i>Актуализации</i>."
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:16
+msgid "_Hide this information in the future"
+msgstr "_Скрий тази информация за в бъдеще"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:17
+msgid "Co_ntinue"
+msgstr "Продъл_жаване"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:18
+msgid "<big><b>Running on battery</b></big>"
+msgstr "<big><b>Работа на батерия</b></big>"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:19
+msgid "Your system is running on battery. Are you sure you want to continue?"
+msgstr ""
+"Вашата система работи на батерия. Сигурни ли сте, че искате да продължите?"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:21
+msgid "_Upgrade"
+msgstr "_Надграждане"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:22
+#: ../data/gtkbuilder/UpgradePromptDialog.ui.h:8
+msgid "Show progress of individual files"
+msgstr "Показване на напредък за индивидулни файлове"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:23
+#: ../data/update-manager.desktop.in.h:1
+#, fuzzy
+msgid "Software Updater"
+msgstr "Обновления на програмите"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:24
+#, fuzzy
+msgid "Starting Software Updater"
+msgstr "Обновления на програмите"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:25
+msgid "U_pgrade"
+msgstr "_Надграждане"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:27
+msgid "updates"
+msgstr "актуализации"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:28
+msgid "Changes"
+msgstr "Промени"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:29
+msgid "Description"
+msgstr "Описание"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:30
+#, fuzzy
+msgid "Details of updates"
+msgstr "Описание на актуализацията"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:31
+msgid ""
+"You are connected via roaming and may be charged for the data consumed by "
+"this update."
+msgstr ""
+"Вие сте свързани през роуминг и може да бъдете таксувани за данните, "
+"изразходвани за това обновление."
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:32
+msgid ""
+"You may want to wait until you’re not using a mobile broadband connection."
+msgstr ""
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:33
+msgid "It’s safer to connect the computer to AC power before updating."
+msgstr ""
+"Преди да започне актуализирането по-добре да свържете захранващия адаптер."
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:34
+msgid "_Settings..."
+msgstr "_Настройки..."
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:35
+#, fuzzy
+msgid "_Install Now"
+msgstr "Инсталиране"
+
+#: ../data/gtkbuilder/UpgradePromptDialog.ui.h:1
+msgid "<b>A new version of Ubuntu is available. Would you like to upgrade?</b>"
+msgstr "<b>Налична е нова версия на Убунту. Бихте ли искали да надградите?</b>"
+
+#: ../data/gtkbuilder/UpgradePromptDialog.ui.h:3
+msgid "Don't Upgrade"
+msgstr "Не надграждай"
+
+#: ../data/gtkbuilder/UpgradePromptDialog.ui.h:4
+msgid "Ask Me Later"
+msgstr "Напомняне по късно"
+
+#: ../data/gtkbuilder/UpgradePromptDialog.ui.h:5
+msgid "Yes, Upgrade Now"
+msgstr "Да, надгради сега"
+
+#: ../data/gtkbuilder/UpgradePromptDialog.ui.h:6
+msgid "You have declined to upgrade to the new Ubuntu"
+msgstr "Вие сте отхвърлили надграждането до нова версия на Убунту"
+
+#: ../data/gtkbuilder/UpgradePromptDialog.ui.h:7
+#, fuzzy
+msgid ""
+"You can upgrade at a later time by opening Software Updater and click on "
+"\"Upgrade\"."
+msgstr ""
+"Можете да надградите по-късно като отворите Диспечера за Надграждане и "
+"щракнете върху \"Надгради\"."
+
+#: ../data/update-manager.desktop.in.h:2
+msgid "Software Updates"
+msgstr "Обновления на програмите"
+
+#: ../data/update-manager.desktop.in.h:3
+msgid "Show and install available updates"
+msgstr "Показване и инсталация на наличните актуализации"
+
+#: ../update-manager:66 ../update-manager-text:55 ../do-release-upgrade:51
+msgid "Show version and exit"
+msgstr "Показване на версията и изход"
+
+#: ../update-manager:69
+msgid "Directory that contains the data files"
+msgstr "Папка, която съдържа файловете с данни"
+
+#: ../update-manager:72
+msgid "Check if a new Ubuntu release is available"
+msgstr "Проверка дали има по-ново издание на Убунту"
+
+#: ../update-manager:75 ../do-release-upgrade:54 ../check-new-release-gtk:186
+msgid "Check if upgrading to the latest devel release is possible"
+msgstr ""
+"Проверка дали е възможно надграждане до последното издание в разработка"
+
+#: ../update-manager:79
+msgid "Upgrade using the latest proposed version of the release upgrader"
+msgstr "Надграждане с предложената най-нова весрия"
+
+#: ../update-manager:86
+msgid "Do not focus on map when starting"
+msgstr "Да не се фокусира на карта при стартиране"
+
+#: ../update-manager:89
+msgid "Try to run a dist-upgrade"
+msgstr "Опит за пускане на dist-upgrade"
+
+#: ../update-manager:92
+msgid "Do not check for updates when starting"
+msgstr "Да не се проверява за обновления при пускане"
+
+#: ../update-manager:96 ../do-release-upgrade:70
+msgid "Test upgrade with a sandbox aufs overlay"
+msgstr "Тестване на надграждане в ограничителен режим aufs припокриване"
+
+#: ../update-manager:116
+msgid "Running partial upgrade"
+msgstr "Протичане на частично надграждане"
+
+#: ../update-manager-text:59
+msgid "Show description of the package instead of the changelog"
+msgstr ""
+
+#: ../do-release-upgrade:58 ../check-new-release-gtk:190
+msgid ""
+"Try upgrading to the latest release using the upgrader from $distro-proposed"
+msgstr ""
+"Опит за надграждане до най-новата версия с помощта на програма за "
+"надграждане от $distro-proposed"
+
+#: ../do-release-upgrade:62
+msgid ""
+"Run in a special upgrade mode.\n"
+"Currently 'desktop' for regular upgrades of a desktop system and 'server' "
+"for server systems are supported."
+msgstr ""
+"Изпълнение в специален режим за надграждане.\n"
+"Текущо се поддържат 'работен плот' за редовно актуализиране на настолни "
+"системи и 'сървър' за сървърни системи."
+
+#: ../do-release-upgrade:68
+msgid "Run the specified frontend"
+msgstr "Стартиране на определения фронтенд"
+
+#: ../do-release-upgrade:73
+msgid ""
+"Check only if a new distribution release is available and report the result "
+"via the exit code"
+msgstr ""
+"Проверка само ако нова дистрибуция е налична и доклаване на резултата чрез "
+"exit код"
+
+#: ../do-release-upgrade:87
+msgid "Checking for a new Ubuntu release"
+msgstr ""
+
+#: ../do-release-upgrade:101
+msgid ""
+"For upgrade information, please visit:\n"
+"%(url)s\n"
+msgstr ""
+"За повече информация, моля посетете:\n"
+"%(url)s\n"
+
+#: ../do-release-upgrade:107
+msgid "No new release found"
+msgstr "Не е намерена нова дистрибуция"
+
+#: ../do-release-upgrade:119
+#, c-format
+msgid "New release '%s' available."
+msgstr "Достъпно е ново издание на '%s'."
+
+#: ../do-release-upgrade:120
+msgid "Run 'do-release-upgrade' to upgrade to it."
+msgstr "Изпълнете 'do-release-upgrade', за да го надградите."
+
+#: ../check-new-release-gtk:101
+msgid "Ubuntu %(version)s Upgrade Available"
+msgstr "Убунту %(version)s налична за надграждане"
+
+#: ../check-new-release-gtk:143
+#, c-format
+msgid "You have declined the upgrade to Ubuntu %s"
+msgstr "Вие сте отказали надграждането до Убунту %s"
+
+#: ../check-new-release-gtk:196
+msgid "Add debug output"
+msgstr ""
+
+#: ../ubuntu-support-status:91
+msgid "Show unsupported packages on this machine"
+msgstr ""
+
+#: ../ubuntu-support-status:94
+msgid "Show supported packages on this machine"
+msgstr ""
+
+#: ../ubuntu-support-status:97
+msgid "Show all packages with their status"
+msgstr ""
+
+#: ../ubuntu-support-status:100
+msgid "Show all packages in a list"
+msgstr ""
+
+#: ../ubuntu-support-status:142
+#, c-format
+msgid "Support status summary of '%s':"
+msgstr ""
+
+#: ../ubuntu-support-status:145
+msgid "You have %(num)s packages (%(percent).1f%%) supported until %(time)s"
+msgstr ""
+
+#: ../ubuntu-support-status:151
+msgid ""
+"You have %(num)s packages (%(percent).1f%%) that can not/no-longer be "
+"downloaded"
+msgstr ""
+
+#: ../ubuntu-support-status:154
+msgid "You have %(num)s packages (%(percent).1f%%) that are unsupported"
+msgstr ""
+
+#: ../ubuntu-support-status:162
+msgid ""
+"Run with --show-unsupported, --show-supported or --show-all to see more "
+"details"
+msgstr ""
+
+#: ../ubuntu-support-status:166
+msgid "No longer downloadable:"
+msgstr ""
+
+#: ../ubuntu-support-status:169
+msgid "Unsupported: "
+msgstr ""
+
+#: ../ubuntu-support-status:174
+#, c-format
+msgid "Supported until %s:"
+msgstr ""
+
+#: ../ubuntu-support-status:183
+msgid "Unsupported"
+msgstr ""
+
+#. Why do we use %s here instead of $strings or {} format placeholders?
+#. It's because we don't want to break existing translations.
+#: ../janitor/plugincore/exceptions.py:42
+#, python-format
+msgid "Unimplemented method: %s"
+msgstr "Неимплементиран метод: %s"
+
+#: ../janitor/plugincore/core/file_cruft.py:41
+msgid "A file on disk"
+msgstr "Файл на диск"
+
+#: ../janitor/plugincore/core/missing_package_cruft.py:39
+msgid "Install missing package."
+msgstr "Инсталиране на липсващ пакет."
+
+#. 2012-06-08 BAW: i18n string; don't use {} or PEP 292.
+#: ../janitor/plugincore/core/missing_package_cruft.py:49
+#, python-format
+msgid "Package %s should be installed."
+msgstr "Пакетът %s не трябва да се инсталира."
+
+#: ../janitor/plugincore/core/package_cruft.py:49
+msgid ".deb package"
+msgstr ".deb пакет"
+
+#: ../janitor/plugincore/plugins/langpack_manual_plugin.py:46
+#, python-format
+msgid "%s needs to be marked as manually installed."
+msgstr "%s трябва да се маркира като ръчно инсталиран."
+
+#: ../janitor/plugincore/plugins/kdelibs4to5_plugin.py:49
+msgid ""
+"When upgrading, if kdelibs4-dev is installed, kdelibs5-dev needs to be "
+"installed. See bugs.launchpad.net, bug #279621 for details."
+msgstr ""
+"Когато се надгражда, ако kdelibs4-dev е инсталиран, ще трябва да се "
+"инсталира и kdelibs5-dev. Вижте bugs.launchpad.net, bug #279621 за повече "
+"информация."
+
+#: ../janitor/plugincore/plugins/dpkg_status_plugin.py:44
+#, python-format
+msgid "%i obsolete entries in the status file"
+msgstr "%i остарели записа във файла за състояние"
+
+#: ../janitor/plugincore/plugins/dpkg_status_plugin.py:47
+msgid "Obsolete entries in dpkg status"
+msgstr "Остарели записи в състоянието на dpkg"
+
+#. pragma: no cover
+#: ../janitor/plugincore/plugins/dpkg_status_plugin.py:50
+msgid "Obsolete dpkg status entries"
+msgstr "Остарели записи в състоянието на dpkg"
+
+#: ../janitor/plugincore/plugins/remove_lilo_plugin.py:42
+msgid "Remove lilo since grub is also installed.(See bug #314004 for details.)"
+msgstr ""
+"Премахване на lilo докато и grub е инсталиран.(Вижте грешка #314004 за "
+"подробности.)"
+
+#~ msgid "%(count)s update has been selected."
+#~ msgid_plural "%(count)s updates have been selected."
+#~ msgstr[0] "%(count)s актуализация е избрано."
+#~ msgstr[1] "%(count)s актуализации са избрани."
+
+#~ msgid "%(count_str)s %(download_str)s"
+#~ msgstr "%(count_str)s %(download_str)s"
+
+#~ msgid "Welcome to Ubuntu"
+#~ msgstr "Добре дошли в Убунту"
+
+#~ msgid "Update Manager"
+#~ msgstr "Диспечер на актуализациите"
+
+#~ msgid "Starting Update Manager"
+#~ msgstr "Стартиране на диспечера за актуализациите"
+
+#~ msgid "You are connected via a wireless modem."
+#~ msgstr "Вие сте свързани чрез безжичен модем"
+
+#~ msgid "_Install Updates"
+#~ msgstr "_Инсталиране на актуализациите"
+
+#~ msgid "Checking for a new ubuntu release"
+#~ msgstr "Проверка за нова версия на Убунту"
+
+#~ msgid "Your system is up-to-date"
+#~ msgstr "Системата Ви е актуална"
+
+#~ msgid ""
+#~ "Fetching and installing the upgrade can take several hours. Once the "
+#~ "download has finished, the process cannot be cancelled."
+#~ msgstr ""
+#~ "Изтеглянето и инсталирането на надграждане може да отнеме няколко часа. "
+#~ "Щом инсталирането завърши, процесът не може да бъде отказан."
+
+#~ msgid ""
+#~ "If you don't want to install them now, choose \"Update Manager\" from the "
+#~ "Administration menu later."
+#~ msgstr ""
+#~ "Ако не искате да ги инсталирате сега, по-късно изберете 'Диспечер на "
+#~ "актуализациите' от меню Администриране."
+
+#~ msgid "Software updates are available for this computer"
+#~ msgstr "Достъпни са актуализации за този компютър"
+
+#~ msgid ""
+#~ "This upgrade is running in sandbox (test) mode. All changes are written "
+#~ "to '%s' and will be lost on the next reboot.\n"
+#~ "\n"
+#~ "*No* changes written to a systemdir from now until the next reboot are "
+#~ "permanent."
+#~ msgstr ""
+#~ "Това надграждане се изпълнява в ограничителен (пробен) режим. Всички "
+#~ "промени се записват в '%s' и всички промени ще бъдат изгубени при "
+#~ "следващото рестартиране.\n"
+#~ "\n"
+#~ "*Не* промените, записани в systemdir от сега до следващото рестартиране."
+
+#~ msgid "There are no updates to install"
+#~ msgstr "Няма актуализации за инсталиране."
+
+#~ msgid ""
+#~ "You will not get any further security fixes or critical updates. Please "
+#~ "upgrade to a later version of Ubuntu Linux."
+#~ msgstr ""
+#~ "Повече няма да получавате никакви поправки по сигурността или критични "
+#~ "обновления. Моля надградете до по-нова версия на Убунту Линукс."
+
+#~ msgid ""
+#~ "If you don't want to install them now, choose \"Update Manager\" from "
+#~ "Applications later."
+#~ msgstr ""
+#~ "Ако не желаете да ги инсталирате сега, по-късно изберете \"Диспечер на "
+#~ "обновленията\"."
+
+#~ msgid ""
+#~ "The system was unable to get the prerequisites for the upgrade. The "
+#~ "upgrade will abort now and restore the original system state.\n"
+#~ "\n"
+#~ "Please report this as a bug using the command 'ubuntu-bug update-manager' "
+#~ "in a terminal and include the files in /var/log/dist-upgrade/ in the bug "
+#~ "report."
+#~ msgstr ""
+#~ "Системата не можа да получи предпоставките за ъпгрейда. Ъпгрейдът ще "
+#~ "прекъсне сега и ще възстанови оригиналното системно състояние."
+
+#~ msgid ""
+#~ "After your package information was updated the essential package '%s' can "
+#~ "not be found anymore.\n"
+#~ "This indicates a serious error, please report this bug using the command "
+#~ "'ubuntu-bug update-manager' in a terminal and include the files in /var/"
+#~ "log/dist-upgrade/ in the bug report."
+#~ msgstr ""
+#~ "След като вашата пакетна информация беше актуализирана пакетът '%s' не "
+#~ "може да бъде намерен вече.\n"
+#~ "Това показва сериозна грешка, моля докладвайте тази грешка използвайки "
+#~ "командата 'ubuntu-bug update-manager' в терминал и включете файловете, "
+#~ "които се намират в /var/log/dist-upgrade/ в доклада Ви за грешка."
+
+#~ msgid "0 kB"
+#~ msgstr "0 кБ"
+
+#~ msgid ""
+#~ "\n"
+#~ "\n"
+#~ "Please report this bug using the command 'ubuntu-bug update-manager' in a "
+#~ "terminal and include the files in /var/log/dist-upgrade/ in the bug "
+#~ "report.\n"
+#~ "%s"
+#~ msgstr ""
+#~ "\n"
+#~ "\n"
+#~ "Моля докладвайте тази грешка използвайки командата 'ubuntu-bug update-"
+#~ "manager' във терминал и включете файловете, който се намират в /var/log/"
+#~ "dist-upgrade/ в доклада Ви за грешка.\n"
+#~ "%s"
+
+#~ msgid ""
+#~ "Preparing the system for the upgrade failed. Please report this using the "
+#~ "command 'ubuntu-bug update-manager' in a terminal and include the files "
+#~ "in /var/log/dist-upgrade/ in the bug report."
+#~ msgstr ""
+#~ "Подготвянето на системата за ъпгрейда се провали. Моля докладвайте тази "
+#~ "грешка използвайки командата 'ubuntu-bug update-manager' в терминал и "
+#~ "включете файловете, които се намират в /var/log/dist-upgrade/ в доклада "
+#~ "Ви за грешка."
+
+#~ msgid ""
+#~ "Upgrading the repository information resulted in a invalid file. Please "
+#~ "report this as a bug using the command 'ubuntu-bug update-manager' in a "
+#~ "terminal."
+#~ msgstr ""
+#~ "Ъпгрейдвайки информацията в хранилището доведе до невалиден файл. Моля "
+#~ "докладвайте тази грешка използвайки командата  'ubuntu-bug update-"
+#~ "manager' в терминал."
+
+#~ msgid "1 kB"
+#~ msgstr "1 кБ"
+
+#~ msgid ""
+#~ "These software updates have been issued since this version of Ubuntu was "
+#~ "released. If you don't want to install them now, choose \"Update Manager"
+#~ "\" from Applications later."
+#~ msgstr ""
+#~ "Тези софтуерни актуализации са издадени, откакто е пусната тази версия на "
+#~ "Убунту. Ако не искате да ги инсталирате сега, изберете \"Мениджър на "
+#~ "актуализациите\" от Апликации по-късно,"
+
+#~ msgid "Your graphics hardware may not be fully supported in Ubuntu 11.04."
+#~ msgstr ""
+#~ "Вашият графичен хардуер може да не бъде напълно поддържан в Убунту 11.04."
+
+#~ msgid ""
+#~ "The support in Ubuntu 11.04 for your intel graphics hardware is limited "
+#~ "and you may encounter problems after the upgrade. Do you want to continue "
+#~ "with the upgrade?"
+#~ msgstr ""
+#~ "Поддръжката в Убунту 11.04 за вашият Интел графичен хардуер е ограничена "
+#~ "и може да се сблъскате с проблеми след актуализацията. Искате ли да "
+#~ "продължите с актуализацията?"
+
+#~ msgid ""
+#~ "These software updates have been issued since this version of Ubuntu was "
+#~ "released. If you don't want to install them now, choose \"Update Manager"
+#~ "\" from the Administration Menu later."
+#~ msgstr ""
+#~ "Тези софтуерни актуализации са издадени, откакто е пусната тази версия на "
+#~ "Ubuntu. Ако не искате да ги инсталирате сега, изберете \"Мениджър на "
+#~ "актуализациите\" от Администраторското меню по-късно."
+
+#~ msgid "%.0f kB"
+#~ msgstr "%.0f kB"

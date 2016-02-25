@@ -1,0 +1,6 @@
+
+# main repo
+deb http://old-releases.ubuntu.com/ubuntu warty main restricted multiverse universe
+deb-src http://old-releases.ubuntu.com/ubuntu warty main restricted multiverse
+
+deb http://old-releases.ubuntu.com/ubuntu warty-security main restricted

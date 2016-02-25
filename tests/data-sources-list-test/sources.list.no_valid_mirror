@@ -1,0 +1,6 @@
+
+# valid mirror, but not in the test-mirror files 
+deb http://www.ftp.uni-erlangen.de/pub/mirrors/ubuntu/ feisty main
+
+deb http://security.ubuntu.com/ubuntu/ feisty-security main
+

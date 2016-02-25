@@ -1,0 +1,11 @@
+# main repo
+deb http://archive.ubuntu.com/ubuntu/ feisty main restricted multiverse universe
+deb-src http://archive.ubuntu.com/ubuntu/ feisty main restricted multiverse
+
+deb http://security.ubuntu.com/ubuntu/ feisty-security main restricted
+
+# random one
+deb http://user:pass@private-ppa.launchpad.net/random-ppa feisty main
+
+# commercial PPA
+deb https://user:pass@private-ppa.launchpad.net/commercial-ppa-uploaders feisty main

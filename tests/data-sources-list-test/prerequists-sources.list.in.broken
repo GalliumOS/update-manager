@@ -1,0 +1,7 @@
+# sources.list fragment for pre-requists (mirror from sources.list + fallback)
+# this is safe to remove after the upgrade
+
+deb http://old-releases.ubuntu.com.xxx/ubuntu/ feisty-backports main/debian-installer
+
+# below is just for testing
+#deb http://archive.dogfood.launchpad.net/ubuntu feisty-backports main/debian-installer

@@ -1,0 +1,10 @@
+Package: base-pkg
+Priority: optional
+Section: admin
+Installed-Size: 1
+Maintainer: Foo <foo@bar.com>
+Architecture: all
+Version: 2
+Size: 1
+Description: a base package
+Origin: Ubuntu

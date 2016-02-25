@@ -1,0 +1,9 @@
+Origin: Ubuntu
+Label: Ubuntu
+Suite: lucid-security
+Version: 10.04
+Codename: lucid
+Date: Thu, 29 Apr 2010 17:24:55 UTC
+Architectures: amd64 armel i386 ia64 powerpc sparc
+Components: main restricted universe multiverse
+Description: Ubuntu Lucid 10.04

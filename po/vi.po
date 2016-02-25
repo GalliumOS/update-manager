@@ -1,0 +1,2684 @@
+# Vietnamese translation for Update Manager.
+# Copyright © 2005 Gnome i18n Project for Vietnamese.
+# Clytie Siddall <clytie@riverland.net.au>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: update-manager Gnome HEAD\n"
+"Report-Msgid-Bugs-To: sebastian.heinlein@web.de\n"
+"POT-Creation-Date: 2012-06-14 00:53+0100\n"
+"PO-Revision-Date: 2012-04-16 11:54+0000\n"
+"Last-Translator: Hai Lang <hailangvn@gmail.com>\n"
+"Language-Team: Vietnamese <gnomevi-list@lists.sourceforge.net>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Launchpad-Export-Date: 2012-04-17 13:40+0000\n"
+"X-Generator: Launchpad (build 15099)\n"
+
+#. TRANSLATORS: download size of small updates, e.g. "250 kB"
+#: ../DistUpgrade/utils.py:433 ../UpdateManager/Core/utils.py:433
+#, python-format
+msgid "%(size).0f kB"
+msgid_plural "%(size).0f kB"
+msgstr[0] "%(size).0f kB"
+
+#. TRANSLATORS: download size of updates, e.g. "2.3 MB"
+#: ../DistUpgrade/utils.py:436 ../UpdateManager/Core/utils.py:436
+#, python-format
+msgid "%.1f MB"
+msgstr "%.1f MB"
+
+#. TRANSLATORS: %s is a country
+#: ../DistUpgrade/distro.py:206 ../DistUpgrade/distro.py:436
+#, python-format
+msgid "Server for %s"
+msgstr "Máy chủ dành cho %s"
+
+#. More than one server is used. Since we don't handle this case
+#. in the user interface we set "custom servers" to true and
+#. append a list of all used servers
+#: ../DistUpgrade/distro.py:224 ../DistUpgrade/distro.py:230
+#: ../DistUpgrade/distro.py:246
+msgid "Main server"
+msgstr "Máy chủ chính"
+
+#: ../DistUpgrade/distro.py:250
+msgid "Custom servers"
+msgstr "Tự chọn máy chủ"
+
+#: ../DistUpgrade/DistUpgradeAptCdrom.py:142
+msgid "Could not calculate sources.list entry"
+msgstr "Không thể thống kê các mục trong sources.list"
+
+#: ../DistUpgrade/DistUpgradeAptCdrom.py:251
+msgid ""
+"Unable to locate any package files, perhaps this is not a Ubuntu Disc or the "
+"wrong architecture?"
+msgstr ""
+"Không tìm thấy các gói phần mềm, có thể do không đúng đĩa cài Ubuntu hoặc "
+"sai hệ thống?"
+
+#: ../DistUpgrade/DistUpgradeAptCdrom.py:294
+msgid "Failed to add the CD"
+msgstr "Lỗi đọc dữ liệu từ CD"
+
+#: ../DistUpgrade/DistUpgradeAptCdrom.py:295
+#, python-format
+msgid ""
+"There was a error adding the CD, the upgrade will abort. Please report this "
+"as a bug if this is a valid Ubuntu CD.\n"
+"\n"
+"The error message was:\n"
+"'%s'"
+msgstr ""
+"Có lỗi khi đọc dữ liệu từ CD, quá trình nâng cấp sẽ được hủy bỏ. Vui lòng "
+"thông báo lại lỗi này nếu đây là đĩa CD Ubuntu hợp lệ.\n"
+"Thông báo lỗi là:\n"
+"'%s'"
+
+#: ../DistUpgrade/DistUpgradeCache.py:151
+msgid "Remove package in bad state"
+msgid_plural "Remove packages in bad state"
+msgstr[0] "Gỡ bỏ các gói ở tình trạng xấu"
+
+#: ../DistUpgrade/DistUpgradeCache.py:154
+#, python-format
+msgid ""
+"The package '%s' is in an inconsistent state and needs to be reinstalled, "
+"but no archive can be found for it. Do you want to remove this package now "
+"to continue?"
+msgid_plural ""
+"The packages '%s' are in an inconsistent state and need to be reinstalled, "
+"but no archives can be found for them. Do you want to remove these packages "
+"now to continue?"
+msgstr[0] ""
+"Gói '%s' ở trong trạng thái xung đột và cần cài đặt lại, nhưng không tìm "
+"thấy lưu trữ nào của gói này. Bạn có muốn gỡ bỏ gói này bây giờ để tiếp tục?"
+
+#. FIXME: not ideal error message, but we just reuse a
+#. existing one here to avoid a new string
+#: ../DistUpgrade/DistUpgradeCache.py:255
+msgid "The server may be overloaded"
+msgstr "Máy chủ có thể bị quá tải"
+
+#: ../DistUpgrade/DistUpgradeCache.py:368
+msgid "Broken packages"
+msgstr "Gói bị lỗi"
+
+#: ../DistUpgrade/DistUpgradeCache.py:369
+msgid ""
+"Your system contains broken packages that couldn't be fixed with this "
+"software. Please fix them first using synaptic or apt-get before proceeding."
+msgstr ""
+"Hệ thống của bạn chứa các gói tin bị lỗi và không thể sửa được bằng phần mềm "
+"này. Hãy sửa chúng bằng phần mềm synaptic hoặc apt-get trước khi tiếp tục."
+
+#. FIXME: change the text to something more useful
+#: ../DistUpgrade/DistUpgradeCache.py:693
+#, python-format
+msgid ""
+"An unresolvable problem occurred while calculating the upgrade:\n"
+"%s\n"
+"\n"
+" This can be caused by:\n"
+" * Upgrading to a pre-release version of Ubuntu\n"
+" * Running the current pre-release version of Ubuntu\n"
+" * Unofficial software packages not provided by Ubuntu\n"
+"\n"
+msgstr ""
+"Có lỗi xảy ra khi nâng cấp:\n"
+"%s\n"
+"\n"
+" Nguyên nhân có thể do:\n"
+" * Nâng cấp phiên bản đang trong giai đoạn phát triển\n"
+" * Đang sử dụng phiên bản đang trong giai đoạn phát triển\n"
+" * Phần mềm không được cung cấp chính thức bởi Ubuntu\n"
+"\n"
+
+#: ../DistUpgrade/DistUpgradeCache.py:703
+msgid "This is most likely a transient problem, please try again later."
+msgstr "Nhiều khả năng đây chỉ là vấn đề tạm thời, vui lòng thử lại sau."
+
+#: ../DistUpgrade/DistUpgradeCache.py:706
+msgid ""
+"If none of this applies, then please report this bug using the command "
+"'ubuntu-bug update-manager' in a terminal."
+msgstr ""
+"Nếu không giải quyết được, vui lòng báo lỗi này bằng lệnh 'ubuntu-bug update-"
+"manager' trong cửa sổ dòng lệnh."
+
+#: ../DistUpgrade/DistUpgradeCache.py:711
+#: ../UpdateManager/UpdateManager.py:1031
+msgid "Could not calculate the upgrade"
+msgstr "Không thể tính được dung lượng cần nâng cấp"
+
+#: ../DistUpgrade/DistUpgradeCache.py:762
+msgid "Error authenticating some packages"
+msgstr "Gặp lỗi khi đang xác thực một số gói"
+
+#: ../DistUpgrade/DistUpgradeCache.py:763
+msgid ""
+"It was not possible to authenticate some packages. This may be a transient "
+"network problem. You may want to try again later. See below for a list of "
+"unauthenticated packages."
+msgstr ""
+"Không thể xác thực một số gói, có thể do lỗi tạm thời của hệ thống mạng. Bạn "
+"vui lòng thử lại sau. Bên dưới là danh sách các gói chưa được xác thực đầy "
+"đủ."
+
+#: ../DistUpgrade/DistUpgradeCache.py:783
+#, python-format
+msgid ""
+"The package '%s' is marked for removal but it is in the removal blacklist."
+msgstr ""
+"Gói phần mềm '%s' được đánh dấu đề gỡ bỏ nhưng nó nằm trong danh sách các "
+"phần mềm không thể gỡ bỏ."
+
+#: ../DistUpgrade/DistUpgradeCache.py:787
+#, python-format
+msgid "The essential package '%s' is marked for removal."
+msgstr "Gói phần mềm quan trọng '%s' sẽ bị gỡ bỏ."
+
+#: ../DistUpgrade/DistUpgradeCache.py:796
+#, python-format
+msgid "Trying to install blacklisted version '%s'"
+msgstr "Đang cố gắng để cài đặt phiên bản danh sách đen '%s'"
+
+#: ../DistUpgrade/DistUpgradeCache.py:914
+#, python-format
+msgid "Can't install '%s'"
+msgstr "Không thể cài đặt '%s'"
+
+#: ../DistUpgrade/DistUpgradeCache.py:915
+msgid ""
+"It was impossible to install a required package. Please report this as a bug "
+"using 'ubuntu-bug update-manager' in a terminal."
+msgstr ""
+"Không thể cài đặt một gói cần thiết. Hãy báo cáo điều này là một lỗi sử dụng "
+"'ubuntu-bug update-manager' trong một cửa sổ dòng lệnh."
+
+#. FIXME: provide a list
+#: ../DistUpgrade/DistUpgradeCache.py:926
+msgid "Can't guess meta-package"
+msgstr "Không thể đoán được gói gốc"
+
+#: ../DistUpgrade/DistUpgradeCache.py:927
+msgid ""
+"Your system does not contain a ubuntu-desktop, kubuntu-desktop, xubuntu-"
+"desktop or edubuntu-desktop package and it was not possible to detect which "
+"version of Ubuntu you are running.\n"
+" Please install one of the packages above first using synaptic or apt-get "
+"before proceeding."
+msgstr ""
+"Không thể xác định được phiên bản Ubuntu bạn đang sử dụng, do hệ thống không "
+"tìm thấy các gói tin cài đặt giao diện người dùng như ubuntu-desktop, "
+"kubuntu-desktop, xubuntu-desktop hoặc là edubuntu-desktop.\n"
+" Xin vui lòng cài đặt một trong các gói trên trước, thông qua ứng dụng "
+"synaptic hoặc apt-get."
+
+#: ../DistUpgrade/DistUpgradeController.py:114
+msgid "Reading cache"
+msgstr "Đang đọc bộ nhớ đệm"
+
+#: ../DistUpgrade/DistUpgradeController.py:223
+msgid "Unable to get exclusive lock"
+msgstr "Không thể tạo khóa độc quyền"
+
+#: ../DistUpgrade/DistUpgradeController.py:224
+msgid ""
+"This usually means that another package management application (like apt-get "
+"or aptitude) already running. Please close that application first."
+msgstr ""
+"Điều này thường có nghĩa là một chương trình quản lý gói khác đang chạy (vd "
+"như apt-get hay aptitude). Xin hãy đóng chương trình đó trước."
+
+#: ../DistUpgrade/DistUpgradeController.py:257
+msgid "Upgrading over remote connection not supported"
+msgstr "Nâng cấp qua kết nối từ xa (remote connection) chưa được hỗ trợ"
+
+#: ../DistUpgrade/DistUpgradeController.py:258
+msgid ""
+"You are running the upgrade over a remote ssh connection with a frontend "
+"that does not support this. Please try a text mode upgrade with 'do-release-"
+"upgrade'.\n"
+"\n"
+"The upgrade will abort now. Please try without ssh."
+msgstr ""
+"Bạn đang chạy việc nâng cấp qua kết nối ssh từ xa với một giao diện điều "
+"khiển không hỗ trợ chuyện này. Hãy thử chế độ văn bản và cập nhật với 'do-"
+"release-upgrade'.\n"
+"Nâng cấp sẽ bị huỷ bỏ ngay bây giờ. Hãy thử lại mà không dùng ssh."
+
+#: ../DistUpgrade/DistUpgradeController.py:272
+msgid "Continue running under SSH?"
+msgstr "Tiếp tục chạy với SSH?"
+
+#: ../DistUpgrade/DistUpgradeController.py:273
+#, python-format
+msgid ""
+"This session appears to be running under ssh. It is not recommended to "
+"perform a upgrade over ssh currently because in case of failure it is harder "
+"to recover.\n"
+"\n"
+"If you continue, an additional ssh daemon will be started at port '%s'.\n"
+"Do you want to continue?"
+msgstr ""
+"Phiên làm việc này có vẻ như đang được thực hiện thông qua ssh. Việc cập "
+"nhật thông qua ssh hiện tại không được khuyến khích vì khó phục hồi trong "
+"trường hợp gặp lỗi.\n"
+"\n"
+"Nếu bạn muốn tiếp tục, một trình nền ssh bổ sung sẽ được khởi động ở cổng "
+"'%s'.\n"
+"Bạn có muốn tiếp tục không?"
+
+#: ../DistUpgrade/DistUpgradeController.py:287
+msgid "Starting additional sshd"
+msgstr "Đang khởi động tiến trình sshd dự phòng"
+
+#: ../DistUpgrade/DistUpgradeController.py:288
+#, python-format
+msgid ""
+"To make recovery in case of failure easier, an additional sshd will be "
+"started on port '%s'. If anything goes wrong with the running ssh you can "
+"still connect to the additional one.\n"
+msgstr ""
+"Để  dễ dàng phục hồi trong trường hợp có sự cố, dịch vụ sshd dự phòng sẽ "
+"được chạy ở cổng '%s'. Nếu gặp sự cố với phiên làm việc ssh hiện tại, bạn có "
+"thể kết nối lại thông qua dịch vụ dự phòng nêu trên.\n"
+
+#: ../DistUpgrade/DistUpgradeController.py:296
+#, python-format
+msgid ""
+"If you run a firewall, you may need to temporarily open this port. As this "
+"is potentially dangerous it's not done automatically. You can open the port "
+"with e.g.:\n"
+"'%s'"
+msgstr ""
+"Nếu bạn dùng tường lửa, có thể bạn cần tạm thời mở cổng này. Việc này không "
+"được tiến hành tự động vì có thể gây nguy hiểm. Bạn có thể mở cổng với:\n"
+"%s"
+
+#: ../DistUpgrade/DistUpgradeController.py:368
+#: ../DistUpgrade/DistUpgradeController.py:413
+msgid "Can not upgrade"
+msgstr "Không thể nâng cấp"
+
+#: ../DistUpgrade/DistUpgradeController.py:369
+#, python-format
+msgid "An upgrade from '%s' to '%s' is not supported with this tool."
+msgstr "Quá trình nâng cấp từ '%s' lên '%s' không được hỗ trợ với công cụ này."
+
+#: ../DistUpgrade/DistUpgradeController.py:378
+msgid "Sandbox setup failed"
+msgstr "Có lỗi khi khởi tạo trong chế độ kiểm tra lỗi"
+
+#: ../DistUpgrade/DistUpgradeController.py:379
+msgid "It was not possible to create the sandbox environment."
+msgstr "Không tạo được chế độ kiểm tra lỗi"
+
+#: ../DistUpgrade/DistUpgradeController.py:385
+msgid "Sandbox mode"
+msgstr "Chế độ kiểm tra lỗi"
+
+#: ../DistUpgrade/DistUpgradeController.py:386
+#, python-format
+msgid ""
+"This upgrade is running in sandbox (test) mode. All changes are written to "
+"'%s' and will be lost on the next reboot.\n"
+"\n"
+"*No* changes written to a system directory from now until the next reboot "
+"are permanent."
+msgstr ""
+"Bản nâng cấp này đang chạy trong chế độ hộp cát (thử nghiệm). Tất cả các "
+"thay đổi sẽ được ghi vào '%s' và sẽ bị mất khi khởi động lại.\n"
+"\n"
+"Từ giờ đến lần khởi động lại tiếp theo, *không* thay đổi nào được ghi vào "
+"thư mục hệ thống một cách vĩnh viễn."
+
+#: ../DistUpgrade/DistUpgradeController.py:414
+msgid ""
+"Your python install is corrupted. Please fix the '/usr/bin/python' symlink."
+msgstr ""
+"Bản cài đặt python của bạn bị lỗi. Vui lòng sửa lại liên kết '/usr/bin/"
+"python'."
+
+#: ../DistUpgrade/DistUpgradeController.py:440
+msgid "Package 'debsig-verify' is installed"
+msgstr "Gói 'debsig-verify' đã được cài đặt"
+
+#: ../DistUpgrade/DistUpgradeController.py:441
+msgid ""
+"The upgrade can not continue with that package installed.\n"
+"Please remove it with synaptic or 'apt-get remove debsig-verify' first and "
+"run the upgrade again."
+msgstr ""
+"Việc nâng cấp không thể thực hiện nếu gói debsig-verify đã được cài.\n"
+"Vui lòng gỡ bỏ nó bằng phần mềm synaptic hoặc bằng lệnh 'apt-get remove "
+"debsig-verify' rồi thực hiện lại việc nâng cấp."
+
+#: ../DistUpgrade/DistUpgradeController.py:453
+#, python-format
+msgid "Can not write to '%s'"
+msgstr "Không thể ghi vào '%s'"
+
+#: ../DistUpgrade/DistUpgradeController.py:454
+#, python-format
+msgid ""
+"Its not possible to write to the system directory '%s' on your system. The "
+"upgrade can not continue.\n"
+"Please make sure that the system directory is writable."
+msgstr ""
+"Không thể ghi vào thư mục hệ thống '%s' trong hệ thống của bạn. Không thể "
+"tiếp tục việc nâng cấp.\n"
+"Vui lòng kiểm tra lại rằng thư mục hệ thống của bạn cho ghi vào."
+
+#: ../DistUpgrade/DistUpgradeController.py:465
+msgid "Include latest updates from the Internet?"
+msgstr "Bao gồm các cập nhật mới nhất từ Internet?"
+
+#: ../DistUpgrade/DistUpgradeController.py:466
+msgid ""
+"The upgrade system can use the internet to automatically download the latest "
+"updates and install them during the upgrade.  If you have a network "
+"connection this is highly recommended.\n"
+"\n"
+"The upgrade will take longer, but when it is complete, your system will be "
+"fully up to date.  You can choose not to do this, but you should install the "
+"latest updates soon after upgrading.\n"
+"If you answer 'no' here, the network is not used at all."
+msgstr ""
+"Quá trình nâng cấp sẽ tải và cài đặt các phần mềm mới nhất qua kết nối "
+"internet. Đây là cách nâng cấp tốt nhất.\n"
+"\n"
+"Thời gian nâng cấp có thể lâu hơn, nhưng hệ thống của bạn sẽ được cập nhật "
+"hoàn toàn. Bây giờ bạn có thể bỏ qua, nhưng sau khi nâng cấp thành công, bạn "
+"nên tiến hành cài đặt các bản cập nhật mới nhất.\n"
+"Nếu bạn chọn \"Không\", sẽ không có gì được tải từ trên mạng."
+
+#: ../DistUpgrade/DistUpgradeController.py:686
+#, python-format
+msgid "disabled on upgrade to %s"
+msgstr "bị hủy khi nâng cấp %s"
+
+#: ../DistUpgrade/DistUpgradeController.py:713
+msgid "No valid mirror found"
+msgstr "Không tìm thấy nguồn cập nhật hợp lệ"
+
+#: ../DistUpgrade/DistUpgradeController.py:714
+#, python-format
+msgid ""
+"While scanning your repository information no mirror entry for the upgrade "
+"was found. This can happen if you run a internal mirror or if the mirror "
+"information is out of date.\n"
+"\n"
+"Do you want to rewrite your 'sources.list' file anyway? If you choose 'Yes' "
+"here it will update all '%s' to '%s' entries.\n"
+"If you select 'No' the upgrade will cancel."
+msgstr ""
+"Trong khi quét thông tin kho của bạn, chương trình không tìm thấy tên máy "
+"nhân bản cho việc cập nhật. Có thể bạn đang chạy một máy nhân bản nội bộ hay "
+"thông tin máy nhân bản đã cũ.\n"
+"\n"
+"Bạn có muốn ghi đè tập tin '/etc/apt/sources.list' của bạn không? Nếu bạn "
+"chọn 'Có' ở đây tất cả các mục '%s' sẽ thành '%s'.\n"
+"Nếu bạn chọn 'Không' thì việc cập nhật sẽ bị hủy bỏ."
+
+#. hm, still nothing useful ...
+#: ../DistUpgrade/DistUpgradeController.py:734
+msgid "Generate default sources?"
+msgstr "Tạo ra các nguồn cập nhật mặc định?"
+
+#: ../DistUpgrade/DistUpgradeController.py:735
+#, python-format
+msgid ""
+"After scanning your 'sources.list' no valid entry for '%s' was found.\n"
+"\n"
+"Should default entries for '%s' be added? If you select 'No', the upgrade "
+"will cancel."
+msgstr ""
+"Sau khi quét '/etc/apt/sources.list' của bạn, chương trình không tìm thấy "
+"mục hợp lệ cho '%s'.\n"
+"\n"
+"Bạn có muốn thêm mục mặc định '%s' không? Nếu bạn chọn 'Không', việc nâng "
+"cấp sẽ bị huỷ bỏ."
+
+#: ../DistUpgrade/DistUpgradeController.py:770
+msgid "Repository information invalid"
+msgstr "Thông tin về các nguồn cập nhật không hợp lệ"
+
+#: ../DistUpgrade/DistUpgradeController.py:771
+msgid ""
+"Upgrading the repository information resulted in a invalid file so a bug "
+"reporting process is being started."
+msgstr ""
+"Việc nâng cấp thông tin kho đã tạo ra một tập tin không hợp lệ nên một tiến "
+"trình báo cáo lỗi đang được bắt đầu."
+
+#: ../DistUpgrade/DistUpgradeController.py:778
+msgid "Third party sources disabled"
+msgstr "Không cho phép sử dụng các nguồn cập nhật bên ngoài"
+
+#: ../DistUpgrade/DistUpgradeController.py:779
+msgid ""
+"Some third party entries in your sources.list were disabled. You can re-"
+"enable them after the upgrade with the 'software-properties' tool or your "
+"package manager."
+msgstr ""
+"Một số nguồn bên ngoài trong tập tin sources.list của bạn đã bị cấm. Bạn có "
+"thể cho phép sử dụng chúng sau khi nâng cấp bằng công cụ 'tính-năng-của-phần-"
+"mềm' hay bằng trình quản lý gói."
+
+#: ../DistUpgrade/DistUpgradeController.py:819
+msgid "Package in inconsistent state"
+msgid_plural "Packages in inconsistent state"
+msgstr[0] "Gói ở tình trạng không ổn định"
+
+#: ../DistUpgrade/DistUpgradeController.py:822
+#, python-format
+msgid ""
+"The package '%s' is in an inconsistent state and needs to be reinstalled, "
+"but no archive can be found for it. Please reinstall the package manually or "
+"remove it from the system."
+msgid_plural ""
+"The packages '%s' are in an inconsistent state and need to be reinstalled, "
+"but no archive can be found for them. Please reinstall the packages manually "
+"or remove them from the system."
+msgstr[0] ""
+"Gói '%s' ở trong trạng thái xung đột và cần được cài đặt lại, nhưng không có "
+"lưu trữ nào cho gói này. Vui lòng cài đặt lại gói bằng cách thủ công hoặc gỡ "
+"bỏ nó khỏi hệ thống."
+
+#: ../DistUpgrade/DistUpgradeController.py:870
+msgid "Error during update"
+msgstr "Gặp lỗi trong quá trình cập nhật"
+
+#: ../DistUpgrade/DistUpgradeController.py:871
+msgid ""
+"A problem occurred during the update. This is usually some sort of network "
+"problem, please check your network connection and retry."
+msgstr ""
+"Đã có lỗi xuất hiện trong quá trình cập nhật. Thông thường là do các vấn đề "
+"về mạng, hãy kiểm tra kết nối mạng và thử lại."
+
+#. print("on_button_install_clicked")
+#: ../DistUpgrade/DistUpgradeController.py:880
+#: ../UpdateManager/UpdateManager.py:757
+msgid "Not enough free disk space"
+msgstr "Không còn không gian đĩa trống"
+
+#: ../DistUpgrade/DistUpgradeController.py:881
+#, python-format
+msgid ""
+"The upgrade has aborted. The upgrade needs a total of %s free space on disk "
+"'%s'. Please free at least an additional %s of disk space on '%s'. Empty "
+"your trash and remove temporary packages of former installations using 'sudo "
+"apt-get clean'."
+msgstr ""
+"Quá trình nâng cấp bị hủy ngang. Cần tổng cộng %s chỗ trống trên đĩa cứng "
+"'%s'. Bạn cần có thêm %s dung lượng trống trên đĩa '%s'. Dọn sạch rác và các "
+"gói tạm hay các gói đã dùng để cài đặt chương trình mà bạn không cần nữa "
+"bằng lệnh 'sudo apt-get clean'."
+
+#. calc the dist-upgrade and see if the removals are ok/expected
+#. do the dist-upgrade
+#: ../DistUpgrade/DistUpgradeController.py:910
+#: ../DistUpgrade/DistUpgradeController.py:1692
+msgid "Calculating the changes"
+msgstr "Tính toán các thay đổi cần thực hiện"
+
+#. ask the user
+#: ../DistUpgrade/DistUpgradeController.py:942
+msgid "Do you want to start the upgrade?"
+msgstr "Bạn có muốn bắt đầu nâng cấp?"
+
+#: ../DistUpgrade/DistUpgradeController.py:1008
+msgid "Upgrade canceled"
+msgstr "Nâng cấp bị huỷ bỏ"
+
+#: ../DistUpgrade/DistUpgradeController.py:1009
+msgid ""
+"The upgrade will cancel now and the original system state will be restored. "
+"You can resume the upgrade at a later time."
+msgstr ""
+"Bây giờ việc nâng cấp sẽ bị hủy và hệ thống sẽ được trả về trạng thái ban "
+"đầu. Sau này bạn có thể tiếp tục việc nâng cấp."
+
+#: ../DistUpgrade/DistUpgradeController.py:1015
+#: ../DistUpgrade/DistUpgradeController.py:1149
+msgid "Could not download the upgrades"
+msgstr "Không thể tải các gói nâng cấp xuống"
+
+#: ../DistUpgrade/DistUpgradeController.py:1016
+msgid ""
+"The upgrade has aborted. Please check your Internet connection or "
+"installation media and try again. All files downloaded so far have been kept."
+msgstr ""
+"Đã huỷ nâng cấp. Hãy kiểm tra kết nối mạng của bạn hay thiết bị cài đặt và "
+"thử lại. Tất cả tập tin đã tải đều được giữ lại."
+
+#. FIXME: strings are not good, but we are in string freeze
+#. currently
+#: ../DistUpgrade/DistUpgradeController.py:1100
+#: ../DistUpgrade/DistUpgradeController.py:1137
+#: ../DistUpgrade/DistUpgradeController.py:1242
+msgid "Error during commit"
+msgstr "Lỗi trong quá trình thực hiện"
+
+#. generate a new cache
+#: ../DistUpgrade/DistUpgradeController.py:1102
+#: ../DistUpgrade/DistUpgradeController.py:1139
+#: ../DistUpgrade/DistUpgradeController.py:1281
+msgid "Restoring original system state"
+msgstr "Khôi phục hệ thống về trạng thái ban đầu"
+
+#: ../DistUpgrade/DistUpgradeController.py:1103
+#: ../DistUpgrade/DistUpgradeController.py:1118
+#: ../DistUpgrade/DistUpgradeController.py:1140
+msgid "Could not install the upgrades"
+msgstr "Không thể cài đặt các gói nâng cấp"
+
+#. invoke the frontend now and show a error message
+#: ../DistUpgrade/DistUpgradeController.py:1108
+msgid ""
+"The upgrade has aborted. Your system could be in an unusable state. A "
+"recovery will run now (dpkg --configure -a)."
+msgstr ""
+"Quá trình nâng cấp bị hủy bỏ. Trạng thái của hệ thống không thể sử dụng "
+"được. Chạy hồi phục ngay (dpkg --configure -a)."
+
+#: ../DistUpgrade/DistUpgradeController.py:1113
+#, python-format
+msgid ""
+"\n"
+"\n"
+"Please report this bug in a browser at http://bugs.launchpad.net/ubuntu/"
+"+source/update-manager/+filebug and attach the files in /var/log/dist-"
+"upgrade/ to the bug report.\n"
+"%s"
+msgstr ""
+"\n"
+"\n"
+"Vui lòng báo cáo lỗi này trong trình duyệt tại http://bugs.launchpad.net/"
+"ubuntu/+source/update-manager/+filebug và đính kèm các tập tin trong /var/"
+"log/dist-upgrade/ vào báo cáo lỗi.\n"
+"%s"
+
+#: ../DistUpgrade/DistUpgradeController.py:1150
+msgid ""
+"The upgrade has aborted. Please check your Internet connection or "
+"installation media and try again. "
+msgstr ""
+"Quá trình nâng cấp bị hủy bỏ. Xin kiểm tra lại kết nối Internet hay cài đặt "
+"các phương tiện và thử lại. "
+
+#: ../DistUpgrade/DistUpgradeController.py:1230
+msgid "Remove obsolete packages?"
+msgstr "Xóa các gói không còn dùng nữa"
+
+#: ../DistUpgrade/DistUpgradeController.py:1231
+#: ../DistUpgrade/DistUpgrade.ui.h:8
+msgid "_Keep"
+msgstr "_Giữ lại"
+
+#: ../DistUpgrade/DistUpgradeController.py:1231
+msgid "_Remove"
+msgstr "_Xóa bỏ"
+
+#: ../DistUpgrade/DistUpgradeController.py:1243
+msgid ""
+"A problem occurred during the clean-up. Please see the below message for "
+"more information. "
+msgstr ""
+"Có lỗi trong quá trình kết thúc nâng cấp. Vui lòng xem thông tin bên dưới. "
+
+#. FIXME: instead of error out, fetch and install it
+#. here
+#: ../DistUpgrade/DistUpgradeController.py:1319
+msgid "Required depends is not installed"
+msgstr "Các gói phụ thuộc chưa được cài đặt"
+
+#: ../DistUpgrade/DistUpgradeController.py:1320
+#, python-format
+msgid "The required dependency '%s' is not installed. "
+msgstr "Gói phụ thuộc '%s' chưa được cài đặt. "
+
+#. sanity check (check for ubuntu-desktop, brokenCache etc)
+#. then open the cache (again)
+#: ../DistUpgrade/DistUpgradeController.py:1588
+#: ../DistUpgrade/DistUpgradeController.py:1653
+msgid "Checking package manager"
+msgstr "Đang kiểm tra trình quản lý gói"
+
+#: ../DistUpgrade/DistUpgradeController.py:1593
+msgid "Preparing the upgrade failed"
+msgstr "Quá trình chuẩn bị để nâng cấp thất bại"
+
+#: ../DistUpgrade/DistUpgradeController.py:1594
+msgid ""
+"Preparing the system for the upgrade failed so a bug reporting process is "
+"being started."
+msgstr ""
+"Gặp lỗi trong việc chuẩn bị hệ thống cho việc nâng cấp nên một tiến trình "
+"báo cáo lỗi đang được bắt đầu."
+
+#: ../DistUpgrade/DistUpgradeController.py:1608
+msgid "Getting upgrade prerequisites failed"
+msgstr "Quá trình tải các gói phụ thuộc cần thiết để nâng cấp thất bại"
+
+#: ../DistUpgrade/DistUpgradeController.py:1609
+msgid ""
+"The system was unable to get the prerequisites for the upgrade. The upgrade "
+"will abort now and restore the original system state.\n"
+"\n"
+"Additionally, a bug reporting process is being started."
+msgstr ""
+"Hệ thống không thể lấy các điều kiện tiên quyết cho việc nâng cấp. Việc nâng "
+"cấp sẽ bị hủy ngang và phục hội trạng thái hệ thống ban đầu.\n"
+"\n"
+"Ngoài ra, một tiến trình báo cáo lỗi đang được bắt đầu."
+
+#: ../DistUpgrade/DistUpgradeController.py:1637
+msgid "Updating repository information"
+msgstr "Cập nhật thông tin về các nguồn cập nhật"
+
+#: ../DistUpgrade/DistUpgradeController.py:1644
+msgid "Failed to add the cdrom"
+msgstr "Không thể thêm cdrom"
+
+#: ../DistUpgrade/DistUpgradeController.py:1645
+msgid "Sorry, adding the cdrom was not successful."
+msgstr "Rất tiếc, việc thêm CD/DVD không thành công."
+
+#: ../DistUpgrade/DistUpgradeController.py:1673
+msgid "Invalid package information"
+msgstr "Thông tin gói không hợp lệ"
+
+#: ../DistUpgrade/DistUpgradeController.py:1674
+msgid "After updating your package "
+msgstr ""
+
+#: ../DistUpgrade/DistUpgradeController.py:1698
+#: ../DistUpgrade/DistUpgradeController.py:1750
+msgid "Fetching"
+msgstr "Đang lấy về"
+
+#: ../DistUpgrade/DistUpgradeController.py:1704
+#: ../DistUpgrade/DistUpgradeController.py:1754
+msgid "Upgrading"
+msgstr "Đang nâng cấp"
+
+#. don't abort here, because it would restore the sources.list
+#: ../DistUpgrade/DistUpgradeController.py:1709
+#: ../DistUpgrade/DistUpgradeController.py:1756
+#: ../DistUpgrade/DistUpgradeController.py:1763
+#: ../DistUpgrade/DistUpgradeController.py:1774
+msgid "Upgrade complete"
+msgstr "Nâng cấp hoàn tất"
+
+#: ../DistUpgrade/DistUpgradeController.py:1710
+#: ../DistUpgrade/DistUpgradeController.py:1757
+#: ../DistUpgrade/DistUpgradeController.py:1764
+msgid ""
+"The upgrade has completed but there were errors during the upgrade process."
+msgstr "Việc nâng cấp đã hoàn thành nhưng có vài lỗi đã xảy ra."
+
+#: ../DistUpgrade/DistUpgradeController.py:1717
+msgid "Searching for obsolete software"
+msgstr "Đang tìm các phần mềm không còn dùng nữa"
+
+#: ../DistUpgrade/DistUpgradeController.py:1726
+msgid "System upgrade is complete."
+msgstr "Quá trình nâng cấp hệ thống đã hoàn thành"
+
+#: ../DistUpgrade/DistUpgradeController.py:1775
+msgid "The partial upgrade was completed."
+msgstr "Quá trình nâng cấp từng phần kết thúc."
+
+#: ../DistUpgrade/DistUpgradeQuirks.py:204
+msgid "evms in use"
+msgstr "đang dùng evms"
+
+#: ../DistUpgrade/DistUpgradeQuirks.py:205
+msgid ""
+"Your system uses the 'evms' volume manager in /proc/mounts. The 'evms' "
+"software is no longer supported, please switch it off and run the upgrade "
+"again when this is done."
+msgstr ""
+"Hệ thống cũ dùng hệ thống quản lí tập tin 'evms' trong /proc/mounts. 'evms' "
+"không còn được hỗ trợ, hãy tắt nó và thực hiện lại quá trình nâng cấp."
+
+#: ../DistUpgrade/DistUpgradeQuirks.py:502
+msgid "Your graphics hardware may not be fully supported in Ubuntu 12.04 LTS."
+msgstr ""
+"Phần cứng đồ họa của bạn có thể không được hỗ trợ đầy đủ trong Ubuntu 12.04 "
+"LTS."
+
+#: ../DistUpgrade/DistUpgradeQuirks.py:504
+msgid ""
+"The support in Ubuntu 12.04 LTS for your Intel graphics hardware is limited "
+"and you may encounter problems after the upgrade. For more information see "
+"https://wiki.ubuntu.com/X/Bugs/UpdateManagerWarningForI8xx Do you want to "
+"continue with the upgrade?"
+msgstr ""
+"Sự hỗ trợ cho phần cứng đồ họa của bạn rất hạn chế trong Ubuntu 12.04 LTS và "
+"bạn có thể gặp các vấn đề sau khi nâng cấp. Hãy xem thêm thông tin tại "
+"https://wiki.ubuntu.com/X/Bugs/UpdateManagerWarningForI8xx . Bạn có muốn "
+"tiếp tục nâng cấp không?"
+
+#: ../DistUpgrade/DistUpgradeQuirks.py:526
+#: ../DistUpgrade/DistUpgradeQuirks.py:554
+#: ../DistUpgrade/DistUpgradeQuirks.py:581
+msgid ""
+"Upgrading may reduce desktop effects, and performance in games and other "
+"graphically intensive programs."
+msgstr ""
+"Quá trình nâng cấp có thể làm giảm hiệu ứng đồ họa, hiệu năng các trò chơi "
+"và các chương trình khác yêu cầu đồ họa cao."
+
+#: ../DistUpgrade/DistUpgradeQuirks.py:530
+#: ../DistUpgrade/DistUpgradeQuirks.py:558
+msgid ""
+"This computer is currently using the NVIDIA 'nvidia' graphics driver. No "
+"version of this driver is available that works with your video card in "
+"Ubuntu 10.04 LTS.\n"
+"\n"
+"Do you want to continue?"
+msgstr ""
+"Máy tính sử dụng trình điều kiển đồ hoạ NVIDIA 'nvidia' . Không có phiên bản "
+"của trình điều khiển tương đương nào việc với phần cứng của bạn trong Ubuntu "
+"10.04 LTS\n"
+"\n"
+"Bạn có muốn tiếp tục?"
+
+#: ../DistUpgrade/DistUpgradeQuirks.py:585
+msgid ""
+"This computer is currently using the AMD 'fglrx' graphics driver. No version "
+"of this driver is available that works with your hardware in Ubuntu 10.04 "
+"LTS.\n"
+"\n"
+"Do you want to continue?"
+msgstr ""
+"Máy tính sử dụng trình điều kiển đồ hoạ AMD  'fglrx'. Không có phiên bản của "
+"trình điều khiển tương đương nào làm việc với phần cứng của bạn trong Ubuntu "
+"10.04 LTS\n"
+"\n"
+"Bạn có muốn tiếp tục?"
+
+#: ../DistUpgrade/DistUpgradeQuirks.py:615
+msgid "No i686 CPU"
+msgstr "Không dùng bộ xử lý i686"
+
+#: ../DistUpgrade/DistUpgradeQuirks.py:616
+msgid ""
+"Your system uses an i586 CPU or a CPU that does not have the 'cmov' "
+"extension. All packages were built with optimizations requiring i686 as the "
+"minimal architecture. It is not possible to upgrade your system to a new "
+"Ubuntu release with this hardware."
+msgstr ""
+"Hệ thống của bạn sử dụng bộ xử lý i586 hoặc bộ xử lý không hỗ trợ phần mở "
+"rọng 'cmov'. Tất cả các gói được built với dẫn tối ưu hóa đều yêu cầu phần "
+"cứng với bộ xử lý tối thiểu là i686. Bạn không thể nâng cấp hệ thống lên đến "
+"bản Ubuntu tiếp theo với cấu hình phần cứng này."
+
+#: ../DistUpgrade/DistUpgradeQuirks.py:652
+msgid "No ARMv6 CPU"
+msgstr "Không có ARMv6 CPU"
+
+#: ../DistUpgrade/DistUpgradeQuirks.py:653
+msgid ""
+"Your system uses an ARM CPU that is older than the ARMv6 architecture. All "
+"packages in karmic were built with optimizations requiring ARMv6 as the "
+"minimal architecture. It is not possible to upgrade your system to a new "
+"Ubuntu release with this hardware."
+msgstr ""
+"Hệ thống của bạn sử dụng một CPU ARM là kiến trúc cũ hơn ARMv6. Tất cả các "
+"gói trong karmic được xây dựng với yêu cầu tối ưu ARMv6 như kiến trúc tối "
+"thiểu. Không thể để nâng cấp hệ thống của bạn với một bản phát hành Ubuntu "
+"mới với phần cứng này."
+
+#: ../DistUpgrade/DistUpgradeQuirks.py:673
+msgid "No init available"
+msgstr "Không init nào có sẵn"
+
+#: ../DistUpgrade/DistUpgradeQuirks.py:674
+msgid ""
+"Your system appears to be a virtualised environment without an init daemon, "
+"e.g. Linux-VServer. Ubuntu 10.04 LTS cannot function within this type of "
+"environment, requiring an update to your virtual machine configuration "
+"first.\n"
+"\n"
+"Are you sure you want to continue?"
+msgstr ""
+"Hệ thống của bạn dường như là một môi trường mà không có một virtualised "
+"init daemon, ví dụ: Linux-VServer. Ubuntu 10.04 LTS không có chức năng này "
+"trong vòng loại của môi trường, đòi hỏi một cập nhật cho cấu hình máy ảo của "
+"bạn đầu tiên.\n"
+"\n"
+"Bạn có chắc chắn muốn tiếp tục không?"
+
+#: ../DistUpgrade/DistUpgradeMain.py:65
+msgid "Sandbox upgrade using aufs"
+msgstr "Sanbox nâng cấp sử dụng aufs"
+
+#: ../DistUpgrade/DistUpgradeMain.py:67
+msgid "Use the given path to search for a cdrom with upgradable packages"
+msgstr "Dùng đường dẫn sau để tìm các gói nâng cấp trên CD/DVD"
+
+#: ../DistUpgrade/DistUpgradeMain.py:73
+msgid ""
+"Use frontend. Currently available: \n"
+"DistUpgradeViewText, DistUpgradeViewGtk, DistUpgradeViewKDE"
+msgstr ""
+"Dùng trình có giao diện đồ họa. Các trình có thể dùng: \n"
+"DistUpgradeViewText, DistUpgradeViewGtk, DistUpgradeViewKDE"
+
+#: ../DistUpgrade/DistUpgradeMain.py:76
+msgid "*DEPRECATED* this option will be ignored"
+msgstr "*ĐÃ LOẠI BỎ* tuỳ chọn này sẽ bị bỏ qua"
+
+#: ../DistUpgrade/DistUpgradeMain.py:79
+msgid "Perform a partial upgrade only (no sources.list rewriting)"
+msgstr "Thực hiện nâng cấp từng phần (không ghi lại tệp tin sources.list)"
+
+#: ../DistUpgrade/DistUpgradeMain.py:82
+msgid "Disable GNU screen support"
+msgstr "Tắt hỗ trợ màn hình GNU"
+
+#: ../DistUpgrade/DistUpgradeMain.py:84
+msgid "Set datadir"
+msgstr "Thiết lập datadir"
+
+#. print("mediaChange %s %s" % (medium, drive))
+#: ../DistUpgrade/DistUpgradeViewGtk.py:114
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:117
+#: ../DistUpgrade/DistUpgradeViewKDE.py:195
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:155
+#, python-format
+msgid "Please insert '%s' into the drive '%s'"
+msgstr "Vui lòng đưa đĩa '%s' vào ổ '%s'"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:135
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:138
+#: ../DistUpgrade/DistUpgradeViewKDE.py:209
+msgid "Fetching is complete"
+msgstr "Quá trình tải cập nhật đã hoàn thành"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:146
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:149
+#: ../DistUpgrade/DistUpgradeViewKDE.py:222
+#, python-format
+msgid "Fetching file %li of %li at %sB/s"
+msgstr "Đang tải file %li / %li tốc độ %sB/s"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:149
+#: ../DistUpgrade/DistUpgradeViewGtk.py:296
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:152
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:309
+#: ../DistUpgrade/DistUpgradeViewKDE.py:223
+#: ../DistUpgrade/DistUpgradeViewKDE.py:371
+#, python-format
+msgid "About %s remaining"
+msgstr "Còn khoảng %s"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:152
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:155
+#: ../DistUpgrade/DistUpgradeViewKDE.py:225
+#, python-format
+msgid "Fetching file %li of %li"
+msgstr "Đang tải tập tin %li của %li"
+
+#. FIXME: add support for the timeout
+#. of the terminal (to display something useful then)
+#. -> longer term, move this code into python-apt
+#: ../DistUpgrade/DistUpgradeViewGtk.py:183
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:186
+#: ../DistUpgrade/DistUpgradeViewKDE.py:262
+msgid "Applying changes"
+msgstr "Đang áp dụng các thay đổi"
+
+#. we do not report followup errors from earlier failures
+#: ../DistUpgrade/DistUpgradeViewGtk.py:208
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:212
+#: ../DistUpgrade/DistUpgradeViewKDE.py:275
+msgid "dependency problems - leaving unconfigured"
+msgstr "có lỗi với các gói phụ thuộc - bỏ qua không cấu hình"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:213
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:217
+#: ../DistUpgrade/DistUpgradeViewKDE.py:277
+#, python-format
+msgid "Could not install '%s'"
+msgstr "Không thể cài đặt '%s'"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:214
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:218
+#: ../DistUpgrade/DistUpgradeViewKDE.py:278
+#, python-format
+msgid ""
+"The upgrade will continue but the '%s' package may not be in a working "
+"state. Please consider submitting a bug report about it."
+msgstr ""
+"Việc nâng cấp sẽ tiếp tục nhưng gói '%s' có thể không hoạt động. Xin vui "
+"lòng gửi một báo cáo lỗi về việc này."
+
+#. self.expander.set_expanded(True)
+#: ../DistUpgrade/DistUpgradeViewGtk.py:231
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:235
+#: ../DistUpgrade/DistUpgradeViewKDE.py:299
+#, python-format
+msgid ""
+"Replace the customized configuration file\n"
+"'%s'?"
+msgstr ""
+"Thay thế tập tin cấu hình đã sửa đổi\n"
+"'%s'?"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:232
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:236
+#: ../DistUpgrade/DistUpgradeViewKDE.py:300
+msgid ""
+"You will lose any changes you have made to this configuration file if you "
+"choose to replace it with a newer version."
+msgstr ""
+"Bạn sẽ mất tất cả các thay đổi đã chỉnh sửa trong tập tin cấu hình này nếu "
+"bạn chọn thay thế nó bởi phiên bản mới."
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:251
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:256
+#: ../DistUpgrade/DistUpgradeViewKDE.py:323
+msgid "The 'diff' command was not found"
+msgstr "Không tìm thấy lệnh 'diff'"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:464
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:477
+#: ../DistUpgrade/DistUpgradeViewText.py:92
+msgid "A fatal error occurred"
+msgstr "Gặp lỗi nghiêm trọng"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:465
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:478
+msgid ""
+"Please report this as a bug (if you haven't already) and include the files /"
+"var/log/dist-upgrade/main.log and /var/log/dist-upgrade/apt.log in your "
+"report. The upgrade has aborted.\n"
+"Your original sources.list was saved in /etc/apt/sources.list.distUpgrade."
+msgstr ""
+"Xin hãy báo cáo lỗi này (nếu như bạn chưa làm) và bao gồm các tập tin /var/"
+"log/dist-upgrade/main.log và /var/log/dist-upgrade/apt.log trong bản báo "
+"cáo. Quá trình nâng cấp bị hủy bỏ."
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:482
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:495
+msgid "Ctrl-c pressed"
+msgstr "Nhắp Ctrl-c"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:483
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:496
+msgid ""
+"This will abort the operation and may leave the system in a broken state. "
+"Are you sure you want to do that?"
+msgstr ""
+"Nó sẽ hủy bỏ hành động này và rời khỏi hệ thống trong một trạng thái xấu. "
+"Bạn có chắc chắn muốn thực hiện nó."
+
+#. append warning
+#: ../DistUpgrade/DistUpgradeViewGtk.py:631
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:629
+msgid "To prevent data loss close all open applications and documents."
+msgstr "Để tránh mất mát dữ liệu, hãy đóng các ứng dụng và tài liệu đang mở."
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:645
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:643
+#, python-format
+msgid "No longer supported by Canonical (%s)"
+msgstr "Không còn được hỗ trợ bởi Canonical (%s)"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:646
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:644
+#, python-format
+msgid "<b>Downgrade (%s)</b>"
+msgstr "<b>Hạ cấp (Downgrade) (%s)</b>"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:647
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:645
+#, python-format
+msgid "Remove (%s)"
+msgstr "Loại bỏ (%s)"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:648
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:646
+#, python-format
+msgid "No longer needed (%s)"
+msgstr "Không còn cần thiết (%s)"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:649
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:647
+#, python-format
+msgid "Install (%s)"
+msgstr "Cài đặt (%s)"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:650
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:648
+#, python-format
+msgid "Upgrade (%s)"
+msgstr "Nâng cấp (%s)"
+
+#. change = QMessageBox.question(None, _("Media Change"), msg, QMessageBox.Ok, QMessageBox.Cancel)
+#: ../DistUpgrade/DistUpgradeViewKDE.py:196
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:157
+msgid "Media Change"
+msgstr "Đổi đĩa"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:335
+msgid "Show Difference >>>"
+msgstr "Hiện khác biệt >>>"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:338
+msgid "<<< Hide Difference"
+msgstr "<<< Ẩn khác biệt"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:554
+msgid "Error"
+msgstr "Lỗi"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:568
+msgid "&Cancel"
+msgstr "&Hủy"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:572
+#: ../DistUpgrade/DistUpgradeViewKDE.py:813
+msgid "&Close"
+msgstr "Đó&ng"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:618
+msgid "Show Terminal >>>"
+msgstr "Hiện cửa sổ dòng lệnh >>>"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:621
+msgid "<<< Hide Terminal"
+msgstr "<<< Ẩn cửa sổ dòng lệnh"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:701
+msgid "Information"
+msgstr "Thông tin"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:751
+#: ../DistUpgrade/DistUpgradeViewKDE.py:796
+#: ../DistUpgrade/DistUpgradeViewKDE.py:799 ../DistUpgrade/DistUpgrade.ui.h:7
+msgid "Details"
+msgstr "Chi tiết"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:777
+#, python-format
+msgid "No longer supported %s"
+msgstr "Không còn hỗ trợ %s"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:779
+#, python-format
+msgid "Remove %s"
+msgstr "Xóa %s"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:781
+#: ../DistUpgrade/DistUpgradeViewText.py:182
+#, python-format
+msgid "Remove (was auto installed) %s"
+msgstr "Xóa %s (được cài tự động)"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:783
+#, python-format
+msgid "Install %s"
+msgstr "Cài đặt %s"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:785
+#, python-format
+msgid "Upgrade %s"
+msgstr "Nâng cấp %s"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:809
+#: ../DistUpgrade/DistUpgradeViewText.py:230
+msgid "Restart required"
+msgstr "Cần phải khởi động lại hệ thống"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:809
+msgid "<b><big>Restart the system to complete the upgrade</big></b>"
+msgstr "<b><big>Khởi động lại hệ thống để hoàn tất nâng cấp</big></b>"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:812 ../DistUpgrade/DistUpgrade.ui.h:14
+#: ../data/gtkbuilder/UpdateManager.ui.h:26
+msgid "_Restart Now"
+msgstr "_Khởi động lại ngay"
+
+#. FIXME make this user friendly
+#: ../DistUpgrade/DistUpgradeViewKDE.py:830
+msgid ""
+"<b><big>Cancel the running upgrade?</big></b>\n"
+"\n"
+"The system could be in an unusable state if you cancel the upgrade. You are "
+"strongly advised to resume the upgrade."
+msgstr ""
+"<b><big>Hủy bỏ quá trình nâng cấp?</big></b>\n"
+"\n"
+"Hệ thống sẽ không làm việc ổn định nếu bạn hủy bỏ quá trình này. Khuyến cáo: "
+"bạn hãy tiếp tục quá trình nâng cấp."
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:834
+msgid "Cancel Upgrade?"
+msgstr "Hủy quá trình nâng cấp?"
+
+#: ../DistUpgrade/DistUpgradeView.py:61
+#, python-format
+msgid "%li day"
+msgid_plural "%li days"
+msgstr[0] "%li ngày"
+
+#: ../DistUpgrade/DistUpgradeView.py:63
+#, python-format
+msgid "%li hour"
+msgid_plural "%li hours"
+msgstr[0] "%li giờ"
+
+#: ../DistUpgrade/DistUpgradeView.py:65
+#, python-format
+msgid "%li minute"
+msgid_plural "%li minutes"
+msgstr[0] "%li phút"
+
+#: ../DistUpgrade/DistUpgradeView.py:66
+#, python-format
+msgid "%li second"
+msgid_plural "%li seconds"
+msgstr[0] "%li giây"
+
+#. TRANSLATORS: you can alter the ordering of the remaining time
+#. information here if you shuffle %(str_days)s %(str_hours)s %(str_minutes)s
+#. around. Make sure to keep all '$(str_*)s' in the translated string
+#. and do NOT change anything appart from the ordering.
+#.
+#. %(str_hours)s will be either "1 hour" or "2 hours" depending on the
+#. plural form
+#.
+#. Note: most western languages will not need to change this
+#: ../DistUpgrade/DistUpgradeView.py:82
+#, python-format
+msgid "%(str_days)s %(str_hours)s"
+msgstr "%(str_days)s %(str_hours)s"
+
+#. TRANSLATORS: you can alter the ordering of the remaining time
+#. information here if you shuffle %(str_hours)s %(str_minutes)s
+#. around. Make sure to keep all '$(str_*)s' in the translated string
+#. and do NOT change anything appart from the ordering.
+#.
+#. %(str_hours)s will be either "1 hour" or "2 hours" depending on the
+#. plural form
+#.
+#. Note: most western languages will not need to change this
+#: ../DistUpgrade/DistUpgradeView.py:100
+#, python-format
+msgid "%(str_hours)s %(str_minutes)s"
+msgstr "%(str_hours)s %(str_minutes)s"
+
+#. 56 kbit
+#. 1Mbit = 1024 kbit
+#: ../DistUpgrade/DistUpgradeView.py:151
+#, python-format
+msgid ""
+"This download will take about %s with a 1Mbit DSL connection and about %s "
+"with a 56k modem."
+msgstr ""
+"Thời gian tải khoảng %s với kết nối DSL tốc độ 1Mbit và khoảng %s với modem "
+"tốc độ 65k."
+
+#. if we have a estimated speed, use it
+#: ../DistUpgrade/DistUpgradeView.py:155
+#, python-format
+msgid "This download will take about %s with your connection. "
+msgstr "Quá trình tải xuống sẽ mất %s với tốc độ kết nối hiện tại của bạn. "
+
+#. Declare these translatable strings from the .ui files here so that
+#. xgettext picks them up.
+#: ../DistUpgrade/DistUpgradeView.py:259 ../DistUpgrade/DistUpgrade.ui.h:21
+msgid "Preparing to upgrade"
+msgstr "Đang chuẩn bị nâng cấp"
+
+#: ../DistUpgrade/DistUpgradeView.py:260
+msgid "Getting new software channels"
+msgstr "Đang sửa đổi các kênh cài đặt phần mềm"
+
+#: ../DistUpgrade/DistUpgradeView.py:261 ../DistUpgrade/DistUpgrade.ui.h:23
+msgid "Getting new packages"
+msgstr "Đang lấy các gói mới"
+
+#: ../DistUpgrade/DistUpgradeView.py:262 ../DistUpgrade/DistUpgrade.ui.h:26
+msgid "Installing the upgrades"
+msgstr "Đang cài đặt các bản nâng cấp"
+
+#: ../DistUpgrade/DistUpgradeView.py:263 ../DistUpgrade/DistUpgrade.ui.h:25
+msgid "Cleaning up"
+msgstr "Đang dọn dẹp hệ thống"
+
+#: ../DistUpgrade/DistUpgradeView.py:348
+#, python-format
+msgid ""
+"%(amount)d installed package is no longer supported by Canonical. You can "
+"still get support from the community."
+msgid_plural ""
+"%(amount)d installed packages are no longer supported by Canonical. You can "
+"still get support from the community."
+msgstr[0] ""
+"Có %(amount)d gói không còn được hỗ trợ bởi Canonical. Tuy vậy, bạn có thể "
+"nhận được sự hỗ trợ từ cộng đồng."
+
+#. FIXME: make those two separate lines to make it clear
+#. that the "%" applies to the result of ngettext
+#: ../DistUpgrade/DistUpgradeView.py:357
+#, python-format
+msgid "%d package is going to be removed."
+msgid_plural "%d packages are going to be removed."
+msgstr[0] "%d gói sẽ được xóa khỏi hệ thống."
+
+#: ../DistUpgrade/DistUpgradeView.py:362
+#, python-format
+msgid "%d new package is going to be installed."
+msgid_plural "%d new packages are going to be installed."
+msgstr[0] "%d gói mới sẽ được cài đặt."
+
+#: ../DistUpgrade/DistUpgradeView.py:368
+#, python-format
+msgid "%d package is going to be upgraded."
+msgid_plural "%d packages are going to be upgraded."
+msgstr[0] "%d gói sẽ được nâng cấp."
+
+#: ../DistUpgrade/DistUpgradeView.py:373
+#, python-format
+msgid ""
+"\n"
+"\n"
+"You have to download a total of %s. "
+msgstr ""
+"\n"
+"\n"
+"Bạn đã tải về tổng cộng %s. "
+
+#: ../DistUpgrade/DistUpgradeView.py:378
+msgid ""
+"Installing the upgrade can take several hours. Once the download has "
+"finished, the process cannot be canceled."
+msgstr ""
+"Việc cài đặt bản nâng cấp này có thể mất vài giờ. Ngay khi hoàn thành việc "
+"tải xuống, tiến trình nâng cấp không thể bị hủy bỏ."
+
+#: ../DistUpgrade/DistUpgradeView.py:382
+msgid ""
+"Fetching and installing the upgrade can take several hours. Once the "
+"download has finished, the process cannot be canceled."
+msgstr ""
+"Việc lấy về và cài đặt bản nâng cấp này có thể mất vài giờ. Ngay khi hoàn "
+"thành việc tải xuống, tiến trình nâng cấp không thể bị hủy bỏ."
+
+#: ../DistUpgrade/DistUpgradeView.py:387
+msgid "Removing the packages can take several hours. "
+msgstr "Việc gỡ bỏ các gói có thể mất vài giờ/ "
+
+#. FIXME: this should go into DistUpgradeController
+#: ../DistUpgrade/DistUpgradeView.py:392 ../UpdateManager/UpdateManager.py:676
+msgid "The software on this computer is up to date."
+msgstr "Phần mềm trên máy tính này đã được cập nhật."
+
+#: ../DistUpgrade/DistUpgradeView.py:393
+msgid ""
+"There are no upgrades available for your system. The upgrade will now be "
+"canceled."
+msgstr ""
+"Hiện không có bản nâng cấp nào cho hệ thống. Quá trình nâng cấp sẽ được hủy "
+"bỏ."
+
+#: ../DistUpgrade/DistUpgradeView.py:406
+msgid "Reboot required"
+msgstr "Cần phải khởi động lại hệ thống"
+
+#: ../DistUpgrade/DistUpgradeView.py:407
+msgid ""
+"The upgrade is finished and a reboot is required. Do you want to do this now?"
+msgstr ""
+"Quá trình nâng cấp đã hoàn thành và hệ thống cần được khởi động lại. Bạn có "
+"muốn thực hiện ngay không?"
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:72
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:72
+#, python-format
+msgid "authenticate '%(file)s' against '%(signature)s' "
+msgstr "xác thực '%(file)s' với '%(signature)s' "
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:131
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:131
+#, python-format
+msgid "extracting '%s'"
+msgstr "giải nén '%s'"
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:151
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:152
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:151
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:152
+msgid "Could not run the upgrade tool"
+msgstr "Không thể chạy công cụ nâng cấp"
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:152
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:152
+msgid ""
+"This is most likely a bug in the upgrade tool. Please report it as a bug "
+"using the command 'ubuntu-bug update-manager'."
+msgstr ""
+"Điều này hầu như có vẻ là một lỗi trong công cụ nâng cấp. Hãy báo cáo lỗi "
+"này sử dụng lệnh 'ubuntu-bug update-manager'."
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:227
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:227
+msgid "Upgrade tool signature"
+msgstr "Chữ ký của công cụ nâng cấp"
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:234
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:234
+msgid "Upgrade tool"
+msgstr "Công cụ nâng cấp"
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:268
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:268
+msgid "Failed to fetch"
+msgstr "Lỗi tải xuống"
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:269
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:269
+msgid "Fetching the upgrade failed. There may be a network problem. "
+msgstr "Lỗi tải xuống bản nâng cấp. Có thể là do vấn đề về mạng. "
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:273
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:273
+msgid "Authentication failed"
+msgstr "Lỗi xác thực"
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:274
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:274
+msgid ""
+"Authenticating the upgrade failed. There may be a problem with the network "
+"or with the server. "
+msgstr "Lỗi xác thực bản nâng cấp. Có thể có vấn đề về mạng hoặc với máy chủ. "
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:279
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:279
+msgid "Failed to extract"
+msgstr "Lỗi giải nén"
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:280
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:280
+msgid ""
+"Extracting the upgrade failed. There may be a problem with the network or "
+"with the server. "
+msgstr "Lỗi giải nén bản nâng cấp. Có thể có vấn đề về mạng hoặc với máy chủ. "
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:285
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:285
+msgid "Verification failed"
+msgstr "Việc xác nhận thất bại"
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:286
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:286
+msgid ""
+"Verifying the upgrade failed.  There may be a problem with the network or "
+"with the server. "
+msgstr "Lỗi xác minh gói nâng cấp. Có thể có vấn đề về mạng hoặc với máy chủ. "
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:300
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:306
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:300
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:306
+msgid "Can not run the upgrade"
+msgstr "Không thể thực hiện quá trình nâng cấp"
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:301
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:301
+msgid ""
+"This usually is caused by a system where /tmp is mounted noexec. Please "
+"remount without noexec and run the upgrade again."
+msgstr ""
+"Điều này thường bị gây ra bởi một hệ thống có /tmp được gắn với tuỳ chọn "
+"noexec. Hãy gắn lại mà không có noexec rồi chạy lại nâng cấp."
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:307
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:307
+#, python-format
+msgid "The error message is '%s'."
+msgstr "Thông báo lỗi: '%s'"
+
+#: ../DistUpgrade/DistUpgradeViewText.py:93
+msgid ""
+"Please report this as a bug and include the files /var/log/dist-upgrade/main."
+"log and /var/log/dist-upgrade/apt.log in your report. The upgrade has "
+"aborted.\n"
+"Your original sources.list was saved in /etc/apt/sources.list.distUpgrade."
+msgstr ""
+"Xin hãy báo cáo lỗi này và bao gồm các tập tin /var/log/dist-upgrade/main."
+"log và /var/log/dist-upgrade/apt.log trong bản báo cáo. Quá trình nâng cấp "
+"bị hủy bỏ.\n"
+"Tập tin gốc sources.list đã được lưu ở /etc/apt/sources.list.distUpgrade."
+
+#: ../DistUpgrade/DistUpgradeViewText.py:117
+msgid "Aborting"
+msgstr "Đang dừng lại"
+
+#: ../DistUpgrade/DistUpgradeViewText.py:122
+msgid "Demoted:\n"
+msgstr "Đã chuyển xuống phiên bản cũ:\n"
+
+#: ../DistUpgrade/DistUpgradeViewText.py:129
+msgid "To continue please press [ENTER]"
+msgstr "Để tiếp tục, hãy nhấn [ENTER]"
+
+#: ../DistUpgrade/DistUpgradeViewText.py:157
+#: ../DistUpgrade/DistUpgradeViewText.py:196
+#: ../DistUpgrade/DistUpgradeViewText.py:203
+msgid "Continue [yN] "
+msgstr "_Tiếp tục "
+
+#: ../DistUpgrade/DistUpgradeViewText.py:157
+#: ../DistUpgrade/DistUpgradeViewText.py:196
+msgid "Details [d]"
+msgstr "Chi tiết [t]"
+
+#. TRANSLATORS: the "y" is "yes"
+#. TRANSLATORS: first letter of a positive (yes) answer
+#: ../DistUpgrade/DistUpgradeViewText.py:162
+#: ../DistUpgrade/DistUpgradeViewText.py:206
+msgid "y"
+msgstr "y"
+
+#. TRANSLATORS: the "n" is "no"
+#. TRANSLATORS: first letter of a negative (no) answer
+#: ../DistUpgrade/DistUpgradeViewText.py:165
+#: ../DistUpgrade/DistUpgradeViewText.py:213
+msgid "n"
+msgstr "k"
+
+#. TRANSLATORS: the "d" is "details"
+#: ../DistUpgrade/DistUpgradeViewText.py:168
+msgid "d"
+msgstr "d"
+
+#: ../DistUpgrade/DistUpgradeViewText.py:173
+#, python-format
+msgid "No longer supported: %s\n"
+msgstr "Không còn hỗ trợ: %s\n"
+
+#: ../DistUpgrade/DistUpgradeViewText.py:178
+#, python-format
+msgid "Remove: %s\n"
+msgstr "Gỡ bỏ: %s\n"
+
+#: ../DistUpgrade/DistUpgradeViewText.py:188
+#, python-format
+msgid "Install: %s\n"
+msgstr "Cài mới: %s\n"
+
+#: ../DistUpgrade/DistUpgradeViewText.py:193
+#, python-format
+msgid "Upgrade: %s\n"
+msgstr "Nâng cấp: %s\n"
+
+#: ../DistUpgrade/DistUpgradeViewText.py:210
+msgid "Continue [Yn] "
+msgstr "Tiếp tục [Yn] "
+
+#: ../DistUpgrade/DistUpgradeViewText.py:231
+msgid ""
+"To finish the upgrade, a restart is required.\n"
+"If you select 'y' the system will be restarted."
+msgstr ""
+"Để hoàn tất việc nâng cấp, bạn phải khởi động lại máy.\n"
+"Nếu bạn chọn 'd' hệ thống sẽ được khởi động lại."
+
+#: ../DistUpgrade/DistUpgrade.ui.h:1
+msgid "_Cancel Upgrade"
+msgstr "_Hủy bỏ nâng cấp"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:2
+msgid "_Resume Upgrade"
+msgstr "_Tiếp tục Nâng cấp"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:3
+msgid ""
+"<b><big>Cancel the running upgrade?</big></b>\n"
+"\n"
+"The system could be in an unusable state if you cancel the upgrade. You are "
+"strongly adviced to resume the upgrade."
+msgstr ""
+"<b><big>Hủy bỏ nâng cấp đang thực hiện?</big></b>\n"
+"\n"
+"Hệ thống có thể ở trong tình trạng không ổn định nếu bạn hủy nâng cấp này. "
+"Tốt nhất bạn nên tiếp tục nâng cấp."
+
+#: ../DistUpgrade/DistUpgrade.ui.h:6
+msgid "_Start Upgrade"
+msgstr "_Bắt đầu Nâng cấp"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:9
+msgid "_Replace"
+msgstr "_Thay thế"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:10
+msgid "Difference between the files"
+msgstr "Khác biệt giữa hai tập tin"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:11
+msgid "_Report Bug"
+msgstr "_Thông báo lỗi"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:12
+msgid "_Continue"
+msgstr "_Tiếp tục"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:13
+msgid "<b><big>Start the upgrade?</big></b>"
+msgstr "<b><big>Bắt đầu quá trình nâng cấp?</big></b>"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:15
+msgid ""
+"<b><big>Restart the system to complete the upgrade</big></b>\n"
+"\n"
+"Please save your work before continuing."
+msgstr ""
+"<b><big>Khởi động lại hệ thống để tiếp tục nâng cấp</big></b>\n"
+"\n"
+"Hãy lưu những việc bạn đang làm trước khi tiếp tục."
+
+#: ../DistUpgrade/DistUpgrade.ui.h:18
+msgid "Distribution Upgrade"
+msgstr "Nâng cấp bản phân phối"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:19
+#, fuzzy
+msgid "<b><big>Upgrading Ubuntu to version 12.10</big></b>"
+msgstr "<b><big>Nâng cấp Ubuntu lên phiên bản 11.10</big></b>"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:20
+msgid "    "
+msgstr "    "
+
+#: ../DistUpgrade/DistUpgrade.ui.h:22
+msgid "Setting new software channels"
+msgstr "Cài đặt các kênh phần mềm mới"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:24
+msgid "Restarting the computer"
+msgstr "Đang khởi động lại máy tính"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:27
+msgid "Terminal"
+msgstr "Cửa sổ dòng lệnh"
+
+#: ../UpdateManager/backend/InstallBackendSynaptic.py:64
+msgid "Please wait, this can take some time."
+msgstr "Vui lòng đợi trong chốc lát."
+
+#: ../UpdateManager/backend/InstallBackendSynaptic.py:66
+msgid "Update is complete"
+msgstr "Cập nhật hoàn thành"
+
+#: ../UpdateManager/DistUpgradeFetcher.py:114
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:109
+msgid "Could not find the release notes"
+msgstr "Không tìm thấy bản chú giải phát hành"
+
+#: ../UpdateManager/DistUpgradeFetcher.py:115
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:110
+msgid "The server may be overloaded. "
+msgstr "Máy chủ có thể đang quá tải. "
+
+#: ../UpdateManager/DistUpgradeFetcher.py:125
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:114
+msgid "Could not download the release notes"
+msgstr "Không thể tải về bản chú giải phát hành"
+
+#: ../UpdateManager/DistUpgradeFetcher.py:126
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:115
+msgid "Please check your internet connection."
+msgstr "Hãy kiểm tra kết nối internet của bạn."
+
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:68
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:91
+msgid "Upgrade"
+msgstr "Nâng cấp"
+
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:95
+#: ../data/gtkbuilder/UpdateManager.ui.h:20
+#: ../data/gtkbuilder/UpgradePromptDialog.ui.h:2
+msgid "Release Notes"
+msgstr "Bản chú giải phát hành"
+
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:134
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:148
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:150
+msgid "Downloading additional package files..."
+msgstr "Đang tải các gói bổ sung..."
+
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:148
+#, python-format
+msgid "File %s of %s at %sB/s"
+msgstr "Tập tin %s / %s, tốc độ %sB/s"
+
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:150
+#, python-format
+msgid "File %s of %s"
+msgstr "Tập tin %s / %s"
+
+#: ../UpdateManager/ChangelogViewer.py:75
+msgid "Open Link in Browser"
+msgstr "Mở trong Trình duyệt"
+
+#: ../UpdateManager/ChangelogViewer.py:78
+msgid "Copy Link to Clipboard"
+msgstr "Sao chép vào Bộ nhớ"
+
+#: ../UpdateManager/GtkProgress.py:162
+#, python-format
+msgid "Downloading file %(current)li of %(total)li with %(speed)s/s"
+msgstr "Đang tải tập tin %(current)li của %(total)li với tốc độ %(speed)s/s"
+
+#: ../UpdateManager/GtkProgress.py:167
+#, python-format
+msgid "Downloading file %(current)li of %(total)li"
+msgstr "Đang tải tập tin %(current)li của %(total)li"
+
+#: ../UpdateManager/UpdateManager.py:106 ../do-release-upgrade:100
+msgid "Your Ubuntu release is not supported anymore."
+msgstr "Phiên bản Ubuntu của bạn không còn được hỗ trợ."
+
+#: ../UpdateManager/UpdateManager.py:107
+msgid ""
+"You will not get any further security fixes or critical updates. Please "
+"upgrade to a later version of Ubuntu."
+msgstr ""
+"Bạn sẽ không lấy các bản sửa lỗi bảo vệ hay cập nhật cấp thiết nữa. Vui lòng "
+"nâng cấp lên phiên bản Ubuntu mới hơn."
+
+#: ../UpdateManager/UpdateManager.py:115
+msgid "Upgrade information"
+msgstr "Thông tin cập nhật"
+
+#: ../UpdateManager/UpdateManager.py:233
+#: ../UpdateManagerText/UpdateManagerText.py:35
+msgid "Install"
+msgstr "Cài đặt"
+
+#: ../UpdateManager/UpdateManager.py:235
+msgid "Name"
+msgstr "Tên"
+
+#. upload_archive = version_match.group(2).strip()
+#: ../UpdateManager/UpdateManager.py:395
+#, python-format
+msgid "Version %s: \n"
+msgstr "Phiên bản %s: \n"
+
+#: ../UpdateManager/UpdateManager.py:453
+msgid ""
+"No network connection detected, you can not download changelog information."
+msgstr ""
+"Không tìm thấy kết nối mạng, bạn không thể tải xuống thông tin về các thay "
+"đổi."
+
+#: ../UpdateManager/UpdateManager.py:463
+msgid "Downloading list of changes..."
+msgstr "Đang tải danh sách các thay đổi"
+
+#: ../UpdateManager/UpdateManager.py:507
+msgid "_Deselect All"
+msgstr "_Bỏ chọn tất cả"
+
+#: ../UpdateManager/UpdateManager.py:513
+msgid "Select _All"
+msgstr "C_họn tất cả"
+
+#: ../UpdateManager/UpdateManager.py:572
+#, python-format
+msgid "%s will be downloaded."
+msgstr "%s sẽ được tải về"
+
+#: ../UpdateManager/UpdateManager.py:584
+#, fuzzy
+msgid "The update has already been downloaded."
+msgid_plural "The updates have already been downloaded."
+msgstr[0] "Các bản cập nhật đã được tải xuống xong, nhưng chưa được cài đặt."
+
+#: ../UpdateManager/UpdateManager.py:589
+msgid "There are no updates to install."
+msgstr "Không có bản cập nhật nào để cài đặt."
+
+#: ../UpdateManager/UpdateManager.py:598
+msgid "Unknown download size."
+msgstr "Không biết kích thước tải về."
+
+#: ../UpdateManager/UpdateManager.py:624
+msgid ""
+"It is unknown when the package information was updated last. Please click "
+"the 'Check' button to update the information."
+msgstr ""
+"Không rõ khi nào thông tin gói được cập nhật lần cuối. Hãy nhấn nút 'Kiểm "
+"tra' để cập nhật thông tin."
+
+#: ../UpdateManager/UpdateManager.py:630
+#, python-format
+msgid ""
+"The package information was last updated %(days_ago)s days ago.\n"
+"Press the 'Check' button below to check for new software updates."
+msgstr ""
+"Thông tin về gói cài đặt được cập nhật lần cuối vào %(days_ago)s ngày "
+"trước.\n"
+"Hãy nhấn nút 'Kiểm tra' bên dưới để kiểm tra cập nhật phần mềm mới."
+
+#: ../UpdateManager/UpdateManager.py:635
+#, python-format
+msgid "The package information was last updated %(days_ago)s day ago."
+msgid_plural "The package information was last updated %(days_ago)s days ago."
+msgstr[0] "Thông tin gói đã được cập nhật %(days_ago)s ngày trước."
+
+#: ../UpdateManager/UpdateManager.py:639
+#, python-format
+msgid "The package information was last updated %(hours_ago)s hour ago."
+msgid_plural ""
+"The package information was last updated %(hours_ago)s hours ago."
+msgstr[0] "Thông tin gói đã được cập nhật %(hours_ago)s giờ trước."
+
+#. TRANSLATORS: only in plural form, as %s minutes ago is one of 15, 30, 45 minutes ago
+#: ../UpdateManager/UpdateManager.py:644 ../UpdateManager/UpdateManager.py:646
+#: ../UpdateManager/UpdateManager.py:648
+#, python-format
+msgid "The package information was last updated about %s minutes ago."
+msgstr "Thông tin gói được cập nhật lần cuối khoảng %s phút trước."
+
+#: ../UpdateManager/UpdateManager.py:650
+msgid "The package information was just updated."
+msgstr "Thông tin gói vừa được cập nhật."
+
+#: ../UpdateManager/UpdateManager.py:689
+msgid "Software updates may be available for your computer."
+msgstr "Các bản cập nhật phần mềm có thể đã sẵn sàng cho máy tính của bạn."
+
+#: ../UpdateManager/UpdateManager.py:697
+#, python-format
+msgid ""
+"Updated software has been issued since %s was released. Do you want to "
+"install it now?"
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:700
+msgid ""
+"Updated software is available for this computer. Do you want to install it "
+"now?"
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:758
+#, python-format
+msgid ""
+"The upgrade needs a total of %s free space on disk '%s'. Please free at "
+"least an additional %s of disk space on '%s'. Empty your trash and remove "
+"temporary packages of former installations using 'sudo apt-get clean'."
+msgstr ""
+"Quá trình nâng cấp cần %s không gian trống trên ổ đĩa '%s'. Hãy bảo đảm ít "
+"nhất %s trống trên đĩa '%s'. Chẳng hạn: làm sạch Thùng rác và dùng 'sudo apt-"
+"get clean' để xóa các tập tin tạm của các gói đã cài đặt."
+
+#: ../UpdateManager/UpdateManager.py:783
+msgid ""
+"The computer needs to restart to finish installing updates. Please save your "
+"work before continuing."
+msgstr ""
+"Cần khởi động lại máy tính để hoàn thiện cài đặt các bản cập nhật. Vui lòng "
+"lưu lại công việc trước khi tiếp tục."
+
+#: ../UpdateManager/UpdateManager.py:847
+msgid "Reading package information"
+msgstr "Đang đọc thông tin về gói"
+
+#: ../UpdateManager/UpdateManager.py:862
+msgid "Connecting..."
+msgstr "Đang kết nối…"
+
+#: ../UpdateManager/UpdateManager.py:879
+msgid "You may not be able to check for updates or download new updates."
+msgstr "Bạn có thể sẽ không kiểm tra hoặc tải về bản nâng cấp được nữa."
+
+#: ../UpdateManager/UpdateManager.py:1002
+msgid "Could not initialize the package information"
+msgstr "Không thể khởi tạo thông tin về gói"
+
+#: ../UpdateManager/UpdateManager.py:1003
+msgid ""
+"An unresolvable problem occurred while initializing the package "
+"information.\n"
+"\n"
+"Please report this bug against the 'update-manager' package and include the "
+"following error message:\n"
+msgstr ""
+"Có lỗi xảy ra khi chuẩn bị thông tin về các gói.\n"
+"\n"
+"Hãy thông báo lỗi của 'update-manager' và kèm theo thông báo lỗi sau:\n"
+
+#: ../UpdateManager/UpdateManager.py:1032
+msgid ""
+"An unresolvable problem occurred while calculating the upgrade.\n"
+"\n"
+"Please report this bug against the 'update-manager' package and include the "
+"following error message:"
+msgstr ""
+"Có lỗi xảy ra khi chuẩn bị nâng cấp.\n"
+"\n"
+"Hãy thông báo lỗi của 'update-manager' và kèm theo thông báo lỗi sau:"
+
+#: ../UpdateManager/UpdateManager.py:1056
+msgid " (New install)"
+msgstr " (Mới cài đặt)"
+
+#. TRANSLATORS: the b stands for Bytes
+#: ../UpdateManager/UpdateManager.py:1063
+#, python-format
+msgid "(Size: %s)"
+msgstr "(Dung lượng: %s)"
+
+#: ../UpdateManager/UpdateManager.py:1067
+#, python-format
+msgid "From version %(old_version)s to %(new_version)s"
+msgstr "Từ phiên bản %(old_version)s lên %(new_version)s"
+
+#: ../UpdateManager/UpdateManager.py:1071
+#, python-format
+msgid "Version %s"
+msgstr "Phiên bản %s"
+
+#: ../UpdateManager/UpdateManager.py:1104 ../do-release-upgrade:112
+msgid "Release upgrade not possible right now"
+msgstr "Không thể nâng cấp bản phát hành ngay được"
+
+#: ../UpdateManager/UpdateManager.py:1105 ../do-release-upgrade:113
+#, c-format, python-format
+msgid ""
+"The release upgrade can not be performed currently, please try again later. "
+"The server reported: '%s'"
+msgstr ""
+"Không thể tiến hành nâng cấp bản phát hành ngay được, xin thử lại sau. Máy "
+"chủ báo cáo: '%s'"
+
+#: ../UpdateManager/UpdateManager.py:1107 ../check-new-release-gtk:126
+msgid "Downloading the release upgrade tool"
+msgstr "Đang tải công cụ nâng cấp bản phát hành"
+
+#: ../UpdateManager/UpdateManager.py:1114
+#, python-format
+msgid "<b>New Ubuntu release '%s' is available</b>"
+msgstr "Phiên bản Ubuntu mới '%s' sẵn sàng"
+
+#. we assert a clean cache
+#: ../UpdateManager/UpdateManager.py:1153
+msgid "Software index is broken"
+msgstr "Chỉ mục phần mềm bị hỏng"
+
+#: ../UpdateManager/UpdateManager.py:1154
+msgid ""
+"It is impossible to install or remove any software. Please use the package "
+"manager \"Synaptic\" or run \"sudo apt-get install -f\" in a terminal to fix "
+"this issue at first."
+msgstr ""
+"Hiện không thể cài đặt hay gỡ bỏ bất kỳ phần mềm nào. Vui lòng dùng trình "
+"quản lý gói \"Synaptic\" hoặc chạy lệnh \"sudo apt-get install -f\" trong "
+"cửa sổ lệnh để sửa lỗi này trước tiên."
+
+#: ../UpdateManager/UnitySupport.py:57
+msgid "Check for Updates"
+msgstr "Kiểm tra bản cập nhật"
+
+#: ../UpdateManager/UnitySupport.py:66
+msgid "Install All Available Updates"
+msgstr "Cài đặt tất cả bản cập nhật sẵn sàng"
+
+#: ../UpdateManagerText/UpdateManagerText.py:34
+msgid "Cancel"
+msgstr "Hủy bỏ"
+
+#: ../UpdateManagerText/UpdateManagerText.py:37
+msgid "Changelog"
+msgstr "Nhật ký thay đổi"
+
+#: ../UpdateManagerText/UpdateManagerText.py:40
+msgid "Updates"
+msgstr "Các cập nhật"
+
+#: ../UpdateManagerText/UpdateManagerText.py:53
+msgid "Building Updates List"
+msgstr "Xây dựng danh sách cập nhật"
+
+#: ../UpdateManagerText/UpdateManagerText.py:56
+msgid ""
+"\n"
+"A normal upgrade can not be calculated, please run: \n"
+"  sudo apt-get dist-upgrade\n"
+"\n"
+"\n"
+"This can be caused by:\n"
+" * A previous upgrade which didn't complete\n"
+" * Problems with some of the installed software\n"
+" * Unofficial software packages not provided by Ubuntu\n"
+" * Normal changes of a pre-release version of Ubuntu"
+msgstr ""
+"\n"
+"Không thể nâng cấp theo cách bình thường, vui lòng chạy: \n"
+"  sudo apt-get dist-upgrade\n"
+"\n"
+"\n"
+"Nó có thể do những nguyên nhân:\n"
+" * Một nâng cấp trước đó không hoàn thành\n"
+" * Có lỗi khi cài đặt một số phần mềm\n"
+" * Những gói phần mềm không được cung cấp bởi Ubuntu\n"
+" * Những thay đổi bình thường của phiên bản Ubuntu thử nghiệm trước khi phát "
+"hành"
+
+#: ../UpdateManagerText/UpdateManagerText.py:125
+msgid "Downloading changelog"
+msgstr "Đang tải về bản ghi thay đổi"
+
+#: ../UpdateManager/Core/MyCache.py:147
+#, python-format
+msgid "Other updates (%s)"
+msgstr "Cập nhật khác (%s)"
+
+#: ../UpdateManager/Core/MyCache.py:325
+msgid "This update does not come from a source that supports changelogs."
+msgstr "Cập nhật này không đến từ một nguồn hỗ trợ bản ghi thay đổi."
+
+#: ../UpdateManager/Core/MyCache.py:331 ../UpdateManager/Core/MyCache.py:359
+msgid ""
+"Failed to download the list of changes. \n"
+"Please check your Internet connection."
+msgstr ""
+"Không tải được danh sách các thay đổi. \n"
+"Hãy kiểm tra kết nối Internet của bạn."
+
+#: ../UpdateManager/Core/MyCache.py:338
+#, python-format
+msgid ""
+"Changes for the versions:\n"
+"Installed version: %s\n"
+"Available version: %s\n"
+"\n"
+msgstr ""
+"Thay đổi cho phiên bản:\n"
+"Phiên bản đã cài: %s\n"
+"Phiên bản sẵn sàng: %s\n"
+"\n"
+
+#: ../UpdateManager/Core/MyCache.py:348
+#, python-format
+msgid ""
+"The changelog does not contain any relevant changes.\n"
+"\n"
+"Please use http://launchpad.net/ubuntu/+source/%s/%s/+changelog\n"
+"until the changes become available or try again later."
+msgstr ""
+"Bản ghi thay đổi không chưa bất kỳ thay đổi nào.\n"
+"\n"
+"Vui lòng xem tạm trên http://launchpad.net/ubuntu/+source/%s/%s/+changelog\n"
+"đến khi thay đổi sẵn sàng hoặc thử lại sau."
+
+#: ../UpdateManager/Core/MyCache.py:353
+#, python-format
+msgid ""
+"The list of changes is not available yet.\n"
+"\n"
+"Please use http://launchpad.net/ubuntu/+source/%s/%s/+changelog\n"
+"until the changes become available or try again later."
+msgstr ""
+"Danh sách thay đổi chưa sẵn sàng.\n"
+"\n"
+"Vui lòng sử dụng http://launchpad.net/ubuntu/+source/%s/%s/+changelog\n"
+"đến khi thay đổi sẵn sàng hoặc thử lại sau."
+
+#: ../UpdateManager/Core/UpdateList.py:51
+msgid "Failed to detect distribution"
+msgstr "Không thể tìm ra bản phân phối"
+
+#: ../UpdateManager/Core/UpdateList.py:52
+#, python-format
+msgid "A error '%s' occurred while checking what system you are using."
+msgstr "Lỗi '%s' xảy ra khi đang kiểm tra hệ thống nào bạn đang dùng."
+
+#: ../UpdateManager/Core/UpdateList.py:63
+msgid "Important security updates"
+msgstr "Các bản cập nhật bảo mật quan trọng"
+
+#: ../UpdateManager/Core/UpdateList.py:64
+msgid "Recommended updates"
+msgstr "Các bản cập nhật được khuyến nghị"
+
+#: ../UpdateManager/Core/UpdateList.py:65
+msgid "Proposed updates"
+msgstr "Các bản cập nhật được đề xuất"
+
+#: ../UpdateManager/Core/UpdateList.py:66
+msgid "Backports"
+msgstr "Các bản cập nhật bảo trì"
+
+#: ../UpdateManager/Core/UpdateList.py:67
+msgid "Distribution updates"
+msgstr "Cập nhật bản phân phối"
+
+#: ../UpdateManager/Core/UpdateList.py:72
+msgid "Other updates"
+msgstr "Các bản cập nhật khác"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:1
+#, fuzzy
+msgid "<big><b>Starting Software Updater</b></big>"
+msgstr "<big><b>Đang khởi động trình quản lý cập nhật</b></big>"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:2
+msgid ""
+"Software updates correct errors, eliminate security vulnerabilities and "
+"provide new features."
+msgstr ""
+"Các bản cập nhật phần mềm giúp sửa lỗi, loại bỏ các lổ hổng bảo mật và cung "
+"cấp các tính năng mới."
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:3
+msgid "_Partial Upgrade"
+msgstr "_Nâng cấp một phần"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:4
+msgid "<big><b>Not all updates can be installed</b></big>"
+msgstr ""
+"<big><b>Không phải toàn bộ các bản cập nhật có thể được cài đặt</b></big>"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:5
+msgid ""
+"Run a partial upgrade, to install as many updates as possible. \n"
+"\n"
+"This can be caused by:\n"
+" * A previous upgrade which didn't complete\n"
+" * Problems with some of the installed software\n"
+" * Unofficial software packages not provided by Ubuntu\n"
+" * Normal changes of a pre-release version of Ubuntu"
+msgstr ""
+"Khởi động nâng cấp một phần, để cài đặt như cập nhật nhiều nhất có thể. \n"
+"\n"
+"Điều này có thể được gây ra bởi:\n"
+" * Một nâng cấp trước đó đã không hoàn thành\n"
+" * Vấn đề với một số các phần mềm cài đặt\n"
+" * Phần mềm không chính thức của các gói không được cung cấp bởi Ubuntu\n"
+" * Bình thường thay đổi trước một phát hành phiên bản Ubuntu"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:12
+msgid "Chec_k"
+msgstr "_Kiểm tra"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:13
+msgid ""
+"<b><big>You must check for updates manually</big></b>\n"
+"\n"
+"Your system does not check for updates automatically. You can configure this "
+"behavior in <i>Software Sources</i> on the <i>Updates</i> tab."
+msgstr ""
+"<b><big>Bạn phải kiểm tra các cập nhật thủ công</big></b>\n"
+"\n"
+"Hệ thống của bạn không kiểm tra các cập nhật tự động. Bạn có thể cấu hình "
+"chế độ này trong <i>Nguồn cài đặt phần mềm</i> trong tab <i>Cập nhật</i>."
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:16
+msgid "_Hide this information in the future"
+msgstr "Ẩn thông tin này trong những lần sau"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:17
+msgid "Co_ntinue"
+msgstr "_Tiếp tục"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:18
+msgid "<big><b>Running on battery</b></big>"
+msgstr "<big><b>Chạy trên pin</b></big>"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:19
+msgid "Your system is running on battery. Are you sure you want to continue?"
+msgstr ""
+"Hệ thống của bạn có đang chạy trên pin. Bạn có chắc chắn muốn tiếp tục không?"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:21
+msgid "_Upgrade"
+msgstr "_Nâng cấp"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:22
+#: ../data/gtkbuilder/UpgradePromptDialog.ui.h:8
+msgid "Show progress of individual files"
+msgstr "Hiện tiến trình của từng tập tin đơn lẻ"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:23
+#: ../data/update-manager.desktop.in.h:1
+#, fuzzy
+msgid "Software Updater"
+msgstr "Bản cập nhật phần mềm"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:24
+#, fuzzy
+msgid "Starting Software Updater"
+msgstr "Bản cập nhật phần mềm"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:25
+msgid "U_pgrade"
+msgstr "_Nâng cấp"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:27
+msgid "updates"
+msgstr "các cập nhật"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:28
+msgid "Changes"
+msgstr "Các thay đổi"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:29
+msgid "Description"
+msgstr "Diễn giải"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:30
+#, fuzzy
+msgid "Details of updates"
+msgstr "Diễn giải các cập nhật"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:31
+msgid ""
+"You are connected via roaming and may be charged for the data consumed by "
+"this update."
+msgstr ""
+"Bạn đang kết nối qua roaming và có thể phải trả phí dữ liệu cho bản cập nhật "
+"này."
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:32
+msgid ""
+"You may want to wait until you’re not using a mobile broadband connection."
+msgstr ""
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:33
+msgid "It’s safer to connect the computer to AC power before updating."
+msgstr ""
+"Sẽ an toàn hơn nếu cắm một nguồn điện xoay chiều vào máy tính trước khi cập "
+"nhật."
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:34
+msgid "_Settings..."
+msgstr "Thiết _lập..."
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:35
+#, fuzzy
+msgid "_Install Now"
+msgstr "Cài đặt"
+
+#: ../data/gtkbuilder/UpgradePromptDialog.ui.h:1
+msgid "<b>A new version of Ubuntu is available. Would you like to upgrade?</b>"
+msgstr ""
+"<b>Một phiên bản mới của Ubuntu đã sẵn sàng. Bạn có muốn nâng cấp không?</b>"
+
+#: ../data/gtkbuilder/UpgradePromptDialog.ui.h:3
+msgid "Don't Upgrade"
+msgstr "Không nâng cấp"
+
+#: ../data/gtkbuilder/UpgradePromptDialog.ui.h:4
+msgid "Ask Me Later"
+msgstr "Hỏi lại tôi sau"
+
+#: ../data/gtkbuilder/UpgradePromptDialog.ui.h:5
+msgid "Yes, Upgrade Now"
+msgstr "Vâng, nâng cấp ngay bây giờ"
+
+#: ../data/gtkbuilder/UpgradePromptDialog.ui.h:6
+msgid "You have declined to upgrade to the new Ubuntu"
+msgstr "Bạn vừa từ chối nâng cấp lên Ubuntu mới"
+
+#: ../data/gtkbuilder/UpgradePromptDialog.ui.h:7
+#, fuzzy
+msgid ""
+"You can upgrade at a later time by opening Software Updater and click on "
+"\"Upgrade\"."
+msgstr ""
+"Bạn có thể nâng cấp sau bằng cách mở Trình quản lý cập nhật và nhấn vào "
+"\"Nâng Cấp\"."
+
+#: ../data/update-manager.desktop.in.h:2
+msgid "Software Updates"
+msgstr "Bản cập nhật phần mềm"
+
+#: ../data/update-manager.desktop.in.h:3
+msgid "Show and install available updates"
+msgstr "Hiển thị và cài đặt các bản cập nhật đã sẵn sàng"
+
+#: ../update-manager:66 ../update-manager-text:55 ../do-release-upgrade:51
+msgid "Show version and exit"
+msgstr "Hiển thị phiên bản và thoát"
+
+#: ../update-manager:69
+msgid "Directory that contains the data files"
+msgstr "Thư mục chứa các tập tin dữ liệu"
+
+#: ../update-manager:72
+msgid "Check if a new Ubuntu release is available"
+msgstr "Kiểm tra nếu một Ubuntu mới phát hành có sẵn"
+
+#: ../update-manager:75 ../do-release-upgrade:54 ../check-new-release-gtk:186
+msgid "Check if upgrading to the latest devel release is possible"
+msgstr "Kiểm tra nếu có bản mới nhất phát hành trong giai đoạn phát triển"
+
+#: ../update-manager:79
+msgid "Upgrade using the latest proposed version of the release upgrader"
+msgstr "Nâng cấp, sử dụng phiên bản mới nhất đề xuất của Upgrader phát hành"
+
+#: ../update-manager:86
+msgid "Do not focus on map when starting"
+msgstr "Không tập trung vào bản đồ khi đang khởi động"
+
+#: ../update-manager:89
+msgid "Try to run a dist-upgrade"
+msgstr "Hãy thử chạy dist-upgrade"
+
+#: ../update-manager:92
+msgid "Do not check for updates when starting"
+msgstr "Đừng kiểm tra cập nhật khi khởi động."
+
+#: ../update-manager:96 ../do-release-upgrade:70
+msgid "Test upgrade with a sandbox aufs overlay"
+msgstr "Thử nghiệm nâng cấp với một aufs chỗ thử bao"
+
+#: ../update-manager:116
+msgid "Running partial upgrade"
+msgstr "Thực hiện nâng cấp một phần"
+
+#: ../update-manager-text:59
+msgid "Show description of the package instead of the changelog"
+msgstr "Hiện mô tả gói thay vì nhật ký sửa đổi"
+
+#: ../do-release-upgrade:58 ../check-new-release-gtk:190
+msgid ""
+"Try upgrading to the latest release using the upgrader from $distro-proposed"
+msgstr ""
+"Đang thử nâng cấp tới các phiên bản phát hành mới nhất sử dụng trình nâng "
+"cấp từ $distro-proposed"
+
+#: ../do-release-upgrade:62
+msgid ""
+"Run in a special upgrade mode.\n"
+"Currently 'desktop' for regular upgrades of a desktop system and 'server' "
+"for server systems are supported."
+msgstr ""
+"Chạy trong một chế độ nâng cấp đặc biệt.\n"
+"Hiện nay 'desktop' cho nâng cấp thường xuyên của một hệ thống máy tính để "
+"bàn và 'máy chủ' cho các hệ thống máy chủ được hỗ trợ."
+
+#: ../do-release-upgrade:68
+msgid "Run the specified frontend"
+msgstr "Thực thi một trình quản lý chỉ định"
+
+#: ../do-release-upgrade:73
+msgid ""
+"Check only if a new distribution release is available and report the result "
+"via the exit code"
+msgstr ""
+"Kiểm tra chỉ khi một bản phân phối mới có sẵn và thông báo kết quả thông qua "
+"lệnh thoát"
+
+#: ../do-release-upgrade:87
+msgid "Checking for a new Ubuntu release"
+msgstr "Đang tìm bản phát hành Ubuntu mới"
+
+#: ../do-release-upgrade:101
+msgid ""
+"For upgrade information, please visit:\n"
+"%(url)s\n"
+msgstr ""
+"Để xem thông tin nâng cấp, vui lòng truy cập:\n"
+"%(url)s\n"
+
+#: ../do-release-upgrade:107
+msgid "No new release found"
+msgstr "Chưa có bản phát hành mới nào"
+
+#: ../do-release-upgrade:119
+#, c-format
+msgid "New release '%s' available."
+msgstr "Phiên bản mới '%s' sẵn sàng."
+
+#: ../do-release-upgrade:120
+msgid "Run 'do-release-upgrade' to upgrade to it."
+msgstr "Chạy 'do-release-upgrade' để nâng cấp."
+
+#: ../check-new-release-gtk:101
+msgid "Ubuntu %(version)s Upgrade Available"
+msgstr "Ubuntu %(version)s hiện đang sẵn sàng"
+
+#: ../check-new-release-gtk:143
+#, c-format
+msgid "You have declined the upgrade to Ubuntu %s"
+msgstr "Bạn đã từ chối việc nâng cấp lên Ubuntu %s"
+
+#: ../check-new-release-gtk:196
+msgid "Add debug output"
+msgstr "Thêm kết xuất tìm lỗi"
+
+#: ../ubuntu-support-status:91
+msgid "Show unsupported packages on this machine"
+msgstr "Hiện các gói không được hỗ trợ trên máy này"
+
+#: ../ubuntu-support-status:94
+msgid "Show supported packages on this machine"
+msgstr "Hiện các gói được hỗ trợ trên máy này"
+
+#: ../ubuntu-support-status:97
+msgid "Show all packages with their status"
+msgstr "Hiện tất cả các gói với tình trạng của chúng"
+
+#: ../ubuntu-support-status:100
+msgid "Show all packages in a list"
+msgstr "Hiện tất cả các gói trong một danh sách"
+
+#: ../ubuntu-support-status:142
+#, c-format
+msgid "Support status summary of '%s':"
+msgstr "Tóm tắt tình trạng hỗ trợ của '%s':"
+
+#: ../ubuntu-support-status:145
+msgid "You have %(num)s packages (%(percent).1f%%) supported until %(time)s"
+msgstr "Bạn có %(num)s gói (%(percent).1f%%) được hỗ trợ đến %(time)s"
+
+#: ../ubuntu-support-status:151
+msgid ""
+"You have %(num)s packages (%(percent).1f%%) that can not/no-longer be "
+"downloaded"
+msgstr "Bạn có %(num)s gói (%(percent).1f%%) không thể/không còn để tải xuống"
+
+#: ../ubuntu-support-status:154
+msgid "You have %(num)s packages (%(percent).1f%%) that are unsupported"
+msgstr "Bạn có %(num)s gói (%(percent).1f%%) không được hỗ trợ"
+
+#: ../ubuntu-support-status:162
+msgid ""
+"Run with --show-unsupported, --show-supported or --show-all to see more "
+"details"
+msgstr ""
+"Chạy với tùy chọn --show-unsupported, --show-supported hoặc --show-all để "
+"biết thêm chi tiết"
+
+#: ../ubuntu-support-status:166
+msgid "No longer downloadable:"
+msgstr "Không còn tải xuống được:"
+
+#: ../ubuntu-support-status:169
+msgid "Unsupported: "
+msgstr "Không được hỗ trợ: "
+
+#: ../ubuntu-support-status:174
+#, c-format
+msgid "Supported until %s:"
+msgstr "Được hỗ trợ đến %s:"
+
+#: ../ubuntu-support-status:183
+msgid "Unsupported"
+msgstr "Không được hỗ trợ"
+
+#. Why do we use %s here instead of $strings or {} format placeholders?
+#. It's because we don't want to break existing translations.
+#: ../janitor/plugincore/exceptions.py:42
+#, python-format
+msgid "Unimplemented method: %s"
+msgstr "Không thực hiện được phương thức: %s"
+
+#: ../janitor/plugincore/core/file_cruft.py:41
+msgid "A file on disk"
+msgstr "Một tệp tin trên đĩa"
+
+#: ../janitor/plugincore/core/missing_package_cruft.py:39
+msgid "Install missing package."
+msgstr "Cài đặt các gói còn thiếu."
+
+#. 2012-06-08 BAW: i18n string; don't use {} or PEP 292.
+#: ../janitor/plugincore/core/missing_package_cruft.py:49
+#, python-format
+msgid "Package %s should be installed."
+msgstr "Gói %s nên được cài đặt."
+
+#: ../janitor/plugincore/core/package_cruft.py:49
+msgid ".deb package"
+msgstr "gói .deb"
+
+#: ../janitor/plugincore/plugins/langpack_manual_plugin.py:46
+#, python-format
+msgid "%s needs to be marked as manually installed."
+msgstr "%s phải được đánh dấu để cài thủ công."
+
+#: ../janitor/plugincore/plugins/kdelibs4to5_plugin.py:49
+msgid ""
+"When upgrading, if kdelibs4-dev is installed, kdelibs5-dev needs to be "
+"installed. See bugs.launchpad.net, bug #279621 for details."
+msgstr ""
+"Khi nâng cấp, nếu kdelibs4-dev được cài đặt, kdelibs5-dev nhu cầu được cài "
+"đặt. Xem bugs.launchpad.net, lỗi # 279621 để biết chi tiết."
+
+#: ../janitor/plugincore/plugins/dpkg_status_plugin.py:44
+#, python-format
+msgid "%i obsolete entries in the status file"
+msgstr "%i mục lỗi thời trong tệp trạng thái"
+
+#: ../janitor/plugincore/plugins/dpkg_status_plugin.py:47
+msgid "Obsolete entries in dpkg status"
+msgstr "Những mục lỗi thời trong trạng thái dpkg"
+
+#. pragma: no cover
+#: ../janitor/plugincore/plugins/dpkg_status_plugin.py:50
+msgid "Obsolete dpkg status entries"
+msgstr "Dpkg tình trạng quá cũ mục"
+
+#: ../janitor/plugincore/plugins/remove_lilo_plugin.py:42
+msgid "Remove lilo since grub is also installed.(See bug #314004 for details.)"
+msgstr "Gỡ bỏ lilo vì grub đã được cài đặt.(Xem thêm lỗi số #314004.)"
+
+#~ msgid ""
+#~ "After your package information was updated the essential package '%s' can "
+#~ "not be found anymore so a bug reporting process is being started."
+#~ msgstr ""
+#~ "Sau khi cập nhật thông tin gói của bạn, không thể tìm thấy gói chủ yếu "
+#~ "'%s' nữa nên một tiến trình báo cáo lỗi đang được bắt đầu."
+
+#~ msgid "<b><big>Upgrading Ubuntu to version 12.04</big></b>"
+#~ msgstr "<b><big>Đang nâng cấp Ubuntu lên phiên bản 12.04</big></b>"
+
+#~ msgid "%(count)s update has been selected."
+#~ msgid_plural "%(count)s updates have been selected."
+#~ msgstr[0] "%(count)s thành phần cần nâng cấp đã được chọn."
+
+#~ msgid "%(count_str)s %(download_str)s"
+#~ msgstr "%(count_str)s %(download_str)s"
+
+#~ msgid "Welcome to Ubuntu"
+#~ msgstr "Chào mừng đến với Ubuntu"
+
+#~ msgid ""
+#~ "These software updates have been issued since this version of Ubuntu was "
+#~ "released."
+#~ msgstr ""
+#~ "Các bản cập nhật phần mềm sau đã được đưa ra từ khi phiên Ubuntu này được "
+#~ "phát hành."
+
+#~ msgid "Software updates are available for this computer."
+#~ msgstr "Đang có các bản cập nhật phần mềm cho máy tính này."
+
+#~ msgid "Update Manager"
+#~ msgstr "Trình Quản lý Cập nhật"
+
+#~ msgid "Starting Update Manager"
+#~ msgstr "Đang khởi động Trình quản lí Cập nhật"
+
+#~ msgid "You are connected via a wireless modem."
+#~ msgstr "Bạn đang kết nối qua một modem không dây."
+
+#~ msgid "_Install Updates"
+#~ msgstr "_Cài đặt các cập nhật"
+
+#~ msgid "Checking for a new ubuntu release"
+#~ msgstr "Đang kiểm tra bản phát hành Ubuntu mới"
+
+#~ msgid "Your system is up-to-date"
+#~ msgstr "Hệ thống của bạn đã được cập nhật mới nhất"
+
+#~ msgid ""
+#~ "Fetching and installing the upgrade can take several hours. Once the "
+#~ "download has finished, the process cannot be cancelled."
+#~ msgstr ""
+#~ "Việc cài đặt các bản nâng cấp và cài đặt có thể mất hàng giờ. Tiến trình "
+#~ "cài đặt không thể hủy bỏ giữa chừng sau khi quá trình tải xuống đã hoàn "
+#~ "tất."
+
+#~ msgid ""
+#~ "This upgrade is running in sandbox (test) mode. All changes are written "
+#~ "to '%s' and will be lost on the next reboot.\n"
+#~ "\n"
+#~ "*No* changes written to a systemdir from now until the next reboot are "
+#~ "permanent."
+#~ msgstr ""
+#~ "Nâng cấp trong chế độ kiểm tra lỗi. Những thay đổi cho '%s' sẽ bị mất sau "
+#~ "khi khởi động lại máy.\n"
+#~ "\n"
+#~ "Mọi thay đổi trong systemdir sẽ bị mất sau khi khởi động lại máy."
+
+#~ msgid "Software updates are available for this computer"
+#~ msgstr "Có thông tin về cập nhật gói phần mềm"
+
+#~ msgid ""
+#~ "If you don't want to install them now, choose \"Update Manager\" from the "
+#~ "Administration menu later."
+#~ msgstr ""
+#~ "Nếu không muốn cài chúng ngay bây giờ, bạn có thể cài sau này bằng "
+#~ "\"Trình Quản lý cập nhật\" từ trình đơn Quản lý"
+
+#~ msgid "There are no updates to install"
+#~ msgstr "Không có bản cập nhật nào được cài đặt"
+
+#~ msgid "The update has already been downloaded, but not installed"
+#~ msgid_plural "The updates have already been downloaded, but not installed"
+#~ msgstr[0] "Bản cập nhật đã được tải, nhưng chưa được cài đặt."
+
+#~ msgid ""
+#~ "You will not get any further security fixes or critical updates. Please "
+#~ "upgrade to a later version of Ubuntu Linux."
+#~ msgstr ""
+#~ "Bạn sẽ không nhận được bất kỳ bản cập nhật quan trọng hay sửa lỗi bảo mật "
+#~ "nào nữa. Xin vui lòng nâng cấp lên phiên bản Ubuntu Linux mới hơn."
+
+#~ msgid "%.0f kB"
+#~ msgstr "%.0f kB"
+
+#~ msgid ""
+#~ "Preparing the system for the upgrade failed. Please report this using the "
+#~ "command 'ubuntu-bug update-manager' in a terminal and include the files "
+#~ "in /var/log/dist-upgrade/ in the bug report."
+#~ msgstr ""
+#~ "Chuẩn bị hệ thống cho nâng cấp đã thất bại. Hãy báo điều này sử dụng lệnh "
+#~ "'ubuntu-bug update-manager' trong một cửa sổ dòng lệnh và thêm vào các "
+#~ "tập tin trong /var/log/dist-upgrade/ trong báo cáo lỗi."
+
+#~ msgid ""
+#~ "The system was unable to get the prerequisites for the upgrade. The "
+#~ "upgrade will abort now and restore the original system state.\n"
+#~ "\n"
+#~ "Please report this as a bug using the command 'ubuntu-bug update-manager' "
+#~ "in a terminal and include the files in /var/log/dist-upgrade/ in the bug "
+#~ "report."
+#~ msgstr ""
+#~ "Hệ thống không thể lấy điều kiện nâng cấp. Quá trình nâng cấp sẽ huỷ bỏ "
+#~ "bây giờ và phục hồi lại trạng thái hệ thống gốc.\n"
+#~ "\n"
+#~ "Hãy báo lỗi này sử dụng lệnh 'ubuntu-bug update-manager' trong một cửa sổ "
+#~ "dòng lệnh và thêm vào các tập tin trong /var/log/dist-upgrade/ trong báo "
+#~ "cáo lỗi."
+
+#~ msgid "0 kB"
+#~ msgstr "0 kB"
+
+#~ msgid ""
+#~ "\n"
+#~ "\n"
+#~ "Please report this bug using the command 'ubuntu-bug update-manager' in a "
+#~ "terminal and include the files in /var/log/dist-upgrade/ in the bug "
+#~ "report.\n"
+#~ "%s"
+#~ msgstr ""
+#~ "\n"
+#~ "\n"
+#~ "Hãy báo lỗi này sử dụng lệnh 'ubuntu-bug update-manager' trong một cửa sổ "
+#~ "dòng lệnh và thêm vào các tập tin trong /var/log/dist-upgrade/ trong báo "
+#~ "cáo lỗi.\n"
+#~ "%s"
+
+#~ msgid ""
+#~ "Upgrading the repository information resulted in a invalid file. Please "
+#~ "report this as a bug using the command 'ubuntu-bug update-manager' in a "
+#~ "terminal."
+#~ msgstr ""
+#~ "Nâng cấp thông tin kho phần mềm gây ra một tập tin hỏng. Hãy báo cáo điều "
+#~ "này là một lỗi sử dụng lệnh 'ubuntu-bug update-manager' trong một cửa sổ "
+#~ "dòng lệnh."
+
+#~ msgid "1 kB"
+#~ msgstr "1 kB"
+
+#~ msgid ""
+#~ "After your package information was updated the essential package '%s' can "
+#~ "not be found anymore.\n"
+#~ "This indicates a serious error, please report this bug using the command "
+#~ "'ubuntu-bug update-manager' in a terminal and include the files in /var/"
+#~ "log/dist-upgrade/ in the bug report."
+#~ msgstr ""
+#~ "Sau khi thông tin gói của bạn đã được cập nhật, gói thiết yếu '%s' không "
+#~ "còn thấy nữa.\n"
+#~ "Điều này biểu thị một lỗi nghiêm trọng, hãy báo lỗi này sử dụng lệnh "
+#~ "'ubuntu-bug update-manager' trong một cửa sổ dòng lệnh và thêm vào các "
+#~ "tập tin trong /var/log/dist-upgrade/ trong báo cáo lỗi."
+
+#~ msgid "Your graphics hardware may not be fully supported in Ubuntu 11.04."
+#~ msgstr ""
+#~ "Phần cứng đồ hoạ của bạn có thể không được hỗ trợ hoàn toàn trong Ubuntu "
+#~ "11.04."
+
+#~ msgid ""
+#~ "The support in Ubuntu 11.04 for your intel graphics hardware is limited "
+#~ "and you may encounter problems after the upgrade. Do you want to continue "
+#~ "with the upgrade?"
+#~ msgstr ""
+#~ "Hỗ trợ trong Ubuntu 11.04 cho phần cứng đồ hoạ intel của bạn bị giới hạn "
+#~ "và bạn có thể gặp vấn đề sau nâng cấp. Bạn có muốn tiếp tục nâng cấp "
+#~ "không?"
+
+#~ msgid ""
+#~ "If you don't want to install them now, choose \"Update Manager\" from "
+#~ "Applications later."
+#~ msgstr ""
+#~ "Nếu bạn không muốn cài chúng bây giờ, hãy chọn \"Trình Quản lý cập nhật\" "
+#~ "từ Ứng dụng sau."
+
+#~ msgid ""
+#~ "These software updates have been issued since this version of Ubuntu was "
+#~ "released. If you don't want to install them now, choose \"Update Manager"
+#~ "\" from Applications later."
+#~ msgstr ""
+#~ "Những bản cập nhật phần mềm này đã được đưa ra từ khi phiên bản Ubuntu "
+#~ "này được phát hành. Nếu bạn không muốn cài đặt chúng bầy giờ, hãy chọn "
+#~ "\"Trình quản lý cập nhật\" từ Ứng dụng sau."
+
+#~ msgid ""
+#~ "These software updates have been issued since this version of Ubuntu was "
+#~ "released. If you don't want to install them now, choose \"Update Manager"
+#~ "\" from the Administration Menu later."
+#~ msgstr ""
+#~ "Những bản cập nhật phần mềm này đã được đưa ra từ khi phiên bản Ubuntu "
+#~ "này được phát hành. Nếu bạn không muốn cài đặt chúng bầy giờ, hãy chọn "
+#~ "\"Trình quản lý cập nhật\" từ trình đơn quản trị sau."

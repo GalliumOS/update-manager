@@ -1,0 +1,89 @@
+Package: apt
+Priority: important
+Section: admin
+Installed-Size: 5488
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: all
+Version: 0.7.25.3ubuntu7
+Replaces: libapt-pkg-dev (<< 0.3.7), libapt-pkg-doc (<< 0.3.7)
+Provides: libapt-pkg-libc6.10-6-4.8
+Recommends: ubuntu-keyring
+Suggests: aptitude | synaptic | wajig, dpkg-dev, apt-doc, bzip2, lzma, python-apt
+Filename: pool/main/a/apt/apt_0.7.25.3ubuntu7_amd64.deb
+Size: 1817332
+MD5sum: e4e56d2597d1ae396d30d20684632719
+SHA1: baeeaa983f8f0224bb6748279611b1b2b323e49b
+SHA256: 863feb4e20cdb33d81cd59417a494c8cc369800f86f0a42d428e1aed872fc247
+Description: Advanced front-end for dpkg
+ This is Debian's next generation front-end for the dpkg package manager.
+ It provides the apt-get utility and APT dselect method that provides a
+ simpler, safer way to install and upgrade packages.
+ .
+ APT features complete installation ordering, multiple source capability
+ and several other unique features, see the Users Guide in apt-doc.
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Build-Essential: yes
+Origin: Ubuntu
+Supported: 5y
+Task: minimal
+
+Package: zsh
+Priority: optional
+Section: shells
+Installed-Size: 12992
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Clint Adams <schizo@debian.org>
+Architecture: all
+Version: 4.3.10-5ubuntu3
+Suggests: zsh-doc
+Conflicts: pdksh (<< 5.2.14-18)
+Filename: pool/main/z/zsh/zsh_4.3.10-5ubuntu3_amd64.deb
+Size: 4414350
+MD5sum: ba1c2a6832e13cee567ada772db2a432
+SHA1: c065f4ba97e1a05320951019c60196e83794a9af
+SHA256: 61495a50dcfc6d1faba7cbb635df04bbb07661cca0a18e2028a11b16e893c958
+Description: A shell with lots of features
+ Zsh is a UNIX command interpreter (shell) usable as an
+ interactive login shell and as a shell script command
+ processor. Of the standard shells, zsh most closely resembles
+ ksh but includes many enhancements. Zsh has command-line editing,
+ built-in spelling correction, programmable command completion,
+ shell functions (with autoloading), a history mechanism, and a
+ host of other features.
+Homepage: http://www.zsh.org/
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Phased-Update-Percentage: 10
+
+Package: zsh-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 348
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Clint Adams <schizo@debian.org>
+Architecture: amd64
+Source: zsh
+Version: 4.3.10-5ubuntu3
+Filename: pool/main/z/zsh/zsh-dev_4.3.10-5ubuntu3_amd64.deb
+Size: 79682
+MD5sum: 307bcd1994a2eb0d01cc06856a75fb52
+SHA1: 9e8d41855b62ba018341882099e3849e550aa55c
+SHA256: 5c615269c6a41ed44923edc696ab77c5c4e4b9c0ece17c0e3d767db80bfb65cc
+Description: A shell with lots of features (development files)
+ Zsh is a UNIX command interpreter (shell) usable as an
+ interactive login shell and as a shell script command
+ processor. Of the standard shells, zsh most closely resembles
+ ksh but includes many enhancements. Zsh has command-line editing,
+ built-in spelling correction, programmable command completion,
+ shell functions (with autoloading), a history mechanism, and a
+ host of other features.
+ .
+ This package contains headers and scripts necessary to compile
+ third-party modules.
+Homepage: http://www.zsh.org/
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+Phased-Update-Percentage: 10

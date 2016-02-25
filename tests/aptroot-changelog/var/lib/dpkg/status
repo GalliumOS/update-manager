@@ -1,0 +1,30 @@
+Package: apt
+Status: install ok installed
+Priority: important
+Section: admin
+Installed-Size: 3005
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 0.1
+Description: a example package with no source entry
+
+Package: gcc
+Status: install ok installed
+Priority: optional
+Section: devel
+Installed-Size: 3005
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Version: 0.1
+Description: an example package with source entry
+
+Package: libgtk2.0-dev
+Status: install ok installed
+Priority: optional
+Section: libdevel
+Installed-Size: 3005
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: amd64
+Version: 0.1
+Description: an example package with srcver == binver
+

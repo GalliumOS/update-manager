@@ -1,0 +1,2564 @@
+# translation of po_update-manager-km.po to Khmer
+# Khmer translation for update-manager
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the update-manager package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+# Khoem Sokhem <khoemsokhem@khmeros.info>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: po_update-manager-km\n"
+"Report-Msgid-Bugs-To: sebastian.heinlein@web.de\n"
+"POT-Creation-Date: 2012-06-14 00:53+0100\n"
+"PO-Revision-Date: 2012-03-21 08:35+0000\n"
+"Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
+"Language-Team: Khmer <en@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Launchpad-Export-Date: 2012-04-17 13:40+0000\n"
+"X-Generator: Launchpad (build 15099)\n"
+"X-Language: km-KH\n"
+
+#. TRANSLATORS: download size of small updates, e.g. "250 kB"
+#: ../DistUpgrade/utils.py:433 ../UpdateManager/Core/utils.py:433
+#, python-format
+msgid "%(size).0f kB"
+msgid_plural "%(size).0f kB"
+msgstr[0] "%(size).0f kB"
+
+#. TRANSLATORS: download size of updates, e.g. "2.3 MB"
+#: ../DistUpgrade/utils.py:436 ../UpdateManager/Core/utils.py:436
+#, python-format
+msgid "%.1f MB"
+msgstr "%.1f MB"
+
+#. TRANSLATORS: %s is a country
+#: ../DistUpgrade/distro.py:206 ../DistUpgrade/distro.py:436
+#, python-format
+msgid "Server for %s"
+msgstr "ម៉ាស៊ីន​បម្រើ​សម្រាប់ %s"
+
+#. More than one server is used. Since we don't handle this case
+#. in the user interface we set "custom servers" to true and
+#. append a list of all used servers
+#: ../DistUpgrade/distro.py:224 ../DistUpgrade/distro.py:230
+#: ../DistUpgrade/distro.py:246
+msgid "Main server"
+msgstr "ម៉ាស៊ីន​បម្រើ​មេ"
+
+#: ../DistUpgrade/distro.py:250
+msgid "Custom servers"
+msgstr "ម៉ាស៊ីន​បម្រើ​ផ្ទាល់ខ្លួន"
+
+#: ../DistUpgrade/DistUpgradeAptCdrom.py:142
+msgid "Could not calculate sources.list entry"
+msgstr "មិន​អាច​គណនា​ធាតុ sources.list បាន​ឡើយ"
+
+#: ../DistUpgrade/DistUpgradeAptCdrom.py:251
+msgid ""
+"Unable to locate any package files, perhaps this is not a Ubuntu Disc or the "
+"wrong architecture?"
+msgstr ""
+"មិន​អាច​រក​ឃើញទីតាំង​ឯកសារ​កញ្ចប់​ណាមួយ​ឡើយ ប្រហែល​វា​មិនមែន​ជា​ថាស​អ៊ូប៊ុនទូ ឬ​ស្ថាបត្យកម្ម​ដែល​ត្រឹមត្រូវ​ទេ ?"
+
+#: ../DistUpgrade/DistUpgradeAptCdrom.py:294
+msgid "Failed to add the CD"
+msgstr "បាន​បរាជ័យ​ក្នុង​ការ​បន្ថែម​ស៊ីឌី"
+
+#: ../DistUpgrade/DistUpgradeAptCdrom.py:295
+#, python-format
+msgid ""
+"There was a error adding the CD, the upgrade will abort. Please report this "
+"as a bug if this is a valid Ubuntu CD.\n"
+"\n"
+"The error message was:\n"
+"'%s'"
+msgstr ""
+"មាន​កំហុស​ក្នុង​ការ​បន្ថែម​ស៊ីឌី ការ​ធ្វើឲ្យ​ប្រសើរ​នឹង​ត្រូវ​​បោះបង់ ។ សូម​រាយការណ៍​វា​ជា​កំហុស ប្រសិនបើ​វា​ជា​ស៊ីឌី​"
+"អ៊ូប៊ុនទូ​ត្រឹមត្រូវ ។\n"
+"\n"
+"សារ​កំហុស​គឺ ៖\n"
+"'%s'"
+
+#: ../DistUpgrade/DistUpgradeCache.py:151
+msgid "Remove package in bad state"
+msgid_plural "Remove packages in bad state"
+msgstr[0] "យក​កញ្ចប់​ដែល​ស្ថិត​ក្នុង​ស្ថានភាព​មិនត្រឹមត្រូវ​ចេញ"
+
+#: ../DistUpgrade/DistUpgradeCache.py:154
+#, python-format
+msgid ""
+"The package '%s' is in an inconsistent state and needs to be reinstalled, "
+"but no archive can be found for it. Do you want to remove this package now "
+"to continue?"
+msgid_plural ""
+"The packages '%s' are in an inconsistent state and need to be reinstalled, "
+"but no archives can be found for them. Do you want to remove these packages "
+"now to continue?"
+msgstr[0] ""
+"កញ្ចប់ '%s' ស្ថិត​នៅ​ក្នុង​ស្ថានភាព​មិន​ឆបគ្នា និង​ទាមទារឲ្យ​ដំឡើង​ឡើងវិញ ប៉ុន្តែ​រក​មិន​ឃើញ​ប័ណ្ណសារ​សម្រាប់​វា​"
+"ទេ ។ តើ​អ្នក​​ចង់​យក​កញ្ចប់​នេះ​ចេញ​ឥឡូវ ដើម្បីបន្ត​ឬ ?"
+
+#. FIXME: not ideal error message, but we just reuse a
+#. existing one here to avoid a new string
+#: ../DistUpgrade/DistUpgradeCache.py:255
+msgid "The server may be overloaded"
+msgstr "ម៉ាស៊ីន​បម្រើ​អាច​នឹង​ផ្ទុក​លើស"
+
+#: ../DistUpgrade/DistUpgradeCache.py:368
+msgid "Broken packages"
+msgstr "កញ្ចប់​ខូច"
+
+#: ../DistUpgrade/DistUpgradeCache.py:369
+msgid ""
+"Your system contains broken packages that couldn't be fixed with this "
+"software. Please fix them first using synaptic or apt-get before proceeding."
+msgstr ""
+"ប្រព័ន្ធ​របស់​អ្នក​មាន​កញ្ចប់​ខូច​ ដែល​មិន​អាច​ជួសជុល​ដោយ​ប្រើ​កម្មវិធី​នេះ​បានទេ ។ សូម​ជួសជុល​ពួកវា​សិន ដោយ​ប្រើ "
+"synaptic ឬ apt-get មុន​នឹង​បន្ត ។"
+
+#. FIXME: change the text to something more useful
+#: ../DistUpgrade/DistUpgradeCache.py:693
+#, python-format
+msgid ""
+"An unresolvable problem occurred while calculating the upgrade:\n"
+"%s\n"
+"\n"
+" This can be caused by:\n"
+" * Upgrading to a pre-release version of Ubuntu\n"
+" * Running the current pre-release version of Ubuntu\n"
+" * Unofficial software packages not provided by Ubuntu\n"
+"\n"
+msgstr ""
+"បញ្ហា​ដែល​មិន​អាច​ដោះស្រាយ​បាន​កើតឡើង ខណៈ​ពេល​កំពុង​គណនា​ការ​ធ្វើឲ្យ​ប្រសើរ ៖\n"
+"%s\n"
+"\n"
+" វា​អាច​បណ្ដាល​មកពី ៖\n"
+" * ការ​ធ្វើឲ្យ​ប្រសើរ​ទៅ​កាន់​កំណែ​ចេញ​ផ្សាយ​មុន​របស់​អ៊ូប៊ុនទូ\n"
+" * ការ​ដំណើរការ​កំណែ​ចេញផ្សាយ​មុន​របស់​អ៊ូប៊ុនទូ\n"
+" * កញ្ចប់​កម្មវិធី​មិន​ផ្លូវការ​មិន​ត្រូវ​បាន​ផ្ដល់​ដោយ​អ៊ូប៊ុនទូ\n"
+"\n"
+
+#: ../DistUpgrade/DistUpgradeCache.py:703
+msgid "This is most likely a transient problem, please try again later."
+msgstr "វា​អាច​នឹង​ជា​បញ្ហា​បណ្ដោះអាសន្ន​ប៉ុណ្ណោះ សូម​ព្យាយាម​ម្ដងទៀត​នៅ​ពេលក្រោយ ។"
+
+#: ../DistUpgrade/DistUpgradeCache.py:706
+msgid ""
+"If none of this applies, then please report this bug using the command "
+"'ubuntu-bug update-manager' in a terminal."
+msgstr ""
+"ប្រសិនបើ​មិន​អាច​ដោះស្រាយ​បញ្ហា​ណាមួយ​បាន​ សូម​រាយការណ៍​អំពី​កំហុស​នេះ​ដោយ​ប្រើ​ពាក្យ​បញ្ជា 'ubuntu-bug "
+"update-manager' នៅ​ក្នុង​ស្ថានីយ ។"
+
+#: ../DistUpgrade/DistUpgradeCache.py:711
+#: ../UpdateManager/UpdateManager.py:1031
+msgid "Could not calculate the upgrade"
+msgstr "មិន​អាច​គណនា​ការ​ធ្វើឲ្យ​ប្រសើរ​បាន​ឡើយ"
+
+#: ../DistUpgrade/DistUpgradeCache.py:762
+msgid "Error authenticating some packages"
+msgstr "កំហុស​ក្នុង​ការ​ផ្ទៀងផ្ទាត់​ភាព​ត្រឹមត្រូវ​របស់​កញ្ចប់​មួយចំនួន"
+
+#: ../DistUpgrade/DistUpgradeCache.py:763
+msgid ""
+"It was not possible to authenticate some packages. This may be a transient "
+"network problem. You may want to try again later. See below for a list of "
+"unauthenticated packages."
+msgstr ""
+"មិន​អាច​ផ្ទៀងផ្ទាត់​ភាព​ត្រឹមត្រូវ​របស់​កញ្ចប់​មួយ​ចំនួន​បាន​ទេ ។ វា​អាច​នឹង​ជា​បញ្ហា​បណ្ដាញ​​បណ្ដោះ​អាសន្ន​"
+"តែប៉ុណ្ណោះ ។ អ្នក​ប្រហែលជា​ចង់​ព្យាយាម​ម្ដងទៀត​នៅពេលក្រោយ ។ សូម​មើល​ខាងក្រោម​នេះ​សម្រាប់​បញ្ជី​បញ្ចប់​ដែល​ពុំ​"
+"ទាន់​បាន​ផ្ទៀងផ្ទាត់​ភាព​ត្រឹមត្រូវ ។"
+
+#: ../DistUpgrade/DistUpgradeCache.py:783
+#, python-format
+msgid ""
+"The package '%s' is marked for removal but it is in the removal blacklist."
+msgstr "កញ្ចប់ '%s' ត្រូវ​បាន​សម្គាល់​សម្រាប់​ការ​យកចេញ ប៉ុន្តែ​វា​ស្ថិត​នៅ​ក្នុង​បញ្ជី​ខ្មៅ ។"
+
+#: ../DistUpgrade/DistUpgradeCache.py:787
+#, python-format
+msgid "The essential package '%s' is marked for removal."
+msgstr "កញ្ចប់​ដែល​ចាំបាច់ '%s' ត្រូវ​បាន​សម្គាល់​សម្រាប់​ការ​យកចេញ ។"
+
+#: ../DistUpgrade/DistUpgradeCache.py:796
+#, python-format
+msgid "Trying to install blacklisted version '%s'"
+msgstr "សាកល្បងដំឡើង​កំណែ​ក្នុង​បញ្ជី​ខ្មៅ '%s'"
+
+#: ../DistUpgrade/DistUpgradeCache.py:914
+#, python-format
+msgid "Can't install '%s'"
+msgstr "មិន​អាច​ដំឡើង '%s'"
+
+#: ../DistUpgrade/DistUpgradeCache.py:915
+msgid ""
+"It was impossible to install a required package. Please report this as a bug "
+"using 'ubuntu-bug update-manager' in a terminal."
+msgstr ""
+"មិន​អាច​ដំឡើង​កញ្ចប់​ដែល​បាន​ទាមទារ​បាន​ឡើយ ។ សូម​រាយការណ៍​វា​ជា​កំហុស​ដោយ​ប្រើ​ពាក្យ​បញ្ជា 'ubuntu-bug "
+"update-manager' នៅ​ក្នុង​ស្ថានីយ ។"
+
+#. FIXME: provide a list
+#: ../DistUpgrade/DistUpgradeCache.py:926
+msgid "Can't guess meta-package"
+msgstr "មិន​អាច​ទាយ​កញ្ចប់​មេតា​បាន​ឡើយ"
+
+#: ../DistUpgrade/DistUpgradeCache.py:927
+msgid ""
+"Your system does not contain a ubuntu-desktop, kubuntu-desktop, xubuntu-"
+"desktop or edubuntu-desktop package and it was not possible to detect which "
+"version of Ubuntu you are running.\n"
+" Please install one of the packages above first using synaptic or apt-get "
+"before proceeding."
+msgstr ""
+"ប្រព័ន្ធ​របស់​អ្នក​មិន​មាន​កញ្ចប់​ ubuntu-desktop, kubuntu-desktop, xubuntu-desktop ឬ​កញ្ចប់ "
+"edubuntu-desktop ទេ ហើយ​វា​ក៏​មិន​អាច​រក​ឃើញ​កំណែ​អ៊ូប៊ុនទូ​ណាមួយ​ដែល​អ្នក​កំពុងតែ​ដំណើរការ​ផង​ដែរ ។\n"
+" សូម​ដំឡើង​កញ្ចប់​ណាមួយ​នៅ​ខាងលើ​នេះ​សិន ដោយ​ប្រើ synaptic ឬ apt-get មុន​នឹង​បន្ត ។"
+
+#: ../DistUpgrade/DistUpgradeController.py:114
+msgid "Reading cache"
+msgstr "អាន​ឃ្លាំងសម្ងាត់"
+
+#: ../DistUpgrade/DistUpgradeController.py:223
+msgid "Unable to get exclusive lock"
+msgstr "មិន​អាច​ចាក់សោ​កញ្ចប់​បាន​ឡើយ"
+
+#: ../DistUpgrade/DistUpgradeController.py:224
+msgid ""
+"This usually means that another package management application (like apt-get "
+"or aptitude) already running. Please close that application first."
+msgstr ""
+"ជាទូទៅ មាន​ន័យ​ថា​កម្មវិធី​គ្រប់គ្រង​កញ្ចប់​ផ្សេងទៀត (ដូចជា apt-get ឬ aptitude) កំពុងតែ​បាន​ដំណើរការ​"
+"រួចហើយ ។ សូម​បិទ​កម្មវិធី​នោះ​ជាមុន​សិន ។"
+
+#: ../DistUpgrade/DistUpgradeController.py:257
+msgid "Upgrading over remote connection not supported"
+msgstr "ការ​ធ្វើឲ្យ​ប្រសើរ​តាម​រយៈ​ការ​តភ្ជាប់​ពី​ចម្ងាយ​មិន​ត្រូវ​បាន​គាំទ្រ"
+
+#: ../DistUpgrade/DistUpgradeController.py:258
+msgid ""
+"You are running the upgrade over a remote ssh connection with a frontend "
+"that does not support this. Please try a text mode upgrade with 'do-release-"
+"upgrade'.\n"
+"\n"
+"The upgrade will abort now. Please try without ssh."
+msgstr ""
+"អ្នក​កំពុងតែ​ដំណើរការ​ការ​ធ្វើឲ្យ​ប្រសើរ​តាម​រយៈ​ការ​តភ្ជាប់ ssh ពី​ចម្ងាយ​ជាមួយ​ផ្នែក​​ខាងមុខ​ដែល​មិន​គាំទ្រ​"
+"វា ។ សូម​ព្យាយាម​ប្រើ​ការ​ធ្វើឲ្យ​ប្រសើរ​របៀប​អត្ថបទ​ដោយ​ប្រើ​ពាក្យ​បញ្ជា 'do-release-upgrade' ។\n"
+"\n"
+"ការ​ធ្វើឲ្យ​ប្រសើរ​នឹង​ត្រូវ​បោះបង់​ឥឡូវ​នេះ ។ សូម​ព្យាយាម​ដោយ​មិន​ប្រើ ssh ។"
+
+#: ../DistUpgrade/DistUpgradeController.py:272
+msgid "Continue running under SSH?"
+msgstr "បន្ត​ដំណើរការ​ក្រោម​ SSH ឬ ?"
+
+#: ../DistUpgrade/DistUpgradeController.py:273
+#, python-format
+msgid ""
+"This session appears to be running under ssh. It is not recommended to "
+"perform a upgrade over ssh currently because in case of failure it is harder "
+"to recover.\n"
+"\n"
+"If you continue, an additional ssh daemon will be started at port '%s'.\n"
+"Do you want to continue?"
+msgstr ""
+"សម័យ​នេះ​ទំនងជា​កំពុង​ដំណើរការ​ក្រោម ssh ។ អ្នក​មិន​ត្រូវ​បាន​ផ្ដល់​អនុសាសន៍​ឲ្យ​អនុវត្ត​ការ​ធ្វើឲ្យ​ប្រសើរ​តាម​"
+"រយៈ​ ssh ទេ ពីព្រោះ​បើសិនជា​មាន​កំហុស វា​អាច​នឹង​កាន់តែ​ពិបាក​ក្នុង​ការ​សង្គ្រោះ ។\n"
+"\n"
+"ប្រសិនបើ​អ្នក​បន្ត ដេមិន ssh បន្ថែម​នឹង​ត្រូវ​បាន​ចាប់ផ្ដើម​នៅ​ត្រង់​ច្រក '%s' ។\n"
+"តើ​អ្នក​ចង់​បន្ត​ដែរ​ឬ​ទេ ?"
+
+#: ../DistUpgrade/DistUpgradeController.py:287
+msgid "Starting additional sshd"
+msgstr "ចាប់ផ្ដើម sshd បន្ថែម"
+
+#: ../DistUpgrade/DistUpgradeController.py:288
+#, python-format
+msgid ""
+"To make recovery in case of failure easier, an additional sshd will be "
+"started on port '%s'. If anything goes wrong with the running ssh you can "
+"still connect to the additional one.\n"
+msgstr ""
+"ដើម្បី​ធ្វើឲ្យ​ការ​សង្គ្រោះ​កាន់តែ​មាន​ភាព​ងាយស្រួល​ក្នុង​ករណី​ដែល​មាន​កំហុស  sshd បន្ថែម​នឹង​ត្រូវ​បាន​ចាប់ផ្ដើម​"
+"នៅ​លើ​ច្រក '%s' ។ ប្រសិនបើ​មាន​អ្វី​មួយ​មិន​ត្រឹមត្រូវ​ជាមួយ​នឹង​ការ​ដំណើរការ ssh អ្នក​នៅតែ​អាច​តភ្ជាប់​"
+"ទៅកាន់ sshd បន្ថែម​បាន​ដដែល ។\n"
+
+#: ../DistUpgrade/DistUpgradeController.py:296
+#, python-format
+msgid ""
+"If you run a firewall, you may need to temporarily open this port. As this "
+"is potentially dangerous it's not done automatically. You can open the port "
+"with e.g.:\n"
+"'%s'"
+msgstr ""
+"ប្រសិនបើ​អ្នក​ដំណើរការ​ជញ្ជាំង​ភ្លើង អ្នក​ចាំបាច់​ត្រូវតែ​បើក​ច្រក​នេះ​ជា​បណ្ដោះអាសន្ន ។ ដោយ​សារ​តែ​ការ​ធ្វើ​"
+"ដូច្នេះ​មាន​គ្រោះថ្នាក់​ខ្លាំង វា​មិន​ត្រូវ​បាន​ធ្វើ​ដោយស្វ័យប្រវត្តិ​ទេ ។ អ្នក​អាច​បើក​ច្រក​ជាមួយ ឧ. ៖\n"
+"'%s'"
+
+#: ../DistUpgrade/DistUpgradeController.py:368
+#: ../DistUpgrade/DistUpgradeController.py:413
+msgid "Can not upgrade"
+msgstr "មិន​អាច​ធ្វើឲ្យ​ប្រសើរ​បាន​ឡើយ"
+
+#: ../DistUpgrade/DistUpgradeController.py:369
+#, python-format
+msgid "An upgrade from '%s' to '%s' is not supported with this tool."
+msgstr "ការ​ធ្វើឲ្យ​ប្រសើរ​ពី '%s' ទៅជា '%s' មិន​ត្រូវ​បាន​គាំទ្រ​ជាមួយ​ឧបករណ៍​នេះ​ឡើយ ។"
+
+#: ../DistUpgrade/DistUpgradeController.py:378
+msgid "Sandbox setup failed"
+msgstr "បាន​បរាជ័យ​ក្នុង​ការ​រៀបចំ Sandbox"
+
+#: ../DistUpgrade/DistUpgradeController.py:379
+msgid "It was not possible to create the sandbox environment."
+msgstr "មិន​អាច​បង្កើត​បរិស្ថាន sandbox បាន​ឡើយ ។"
+
+#: ../DistUpgrade/DistUpgradeController.py:385
+msgid "Sandbox mode"
+msgstr "របៀប Sandbox"
+
+#: ../DistUpgrade/DistUpgradeController.py:386
+#, python-format
+msgid ""
+"This upgrade is running in sandbox (test) mode. All changes are written to "
+"'%s' and will be lost on the next reboot.\n"
+"\n"
+"*No* changes written to a system directory from now until the next reboot "
+"are permanent."
+msgstr ""
+"ការ​ធ្វើឲ្យ​ប្រសើរ​កំពុងតែ​ដំណើរការ​នៅ​ក្នុង​របៀប (សាកល្បង)  sandbox ។ រាល់​ការ​ផ្លាស់ប្ដូរ​ទាំងអស់​នឹង​"
+"ត្រូវ​បាន​សរសេរ​ទៅកាន់ '%s' ហើយ​នឹង​ត្រូវ​បាត់បង់​នៅ​ពេល​ចាប់ផ្ដើម​ឡើង​វិញ​ពេលក្រោយ ។\n"
+"\n"
+"*គ្មាន* ការ​ផ្លាស់ប្ដូរ​ត្រូវ​បាន​សរសេរ​ទៅកាន់​ថត​ប្រព័ន្ធ​ចាប់ពី​ពេលនេះ​ រហូត​ទាល់តែ​​ការ​ចាប់ផ្ដើម​ឡើងវិញ​"
+"ពេលក្រោយ​មាន​លក្ខណៈ​អចិន្ត្រៃយ៍ ។"
+
+#: ../DistUpgrade/DistUpgradeController.py:414
+msgid ""
+"Your python install is corrupted. Please fix the '/usr/bin/python' symlink."
+msgstr "ការ​ដំឡើង python របស់​អ្នក​បាន​ខូច ។ សូម​ជួសជុល​តំណ​និមិត្តសញ្ញា '/usr/bin/python' ។"
+
+#: ../DistUpgrade/DistUpgradeController.py:440
+msgid "Package 'debsig-verify' is installed"
+msgstr "កញ្ចប់ 'debsig-verify' ត្រូវ​បាន​ដំឡើង"
+
+#: ../DistUpgrade/DistUpgradeController.py:441
+msgid ""
+"The upgrade can not continue with that package installed.\n"
+"Please remove it with synaptic or 'apt-get remove debsig-verify' first and "
+"run the upgrade again."
+msgstr ""
+"ការ​ធ្វើឲ្យ​ប្រសើរ​មិន​អាច​បន្ត​ជាមួយ​កញ្ចប់​ដែល​បាន​ដំឡើង​នោះ​ទេ ។\n"
+"សូម​យក​វា​ចេញ​ដោយ​ប្រើ synaptic ឬ 'apt-get remove debsig-verify' ជាមុន​សិន រួច​ហើយ​ដំណើរការ​"
+"ការ​ធ្វើឲ្យ​ប្រសើរ​ម្ដងទៀត ។"
+
+#: ../DistUpgrade/DistUpgradeController.py:453
+#, python-format
+msgid "Can not write to '%s'"
+msgstr "មិន​អាច​សរសេរ​ទៅកាន់ '%s'"
+
+#: ../DistUpgrade/DistUpgradeController.py:454
+#, python-format
+msgid ""
+"Its not possible to write to the system directory '%s' on your system. The "
+"upgrade can not continue.\n"
+"Please make sure that the system directory is writable."
+msgstr ""
+"មិន​អាច​សរសេរ​ទៅកាន់​ថត​ប្រព័ន្ធ '%s' នៅ​លើ​ប្រព័ន្ធ​របស់​អ្នក​បាន​ទេ ។ ការ​ធ្វើឲ្យ​ប្រសើរ​មិន​អាច​បន្ត​បាន​"
+"ទេ ។\n"
+"សូម​ប្រាកដ​ថា​ថត​ប្រព័ន្ធ​អាច​សរសេរ​បាន ។"
+
+#: ../DistUpgrade/DistUpgradeController.py:465
+msgid "Include latest updates from the Internet?"
+msgstr "រួមបញ្ចូល​បច្ចុប្បន្នភាព​ចុងក្រោយ​ពី​អ៊ីនធឺណិត​ឬ ?"
+
+#: ../DistUpgrade/DistUpgradeController.py:466
+msgid ""
+"The upgrade system can use the internet to automatically download the latest "
+"updates and install them during the upgrade.  If you have a network "
+"connection this is highly recommended.\n"
+"\n"
+"The upgrade will take longer, but when it is complete, your system will be "
+"fully up to date.  You can choose not to do this, but you should install the "
+"latest updates soon after upgrading.\n"
+"If you answer 'no' here, the network is not used at all."
+msgstr ""
+"ប្រព័ន្ធ​ធ្វើឲ្យ​ប្រសើរ​អាច​ប្រើ​អ៊ីនធឺណិត ដើម្បី​ទាញ​យក​បច្ចុប្បន្នភាព​ចុងក្រោយ និង​ដំឡើង​ពួកវា​ដោយ​ស្វ័យប្រវត្តិ​ក្នុង​"
+"អំឡុង​ពេល​ធ្វើឲ្យ​ប្រសើរ ។ អ្នក​នឹង​ត្រូវ​បាន​ផ្ដល់​អនុសាសន៍​ឲ្យ​ធ្វើ​ដូច្នេះ ប្រសិនបើ​អ្នក​បាន​តភ្ជាប់​បណ្ដាញ ។\n"
+"\n"
+"ការ​ធ្វើឲ្យ​ប្រសើរ​នឹង​ចំណាយ​ពេល​យូរ​បន្តិច ប៉ុន្តែ​នៅ​ពេល​បាន​បញ្ចប់ ប្រព័ន្ធ​​របស់​អ្នក​នឹង​ទាន់សម័យ​ ។ អ្នក​អាច​"
+"ជ្រើស​មិន​ធ្វើ​ដូច្នេះ​បាន ប៉ុន្តែ​អ្នក​គួរតែ​ដំឡើង​បច្ចុប្បន្នភាព​ចុងក្រោយ​ឲ្យ​បាន​ភ្លាមៗ បន្ទាប់ពី​បាន​បញ្ចប់​ការ​"
+"ធ្វើឲ្យ​ប្រសើរ ។\n"
+"ប្រសិនបើ​អ្នក​ឆ្លើយ​ថា 'ទេ' នៅ​ទីនេះ បណ្ដាញ​របស់​អ្នក​នឹង​មិន​ត្រូវ​បាន​ប្រើឡើយ ។"
+
+#: ../DistUpgrade/DistUpgradeController.py:686
+#, python-format
+msgid "disabled on upgrade to %s"
+msgstr "បិទ​នៅ​ពេល​ធ្វើឲ្យ​ប្រសើរ​ទៅកាន់ %s"
+
+#: ../DistUpgrade/DistUpgradeController.py:713
+msgid "No valid mirror found"
+msgstr "រក​មិន​ឃើញ​ទីតាំង​ត្រឹមត្រូវ"
+
+#: ../DistUpgrade/DistUpgradeController.py:714
+#, python-format
+msgid ""
+"While scanning your repository information no mirror entry for the upgrade "
+"was found. This can happen if you run a internal mirror or if the mirror "
+"information is out of date.\n"
+"\n"
+"Do you want to rewrite your 'sources.list' file anyway? If you choose 'Yes' "
+"here it will update all '%s' to '%s' entries.\n"
+"If you select 'No' the upgrade will cancel."
+msgstr ""
+"ខណៈ​ពេល​កំពុង​វិភាគ​រក​ព័ត៌មាន​ឃ្លាំង​របស់​អ្នក គ្មាន​ធាតុ​ទីតាំង​សម្រាប់​ការ​ធ្វើឲ្យ​ប្រសើរ​ត្រូវ​បាន​រក​ឃើញ​ទេ ។ "
+"វា​អាច​កើតឡើង​បាន ប្រសិនបើ​អ្នក​ដំណើរការ​ទីតាំង​ខាងក្នុង ឬ​ប្រសិនបើ​ព័ត៌មាន​អំពី​ទីតាំង​ហួសសម័យ ។\n"
+"\n"
+"តើ​អ្នក​ចង់​សរសេរ​ឯកសារ 'sources.list' របស់​អ្នក​ឡើងវិញ​ឬ ? ប្រសិនបើ​អ្នក​ជ្រើស 'បាទ/ចាស' នៅ​"
+"ទីនេះ វា​នឹង​ធ្វើ​បច្ចុប្បន្ន '%s' ទាំងអស់​ទៅកាន់​ធាតុ '%s' ។\n"
+"ប្រសិនបើ​អ្នក​ជ្រើស 'ទេ' ការ​ធ្វើឲ្យ​ប្រសើរ​នឹង​បោះបង់ ។"
+
+#. hm, still nothing useful ...
+#: ../DistUpgrade/DistUpgradeController.py:734
+msgid "Generate default sources?"
+msgstr "បង្កើត​ប្រភព​លំនាំដើម​ឬ ?"
+
+#: ../DistUpgrade/DistUpgradeController.py:735
+#, python-format
+msgid ""
+"After scanning your 'sources.list' no valid entry for '%s' was found.\n"
+"\n"
+"Should default entries for '%s' be added? If you select 'No', the upgrade "
+"will cancel."
+msgstr ""
+"បន្ទាប់ពី​បាន​វិភាគ​រក 'sources.list' របស់​អ្នក​រួច គ្មាន​ធាតុ​ត្រឹមត្រូវ​សម្រាប់ '%s' ត្រូវ​បាន​រក​ឃើញ​"
+"ទេ ។\n"
+"\n"
+"តើ​គួរតែ​បន្ថែម​ធាតុ​លំនាំដើម​សម្រាប់ '%s' ដែរ​ឬ​ទេ ? ប្រសិនបើ​អ្នក​ជ្រើស 'ទេ' ការ​ធ្វើឲ្យ​ប្រសើរ​នឹង​"
+"បោះបង់ ។"
+
+#: ../DistUpgrade/DistUpgradeController.py:770
+msgid "Repository information invalid"
+msgstr "ព័ត៌មាន​ឃ្លាំង​មិន​ត្រឹមត្រូវ"
+
+#: ../DistUpgrade/DistUpgradeController.py:771
+msgid ""
+"Upgrading the repository information resulted in a invalid file so a bug "
+"reporting process is being started."
+msgstr ""
+"ការ​ធ្វើឲ្យ​ព័ត៌មាន​ឃ្លាំង​ប្រសើរ​ឡើង​បណ្ដាល​ឲ្យ​មាន​ឯកសារ​មិន​ត្រឹមត្រូវ ដូច្នេះ​ដំណើរការ​ក្នុង​ការ​រាយការណ៍​កំហុស​"
+"កំពុងតែ​ត្រូវ​បាន​ចាប់ផ្ដើម ។"
+
+#: ../DistUpgrade/DistUpgradeController.py:778
+msgid "Third party sources disabled"
+msgstr "ប្រភព​របស់​ភាគី​ទីបី​ត្រូវ​បាន​បិទ"
+
+#: ../DistUpgrade/DistUpgradeController.py:779
+msgid ""
+"Some third party entries in your sources.list were disabled. You can re-"
+"enable them after the upgrade with the 'software-properties' tool or your "
+"package manager."
+msgstr ""
+"ធាតុ​របស់​ភាគី​ទីបី​មួយ​ចំនួន​ដែល​នៅ​ក្នុង sources.list របស់​អ្នក​ត្រូវ​បាន​បិទ ។ អ្នក​អាច​បើក​ពួកវា​ឡើងវិញ "
+"បន្ទាប់ពី​បាន​បញ្ចប់​ការ​ធ្វើឲ្យ​ប្រសើរ​ដោយ​ប្រើ​ឧបករណ៍ 'software-properties' ឬ​កម្មវិធី​គ្រប់គ្រង​កញ្ចប់ "
+"។"
+
+#: ../DistUpgrade/DistUpgradeController.py:819
+msgid "Package in inconsistent state"
+msgid_plural "Packages in inconsistent state"
+msgstr[0] "កញ្ចប់​ស្ថិត​នៅក្នុង​ស្ថានភាព​មិន​ឆបគ្នា"
+
+#: ../DistUpgrade/DistUpgradeController.py:822
+#, python-format
+msgid ""
+"The package '%s' is in an inconsistent state and needs to be reinstalled, "
+"but no archive can be found for it. Please reinstall the package manually or "
+"remove it from the system."
+msgid_plural ""
+"The packages '%s' are in an inconsistent state and need to be reinstalled, "
+"but no archive can be found for them. Please reinstall the packages manually "
+"or remove them from the system."
+msgstr[0] ""
+"កញ្ចប់ '%s' ស្ថិតនៅក្នុង​ស្ថានភាព​មិន​ឆប​គ្នា និង​ទាមទារ​ឲ្យ​ដំឡើង​ឡើងវិញ ប៉ុន្តែ​រក​មិនឃើញ​ឃ្លាំង​សម្ងាត់​"
+"សម្រាប់​វាទេ ។ សូម​ដំឡើង​កញ្ចប់ដោយដៃ ឬ​យក​វា​ចេញ​ពី​ប្រព័ន្ធ ។"
+
+#: ../DistUpgrade/DistUpgradeController.py:870
+msgid "Error during update"
+msgstr "កំហុស​ក្នុង​​អំឡុង​ពេល​ធ្វើ​បច្ចុប្បន្នភាព"
+
+#: ../DistUpgrade/DistUpgradeController.py:871
+msgid ""
+"A problem occurred during the update. This is usually some sort of network "
+"problem, please check your network connection and retry."
+msgstr ""
+"បញ្ហា​បាន​កើតឡើង​ក្នុង​អំឡុង​ពេល​ធ្វើ​បច្ចុប្បន្នភាព ។ ជាទូទៅ​បណ្ដាលមក​ពី​បញ្ហា​បណ្ដាញ​ខ្លះ​ៗ សូម​ពិនិត្យមើល​ការ​"
+"តភ្ជាប់​បណ្ដាញ​របស់​អ្នក រួច​ព្យាយាម​ម្ដងទៀត ។"
+
+#. print("on_button_install_clicked")
+#: ../DistUpgrade/DistUpgradeController.py:880
+#: ../UpdateManager/UpdateManager.py:757
+msgid "Not enough free disk space"
+msgstr "គ្មាន​ទំហំ​ថាស​គ្រប់គ្រាន់"
+
+#: ../DistUpgrade/DistUpgradeController.py:881
+#, python-format
+msgid ""
+"The upgrade has aborted. The upgrade needs a total of %s free space on disk "
+"'%s'. Please free at least an additional %s of disk space on '%s'. Empty "
+"your trash and remove temporary packages of former installations using 'sudo "
+"apt-get clean'."
+msgstr ""
+"ការ​ធ្វើឲ្យ​ប្រសើរ​ត្រូវ​បាន​បោះបង់ ។ ការ​ធ្វើឲ្យ​ប្រសើរ​ត្រូវការ​ទំហំ​ថាស​សរុប %s  '%s' ។ សូម​ធ្វើឲ្យ​ទំហំ​"
+"ថាស​ទំនេរ​បន្ថែម​យ៉ាងហោចណាស់​ត្រឹម %s នៅ​លើ '%s' ។ សម្អាត​ធុងសំរាម​របស់​អ្នក និង​យក​កញ្ចប់​បណ្ដោះអាសន្ន​"
+"ដែល​បាន​ដំឡើង​ពីមុន​ចេញ​ដោយ​ប្រើ​ពាក្យ​បញ្ជា 'sudo apt-get clean' ។"
+
+#. calc the dist-upgrade and see if the removals are ok/expected
+#. do the dist-upgrade
+#: ../DistUpgrade/DistUpgradeController.py:910
+#: ../DistUpgrade/DistUpgradeController.py:1692
+msgid "Calculating the changes"
+msgstr "គណនា​ការ​ផ្លាស់ប្ដូរ"
+
+#. ask the user
+#: ../DistUpgrade/DistUpgradeController.py:942
+msgid "Do you want to start the upgrade?"
+msgstr "តើ​អ្នក​ចង់​ចាប់ផ្ដើម​ការ​ធ្វើឲ្យ​ប្រសើរ​ដែរ​ឬ​ទេ ?"
+
+#: ../DistUpgrade/DistUpgradeController.py:1008
+msgid "Upgrade canceled"
+msgstr "ការ​ធ្វើឲ្យ​ប្រសើរ​ត្រូវ​បាន​បោះបង់"
+
+#: ../DistUpgrade/DistUpgradeController.py:1009
+msgid ""
+"The upgrade will cancel now and the original system state will be restored. "
+"You can resume the upgrade at a later time."
+msgstr ""
+"ការ​ធ្វើឲ្យ​ប្រសើរ​នឹង​បោះបង់​ឥឡូវនេះ ហើយ​ស្ថានភាព​ប្រព័ន្ធ​លំនាំដើម​នឹង​ត្រូវ​បាន​ស្ដារ ។ អ្នក​អាច​បន្ត​ការ​"
+"ធ្វើ​ឲ្យ​ប្រសើរ​នៅ​ពេល​ក្រោយ​បាន ។"
+
+#: ../DistUpgrade/DistUpgradeController.py:1015
+#: ../DistUpgrade/DistUpgradeController.py:1149
+msgid "Could not download the upgrades"
+msgstr "មិន​អាច​ទាញ​យក​ការ​ធ្វើឲ្យ​ប្រសើរ​បាន​ឡើយ"
+
+#: ../DistUpgrade/DistUpgradeController.py:1016
+msgid ""
+"The upgrade has aborted. Please check your Internet connection or "
+"installation media and try again. All files downloaded so far have been kept."
+msgstr ""
+"បាន​បោះបង់​ការ​ធ្វើឲ្យ​ប្រសើរ ។ សូម​ពិនិត្យមើល​ការ​​តភ្ជាប់​អ៊ីនធឺណិត ឬ​មេឌៀ​ដំឡើង​របស់​អ្នក រួច​ព្យាយាម​"
+"ម្ដងទៀត ។ គ្រប់​ឯកសារ​ដែល​បាន​ទាញ​យក​ត្រូវ​បាន​រក្សាទុក ។"
+
+#. FIXME: strings are not good, but we are in string freeze
+#. currently
+#: ../DistUpgrade/DistUpgradeController.py:1100
+#: ../DistUpgrade/DistUpgradeController.py:1137
+#: ../DistUpgrade/DistUpgradeController.py:1242
+msgid "Error during commit"
+msgstr "កំហុស​ក្នុង​អំឡុង​ពេល​ប្រតិបត្តិ"
+
+#. generate a new cache
+#: ../DistUpgrade/DistUpgradeController.py:1102
+#: ../DistUpgrade/DistUpgradeController.py:1139
+#: ../DistUpgrade/DistUpgradeController.py:1281
+msgid "Restoring original system state"
+msgstr "ស្ដារ​ស្ថានភាព​ប្រព័ន្ធ​លំនាំដើម"
+
+#: ../DistUpgrade/DistUpgradeController.py:1103
+#: ../DistUpgrade/DistUpgradeController.py:1118
+#: ../DistUpgrade/DistUpgradeController.py:1140
+msgid "Could not install the upgrades"
+msgstr "មិន​អាច​ដំឡើង​ការ​ធ្វើ​ឲ្យ​ប្រសើរ"
+
+#. invoke the frontend now and show a error message
+#: ../DistUpgrade/DistUpgradeController.py:1108
+msgid ""
+"The upgrade has aborted. Your system could be in an unusable state. A "
+"recovery will run now (dpkg --configure -a)."
+msgstr ""
+"ការ​ធ្វើឲ្យ​ប្រសើរ​បាន​បោះបង់ ។ ប្រព័ន្ធ​របស់​អ្នក​អាច​ស្ថិត​នៅ​ក្នុង​ស្ថានភាព​មិន​អាច​ប្រើ​បាន​ ។ ការ​សង្គ្រោះ​"
+"នឹង​ដំណើរការ​ឥឡូវនេះ (dpkg --configure -a) ។"
+
+#: ../DistUpgrade/DistUpgradeController.py:1113
+#, python-format
+msgid ""
+"\n"
+"\n"
+"Please report this bug in a browser at http://bugs.launchpad.net/ubuntu/"
+"+source/update-manager/+filebug and attach the files in /var/log/dist-"
+"upgrade/ to the bug report.\n"
+"%s"
+msgstr ""
+"\n"
+"\n"
+"សូម​រាយការណ៍​កំហុស​នេះ​នៅ​ក្នុង​កម្មវិធី​រុករក​តាម http://bugs.launchpad.net/ubuntu/+source/"
+"update-manager/+filebug and attach the files in /var/log/dist-upgrade/ ទៅកាន់​"
+"របាយការណ៍​កំហុស ។\n"
+"%s"
+
+#: ../DistUpgrade/DistUpgradeController.py:1150
+msgid ""
+"The upgrade has aborted. Please check your Internet connection or "
+"installation media and try again. "
+msgstr ""
+"ការ​ធ្វើឲ្យ​ប្រសើរ​បាន​បោះបង់ ។ សូម​ពិនិត្យមើល​ការ​តភ្ជាប់​អ៊ីនធឺណិត ឬ​មេឌៀ​ដំឡើង​របស់​អ្នក រួច​ព្យាយាម​"
+"ម្ដងទៀត ។ "
+
+#: ../DistUpgrade/DistUpgradeController.py:1230
+msgid "Remove obsolete packages?"
+msgstr "យក​កញ្ចប់​ហួសសម័យ​ចេញ​ឬ ?"
+
+#: ../DistUpgrade/DistUpgradeController.py:1231
+#: ../DistUpgrade/DistUpgrade.ui.h:8
+msgid "_Keep"
+msgstr "រក្សាទុក"
+
+#: ../DistUpgrade/DistUpgradeController.py:1231
+msgid "_Remove"
+msgstr "យកចេញ"
+
+#: ../DistUpgrade/DistUpgradeController.py:1243
+msgid ""
+"A problem occurred during the clean-up. Please see the below message for "
+"more information. "
+msgstr "បញ្ហា​បាន​កើតឡើង​ក្នុង​អំឡុង​ពេល​សម្អាត ។ ចំពោះ​ព័ត៌មាន​បន្ថែម សូម​មើល​សារ​ខាងក្រោម​នេះ ។ "
+
+#. FIXME: instead of error out, fetch and install it
+#. here
+#: ../DistUpgrade/DistUpgradeController.py:1319
+msgid "Required depends is not installed"
+msgstr "ភាព​អាស្រ័យ​ដែល​បាន​ទាមទារ​មិន​ត្រូវ​បាន​ដំឡើង"
+
+#: ../DistUpgrade/DistUpgradeController.py:1320
+#, python-format
+msgid "The required dependency '%s' is not installed. "
+msgstr "ភាព​អាស្រ័យ​ដែល​បាន​ទាមទារ '%s' មិន​ត្រូវ​បាន​ដំឡើង ។ "
+
+#. sanity check (check for ubuntu-desktop, brokenCache etc)
+#. then open the cache (again)
+#: ../DistUpgrade/DistUpgradeController.py:1588
+#: ../DistUpgrade/DistUpgradeController.py:1653
+msgid "Checking package manager"
+msgstr "ពិនិត្យមើល​កម្មវិធី​គ្រប់គ្រង​កញ្ចប់"
+
+#: ../DistUpgrade/DistUpgradeController.py:1593
+msgid "Preparing the upgrade failed"
+msgstr "បាន​បរាជ័យ​ក្នុង​ការ​រៀបចំ​ការ​ធ្វើឲ្យ​ប្រសើរ"
+
+#: ../DistUpgrade/DistUpgradeController.py:1594
+msgid ""
+"Preparing the system for the upgrade failed so a bug reporting process is "
+"being started."
+msgstr ""
+"រៀបចំ​ប្រព័ន្ធ សម្រាប់​ការ​ធ្វើ​ឲ្យ​ប្រសើរ​ឡើង​បាន​បរាជ័យ ដូច្នេះ​ដំណើរការ​រាយការណ៍​កំហុស​កំពុង​ត្រូវ​បាន​"
+"ចាប់ផ្ដើម ។"
+
+#: ../DistUpgrade/DistUpgradeController.py:1608
+msgid "Getting upgrade prerequisites failed"
+msgstr "បាន​បរាជ័យ​ក្នុង​ការ​ទទួលយក​តម្រូវការ​ជាមុន​សម្រាប់​ការ​​ធ្វើឲ្យ​ប្រសើរ"
+
+#: ../DistUpgrade/DistUpgradeController.py:1609
+msgid ""
+"The system was unable to get the prerequisites for the upgrade. The upgrade "
+"will abort now and restore the original system state.\n"
+"\n"
+"Additionally, a bug reporting process is being started."
+msgstr ""
+"ប្រព័ន្ធ​មិន​អាច​ទទួល​យក​តម្រូវការ​ជាមុន​សម្រាប់​ការ​ធ្វើឲ្យ​ប្រសើរ​បាន​ទេ ។ ការ​ធ្វើឲ្យ​ប្រសើរ​នឹង​បោះបង់​"
+"ឥឡូវនេះ ហើយ​នឹង​ស្ដារ​ស្ថានភាព​ប្រព័ន្ធ​លំនាំដើម ។\n"
+"\n"
+"លើសពី​នេះ ដំណើរការ​រាយការណ៍​កំហុស​កំពុង​ត្រូវ​បាន​ចាប់ផ្ដើម ។"
+
+#: ../DistUpgrade/DistUpgradeController.py:1637
+msgid "Updating repository information"
+msgstr "កំពុង​ធ្វើ​បច្ចុប្បន្នភាព​ព័ត៌មាន​ឃ្លាំង"
+
+#: ../DistUpgrade/DistUpgradeController.py:1644
+msgid "Failed to add the cdrom"
+msgstr "បាន​បរាជ័យ​ក្នុង​ការ​បន្ថែម cdrom"
+
+#: ../DistUpgrade/DistUpgradeController.py:1645
+msgid "Sorry, adding the cdrom was not successful."
+msgstr "សូម​អភ័យទោស ការ​បន្ថែម cdrom មិន​ទទួល​ជោគជ័យ​ទេ ។"
+
+#: ../DistUpgrade/DistUpgradeController.py:1673
+msgid "Invalid package information"
+msgstr "ព័ត៌មាន​កញ្ចប់​មិន​ត្រឹមត្រូវ"
+
+#: ../DistUpgrade/DistUpgradeController.py:1674
+msgid "After updating your package "
+msgstr ""
+
+#: ../DistUpgrade/DistUpgradeController.py:1698
+#: ../DistUpgrade/DistUpgradeController.py:1750
+msgid "Fetching"
+msgstr "ទៅ​ប្រមូលយក"
+
+#: ../DistUpgrade/DistUpgradeController.py:1704
+#: ../DistUpgrade/DistUpgradeController.py:1754
+msgid "Upgrading"
+msgstr "ធ្វើឲ្យ​ប្រសើរ"
+
+#. don't abort here, because it would restore the sources.list
+#: ../DistUpgrade/DistUpgradeController.py:1709
+#: ../DistUpgrade/DistUpgradeController.py:1756
+#: ../DistUpgrade/DistUpgradeController.py:1763
+#: ../DistUpgrade/DistUpgradeController.py:1774
+msgid "Upgrade complete"
+msgstr "បាន​បញ្ចប់​ការ​ធ្វើឲ្យ​ប្រសើរ"
+
+#: ../DistUpgrade/DistUpgradeController.py:1710
+#: ../DistUpgrade/DistUpgradeController.py:1757
+#: ../DistUpgrade/DistUpgradeController.py:1764
+msgid ""
+"The upgrade has completed but there were errors during the upgrade process."
+msgstr "បាន​បញ្ចប់​ការ​ធ្វើឲ្យ​ប្រសើរ ប៉ុន្តែ​មាន​កំហុស​ក្នុង​អំឡុង​ពេល​ធ្វើ​ឲ្យ​ប្រសើរ​ឡើង ។"
+
+#: ../DistUpgrade/DistUpgradeController.py:1717
+msgid "Searching for obsolete software"
+msgstr "ស្វែងរក​កម្មវិធី​ដែល​ហូសសម័យ"
+
+#: ../DistUpgrade/DistUpgradeController.py:1726
+msgid "System upgrade is complete."
+msgstr "បាន​បញ្ចប់​ការ​ធ្វើឲ្យ​ប្រព័ន្ធ​ប្រសើរ ។"
+
+#: ../DistUpgrade/DistUpgradeController.py:1775
+msgid "The partial upgrade was completed."
+msgstr "បាន​បញ្ចប់​ការ​ធ្វើឲ្យ​ប្រសើរ​ដោយ​ផ្នែក ។"
+
+#: ../DistUpgrade/DistUpgradeQuirks.py:204
+msgid "evms in use"
+msgstr "evms កំពុង​ត្រូវ​បាន​ប្រើ"
+
+#: ../DistUpgrade/DistUpgradeQuirks.py:205
+msgid ""
+"Your system uses the 'evms' volume manager in /proc/mounts. The 'evms' "
+"software is no longer supported, please switch it off and run the upgrade "
+"again when this is done."
+msgstr ""
+"ប្រព័ន្ធ​របស់​អ្នក​ប្រើ​កម្មវិធី​គ្រប់គ្រង​ភាគ 'evms' នៅ​ក្នុង /proc/mounts ។ កម្មវិធី 'evms' មិន​ត្រូវ​"
+"បាន​គាំទ្រ​ទៀត​ទេ សូម​បិទ​វា រួច​ដំណើរការ​ការ​ធ្វើឲ្យ​ប្រសើរ​ម្ដងទៀត នៅ​ពេល​វា​ត្រូវ​បាន​បញ្ចប់ ។"
+
+#: ../DistUpgrade/DistUpgradeQuirks.py:502
+msgid "Your graphics hardware may not be fully supported in Ubuntu 12.04 LTS."
+msgstr "ផ្នែក​រឹង​ក្រាហ្វិក​របស់​អ្នក​អាច​គាំទ្រ​មិន​ពេញលេញ​នៅ​ក្នុង​អ៊ូប៊ុនទូ 12.04 LTS  ។"
+
+#: ../DistUpgrade/DistUpgradeQuirks.py:504
+msgid ""
+"The support in Ubuntu 12.04 LTS for your Intel graphics hardware is limited "
+"and you may encounter problems after the upgrade. For more information see "
+"https://wiki.ubuntu.com/X/Bugs/UpdateManagerWarningForI8xx Do you want to "
+"continue with the upgrade?"
+msgstr ""
+"កា​រគាំទ្រ​នៅ​ក្នុង​អ៊ូប៊ូទូ 12.04 LTSសម្រាប់​ផ្នែក​រឹង​ក្រាហ្វិក  Intel របស់​អ្នក​ត្រូវ​បានកំណត់ ហើយ​អ្នក​អាច​ជួប​"
+"ប្រទះ​បញ្ហា​បន្ទាប់​ពី​ធ្វើ​ឲ្យ​ប្រសើរ​ឡើង ។ ចំពោះ​ព័ត៌មាន​បន្ថែម សូម​មើល https://wiki.ubuntu.com/X/"
+"Bugs/UpdateManagerWarningForI8xx តើ​អ្នក​ចង់​បន្ត​ការ​ធ្វើ​ឲ្យ​ប្រសើរ​ឡើង​ដែរឬទេ ?"
+
+#: ../DistUpgrade/DistUpgradeQuirks.py:526
+#: ../DistUpgrade/DistUpgradeQuirks.py:554
+#: ../DistUpgrade/DistUpgradeQuirks.py:581
+msgid ""
+"Upgrading may reduce desktop effects, and performance in games and other "
+"graphically intensive programs."
+msgstr ""
+"ការ​ធ្វើឲ្យ​ប្រសើរ​អាច​កាត់បន្ថយ​បែបផែន​ផ្ទៃតុ សមត្ថភាព​នៅ​ក្នុង​ល្បែង​កម្សាន្ត និងកម្មវិធីដែល​ប្រើ​ក្រាហ្វិក​"
+"ផ្សេងទៀត ។"
+
+#: ../DistUpgrade/DistUpgradeQuirks.py:530
+#: ../DistUpgrade/DistUpgradeQuirks.py:558
+msgid ""
+"This computer is currently using the NVIDIA 'nvidia' graphics driver. No "
+"version of this driver is available that works with your video card in "
+"Ubuntu 10.04 LTS.\n"
+"\n"
+"Do you want to continue?"
+msgstr ""
+"បច្ចុប្បន្ន កុំព្យូទ័រ​នេះ​ប្រើ​កម្មវិធី​បញ្ជា​ក្រាហ្វិក NVIDIA 'nvidia' ។ គ្មាន​កំណែ​កម្មវិធី​បញ្ជា​ណាមួយ​ដែល​"
+"ដំណើរការ​ជាមួយ​កាត​វីដេអូ​របស់​អ្នក​នៅ​ក្នុង​អ៊ូប៊ុនទូ ១០.០៤ LTS ទេ ។\n"
+"\n"
+"តើ​អ្នក​ចង់​បន្ត​ដែរ​ឬ​ទេ ?"
+
+#: ../DistUpgrade/DistUpgradeQuirks.py:585
+msgid ""
+"This computer is currently using the AMD 'fglrx' graphics driver. No version "
+"of this driver is available that works with your hardware in Ubuntu 10.04 "
+"LTS.\n"
+"\n"
+"Do you want to continue?"
+msgstr ""
+"បច្ចុប្បន្ន កុំព្យូទ័រ​នេះ​ប្រើ​កម្មវិធី​បញ្ជា​ក្រាហ្វិក AMD 'fglrx' ។ គ្មាន​កំណែ​កម្មវិធី​បញ្ជា​ណាមួយ​ដែល​"
+"ដំណើរការ​ជាមួយ​ផ្នែក​រឹង​នៅ​ក្នុង​អ៊ូប៊ុនទូ ១០.០៤ LTS ។\n"
+"\n"
+"តើ​អ្នក​ចង់​បន្ត​ដែរ​ឬ​ទេ ?"
+
+#: ../DistUpgrade/DistUpgradeQuirks.py:615
+msgid "No i686 CPU"
+msgstr "គ្មាន​ស៊ីភីយូ i686"
+
+#: ../DistUpgrade/DistUpgradeQuirks.py:616
+msgid ""
+"Your system uses an i586 CPU or a CPU that does not have the 'cmov' "
+"extension. All packages were built with optimizations requiring i686 as the "
+"minimal architecture. It is not possible to upgrade your system to a new "
+"Ubuntu release with this hardware."
+msgstr ""
+"ប្រព័ន្ធ​របស់​អ្នក​ប្រើ​ស៊ីភីយូ i586 ឬ​ស៊ីភីយូ​ដែល​មិន​មាន​កន្ទុយ 'cmov' ។ រាល់​កញ្ចប់​ទាំងអស់​ត្រូវ​បាន​ស្ថាបនា​ជាមួយ​"
+"ការ​ធ្វើឲ្យ​ប្រសើរ​ដែល​ទាមទារ i686 ជា​ស្ថាបត្យកម្ម​អប្បបរមា ។ អ្នក​មិន​អាច​ធ្វើឲ្យ​ប្រព័ន្ធ​របស់​អ្នក​"
+"ប្រសើរ​ទៅជា​កំណែ​ចេញផ្សាយ​អ៊ូប៊ុនទូ​ថ្មី​ដោយ​ប្រើ​ផ្នែក​រឹង​នេះ​បាន​ឡើយ ។"
+
+#: ../DistUpgrade/DistUpgradeQuirks.py:652
+msgid "No ARMv6 CPU"
+msgstr "គ្មាន​ស៊ីភីយូ ARMv6"
+
+#: ../DistUpgrade/DistUpgradeQuirks.py:653
+msgid ""
+"Your system uses an ARM CPU that is older than the ARMv6 architecture. All "
+"packages in karmic were built with optimizations requiring ARMv6 as the "
+"minimal architecture. It is not possible to upgrade your system to a new "
+"Ubuntu release with this hardware."
+msgstr ""
+"ប្រព័ន្ធ​របស់​អ្នក​ប្រើ​ស៊ីភីយូ ARM ដែល​ចាស់​ជាង​ស្ថាបត្យកម្ម ARMv6 ។ រាល់​កញ្ចប់​ទាំងអស់​នៅ​ក្នុង karmic ត្រូវ​"
+"បាន​ស្ថាបនា​ជាមួយ​ការ​ធ្វើឲ្យ​ប្រសើរ​ដែល​ទាមទារ ARMv6 ជា​ស្ថាបត្យកម្ម​អប្បបរមា ។ អ្នក​មិន​អាច​ធ្វើឲ្យ​"
+"ប្រព័ន្ធ​របស់​អ្នក​ប្រសើរ​ទៅជា​កំណែ​ចេញ​ផ្សាយ​អ៊ូប៊ុនទូ​ថ្មី​ដោយ​ប្រើ​ផ្នែក​រឹង​នេះ​បាន​ឡើយ ។"
+
+#: ../DistUpgrade/DistUpgradeQuirks.py:673
+msgid "No init available"
+msgstr "គ្មាន init"
+
+#: ../DistUpgrade/DistUpgradeQuirks.py:674
+msgid ""
+"Your system appears to be a virtualised environment without an init daemon, "
+"e.g. Linux-VServer. Ubuntu 10.04 LTS cannot function within this type of "
+"environment, requiring an update to your virtual machine configuration "
+"first.\n"
+"\n"
+"Are you sure you want to continue?"
+msgstr ""
+"ប្រព័ន្ធ​របស់​អ្នក​មាន​លក្ខណៈ​ដូចជា​បរិស្ថាន​និម្មិត​ដែល​គ្មាន​ដេមិន init ឧ. Linux-VServer ។ អ៊ូប៊ុនទូ "
+"១០.០៤  LTS មិន​អាច​​ដំណើរការ​នៅ​ក្នុង​បរិស្ថាន​ប្រភេទ​នេះ​បាន​ទេ ហើយ​វា​ទាមទារ​ឲ្យ​អ្នក​ធ្វើ​បច្ចុប្បន្នភាព​"
+"ចំពោះ​ការ​កំណត់​រចនាសម្ព័ន្ធ​ម៉ាស៊ីន​និម្មិត​របស់​អ្នក​ជាមុន​សិន ។\n"
+"\n"
+"តើ​អ្នក​ចង់​បន្ត​ទេ ?"
+
+#: ../DistUpgrade/DistUpgradeMain.py:65
+msgid "Sandbox upgrade using aufs"
+msgstr "ការ​ធ្វើឲ្យ Sandbox ប្រសើរ​ដោយ​ប្រើ aufs"
+
+#: ../DistUpgrade/DistUpgradeMain.py:67
+msgid "Use the given path to search for a cdrom with upgradable packages"
+msgstr "ប្រើ​ផ្លូវ​ដែល​បាន​ផ្ដល់ ដើម្បី​ស្វែងរក cdrom ដែល​មាន​កញ្ចប់​ដែល​អាច​ធ្វើ​ឲ្យ​ប្រសើរ​បាន"
+
+#: ../DistUpgrade/DistUpgradeMain.py:73
+msgid ""
+"Use frontend. Currently available: \n"
+"DistUpgradeViewText, DistUpgradeViewGtk, DistUpgradeViewKDE"
+msgstr ""
+"ប្រើ​ផ្នែក​ខាងមុខ ។ អាច​ប្រើ​ក្នុង​ពេល​បច្ចុប្បន្នបាន ៖\n"
+"DistUpgradeViewText, DistUpgradeViewGtk, DistUpgradeViewKDE"
+
+#: ../DistUpgrade/DistUpgradeMain.py:76
+msgid "*DEPRECATED* this option will be ignored"
+msgstr "*DEPRECATED* ជម្រើស​នេះ​នឹង​ត្រូវ​បាន​មិន​អើពើ"
+
+#: ../DistUpgrade/DistUpgradeMain.py:79
+msgid "Perform a partial upgrade only (no sources.list rewriting)"
+msgstr "អនុវត្ត​ការ​ធ្វើឲ្យ​ប្រសើរ​ដោយ​ផ្នែក​ប៉ុណ្ណោះ (គ្មាន​ការ​សរសេរ sources.list ឡើង​វិញ​ទេ)"
+
+#: ../DistUpgrade/DistUpgradeMain.py:82
+msgid "Disable GNU screen support"
+msgstr "បិទ​ការ​គាំទ្រ​អេក្រង់ GNU"
+
+#: ../DistUpgrade/DistUpgradeMain.py:84
+msgid "Set datadir"
+msgstr "កំណត់​ថត​ទិន្នន័យ"
+
+#. print("mediaChange %s %s" % (medium, drive))
+#: ../DistUpgrade/DistUpgradeViewGtk.py:114
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:117
+#: ../DistUpgrade/DistUpgradeViewKDE.py:195
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:155
+#, python-format
+msgid "Please insert '%s' into the drive '%s'"
+msgstr "សូម​បញ្ចូល '%s' ទៅ​ក្នុង​ដ្រាយ '%s'"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:135
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:138
+#: ../DistUpgrade/DistUpgradeViewKDE.py:209
+msgid "Fetching is complete"
+msgstr "បាន​បញ្ចប់​ការ​ទៅ​ប្រមូល​យក"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:146
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:149
+#: ../DistUpgrade/DistUpgradeViewKDE.py:222
+#, python-format
+msgid "Fetching file %li of %li at %sB/s"
+msgstr "ទៅ​ប្រមូល​យក​ឯកសារ %li នៃ %li នៅ %sB/s"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:149
+#: ../DistUpgrade/DistUpgradeViewGtk.py:296
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:152
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:309
+#: ../DistUpgrade/DistUpgradeViewKDE.py:223
+#: ../DistUpgrade/DistUpgradeViewKDE.py:371
+#, python-format
+msgid "About %s remaining"
+msgstr "នៅសល់​ប្រហែល %s"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:152
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:155
+#: ../DistUpgrade/DistUpgradeViewKDE.py:225
+#, python-format
+msgid "Fetching file %li of %li"
+msgstr "ទៅ​ប្រមូល​យក​ឯកសារ %li នៃ %li"
+
+#. FIXME: add support for the timeout
+#. of the terminal (to display something useful then)
+#. -> longer term, move this code into python-apt
+#: ../DistUpgrade/DistUpgradeViewGtk.py:183
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:186
+#: ../DistUpgrade/DistUpgradeViewKDE.py:262
+msgid "Applying changes"
+msgstr "អនុវត្ត​ការ​ផ្លាស់ប្ដូរ"
+
+#. we do not report followup errors from earlier failures
+#: ../DistUpgrade/DistUpgradeViewGtk.py:208
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:212
+#: ../DistUpgrade/DistUpgradeViewKDE.py:275
+msgid "dependency problems - leaving unconfigured"
+msgstr "បញ្ហា​ភាព​អាស្រ័យ - មិន​កំណត់​រចនាសម្ព័ន្ធ"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:213
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:217
+#: ../DistUpgrade/DistUpgradeViewKDE.py:277
+#, python-format
+msgid "Could not install '%s'"
+msgstr "មិន​អាច​ដំឡើង '%s'"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:214
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:218
+#: ../DistUpgrade/DistUpgradeViewKDE.py:278
+#, python-format
+msgid ""
+"The upgrade will continue but the '%s' package may not be in a working "
+"state. Please consider submitting a bug report about it."
+msgstr ""
+"ការ​ធ្វើឲ្យ​ប្រសើរ​នឹង​បន្ត ប៉ុន្តែ​កញ្ចប់ '%s' អាច​នឹង​មិន​ស្ថិត​នៅ​ក្នុង​ស្ថានភាព​ដំណើរការ ។ សូម​ដាក់​ស្នើ​"
+"របាយការណ៍​កំហុស​អំពី​វា ។"
+
+#. self.expander.set_expanded(True)
+#: ../DistUpgrade/DistUpgradeViewGtk.py:231
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:235
+#: ../DistUpgrade/DistUpgradeViewKDE.py:299
+#, python-format
+msgid ""
+"Replace the customized configuration file\n"
+"'%s'?"
+msgstr ""
+"ជំនួស​ឯកសារ​កំណត់​រចនាសម្ព័ន្ធ​ដែល​បាន​ប្ដូរ​តាម​បំណង\n"
+"'%s'ឬ ?"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:232
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:236
+#: ../DistUpgrade/DistUpgradeViewKDE.py:300
+msgid ""
+"You will lose any changes you have made to this configuration file if you "
+"choose to replace it with a newer version."
+msgstr ""
+"អ្នក​នឹង​បាត់បង់​ការ​ផ្លាស់ប្ដូរ​ណាមួយ​ដែល​អ្នក​បាន​ធ្វើ​ទៅ​លើ​ឯកសារ​កំណត់​រចនាសម្ព័ន្ធ​នេះ ប្រសិនបើ​អ្នក​ជ្រើស​ជំនួស​"
+"វា​ជាមួយ​កំណែ​ថ្មី​ជាងនេះ ។"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:251
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:256
+#: ../DistUpgrade/DistUpgradeViewKDE.py:323
+msgid "The 'diff' command was not found"
+msgstr "រក​មិន​ឃើញ​ពាក្យ​បញ្ជា 'diff' ទេ"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:464
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:477
+#: ../DistUpgrade/DistUpgradeViewText.py:92
+msgid "A fatal error occurred"
+msgstr "កំហុស​ធ្ងន់ធ្ងរ​បាន​កើតឡើង"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:465
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:478
+msgid ""
+"Please report this as a bug (if you haven't already) and include the files /"
+"var/log/dist-upgrade/main.log and /var/log/dist-upgrade/apt.log in your "
+"report. The upgrade has aborted.\n"
+"Your original sources.list was saved in /etc/apt/sources.list.distUpgrade."
+msgstr ""
+"សូម​រាយការណ៍​វា​ជា​កំហុស (ប្រសិនបើ​អ្នក​ពុំ​ទាន់​បាន​ធ្វើ) និង​រួមបញ្ចូល​ឯកសារ /var/log/dist-upgrade/"
+"main.log និង /var/log/dist-upgrade/apt.log ទៅ​ក្នុង​របាយការណ៍​​របស់​អ្នក ។ ការ​ធ្វើឲ្យ​ប្រសើរ​"
+"បាន​បោះបង់ ។\n"
+" sources.list ដើម​របស់​អ្នក​ត្រូវ​បាន​រក្សាទុក​ក្នុង /etc/apt/sources.list.distUpgrade ។"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:482
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:495
+msgid "Ctrl-c pressed"
+msgstr "ចុច​បញ្ជា (Ctrl)-c"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:483
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:496
+msgid ""
+"This will abort the operation and may leave the system in a broken state. "
+"Are you sure you want to do that?"
+msgstr ""
+"វា​នឹង​បោះបង់​ប្រតិបត្តិការ​នេះ ហើយ​អាច​រក្សាទុក​ប្រព័ន្ធ​ក្នុង​ស្ថានភាព​ខូច​ដដែល ។ តើ​អ្នក​ពិតជា​ចង់​ធ្វើ​ដូច្នោះ​"
+"ឬ ?"
+
+#. append warning
+#: ../DistUpgrade/DistUpgradeViewGtk.py:631
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:629
+msgid "To prevent data loss close all open applications and documents."
+msgstr "ដើម្បី​ការពារ​កុំឲ្យ​បាត់បង់​ទិន្នន័យ បិទ​កម្មវិធី និង​ឯកសារ​ដែល​បាន​បើក​ទាំងអស់ ។"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:645
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:643
+#, python-format
+msgid "No longer supported by Canonical (%s)"
+msgstr "មិន​​ត្រូវ​បាន​គាំទ្រ​ដោយ Canonical (%s) ទៀត​ឡើយ"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:646
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:644
+#, python-format
+msgid "<b>Downgrade (%s)</b>"
+msgstr "<b>បន្ទាប (%s)</b>"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:647
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:645
+#, python-format
+msgid "Remove (%s)"
+msgstr "យកចេញ (%s)"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:648
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:646
+#, python-format
+msgid "No longer needed (%s)"
+msgstr "លែង​ត្រូវការ (%s)"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:649
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:647
+#, python-format
+msgid "Install (%s)"
+msgstr "ដំឡើង (%s)"
+
+#: ../DistUpgrade/DistUpgradeViewGtk.py:650
+#: ../DistUpgrade/DistUpgradeViewGtk3.py:648
+#, python-format
+msgid "Upgrade (%s)"
+msgstr "ធ្វើឲ្យ​ប្រសើរ (%s)"
+
+#. change = QMessageBox.question(None, _("Media Change"), msg, QMessageBox.Ok, QMessageBox.Cancel)
+#: ../DistUpgrade/DistUpgradeViewKDE.py:196
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:157
+msgid "Media Change"
+msgstr "ការ​ផ្លាស់ប្ដូរ​មេឌៀ"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:335
+msgid "Show Difference >>>"
+msgstr "បង្ហាញ​ភាព​ខុសគ្នា >>>"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:338
+msgid "<<< Hide Difference"
+msgstr "<<< លាក់​ភាព​ខុសគ្នា"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:554
+msgid "Error"
+msgstr "កំហុស"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:568
+msgid "&Cancel"
+msgstr "បោះបង់"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:572
+#: ../DistUpgrade/DistUpgradeViewKDE.py:813
+msgid "&Close"
+msgstr "បិទ"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:618
+msgid "Show Terminal >>>"
+msgstr "បង្ហាញ​ស្ថានីយ >>>"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:621
+msgid "<<< Hide Terminal"
+msgstr "<<< លាក់​ស្ថានីយ"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:701
+msgid "Information"
+msgstr "ព័ត៌មាន"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:751
+#: ../DistUpgrade/DistUpgradeViewKDE.py:796
+#: ../DistUpgrade/DistUpgradeViewKDE.py:799 ../DistUpgrade/DistUpgrade.ui.h:7
+msgid "Details"
+msgstr "សេចក្ដី​លម្អិត"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:777
+#, python-format
+msgid "No longer supported %s"
+msgstr "មិន​ត្រូវ​បាន​គាំទ្រ​ទៀត​ទេ %s"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:779
+#, python-format
+msgid "Remove %s"
+msgstr "យកចេញ %s"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:781
+#: ../DistUpgrade/DistUpgradeViewText.py:182
+#, python-format
+msgid "Remove (was auto installed) %s"
+msgstr "យកចេញ (ត្រូវ​បាន​ដំឡើង​ស្វ័យប្រវត្តិ) %s"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:783
+#, python-format
+msgid "Install %s"
+msgstr "ដំឡើង %s"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:785
+#, python-format
+msgid "Upgrade %s"
+msgstr "ធ្វើឲ្យ​ប្រសើរ %s"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:809
+#: ../DistUpgrade/DistUpgradeViewText.py:230
+msgid "Restart required"
+msgstr "ទាមទារឲ្យ​ចាប់ផ្ដើម​ឡើងវិញ"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:809
+msgid "<b><big>Restart the system to complete the upgrade</big></b>"
+msgstr "<b><big>ចាប់ផ្ដើម​ប្រព័ន្ធ​ឡើងវិញ ដើម្បី​បញ្ចប់​ការ​ធ្វើឲ្យ​ប្រសើរ</big></b>"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:812 ../DistUpgrade/DistUpgrade.ui.h:14
+#: ../data/gtkbuilder/UpdateManager.ui.h:26
+msgid "_Restart Now"
+msgstr "ចាប់ផ្ដើម​ឡើងវិញ​ឥឡូវនេះ"
+
+#. FIXME make this user friendly
+#: ../DistUpgrade/DistUpgradeViewKDE.py:830
+msgid ""
+"<b><big>Cancel the running upgrade?</big></b>\n"
+"\n"
+"The system could be in an unusable state if you cancel the upgrade. You are "
+"strongly advised to resume the upgrade."
+msgstr ""
+"<b><big>បោះបង់​ការ​ធ្វើឲ្យ​ប្រសើរ​ដែល​កំពុង​ដំណើរការ​ឬ ?</big></b>\n"
+"\n"
+"ប្រព័ន្ធ​អាច​ស្ថិត​ក្នុង​ស្ថានភាព​ដែល​មិន​អាច​ប្រើ​បាន ប្រសិនបើ​អ្នក​បោះបង់​ការ​ធ្វើឲ្យ​ប្រសើរ ។ អ្នក​ត្រូវ​បាន​"
+"ផ្ដល់​អនុសាសន៍​ឲ្យ​បន្ត​ការ​ធ្វើឲ្យ​ប្រសើរ ។"
+
+#: ../DistUpgrade/DistUpgradeViewKDE.py:834
+msgid "Cancel Upgrade?"
+msgstr "បោះបង់​ការ​ធ្វើឲ្យ​ប្រសើរ​ឬ ?"
+
+#: ../DistUpgrade/DistUpgradeView.py:61
+#, python-format
+msgid "%li day"
+msgid_plural "%li days"
+msgstr[0] "%li ថ្ងៃ"
+
+#: ../DistUpgrade/DistUpgradeView.py:63
+#, python-format
+msgid "%li hour"
+msgid_plural "%li hours"
+msgstr[0] "%li ម៉ោង"
+
+#: ../DistUpgrade/DistUpgradeView.py:65
+#, python-format
+msgid "%li minute"
+msgid_plural "%li minutes"
+msgstr[0] "%li នាទី"
+
+#: ../DistUpgrade/DistUpgradeView.py:66
+#, python-format
+msgid "%li second"
+msgid_plural "%li seconds"
+msgstr[0] "%li វិនាទី"
+
+#. TRANSLATORS: you can alter the ordering of the remaining time
+#. information here if you shuffle %(str_days)s %(str_hours)s %(str_minutes)s
+#. around. Make sure to keep all '$(str_*)s' in the translated string
+#. and do NOT change anything appart from the ordering.
+#.
+#. %(str_hours)s will be either "1 hour" or "2 hours" depending on the
+#. plural form
+#.
+#. Note: most western languages will not need to change this
+#: ../DistUpgrade/DistUpgradeView.py:82
+#, python-format
+msgid "%(str_days)s %(str_hours)s"
+msgstr "%(str_days)s %(str_hours)s"
+
+#. TRANSLATORS: you can alter the ordering of the remaining time
+#. information here if you shuffle %(str_hours)s %(str_minutes)s
+#. around. Make sure to keep all '$(str_*)s' in the translated string
+#. and do NOT change anything appart from the ordering.
+#.
+#. %(str_hours)s will be either "1 hour" or "2 hours" depending on the
+#. plural form
+#.
+#. Note: most western languages will not need to change this
+#: ../DistUpgrade/DistUpgradeView.py:100
+#, python-format
+msgid "%(str_hours)s %(str_minutes)s"
+msgstr "%(str_hours)s %(str_minutes)s"
+
+#. 56 kbit
+#. 1Mbit = 1024 kbit
+#: ../DistUpgrade/DistUpgradeView.py:151
+#, python-format
+msgid ""
+"This download will take about %s with a 1Mbit DSL connection and about %s "
+"with a 56k modem."
+msgstr ""
+"ការ​ទាញ​យក​នេះ​នឹង​ចំណាយ​ពេល​ប្រហែល %s ជាមួយ​នឹង​ការ​តភ្ជាប់ DSL 1Mbit និង​ប្រហែល %s ជាមួយ​ម៉ូដឹម 56k "
+"។"
+
+#. if we have a estimated speed, use it
+#: ../DistUpgrade/DistUpgradeView.py:155
+#, python-format
+msgid "This download will take about %s with your connection. "
+msgstr "ការ​ទាញ​យក​នេះ​នឹង​ចំណាយ​ពេល​ប្រហែល %s ជាមួយ​ការ​តភ្ជាប់ ។ "
+
+#. Declare these translatable strings from the .ui files here so that
+#. xgettext picks them up.
+#: ../DistUpgrade/DistUpgradeView.py:259 ../DistUpgrade/DistUpgrade.ui.h:21
+msgid "Preparing to upgrade"
+msgstr "រៀបចំ​ធ្វើឲ្យ​ប្រសើរ"
+
+#: ../DistUpgrade/DistUpgradeView.py:260
+msgid "Getting new software channels"
+msgstr "ទទួលយក​ឆានែល​កម្មវិធី​ថ្មី"
+
+#: ../DistUpgrade/DistUpgradeView.py:261 ../DistUpgrade/DistUpgrade.ui.h:23
+msgid "Getting new packages"
+msgstr "ទទួល​យក​កញ្ចប់​ថ្មី"
+
+#: ../DistUpgrade/DistUpgradeView.py:262 ../DistUpgrade/DistUpgrade.ui.h:26
+msgid "Installing the upgrades"
+msgstr "ដំឡើង​ការ​ធ្វើឲ្យ​ប្រសើរ"
+
+#: ../DistUpgrade/DistUpgradeView.py:263 ../DistUpgrade/DistUpgrade.ui.h:25
+msgid "Cleaning up"
+msgstr "សម្អាត"
+
+#: ../DistUpgrade/DistUpgradeView.py:348
+#, python-format
+msgid ""
+"%(amount)d installed package is no longer supported by Canonical. You can "
+"still get support from the community."
+msgid_plural ""
+"%(amount)d installed packages are no longer supported by Canonical. You can "
+"still get support from the community."
+msgstr[0] ""
+"%(amount)d កញ្ចប់​ដែល​បាន​ដំឡើង​មិន​ត្រូវ​បាន​គាំទ្រ​ដោយ Canonical ទៀត​ទេ ។ អ្នក​នៅតែ​អាច​ទទួលយក​ការ​"
+"គាំទ្រ​ពី​សហគមន៍ ។"
+
+#. FIXME: make those two separate lines to make it clear
+#. that the "%" applies to the result of ngettext
+#: ../DistUpgrade/DistUpgradeView.py:357
+#, python-format
+msgid "%d package is going to be removed."
+msgid_plural "%d packages are going to be removed."
+msgstr[0] "%d កញ្ចប់នឹង​ត្រូវ​បាន​យក​ចេញ ។"
+
+#: ../DistUpgrade/DistUpgradeView.py:362
+#, python-format
+msgid "%d new package is going to be installed."
+msgid_plural "%d new packages are going to be installed."
+msgstr[0] "%d កញ្ចប់​ថ្មី​នឹង​ត្រូវ​បាន​ដំឡើង ។"
+
+#: ../DistUpgrade/DistUpgradeView.py:368
+#, python-format
+msgid "%d package is going to be upgraded."
+msgid_plural "%d packages are going to be upgraded."
+msgstr[0] "%d កញ្ចប់​នឹង​ត្រូវ​បាន​ធ្វើឲ្យ​ប្រសើរ ។"
+
+#: ../DistUpgrade/DistUpgradeView.py:373
+#, python-format
+msgid ""
+"\n"
+"\n"
+"You have to download a total of %s. "
+msgstr ""
+"\n"
+"\n"
+"អ្នក​ត្រូវតែ​ទាញ​យក​សរុប​ត្រឹម %s ។ "
+
+#: ../DistUpgrade/DistUpgradeView.py:378
+msgid ""
+"Installing the upgrade can take several hours. Once the download has "
+"finished, the process cannot be canceled."
+msgstr ""
+"ដំឡើង​ការ​ធ្វើ​ឲ្យ​ប្រសើរ​ឡើង​អាច​ចំណាយ​ពេល​ច្រើន​ម៉ោង ។ នៅ​ពេល​ដែល​ការ​ទាញយក​បាន​បញ្ចប់ ដំណើរការ​មិន​អាច​"
+"ត្រូវ​បាន​បោះបង់បាន​ទេ ។"
+
+#: ../DistUpgrade/DistUpgradeView.py:382
+msgid ""
+"Fetching and installing the upgrade can take several hours. Once the "
+"download has finished, the process cannot be canceled."
+msgstr ""
+"ការ​ទៅ​យក និង​ដំឡើង​ការ​ធ្វើ​ឲ្យ​ប្រសើរ​ឡើង​អាច​ចំណាយ​ពេល​រាប់​ម៉ោង ។ នៅពេល​ដែល​កា​រទាញយក​បាន​បញ្ចប់ "
+"ដំណើរការ​មិន​អាច​ត្រូ​វបាន​​បោះបង់​ទេ ។"
+
+#: ../DistUpgrade/DistUpgradeView.py:387
+msgid "Removing the packages can take several hours. "
+msgstr "ការ​យក​កញ្ចប់ចេញ​អាច​ចំណាយ​ពេល​ច្រើន​ម៉ោង ។ "
+
+#. FIXME: this should go into DistUpgradeController
+#: ../DistUpgrade/DistUpgradeView.py:392 ../UpdateManager/UpdateManager.py:676
+msgid "The software on this computer is up to date."
+msgstr "កម្មវិធី​នៅ​លើ​កុំព្យូទ័រ​នេះ​ទាន់​សម័យ ។"
+
+#: ../DistUpgrade/DistUpgradeView.py:393
+msgid ""
+"There are no upgrades available for your system. The upgrade will now be "
+"canceled."
+msgstr ""
+"គ្មាន​ការ​ធ្វើឲ្យ​ប្រសើរ​សម្រាប់​ប្រព័ន្ធ​របស់​អ្នក​ទេ ។ ការ​ធ្វើឲ្យ​ប្រសើរ​នឹង​ត្រូវ​បាន​បោះបង់​ឥឡូវនេះ ។"
+
+#: ../DistUpgrade/DistUpgradeView.py:406
+msgid "Reboot required"
+msgstr "ទាមទារ​ឲ្យ​ចាប់ផ្ដើម​ឡើងវិញ"
+
+#: ../DistUpgrade/DistUpgradeView.py:407
+msgid ""
+"The upgrade is finished and a reboot is required. Do you want to do this now?"
+msgstr "ការ​ធ្វើឲ្យ​ប្រសើរ​បាន​បញ្ចប់ ហើយ​វា​ទាមទារ​ឲ្យ​ចាប់ផ្ដើម​ឡើងវិញ ។ តើ​ចង់​ធ្វើ​ដូច្នេះ​ឥឡូវ​នេះ​ឬ ?"
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:72
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:72
+#, python-format
+msgid "authenticate '%(file)s' against '%(signature)s' "
+msgstr "ផ្ទៀងផ្ទាត់​ភាព​ត្រឹមត្រូវ '%(file)s' ទល់នឹង '%(signature)s' "
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:131
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:131
+#, python-format
+msgid "extracting '%s'"
+msgstr "ស្រង់ចេញ '%s'"
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:151
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:152
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:151
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:152
+msgid "Could not run the upgrade tool"
+msgstr "មិន​អាច​ដំណើរការ​ឧបករណ៍​ធ្វើឲ្យ​ប្រសើរ​ទេ"
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:152
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:152
+msgid ""
+"This is most likely a bug in the upgrade tool. Please report it as a bug "
+"using the command 'ubuntu-bug update-manager'."
+msgstr ""
+"ភាគច្រើន​អាច​បណ្ដាល​មក​ពី​កំហុស​នៅ​ក្នុង​ឧបករណ៍​ធ្វើឲ្យ​ប្រសើរ ។ សូម​រាយការណ៍​វា​ជា​កំហុស​ដោយ​ប្រើ​ពាក្យ​បញ្ជា "
+"'ubuntu-bug update-manager' ។"
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:227
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:227
+msgid "Upgrade tool signature"
+msgstr "ហត្ថលេខា​ឧបករណ៍​ធ្វើឲ្យ​ប្រសើរ"
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:234
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:234
+msgid "Upgrade tool"
+msgstr "ឧបករណ៍​ធ្វើឲ្យ​ប្រសើរ"
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:268
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:268
+msgid "Failed to fetch"
+msgstr "បាន​បរាជ័យ​ក្នុង​ការ​ទៅ​ប្រមូលយក"
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:269
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:269
+msgid "Fetching the upgrade failed. There may be a network problem. "
+msgstr "បាន​បរាជ័យ​ក្នុង​ការ​ទៅ​ប្រមូល​យក​ការ​ធ្វើឲ្យ​ប្រសើរ ។ អាច​មាន​បញ្ហា​បណ្ដាញ ។ "
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:273
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:273
+msgid "Authentication failed"
+msgstr "បាន​បរាជ័យ​ក្នុង​ការ​ផ្ទៀងផ្ទាត់​ភាព​ត្រឹមត្រូវ"
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:274
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:274
+msgid ""
+"Authenticating the upgrade failed. There may be a problem with the network "
+"or with the server. "
+msgstr ""
+"បាន​បរាជ័យ​ក្នុង​ការ​ផ្ទៀងផ្ទាត់​ភាព​ត្រឹមត្រូវ​អំពី​ការ​ធ្វើឲ្យ​ប្រសើរ ។ អាច​មាន​បញ្ហា​ជាមួយ​បណ្ដាញ ឬ​ជាមួយ​"
+"ម៉ាស៊ីន​បម្រើ ។ "
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:279
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:279
+msgid "Failed to extract"
+msgstr "បាន​បរាជ័យ​ក្នុង​ការ​ស្រង់​ចេញ"
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:280
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:280
+msgid ""
+"Extracting the upgrade failed. There may be a problem with the network or "
+"with the server. "
+msgstr ""
+"បាន​បរាជ័យ​ក្នុង​ការ​ស្រង់​ចេញ​ការ​ធ្វើឲ្យ​ប្រសើរ ។ អាច​មាន​បញ្ហា​ជាមួយ​បណ្ដាញ ឬ​ជាមួយ​ម៉ាស៊ីន​បម្រើ ។ "
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:285
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:285
+msgid "Verification failed"
+msgstr "បាន​បរាជ័យ​ក្នុង​ការ​ផ្ទៀងផ្ទាត់"
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:286
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:286
+msgid ""
+"Verifying the upgrade failed.  There may be a problem with the network or "
+"with the server. "
+msgstr ""
+"បាន​បរាជ័យ​ក្នុង​ការ​ផ្ទៀងផ្ទាត់​ការ​ធ្វើឲ្យ​ប្រសើរ ។ អាច​មាន​បញ្ហា​ជាមួយ​បណ្ដាញ ឬ​ជាមួយ​ម៉ាស៊ីន​បម្រើ ។ "
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:300
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:306
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:300
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:306
+msgid "Can not run the upgrade"
+msgstr "មិន​អាច​ដំណើរការ​ការ​ធ្វើឲ្យ​ប្រសើរ​បាន​ទេ"
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:301
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:301
+msgid ""
+"This usually is caused by a system where /tmp is mounted noexec. Please "
+"remount without noexec and run the upgrade again."
+msgstr ""
+"ជាទូទៅ​វា​បណ្ដាល​មក​ពី​បញ្ហា​ប្រព័ន្ធ​ដែល /tmp ត្រូវ​បាន​ម៉ោន​​ដោយ​ប្រើ noexec ។ សូម​ម៉ោន​ឡើងវិញ​ដោយ​មិន​ប្រើ "
+"noexec រួច​ដំណើរការ​ការ​ធ្វើឲ្យ​ប្រសើរ​ម្ដងទៀត ។"
+
+#: ../DistUpgrade/DistUpgradeFetcherCore.py:307
+#: ../UpdateManager/Core/DistUpgradeFetcherCore.py:307
+#, python-format
+msgid "The error message is '%s'."
+msgstr "សារ​កំហុស​គឺ '%s' ។"
+
+#: ../DistUpgrade/DistUpgradeViewText.py:93
+msgid ""
+"Please report this as a bug and include the files /var/log/dist-upgrade/main."
+"log and /var/log/dist-upgrade/apt.log in your report. The upgrade has "
+"aborted.\n"
+"Your original sources.list was saved in /etc/apt/sources.list.distUpgrade."
+msgstr ""
+"សូម​រាយការណ៍​វា​ជា​កំហុស​ ហើយ​រួមបញ្ចូល​ឯកសារ​ /var/log/dist-upgrade/main.log និង /var/log/"
+"dist-upgrade/apt.log ទៅ​ក្នុង​របាយការណ៍​របស់​អ្នក ។ ការ​ធ្វើឲ្យ​ប្រសើរ​ត្រូវ​បាន​បោះបង់ ។\n"
+" sources.list របស់​អ្នក​ត្រូវ​បាន​រក្សាទុក​នៅ​ក្នុង /etc/apt/sources.list.distUpgrade ។"
+
+#: ../DistUpgrade/DistUpgradeViewText.py:117
+msgid "Aborting"
+msgstr "បោះបង់"
+
+#: ../DistUpgrade/DistUpgradeViewText.py:122
+msgid "Demoted:\n"
+msgstr "បន្ថយ ៖\n"
+
+#: ../DistUpgrade/DistUpgradeViewText.py:129
+msgid "To continue please press [ENTER]"
+msgstr "ដើម្បី​បន្ត ចុច [ENTER]"
+
+#: ../DistUpgrade/DistUpgradeViewText.py:157
+#: ../DistUpgrade/DistUpgradeViewText.py:196
+#: ../DistUpgrade/DistUpgradeViewText.py:203
+msgid "Continue [yN] "
+msgstr "បន្ត [yN] "
+
+#: ../DistUpgrade/DistUpgradeViewText.py:157
+#: ../DistUpgrade/DistUpgradeViewText.py:196
+msgid "Details [d]"
+msgstr "សេចក្ដីលម្អិត [d]"
+
+#. TRANSLATORS: the "y" is "yes"
+#. TRANSLATORS: first letter of a positive (yes) answer
+#: ../DistUpgrade/DistUpgradeViewText.py:162
+#: ../DistUpgrade/DistUpgradeViewText.py:206
+msgid "y"
+msgstr "បាទ/ចាស"
+
+#. TRANSLATORS: the "n" is "no"
+#. TRANSLATORS: first letter of a negative (no) answer
+#: ../DistUpgrade/DistUpgradeViewText.py:165
+#: ../DistUpgrade/DistUpgradeViewText.py:213
+msgid "n"
+msgstr "ទេ"
+
+#. TRANSLATORS: the "d" is "details"
+#: ../DistUpgrade/DistUpgradeViewText.py:168
+msgid "d"
+msgstr "សេចក្ដីលម្អិត"
+
+#: ../DistUpgrade/DistUpgradeViewText.py:173
+#, python-format
+msgid "No longer supported: %s\n"
+msgstr "មិន​ត្រូវ​បាន​គាំទ្រ​ទៀតទេ ៖ %s\n"
+
+#: ../DistUpgrade/DistUpgradeViewText.py:178
+#, python-format
+msgid "Remove: %s\n"
+msgstr "យក​ចេញ ៖ %s\n"
+
+#: ../DistUpgrade/DistUpgradeViewText.py:188
+#, python-format
+msgid "Install: %s\n"
+msgstr "ដំឡើង ៖ %s\n"
+
+#: ../DistUpgrade/DistUpgradeViewText.py:193
+#, python-format
+msgid "Upgrade: %s\n"
+msgstr "ធ្វើឲ្យ​ប្រសើរ៖ %s\n"
+
+#: ../DistUpgrade/DistUpgradeViewText.py:210
+msgid "Continue [Yn] "
+msgstr "បន្ត [Yn] "
+
+#: ../DistUpgrade/DistUpgradeViewText.py:231
+msgid ""
+"To finish the upgrade, a restart is required.\n"
+"If you select 'y' the system will be restarted."
+msgstr ""
+"ដើម្បី​បញ្ចប់​ការ​ធ្វើឲ្យ​ប្រសើរ ទាមទារ​ឲ្យ​ចាប់ផ្ដើម​ឡើងវិញ ។\n"
+"ប្រសិនបើ​អ្នក​ជ្រើស 'បាទ/ចាស' ប្រព័ន្ធ​នឹង​ត្រូវ​ចាប់ផ្ដើម​ឡើងវិញ ។"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:1
+msgid "_Cancel Upgrade"
+msgstr "បោះបង់​ការ​ធ្វើឲ្យ​ប្រសើរ"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:2
+msgid "_Resume Upgrade"
+msgstr "បន្ត​ការ​ធ្វើឲ្យ​ប្រសើរ"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:3
+msgid ""
+"<b><big>Cancel the running upgrade?</big></b>\n"
+"\n"
+"The system could be in an unusable state if you cancel the upgrade. You are "
+"strongly adviced to resume the upgrade."
+msgstr ""
+"<b><big>បោះបង់​ការ​ធ្វើឲ្យ​ប្រសើរ​ដែល​កំពុង​ដំណើរការ ?</big></b>\n"
+"\n"
+"ប្រព័ន្ធ​អាច​ស្ថិត​ក្នុង​ស្ថាន​ភាព​ដែល​មិន​អាច​ប្រើ​បាន ប្រសិនបើ​អ្នក​បោះបង់​ការ​ធ្វើឲ្យ​ប្រសើរ ។ អ្នក​ត្រូវ​បាន​"
+"ផ្ដល់​អនុសាសន៍​ឲ្យ​បន្ត​ការ​ធ្វើឲ្យ​ប្រសើរ ​​។"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:6
+msgid "_Start Upgrade"
+msgstr "ចាប់ផ្ដើម​ការ​ធ្វើឲ្យ​ប្រសើរ"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:9
+msgid "_Replace"
+msgstr "ជំនួស"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:10
+msgid "Difference between the files"
+msgstr "ភាព​ខុស​គ្នា​រវាង​ឯកសារ"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:11
+msgid "_Report Bug"
+msgstr "រាយការណ៍​កំហុស"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:12
+msgid "_Continue"
+msgstr "បន្ត"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:13
+msgid "<b><big>Start the upgrade?</big></b>"
+msgstr "<b><big>ចាប់ផ្ដើម​ការ​ធ្វើឲ្យ​ប្រសើរ​ឬ ?</big></b>"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:15
+msgid ""
+"<b><big>Restart the system to complete the upgrade</big></b>\n"
+"\n"
+"Please save your work before continuing."
+msgstr ""
+"<b><big>ចាប់ផ្ដើម​ប្រព័ន្ធ​ឡើងវិញ ដើម្បី​បញ្ចប់​ការ​ធ្វើឲ្យ​ប្រសើរ</big></b>\n"
+"\n"
+"សូម​រក្សាទុក​ការងារ​របស់​អ្នក មុននឹង​បន្ត ។"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:18
+msgid "Distribution Upgrade"
+msgstr "ធ្វើឲ្យ​ការ​ចែកចាយ​ប្រសើរ"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:19
+#, fuzzy
+msgid "<b><big>Upgrading Ubuntu to version 12.10</big></b>"
+msgstr "<b><big>ធ្វើ​ឲ្យ​អ៊ូប៊ុនទូ​ប្រសើរ​ទៅ​ជា​កំណែ ១២.០៤</big></b>"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:20
+msgid "    "
+msgstr "    "
+
+#: ../DistUpgrade/DistUpgrade.ui.h:22
+msgid "Setting new software channels"
+msgstr "ការ​កំណត់​ឆានែល​កម្មវិធី​ថ្មី"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:24
+msgid "Restarting the computer"
+msgstr "ចាប់ផ្ដើម​កុំព្យូទ័រ​ឡើងវិញ"
+
+#: ../DistUpgrade/DistUpgrade.ui.h:27
+msgid "Terminal"
+msgstr "ស្ថានីយ"
+
+#: ../UpdateManager/backend/InstallBackendSynaptic.py:64
+msgid "Please wait, this can take some time."
+msgstr "សូម​រង់ចាំ វា​អាច​ចំណាយ​ពេល​មួយ​ស្របក់ ។"
+
+#: ../UpdateManager/backend/InstallBackendSynaptic.py:66
+msgid "Update is complete"
+msgstr "បាន​បញ្ចប់​ការ​ធ្វើ​បច្ចុប្បន្នភាព"
+
+#: ../UpdateManager/DistUpgradeFetcher.py:114
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:109
+msgid "Could not find the release notes"
+msgstr "រក​មិន​ឃើញ​ឯកសារ​ចេញផ្សាយ​ទេ"
+
+#: ../UpdateManager/DistUpgradeFetcher.py:115
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:110
+msgid "The server may be overloaded. "
+msgstr "ម៉ាស៊ីន​បម្រើ​អាច​ផ្ទុក​លើស​ចំណុះ ។ "
+
+#: ../UpdateManager/DistUpgradeFetcher.py:125
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:114
+msgid "Could not download the release notes"
+msgstr "មិន​អាច​ទាញ​យក​ឯកសារ​ចេញផ្សាយ​បាន​ទេ"
+
+#: ../UpdateManager/DistUpgradeFetcher.py:126
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:115
+msgid "Please check your internet connection."
+msgstr "សូម​ពិនិត្យមើល​ការ​តភ្ជាប់​អ៊ីនធឺណិត​របស់​អ្នក ។"
+
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:68
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:91
+msgid "Upgrade"
+msgstr "ធ្វើឲ្យ​ប្រសើរ"
+
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:95
+#: ../data/gtkbuilder/UpdateManager.ui.h:20
+#: ../data/gtkbuilder/UpgradePromptDialog.ui.h:2
+msgid "Release Notes"
+msgstr "ឯកសារ​ចេញផ្សាយ"
+
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:134
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:148
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:150
+msgid "Downloading additional package files..."
+msgstr "ទាញ​យក​ឯកសារ​កញ្ចប់​បន្ថែម..."
+
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:148
+#, python-format
+msgid "File %s of %s at %sB/s"
+msgstr "ឯកសារ %s នៃ %s នៅ %sB/s"
+
+#: ../UpdateManager/DistUpgradeFetcherKDE.py:150
+#, python-format
+msgid "File %s of %s"
+msgstr "ឯកសារ %s នៃ %s"
+
+#: ../UpdateManager/ChangelogViewer.py:75
+msgid "Open Link in Browser"
+msgstr "បើក​តំណ​ក្នុង​កម្មវិធី​រុករក"
+
+#: ../UpdateManager/ChangelogViewer.py:78
+msgid "Copy Link to Clipboard"
+msgstr "ចម្លង​តំណ​ទៅកាន់​ក្ដារ​តម្បៀត​ខ្ទាស់"
+
+#: ../UpdateManager/GtkProgress.py:162
+#, python-format
+msgid "Downloading file %(current)li of %(total)li with %(speed)s/s"
+msgstr "ទាញ​យក​ឯកសារ %(current)li នៃ %(total)li ដោយ %(speed)s/s"
+
+#: ../UpdateManager/GtkProgress.py:167
+#, python-format
+msgid "Downloading file %(current)li of %(total)li"
+msgstr "ទាញយក​ឯកសារ %(current)li នៃ %(total)li"
+
+#: ../UpdateManager/UpdateManager.py:106 ../do-release-upgrade:100
+msgid "Your Ubuntu release is not supported anymore."
+msgstr "ឯកសារ​ចេញផ្សាយ​អ៊ូប៊ុនទូ​របស់​អ្នក​មិន​ត្រូវ​បាន​គាំទ្រ​ទៀតទេ ។"
+
+#: ../UpdateManager/UpdateManager.py:107
+msgid ""
+"You will not get any further security fixes or critical updates. Please "
+"upgrade to a later version of Ubuntu."
+msgstr ""
+"អ្នកនឹង​មិន​យក​ការ​កែ​សុវត្ថិភាព​បន្ត ឬ​បច្ចុប្បន្ន​ភាព​សំខាន់ ។ សូម​ធ្វើ​ឲ្យ​ប្រសើរ​ឡើង​ទៅ​កំណែ​ក្រោយ​របស់​អ៊ូប៊ុន​ទូ ។"
+
+#: ../UpdateManager/UpdateManager.py:115
+msgid "Upgrade information"
+msgstr "ព័ត៌មាន​ធ្វើឲ្យ​ប្រសើរ"
+
+#: ../UpdateManager/UpdateManager.py:233
+#: ../UpdateManagerText/UpdateManagerText.py:35
+msgid "Install"
+msgstr "ដំឡើង"
+
+#: ../UpdateManager/UpdateManager.py:235
+msgid "Name"
+msgstr "ឈ្មោះ"
+
+#. upload_archive = version_match.group(2).strip()
+#: ../UpdateManager/UpdateManager.py:395
+#, python-format
+msgid "Version %s: \n"
+msgstr "កំណែ %s ៖ \n"
+
+#: ../UpdateManager/UpdateManager.py:453
+msgid ""
+"No network connection detected, you can not download changelog information."
+msgstr "រក​មិន​ឃើញ​ការ​តភ្ជាប់​បណ្ដាញ​ទេ អ្នក​មិន​អាច​ទាញ​យក​ព័ត៌មាន​កំណត់ហេតុ​ផ្លាស់ប្ដូរ​ទេ ។"
+
+#: ../UpdateManager/UpdateManager.py:463
+msgid "Downloading list of changes..."
+msgstr "ទាញ​យក​បញ្ជី​នៃ​ការ​ផ្លាស់ប្ដូរ..."
+
+#: ../UpdateManager/UpdateManager.py:507
+msgid "_Deselect All"
+msgstr "មិន​ជ្រើស​ទាំងអស់"
+
+#: ../UpdateManager/UpdateManager.py:513
+msgid "Select _All"
+msgstr "ជ្រើស​ទាំងអស់"
+
+#: ../UpdateManager/UpdateManager.py:572
+#, python-format
+msgid "%s will be downloaded."
+msgstr "%s នឹង​ត្រូវ​បាន​ទាញ​យក ។"
+
+#: ../UpdateManager/UpdateManager.py:584
+#, fuzzy
+msgid "The update has already been downloaded."
+msgid_plural "The updates have already been downloaded."
+msgstr[0] "បច្ចុប្បន្នភាព​ត្រូវ​បាន​ទាញ​យក​រួចហើយ ប៉ុន្តែ​មិន​ទាន់​បាន​ដំឡើង​ទេ ។"
+
+#: ../UpdateManager/UpdateManager.py:589
+msgid "There are no updates to install."
+msgstr "គ្មាន​បច្ចុប្បន្នភាព​ត្រូវ​ដំឡើង​ទេ ។"
+
+#: ../UpdateManager/UpdateManager.py:598
+msgid "Unknown download size."
+msgstr "មិន​ស្គាល់​ទំហំ​ទាញយក ។"
+
+#: ../UpdateManager/UpdateManager.py:624
+msgid ""
+"It is unknown when the package information was updated last. Please click "
+"the 'Check' button to update the information."
+msgstr ""
+"វា​នឹង​ត្រូវ​បាន​ស្គាល់ នៅ​ពេល​ដែល​ព័ត៌មាន​កញ្ចប់​ត្រូវ​បាន​ធ្វើ​បច្ចុប្បន្នភាព​លើក​ចុងក្រោយ ។ សូម​ចុច​​ប៊ូតុង "
+"'ពិនិត្យមើល' ដើម្បី​ធ្វើ​បច្ចុប្បន្នភាព​ព័ត៌មាន ។"
+
+#: ../UpdateManager/UpdateManager.py:630
+#, python-format
+msgid ""
+"The package information was last updated %(days_ago)s days ago.\n"
+"Press the 'Check' button below to check for new software updates."
+msgstr ""
+"ព័ត៌មាន​កញ្ចប់​ត្រូវ​បាន​ធ្វើ​បច្ចុប្បន្នភាព​លើក​ចុងក្រោយ %(days_ago)s ថ្ងៃ​កន្លង​ទៅ ។\n"
+"ចុច​ប៊ូតុង 'ពិនិត្យមើល' ខាងក្រោម​ដើម្បី​ពិនិត្យ​រកមើល​បច្ចុប្បន្នភាព​កម្មវិធី​ថ្មីៗ ។"
+
+#: ../UpdateManager/UpdateManager.py:635
+#, python-format
+msgid "The package information was last updated %(days_ago)s day ago."
+msgid_plural "The package information was last updated %(days_ago)s days ago."
+msgstr[0] "ព័ត៌មាន​កញ្ចប់​ត្រូវ​បាន​ធ្វើ​បច្ចុប្បន្នភាព​ចុងក្រោយ %(days_ago)s ថ្ងៃ​កន្លងទៅ ។"
+
+#: ../UpdateManager/UpdateManager.py:639
+#, python-format
+msgid "The package information was last updated %(hours_ago)s hour ago."
+msgid_plural ""
+"The package information was last updated %(hours_ago)s hours ago."
+msgstr[0] "ព័ត៌មាន​កញ្ចប់​ត្រូវ​បាន​ធ្វើ​បច្ចុប្បន្នភាព​លើក​ចុងក្រោយ %(hours_ago)s ម៉ោង​កន្លងទៅ ។"
+
+#. TRANSLATORS: only in plural form, as %s minutes ago is one of 15, 30, 45 minutes ago
+#: ../UpdateManager/UpdateManager.py:644 ../UpdateManager/UpdateManager.py:646
+#: ../UpdateManager/UpdateManager.py:648
+#, python-format
+msgid "The package information was last updated about %s minutes ago."
+msgstr "ព័ត៌មាន​កញ្ចប់​ត្រូវ​បាន​ធ្វើ​បច្ចុប្បន្នភាព​ចុងក្រោយ​ប្រហែល %s នាទី​កន្លងទៅ ។"
+
+#: ../UpdateManager/UpdateManager.py:650
+msgid "The package information was just updated."
+msgstr "ព័ត៌មាន​កញ្ចប់​ទើបតែ​ត្រូវ​បាន​ធ្វើ​បច្ចុប្បន្នភាព ។"
+
+#: ../UpdateManager/UpdateManager.py:689
+msgid "Software updates may be available for your computer."
+msgstr "បច្ចុប្បន្នភាព​កម្មវិធី​អាច​មាន​សម្រាប់​កុំព្យូទ័រ​របស់​អ្នក ។"
+
+#: ../UpdateManager/UpdateManager.py:697
+#, python-format
+msgid ""
+"Updated software has been issued since %s was released. Do you want to "
+"install it now?"
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:700
+msgid ""
+"Updated software is available for this computer. Do you want to install it "
+"now?"
+msgstr ""
+
+#: ../UpdateManager/UpdateManager.py:758
+#, python-format
+msgid ""
+"The upgrade needs a total of %s free space on disk '%s'. Please free at "
+"least an additional %s of disk space on '%s'. Empty your trash and remove "
+"temporary packages of former installations using 'sudo apt-get clean'."
+msgstr ""
+"ការ​ធ្វើឲ្យ​ប្រសើរ​ត្រូវការ​ទំហំ​ថាស​សរុប​ត្រឹម %s  '%s' ។ សូម​ធ្វើឲ្យ​ទំហំ​ថាស​ទំនេរ​បន្ថែម​យ៉ាង​ហោច​ណាស់​ %s "
+"នៅ​លើ '%s' ។ សម្អាត​ធុងសំរាម​របស់​អ្នក និង​យក​កញ្ចប់​បណ្ដោះអាសន្ន​ដែល​បាន​ដំឡើង​ពី​មុន​ចេញ​ដោយ​ប្រើ​ពាក្យ​"
+"បញ្ជា 'sudo apt-get clean' ។"
+
+#: ../UpdateManager/UpdateManager.py:783
+msgid ""
+"The computer needs to restart to finish installing updates. Please save your "
+"work before continuing."
+msgstr ""
+"កុំព្យូទ័រ​ទាមទារ​ឲ្យ​ចាប់ផ្ដើម​ឡើងវិញ ដើម្បី​បញ្ចប់​ការ​ដំឡើង​បច្ចុប្បន្នភាព ។ សូម​រក្សាទុក​ការងារ​របស់​អ្នក មុន​"
+"នឹង​បន្ត ។"
+
+#: ../UpdateManager/UpdateManager.py:847
+msgid "Reading package information"
+msgstr "អាន​ព័ត៌មាន​កញ្ចប់"
+
+#: ../UpdateManager/UpdateManager.py:862
+msgid "Connecting..."
+msgstr "កំពុង​តភ្ជាប់..."
+
+#: ../UpdateManager/UpdateManager.py:879
+msgid "You may not be able to check for updates or download new updates."
+msgstr "អ្នក​ប្រហែល​ជា​មិន​អាច​ពិនិត្យ​រកមើល​បច្ចុប្បន្នភាព ឬ​ទាញ​យក​បច្ចុប្បន្នភាព​ថ្មី​បាន​ទេ ។"
+
+#: ../UpdateManager/UpdateManager.py:1002
+msgid "Could not initialize the package information"
+msgstr "មិន​អាច​ចាប់ផ្ដើម​ព័ត៌មាន​កញ្ចប់"
+
+#: ../UpdateManager/UpdateManager.py:1003
+msgid ""
+"An unresolvable problem occurred while initializing the package "
+"information.\n"
+"\n"
+"Please report this bug against the 'update-manager' package and include the "
+"following error message:\n"
+msgstr ""
+"បញ្ហា​មិន​អាច​ដោះស្រាយ​បាន​កើតឡើង ខណៈ​ពេល​កំពុង​ចាប់ផ្ដើម​ព័ត៌មាន​កញ្ចប់ ។\n"
+"\n"
+"សូម​រាយការណ៍​កំហុស​នេះ​ទៅកាន់​កញ្ចប់ the 'update-manager' និង​រួមបញ្ចូល​សារ​កំហុស​ដូចខាងក្រោម ៖\n"
+
+#: ../UpdateManager/UpdateManager.py:1032
+msgid ""
+"An unresolvable problem occurred while calculating the upgrade.\n"
+"\n"
+"Please report this bug against the 'update-manager' package and include the "
+"following error message:"
+msgstr ""
+"បញ្ហា​ដែល​មិន​អាច​ដោះស្រាយ​បាន​កើតឡើង ខណៈ​ពេល​កំពុង​គណនា​ការ​ធ្វើឲ្យ​ប្រសើរ ។\n"
+"\n"
+"សូម​រាយការណ៍​កំហុស​នេះ​ទៅកាន់​កញ្ចប់ 'update-manager' និង​រួមបញ្ចូល​សារ​កំហុស​ខាងក្រោម ៖"
+
+#: ../UpdateManager/UpdateManager.py:1056
+msgid " (New install)"
+msgstr " (ដំឡើង​ថ្មី)"
+
+#. TRANSLATORS: the b stands for Bytes
+#: ../UpdateManager/UpdateManager.py:1063
+#, python-format
+msgid "(Size: %s)"
+msgstr "(ទំហំ ៖ %s)"
+
+#: ../UpdateManager/UpdateManager.py:1067
+#, python-format
+msgid "From version %(old_version)s to %(new_version)s"
+msgstr "ពី​កំណែ %(old_version)s ទៅ %(new_version)s"
+
+#: ../UpdateManager/UpdateManager.py:1071
+#, python-format
+msgid "Version %s"
+msgstr "កំណែ %s"
+
+#: ../UpdateManager/UpdateManager.py:1104 ../do-release-upgrade:112
+msgid "Release upgrade not possible right now"
+msgstr "ការ​ធ្វើឲ្យ​ការ​ចេញផ្សាយ​ប្រសើរ​ឡើង​មិន​អាច​ធ្វើ​ទៅ​បាន​ក្នុង​ពេល​ឥឡូវនេះ​ទេ"
+
+#: ../UpdateManager/UpdateManager.py:1105 ../do-release-upgrade:113
+#, c-format, python-format
+msgid ""
+"The release upgrade can not be performed currently, please try again later. "
+"The server reported: '%s'"
+msgstr ""
+"ការ​ធ្វើឲ្យ​ការ​ចេញផ្សាយ​ប្រសើរ​ឡើង​មិន​អាច​ត្រូវ​បាន​អនុវត្ត​ក្នុង​ពេលនេះ​ទេ សូម​ព្យាយាម​ម្ដងទៀត​នៅ​"
+"ពេលក្រោយ ។ ម៉ាស៊ីន​បម្រើ​បាន​រាយការណ៍ ៖ '%s'"
+
+#: ../UpdateManager/UpdateManager.py:1107 ../check-new-release-gtk:126
+msgid "Downloading the release upgrade tool"
+msgstr "ទាញ​យក​ឧបករណ៍​ធ្វើឲ្យ​ការ​ចេញផ្សាយ​ប្រសើរ​ឡើង"
+
+#: ../UpdateManager/UpdateManager.py:1114
+#, python-format
+msgid "<b>New Ubuntu release '%s' is available</b>"
+msgstr "<b>មាន '%s' ការ​ចេញផ្សាយ​អ៊ូប៊ុនទូ​ថ្មី</b>"
+
+#. we assert a clean cache
+#: ../UpdateManager/UpdateManager.py:1153
+msgid "Software index is broken"
+msgstr "លិបិក្រម​កម្មវិធី​បាន​ខូច"
+
+#: ../UpdateManager/UpdateManager.py:1154
+msgid ""
+"It is impossible to install or remove any software. Please use the package "
+"manager \"Synaptic\" or run \"sudo apt-get install -f\" in a terminal to fix "
+"this issue at first."
+msgstr ""
+"មិន​អាច​ដំឡើង ឬ​យក​កម្មវិធី​ណាមួយ​ចេញ​បាន​ទេ ។ សូម​ប្រើ​កម្មវិធី​គ្រប់គ្រង​កញ្ចប់ \"Synaptic\" ឬ​ប្រើ​ពាក្យ​"
+"បញ្ជា \"sudo apt-get install -f\" នៅ​ក្នុង​ស្ថានីយ ដើម្បី​ដោះស្រាយ​បញ្ហា​នេះ​ជាមុន​សិន ។"
+
+#: ../UpdateManager/UnitySupport.py:57
+msgid "Check for Updates"
+msgstr "ពិនិត្យ​រកមើល​បច្ចុប្បន្នភាព"
+
+#: ../UpdateManager/UnitySupport.py:66
+msgid "Install All Available Updates"
+msgstr "ដំឡើង​បច្ចុប្បន្នភាព​ដែល​អាច​ប្រើ​បាន​ទាំងអស់"
+
+#: ../UpdateManagerText/UpdateManagerText.py:34
+msgid "Cancel"
+msgstr "បោះបង់"
+
+#: ../UpdateManagerText/UpdateManagerText.py:37
+msgid "Changelog"
+msgstr "កំណត់​ហេតុ​ផ្លាស់ប្ដូរ"
+
+#: ../UpdateManagerText/UpdateManagerText.py:40
+msgid "Updates"
+msgstr "បច្ចុប្បន្នភាព"
+
+#: ../UpdateManagerText/UpdateManagerText.py:53
+msgid "Building Updates List"
+msgstr "ស្ថាបនា​បញ្ជី​បច្ចុប្បន្នភាព"
+
+#: ../UpdateManagerText/UpdateManagerText.py:56
+msgid ""
+"\n"
+"A normal upgrade can not be calculated, please run: \n"
+"  sudo apt-get dist-upgrade\n"
+"\n"
+"\n"
+"This can be caused by:\n"
+" * A previous upgrade which didn't complete\n"
+" * Problems with some of the installed software\n"
+" * Unofficial software packages not provided by Ubuntu\n"
+" * Normal changes of a pre-release version of Ubuntu"
+msgstr ""
+"\n"
+"មិន​អាច​គណនា​ការ​ធ្វើឲ្យ​ប្រសើរ​តាម​ធម្មតា​បាន​ទេ សូម​ប្រើ​ពាក្យ​បញ្ជា ៖ \n"
+"  sudo apt-get dist-upgrade\n"
+"\n"
+"\n"
+"វា​អាច​បណ្ដាល​មក​ពី ៖\n"
+" * ការ​ធ្វើឲ្យ​ប្រសើរ​ពីមុន​មិន​ទាន់​បាន​បញ្ចប់​សព្វ​គ្រប់\n"
+" * បញ្ហា​ជាមួយ​កម្មវិធី​ដែល​បាន​ដំឡើង​មួយ​ចំនួន\n"
+" * កញ្ចប់​កម្មវិធី​មិន​ផ្លូវការ​មិន​ត្រូវ​បាន​ផ្ដល់​ដោយ​អ៊ូប៊ុនទូ\n"
+" * ការ​ផ្លាស់ប្ដូរ​ធម្មតា​នៃ​កំណែ​ចេញផ្សាយ​មុន​របស់​អ៊ូប៊ុនទូ"
+
+#: ../UpdateManagerText/UpdateManagerText.py:125
+msgid "Downloading changelog"
+msgstr "ទាញ​យក​កំណត់ហេតុ​ផ្លាស់ប្ដូរ"
+
+#: ../UpdateManager/Core/MyCache.py:147
+#, python-format
+msgid "Other updates (%s)"
+msgstr "បច្ចុប្បន្នភាព​ផ្សេងទៀត (%s)"
+
+#: ../UpdateManager/Core/MyCache.py:325
+msgid "This update does not come from a source that supports changelogs."
+msgstr "បច្ចុប្បន្នភាព​នេះ​មិន​មែន​មក​ពី​ប្រភព​ដែល​គាំទ្រ​កំណត់ហេតុ​ផ្លាស់ប្ដូរ​នេះ​ទេ ។"
+
+#: ../UpdateManager/Core/MyCache.py:331 ../UpdateManager/Core/MyCache.py:359
+msgid ""
+"Failed to download the list of changes. \n"
+"Please check your Internet connection."
+msgstr ""
+"បាន​បរាជ័យ​ក្នុង​ការ​ទាញ​យក​បញ្ជី​ផ្លាស់ប្ដូរ ។ \n"
+"សូម​ពិនិត្យមើល​ការ​តភ្ជាប់​អ៊ីនធឺណិត​របស់​អ្នក ។"
+
+#: ../UpdateManager/Core/MyCache.py:338
+#, python-format
+msgid ""
+"Changes for the versions:\n"
+"Installed version: %s\n"
+"Available version: %s\n"
+"\n"
+msgstr ""
+"ផ្លាស់ប្ដូរ​កំណែ ៖\n"
+"កំណែ​ដែល​បាន​ដំឡើង ៖ %s\n"
+"កំណែ​ដែល​មាន ៖ %s\n"
+"\n"
+
+#: ../UpdateManager/Core/MyCache.py:348
+#, python-format
+msgid ""
+"The changelog does not contain any relevant changes.\n"
+"\n"
+"Please use http://launchpad.net/ubuntu/+source/%s/%s/+changelog\n"
+"until the changes become available or try again later."
+msgstr ""
+"កំណត់​ហេតុ​ផ្លាស់ប្ដូរ​មិន​មាន​ការ​ផ្លាស់ប្ដូរ​ដែល​ពាក់ព័ន្ធ​ណាមួយ​ទេ ។\n"
+"\n"
+"សូម​ប្រើ http://launchpad.net/ubuntu/+source/%s/%s/+changelog\n"
+"រហូត​ដល់​ការ​ផ្លាស់ប្ដូរ​អាច​ប្រើ​បាន ឬ​ព្យាយាម​ម្ដងទៀត​នៅ​ពេល​ក្រោយ ។"
+
+#: ../UpdateManager/Core/MyCache.py:353
+#, python-format
+msgid ""
+"The list of changes is not available yet.\n"
+"\n"
+"Please use http://launchpad.net/ubuntu/+source/%s/%s/+changelog\n"
+"until the changes become available or try again later."
+msgstr ""
+"បញ្ជី​ផ្លាស់ប្ដូរ​មិន​ទាន់​អាច​ប្រើ​បានទេ ។\n"
+"\n"
+"សូម​ប្រើ http://launchpad.net/ubuntu/+source/%s/%s/+changelog\n"
+"រហូត​ដល់​ការ​ផ្លាស់ប្ដូរ​អាច​ប្រើ​បាន ឬ​ព្យាយាម​ម្ដងទៀត​នៅ​ពេល​ក្រោយ ។"
+
+#: ../UpdateManager/Core/UpdateList.py:51
+msgid "Failed to detect distribution"
+msgstr "បាន​បរាជ័យ​ក្នុង​ការ​រក​ការ​ចែកចាយ"
+
+#: ../UpdateManager/Core/UpdateList.py:52
+#, python-format
+msgid "A error '%s' occurred while checking what system you are using."
+msgstr "កំហុស '%s' បាន​កើតឡើង ខណៈ​ពេល​ពិនិត្យ​ប្រភេទ​ប្រព័ន្ធ​ដែល​អ្នក​កំពុង​ប្រើ ។"
+
+#: ../UpdateManager/Core/UpdateList.py:63
+msgid "Important security updates"
+msgstr "បច្ចុប្បន្នភាព​សុវត្ថិភាព​សំខាន់"
+
+#: ../UpdateManager/Core/UpdateList.py:64
+msgid "Recommended updates"
+msgstr "បច្ចុប្បន្នភាព​ដែល​បាន​ផ្ដល់​អនុសាសន៍"
+
+#: ../UpdateManager/Core/UpdateList.py:65
+msgid "Proposed updates"
+msgstr "បច្ចុប្បន្នភាព​ដែល​បាន​ស្នើ"
+
+#: ../UpdateManager/Core/UpdateList.py:66
+msgid "Backports"
+msgstr "Backports"
+
+#: ../UpdateManager/Core/UpdateList.py:67
+msgid "Distribution updates"
+msgstr "បច្ចុប្បន្នភាព​ចែកចាយ"
+
+#: ../UpdateManager/Core/UpdateList.py:72
+msgid "Other updates"
+msgstr "បច្ចុប្បន្នភាព​ផ្សេងទៀត"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:1
+#, fuzzy
+msgid "<big><b>Starting Software Updater</b></big>"
+msgstr "<big><b>ចាប់ផ្ដើម​កម្មវិធី​គ្រប់គ្រង​បច្ចុប្បន្នភាព</b></big>"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:2
+msgid ""
+"Software updates correct errors, eliminate security vulnerabilities and "
+"provide new features."
+msgstr "បច្ចុប្បន្នភាព​របស់​កម្មវិធី​កែ​កំហុស លុបបំបាត់​ភាព​ទន់ខ្សោយ​ផ្នែក​សុវត្ថិភាព និង​ផ្ដល់​លក្ខណ​ពិសេស​ថ្មី ។"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:3
+msgid "_Partial Upgrade"
+msgstr "ការ​ធ្វើឲ្យ​ប្រសើរ​ដោយ​ផ្នែក"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:4
+msgid "<big><b>Not all updates can be installed</b></big>"
+msgstr "<big><b>មិន​មែន​គ្រប់​បច្ចុប្បន្នភាព​អាច​ត្រូវ​បាន​ដំឡើង​ទាំងអស់​នោះ​ទេ</b></big>"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:5
+msgid ""
+"Run a partial upgrade, to install as many updates as possible. \n"
+"\n"
+"This can be caused by:\n"
+" * A previous upgrade which didn't complete\n"
+" * Problems with some of the installed software\n"
+" * Unofficial software packages not provided by Ubuntu\n"
+" * Normal changes of a pre-release version of Ubuntu"
+msgstr ""
+"ដើម្បី​ដំឡើង​បច្ចុប្បន្នភាព​ឲ្យ​បាន​ច្រើន​តាម​ដែល​អាច​ធ្វើ​បាន អ្នក​ត្រូវតែ​ដំណើរការ​ការ​ធ្វើឲ្យ​ប្រសើរ​ដោយ​"
+"ផ្នែក ។ \n"
+"\n"
+"វា​អាច​បណ្ដាល​មក​ពី ៖\n"
+" * ការ​ធ្វើ​ឲ្យ​ប្រសើរ​ពីមុន​មិន​ទាន់​បាន​បញ្ចប់​សព្វគ្រប់\n"
+" * បញ្ហា​ជាមួយ​កម្មវិធី​ដែល​បាន​ដំឡើង​មួយ​ចំនួន\n"
+" * កញ្ចប់​កម្មវិធី​មិន​ផ្លូវការ​មិន​ត្រូវ​បាន​ផ្ដល់​ដោយ​អ៊ូប៊ុនទូ\n"
+" * ការ​ផ្លាស់ប្ដូរ​ធម្មតា​នៃ​កំណែ​ចេញ​ផ្សាយ​មុន​របស់​អ៊ូប៊ុនទូ"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:12
+msgid "Chec_k"
+msgstr "ពិនិត្យមើល"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:13
+msgid ""
+"<b><big>You must check for updates manually</big></b>\n"
+"\n"
+"Your system does not check for updates automatically. You can configure this "
+"behavior in <i>Software Sources</i> on the <i>Updates</i> tab."
+msgstr ""
+"<b><big>អ្នក​ត្រូវតែ​ពិនិត្យ​រកមើល​បច្ចុប្បន្នភាព​ដោយដៃ</big></b>\n"
+"\n"
+"ប្រព័ន្ធ​របស់​អ្នក​មិន​ពិនិត្យ​រកមើល​បច្ចុប្បន្នភាព​ដោយស្វ័យប្រវត្តិទេ ។ អ្នក​អាច​កំណត់​រចនាសម្ព័ន្ធ​ឥរិយាបថ​នេះ​នៅ​"
+"ក្នុង <i>ប្រភព​កម្មវិធី</i> លើ​ផ្ទាំង <i>បច្ចុប្បន្នភាព</i> ។"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:16
+msgid "_Hide this information in the future"
+msgstr "លាក់​ព័ត៌មាន​នេះ​ក្នុង​ពេល​អនាគត"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:17
+msgid "Co_ntinue"
+msgstr "បន្ត"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:18
+msgid "<big><b>Running on battery</b></big>"
+msgstr "<big><b>ដំណើរការ​នៅ​លើ​ថាមពល</b></big>"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:19
+msgid "Your system is running on battery. Are you sure you want to continue?"
+msgstr "ប្រព័ន្ធ​របស់​អ្នក​កំពុងតែ​ដំណើរការ​នៅ​លើ​ថាមពល ។ តើ​អ្នក​ប្រាកដ​ជា​ចង់​បន្ត​ឬ ?"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:21
+msgid "_Upgrade"
+msgstr "ធ្វើឲ្យ​ប្រសើរ"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:22
+#: ../data/gtkbuilder/UpgradePromptDialog.ui.h:8
+msgid "Show progress of individual files"
+msgstr "បង្ហាញ​វឌ្ឍនភាព​នៃ​ឯកសារ​នីមួយៗ"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:23
+#: ../data/update-manager.desktop.in.h:1
+#, fuzzy
+msgid "Software Updater"
+msgstr "បច្ចុប្បន្នភាព​កម្មវិធី"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:24
+#, fuzzy
+msgid "Starting Software Updater"
+msgstr "បច្ចុប្បន្នភាព​កម្មវិធី"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:25
+msgid "U_pgrade"
+msgstr "ធ្វើឲ្យ​ប្រសើរ"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:27
+msgid "updates"
+msgstr "បច្ចុប្បន្នភាព"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:28
+msgid "Changes"
+msgstr "ផ្លាស់ប្ដូរ"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:29
+msgid "Description"
+msgstr "សេចក្ដី​ពិពណ៌នា"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:30
+#, fuzzy
+msgid "Details of updates"
+msgstr "សេចក្ដី​ពិពណ៌នា​អំពី​បច្ចុប្បន្នភាព"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:31
+msgid ""
+"You are connected via roaming and may be charged for the data consumed by "
+"this update."
+msgstr ""
+"អ្នក​ត្រូវ​បាន​តភ្ជាប់​តាម​រយៈ roaming ហើយ​អាច​នឹង​ត្រូវ​បាន​គិត​ថ្លៃ​សម្រាប់​ទិន្នន័យ​ដែល​ប្រើ​ដោយ​បច្ចុប្បន្នភាព​"
+"នេះ ។"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:32
+msgid ""
+"You may want to wait until you’re not using a mobile broadband connection."
+msgstr ""
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:33
+msgid "It’s safer to connect the computer to AC power before updating."
+msgstr "វា​មាន​សុវត្ថិភាព​ក្នុង​ការ​តភ្ជាប់​កុំព្យូទ័រ​ទៅ​ថាមពល AC មុន​នឹង​ធ្វើ​បច្ចុប្បន្នភាព ។"
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:34
+msgid "_Settings..."
+msgstr "ការ​កំណត់..."
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:35
+#, fuzzy
+msgid "_Install Now"
+msgstr "ដំឡើង"
+
+#: ../data/gtkbuilder/UpgradePromptDialog.ui.h:1
+msgid "<b>A new version of Ubuntu is available. Would you like to upgrade?</b>"
+msgstr "<b>កំណែ​ថ្មី​របស់​អ៊ូប៊ុនទូ​អាច​ប្រើបាន ។ តើ​អ្នក​ចង់​ធ្វើឲ្យ​ប្រសើរ​ទេ ?</b>"
+
+#: ../data/gtkbuilder/UpgradePromptDialog.ui.h:3
+msgid "Don't Upgrade"
+msgstr "កុំ​ធ្វើឲ្យ​ប្រសើរ"
+
+#: ../data/gtkbuilder/UpgradePromptDialog.ui.h:4
+msgid "Ask Me Later"
+msgstr "សួរ​ខ្ញុំ​នៅ​ពេលក្រោយ"
+
+#: ../data/gtkbuilder/UpgradePromptDialog.ui.h:5
+msgid "Yes, Upgrade Now"
+msgstr "បាទ/ចាស ធ្វើឲ្យ​ប្រសើរ​ឥឡូវនេះ"
+
+#: ../data/gtkbuilder/UpgradePromptDialog.ui.h:6
+msgid "You have declined to upgrade to the new Ubuntu"
+msgstr "អ្នក​បាន​បដិសេធ​មិន​ធ្វើឲ្យ​ប្រសើរ​ចំពោះ​អ៊ូប៊ុនទូ​ថ្មី"
+
+#: ../data/gtkbuilder/UpgradePromptDialog.ui.h:7
+#, fuzzy
+msgid ""
+"You can upgrade at a later time by opening Software Updater and click on "
+"\"Upgrade\"."
+msgstr ""
+"អ្នក​អាច​ធ្វើ​ឲ្យ​ប្រសើរ​នៅ​ពេល​ក្រោយ ដោយ​បើក​កម្មវិធី​គ្រប់គ្រង​​​បច្ចុប្បន្នភាព និង​ចុច​លើ \"ធ្វើឲ្យ​ប្រសើរ\" ។"
+
+#: ../data/update-manager.desktop.in.h:2
+msgid "Software Updates"
+msgstr "បច្ចុប្បន្នភាព​កម្មវិធី"
+
+#: ../data/update-manager.desktop.in.h:3
+msgid "Show and install available updates"
+msgstr "បង្ហាញ និង​ដំឡើង​បច្ចុប្បន្នភាព​ដែល​អាច​ប្រើបាន"
+
+#: ../update-manager:66 ../update-manager-text:55 ../do-release-upgrade:51
+msgid "Show version and exit"
+msgstr "បង្ហាញ​កំណែ រួច​ចាកចេញ"
+
+#: ../update-manager:69
+msgid "Directory that contains the data files"
+msgstr "ថត​ដែល​មាន​ឯកសារ​ទិន្នន័យ"
+
+#: ../update-manager:72
+msgid "Check if a new Ubuntu release is available"
+msgstr "ពិនិត្យ​មើល​ថាតើមាន​ការ​ចេញផ្សាយ​អ៊ូប៊ុនទូ​ដែរ​ឬ​ទេ"
+
+#: ../update-manager:75 ../do-release-upgrade:54 ../check-new-release-gtk:186
+msgid "Check if upgrading to the latest devel release is possible"
+msgstr "ពិនិត្យមើល​ថា​តើ​ការ​ធ្វើឲ្យ​ប្រសើរ​ចំពោះ​ឯកសារ​ចេញផ្សាយ devel ចុងក្រោយ​អាច​ធ្វើ​បាន​ដែរ​ឬ​ទេ"
+
+#: ../update-manager:79
+msgid "Upgrade using the latest proposed version of the release upgrader"
+msgstr "ការ​ធ្វើឲ្យ​ប្រសើរ​ដោយ​ប្រើ​កំណែ​ដែល​បាន​ស្នើ​ចុងក្រោយ​របស់​កម្មវិធី​ធ្វើឲ្យ​ឯកសារ​ចេញផ្សាយ​ប្រសើរ"
+
+#: ../update-manager:86
+msgid "Do not focus on map when starting"
+msgstr "កុំ​ផ្ដោត​ទៅលើ​ផែនទី នៅ​ពេល​ចាប់ផ្ដើម"
+
+#: ../update-manager:89
+msgid "Try to run a dist-upgrade"
+msgstr "សាកល្បង​ប្រើ​ពាក្យ​បញ្ជា dist-upgrade"
+
+#: ../update-manager:92
+msgid "Do not check for updates when starting"
+msgstr "កុំ​ពិនិត្យ​រកមើល​បច្ចុប្បន្នភាព នៅ​ពេល​ចាប់ផ្ដើម"
+
+#: ../update-manager:96 ../do-release-upgrade:70
+msgid "Test upgrade with a sandbox aufs overlay"
+msgstr "សាកល្បង​ធ្វើឲ្យ​ប្រសើរ​ដោយ​ប្រើ sandbox aufs overlay"
+
+#: ../update-manager:116
+msgid "Running partial upgrade"
+msgstr "ដំណើរការ​ការ​ធ្វើឲ្យ​ប្រសើរ​ដោយ​ផ្នែក"
+
+#: ../update-manager-text:59
+msgid "Show description of the package instead of the changelog"
+msgstr "បង្ហាញ​សេចក្ដី​ពិពណ៌នា​អំពី​កញ្ចប់​ជំនួស​កំណត់ហេតុ​ផ្លាស់ប្ដូរ"
+
+#: ../do-release-upgrade:58 ../check-new-release-gtk:190
+msgid ""
+"Try upgrading to the latest release using the upgrader from $distro-proposed"
+msgstr ""
+"សាកល្បង​ធ្វើឲ្យ​ប្រសើរ​ទៅកាន់​ឯកសារ​ចេញផ្សាយ​ចុងក្រោយ​ដោយ​ប្រើ​កម្មវិធី​ធ្វើឲ្យ​ប្រសើរ​ពី $distro ដែល​បាន​"
+"ស្នើ"
+
+#: ../do-release-upgrade:62
+msgid ""
+"Run in a special upgrade mode.\n"
+"Currently 'desktop' for regular upgrades of a desktop system and 'server' "
+"for server systems are supported."
+msgstr ""
+"ដំណើរការ​នៅ​ក្នុង​របៀប​ធ្វើឲ្យ​ប្រសើរ​ពិសេស ។\n"
+"បច្ចុប្បន្ន 'ផ្ទៃតុ' សម្រាប់​ការ​ធ្វើឲ្យ​ប្រសើរ​​តាម​ធម្មតា​ចំពោះ​ប្រព័ន្ធ​ផ្ទៃតុ និង 'ម៉ាស៊ីន​បម្រើ' សម្រាប់​"
+"ប្រព័ន្ធ​ម៉ាស៊ីន​បម្រើ​ដែល​ត្រូវ​បាន​គាំទ្រ ។"
+
+#: ../do-release-upgrade:68
+msgid "Run the specified frontend"
+msgstr "ដំណើរការ​ផ្នែក​ខាងមុខ​ដែល​បាន​បញ្ជាក់"
+
+#: ../do-release-upgrade:73
+msgid ""
+"Check only if a new distribution release is available and report the result "
+"via the exit code"
+msgstr ""
+"ពិនិត្យមើល​ថា​តើ​ការ​ចេញផ្សាយ​ការ​ចែកចាយ​អាច​មាន​ដែរ​ឬ​ទេ រួច​រាយការណ៍​លទ្ធផល​តាម​រយៈ​កូដ​ចាកចេញ"
+
+#: ../do-release-upgrade:87
+msgid "Checking for a new Ubuntu release"
+msgstr "ពិនិត្យ​មើល​ការ​ចេញ​ផ្សាយ​អ៊ូប៊ុនទូ​ថ្មី"
+
+#: ../do-release-upgrade:101
+msgid ""
+"For upgrade information, please visit:\n"
+"%(url)s\n"
+msgstr ""
+"សម្រាប់​ព័ត៌មាន​អំពី​ការ​ធ្វើឲ្យ​ប្រសើរ សូម​ចូល​មើល ៖\n"
+"%(url)s\n"
+
+#: ../do-release-upgrade:107
+msgid "No new release found"
+msgstr "រក​មិន​ឃើញ​ឯកសារ​ចេញ​ផ្សាយ​ថ្មី​ទេ"
+
+#: ../do-release-upgrade:119
+#, c-format
+msgid "New release '%s' available."
+msgstr "មាន​ឯកសារ​ចេញផ្សាយ​ថ្មី '%s' ។"
+
+#: ../do-release-upgrade:120
+msgid "Run 'do-release-upgrade' to upgrade to it."
+msgstr "ប្រើ​ពាក្យ​បញ្ជា 'do-release-upgrade' ដើម្បី​ធ្វើឲ្យ​ប្រសើរ​ចំពោះ​វា ។"
+
+#: ../check-new-release-gtk:101
+msgid "Ubuntu %(version)s Upgrade Available"
+msgstr "ការ​ធ្វើឲ្យ​ប្រសើរ %(version)s អ៊ូប៊ុនទូ​អាច​ប្រើបាន"
+
+#: ../check-new-release-gtk:143
+#, c-format
+msgid "You have declined the upgrade to Ubuntu %s"
+msgstr "អ្នក​បាន​បដិសេធ​ការ​ធ្វើឲ្យ​ប្រសើរ​ទៅ​អ៊ូប៊ុនទូ %s"
+
+#: ../check-new-release-gtk:196
+msgid "Add debug output"
+msgstr "បន្ថែម​ទិន្នន័យ​បំបាត់​កំហុស"
+
+#: ../ubuntu-support-status:91
+msgid "Show unsupported packages on this machine"
+msgstr "បង្ហាញ​កញ្ចប់​ដែល​គ្មាន​ការ​គាំទ្រ​នៅ​លើ​ម៉ាស៊ីន​នេះ"
+
+#: ../ubuntu-support-status:94
+msgid "Show supported packages on this machine"
+msgstr "បង្ហាញ​កញ្ចប់​ដែល​មាន​ការ​គាំទ្រ​នៅ​លើ​ម៉ាស៊ីន​នេះ"
+
+#: ../ubuntu-support-status:97
+msgid "Show all packages with their status"
+msgstr "បង្ហាញ​កញ្ចប់​ទាំងអស់​ជាមួយ​ស្ថានភាព​របស់​ពួកវា"
+
+#: ../ubuntu-support-status:100
+msgid "Show all packages in a list"
+msgstr "បង្ហាញ​កញ្ចប់​ទាំងអស់​នៅ​ក្នុង​បញ្ជី"
+
+#: ../ubuntu-support-status:142
+#, c-format
+msgid "Support status summary of '%s':"
+msgstr "គាំទ្រ​សេចក្ដី​សង្ខេប​ស្ថានភាព​អំពី '%s' ៖"
+
+#: ../ubuntu-support-status:145
+msgid "You have %(num)s packages (%(percent).1f%%) supported until %(time)s"
+msgstr "អ្នក​មាន %(num)s កញ្ចប់ (%(ភាគរយ) ។1f%%) ត្រូវ​បាន​គាំទ្រ​រហូតដល់ %(time)s"
+
+#: ../ubuntu-support-status:151
+msgid ""
+"You have %(num)s packages (%(percent).1f%%) that can not/no-longer be "
+"downloaded"
+msgstr "អ្នក​មាន %(num)s កញ្ចប់ (%(ភាគរយ) ។1f%%) ដែល​មិន​អាច/លែង​ទាញ​យក​ទៀត​បាន"
+
+#: ../ubuntu-support-status:154
+msgid "You have %(num)s packages (%(percent).1f%%) that are unsupported"
+msgstr "អ្នក​មាន %(num)s កញ្ចប់ (%(ភាគរយ) ។1f%%) ដែល​មិន​ត្រូវ​បាន​គាំទ្រ"
+
+#: ../ubuntu-support-status:162
+msgid ""
+"Run with --show-unsupported, --show-supported or --show-all to see more "
+"details"
+msgstr ""
+"ប្រើ​ពាក្យ​បញ្ជា --show-unsupported, --show-supported ឬ --show-all ដើម្បី​មើល​សេចក្ដី​"
+"លម្អិត​បន្ថែម"
+
+#: ../ubuntu-support-status:166
+msgid "No longer downloadable:"
+msgstr "មិន​អាច​ទាញ​យក​ទៀត​បាន ៖"
+
+#: ../ubuntu-support-status:169
+msgid "Unsupported: "
+msgstr "មិន​គាំទ្រ ៖ "
+
+#: ../ubuntu-support-status:174
+#, c-format
+msgid "Supported until %s:"
+msgstr "មិន​គាំទ្រ​រហូតដល់ %s ៖"
+
+#: ../ubuntu-support-status:183
+msgid "Unsupported"
+msgstr "មិន​គាំទ្រ"
+
+#. Why do we use %s here instead of $strings or {} format placeholders?
+#. It's because we don't want to break existing translations.
+#: ../janitor/plugincore/exceptions.py:42
+#, python-format
+msgid "Unimplemented method: %s"
+msgstr "វិធីសាស្ត្រ​ដែល​មិន​បាន​អនុវត្ត ៖ %s"
+
+#: ../janitor/plugincore/core/file_cruft.py:41
+msgid "A file on disk"
+msgstr "ឯកសារ​នៅ​លើ​ថាស"
+
+#: ../janitor/plugincore/core/missing_package_cruft.py:39
+msgid "Install missing package."
+msgstr "ដំឡើង​កញ្ចប់​ដែល​បាត់ ។"
+
+#. 2012-06-08 BAW: i18n string; don't use {} or PEP 292.
+#: ../janitor/plugincore/core/missing_package_cruft.py:49
+#, python-format
+msgid "Package %s should be installed."
+msgstr "កញ្ចប់ %s គួរតែ​ត្រូវ​បាន​ដំឡើង ។"
+
+#: ../janitor/plugincore/core/package_cruft.py:49
+msgid ".deb package"
+msgstr "កញ្ចប់ .deb"
+
+#: ../janitor/plugincore/plugins/langpack_manual_plugin.py:46
+#, python-format
+msgid "%s needs to be marked as manually installed."
+msgstr "%s ទាមទារ​ឲ្យ​សម្គាល់​ថា​បាន​ដំឡើង​ដោយដៃ ។"
+
+#: ../janitor/plugincore/plugins/kdelibs4to5_plugin.py:49
+msgid ""
+"When upgrading, if kdelibs4-dev is installed, kdelibs5-dev needs to be "
+"installed. See bugs.launchpad.net, bug #279621 for details."
+msgstr ""
+"នៅ​ពេល​ធ្វើឲ្យ​ប្រសើរ ប្រសិនបើ kdelibs4-dev ត្រូវ​បាន​ដំឡើង kdelibs5-dev ទាមទារ​ឲ្យ​ដំឡើង ។ "
+"ចំពោះ​ព័ត៌មាន​លម្អិត ​សូម​មើល bugs.launchpad.net, bug #279621 ។"
+
+#: ../janitor/plugincore/plugins/dpkg_status_plugin.py:44
+#, python-format
+msgid "%i obsolete entries in the status file"
+msgstr "%i ធាតុ​ហួសសម័យ​នៅ​ក្នុង​ឯកសារ​ស្ថានភាព"
+
+#: ../janitor/plugincore/plugins/dpkg_status_plugin.py:47
+msgid "Obsolete entries in dpkg status"
+msgstr "ធាតុ​ហួសសម័យ​នៅ​ក្នុង​ស្ថានភាព dpkg"
+
+#. pragma: no cover
+#: ../janitor/plugincore/plugins/dpkg_status_plugin.py:50
+msgid "Obsolete dpkg status entries"
+msgstr "ធាតុ​ស្ថានភាព dpkg ដែល​ហួសសម័យ"
+
+#: ../janitor/plugincore/plugins/remove_lilo_plugin.py:42
+msgid "Remove lilo since grub is also installed.(See bug #314004 for details.)"
+msgstr ""
+"យក lilo ចេញ ​ដោយសារតែ grub ត្រូវ​បាន​ដំឡើង​រួច​ហើយ ។(ចំពោះ​ព័ត៌មាន​លម្អិត សូម​មើល bug #314004 "
+"។)"
+
+#~ msgid ""
+#~ "After your package information was updated the essential package '%s' can "
+#~ "not be found anymore so a bug reporting process is being started."
+#~ msgstr ""
+#~ "បន្ទាប់ពី​បាន​ធ្វើ​បច្ចុប្បន្នភាព​ព័ត៌មាន​កញ្ចប់​រួចហើយ មិន​អាច​រក​ឃើញ​កញ្ចប់​សំខាន់ '%s' ទៀត​ទេ ដូច្នេះ​"
+#~ "ដំណើរការ​រាយការណ៍​កំហុស​កំពុង​ត្រូវ​បាន​ចាប់ផ្ដើម ។"
+
+#~ msgid "%(count)s update has been selected."
+#~ msgid_plural "%(count)s updates have been selected."
+#~ msgstr[0] "%(count)s បច្ចុប្បន្នភាព​ត្រូវ​បាន​ជ្រើស ។"
+
+#~ msgid "%(count_str)s %(download_str)s"
+#~ msgstr "%(count_str)s %(download_str)s"
+
+#~ msgid "Welcome to Ubuntu"
+#~ msgstr "សូម​ស្វាគមន៍​ការ​មកកាន់​អ៊ូប៊ុនទូ"
+
+#~ msgid ""
+#~ "These software updates have been issued since this version of Ubuntu was "
+#~ "released."
+#~ msgstr "បច្ចុប្បន្ន​ភាព​កម្មវិធី​ទាំង​នេះ​ត្រុវ​បាន​ចេញ​តាំង​ពី​កំណែ​អ៊ូប៊ុនទូ​ត្រូវ​បាន​ចេញ​ផ្សាយ​មក​ម្លះ ។"
+
+#~ msgid "Software updates are available for this computer."
+#~ msgstr "ប​ច្ចុប្បន្ន​ភាព​កម្មវិធី​អាច​ប្រើបាន​សម្រាប់​កុំព្យូទ័រ​នេះ ។"
+
+#~ msgid "Update Manager"
+#~ msgstr "កម្មវិធី​គ្រប់គ្រង​បច្ចុប្បន្នភាព"
+
+#~ msgid "Starting Update Manager"
+#~ msgstr "ចាប់ផ្ដើម​កម្មវិធី​គ្រប់គ្រង​បច្ចុប្បន្នភាព"
+
+#~ msgid "You are connected via a wireless modem."
+#~ msgstr "អ្នក​ត្រូវ​បាន​តភ្ជាប់​តាម​រយៈ​ម៉ូដឹម​ឥត​ខ្សែ ។"
+
+#~ msgid "_Install Updates"
+#~ msgstr "ដំឡើង​បច្ចុប្បន្នភាព"
+
+#~ msgid "0 kB"
+#~ msgstr "០ kB"
+
+#~ msgid "1 kB"
+#~ msgstr "១ kB"
+
+#~ msgid "%.0f kB"
+#~ msgstr "%.0f kB"
+
+#~ msgid "Your graphics hardware may not be fully supported in Ubuntu 11.04."
+#~ msgstr "ផ្នែក​រឹង​ក្រាហ្វិក​របស់​អ្នក​អាច​នឹង​មិន​ត្រូវ​បាន​គាំទ្រ​ពេញលេញ​នៅ​ក្នុង​អ៊ូប៊ុនទូ ១១.០៤ ទេ ។"
+
+#~ msgid ""
+#~ "The support in Ubuntu 11.04 for your intel graphics hardware is limited "
+#~ "and you may encounter problems after the upgrade. Do you want to continue "
+#~ "with the upgrade?"
+#~ msgstr ""
+#~ "ការ​គាំទ្រ​នៅ​ក្នុង​អ៊ូប៊ុនទូ ១១.០៤ សម្រាប់​ផ្នែក​រឹង​ក្រាហ្វិក intel របស់​អ្នក​ត្រូវ​បាន​ដាក់កម្រិត ហើយ​អ្នក​"
+#~ "អាច​ជួប​នឹង​បញ្ហា បន្ទាប់ពី​បាន​បញ្ចប់​ការ​ធ្វើឲ្យ​ប្រសើរ ។ តើ​អ្នក​ចង់​បន្ត​ការ​ធ្វើឲ្យ​ប្រសើរ​ដែរ​ឬ​ទេ ?"
+
+#~ msgid ""
+#~ "Fetching and installing the upgrade can take several hours. Once the "
+#~ "download has finished, the process cannot be cancelled."
+#~ msgstr ""
+#~ "ទៅ​ប្រមូល​យក និង​ដំឡើង​ការ​ធ្វើឲ្យ​ប្រសើរ​អាច​ចំណាយ​ពេល​បី​បួន​ម៉ោង ។ មិន​អាច​បោះបង់​ដំណើរការ​បាន​ទេ នៅ​"
+#~ "ពេល​ដែល​ការ​ទាញ​យក​បាន​បញ្ចប់ ។"
+
+#~ msgid ""
+#~ "You will not get any further security fixes or critical updates. Please "
+#~ "upgrade to a later version of Ubuntu Linux."
+#~ msgstr ""
+#~ "អ្នក​នឹង​មិន​ទទួល​បាន​ការ​ជួសជុល​ផ្នែក​សុវត្ថិភាព ឬ​បច្ចុប្បន្នភាព​សំខាន់​ណាមួយ​ទៀតទេ ។ សូម​ធ្វើឲ្យ​ប្រសើរ​ទៅ​"
+#~ "កំណែ​ក្រោយ​របស់ Ubuntu Linux ។"
+
+#~ msgid ""
+#~ "These software updates have been issued since this version of Ubuntu was "
+#~ "released. If you don't want to install them now, choose \"Update Manager"
+#~ "\" from Applications later."
+#~ msgstr ""
+#~ "បច្ចុប្បន្នភាព​កម្មវិធី​ទាំងនេះ​ត្រូវ​បាន​ចេញផ្សាយ ​តាំងពី​កំណែ​របស់​អ៊ូប៊ុនទូ​ត្រូវ​បាន​ចេញ​ផ្សាយ​ផង​ដែរ ។ "
+#~ "ប្រសិនបើ​អ្នក​មិន​ចង់​ដំឡើង​ពួកវា​ឥឡូវនេះ​ទេ ជ្រើស \"កម្មវិធី​គ្រប់គ្រង​បច្ចុប្បន្នភាព​\" ពី​កម្មវិធី​នៅ​ពេល​"
+#~ "ក្រោយ ។"
+
+#~ msgid ""
+#~ "These software updates have been issued since this version of Ubuntu was "
+#~ "released. If you don't want to install them now, choose \"Update Manager"
+#~ "\" from the Administration Menu later."
+#~ msgstr ""
+#~ "បច្ចុប្បន្នភាព​កម្មវិធី​ទាំងនេះ​ត្រូវ​បាន​ចេញ​ផ្សាយ តាំងពី​កំណែ​របស់​អ៊ូប៊ុនទូ​នេះ​ត្រូវ​បាន​ចេញ​ផ្សាយ​ផង​ដែរ ។ "
+#~ "ប្រសិនបើ​អ្នក​មិន​ចង់​ដំឡើង​ពួកវា​ឥឡូវនេះ​ទេ ជ្រើស \"កម្មវិធី​គ្រប់គ្រង​បច្ចុប្បន្នភាព\" ពី​​ម៉ឺនុយ​គ្រប់គ្រង​នៅ​"
+#~ "ពេល​ក្រោយ ។"
+
+#~ msgid "Software updates are available for this computer"
+#~ msgstr "បច្ចុប្បន្នភាព​កម្មវិធី​អាច​មាន​សម្រាប់​កុំព្យូទ័រ​នេះ"
+
+#~ msgid ""
+#~ "If you don't want to install them now, choose \"Update Manager\" from "
+#~ "Applications later."
+#~ msgstr ""
+#~ "ប្រសិនបើ​អ្នក​មិន​ចង់​ដំឡើង​ពួកវា​ឥឡូវនេះ​ទេ ជ្រើស \"កម្មវិធី​គ្រប់គ្រង​បច្ចុប្បន្នភាព\" ពី​កម្មវិធី​នៅ​"
+#~ "ពេលក្រោយ ។"
+
+#~ msgid ""
+#~ "If you don't want to install them now, choose \"Update Manager\" from the "
+#~ "Administration menu later."
+#~ msgstr ""
+#~ "ប្រសិនបើ​អ្នក​មិន​ចង់​ដំឡើង​ពួកវា​ឥឡូវនេះ​ទេ ជ្រើស \"កម្មវិធី​គ្រប់គ្រង​បច្ចុប្បន្នភាព\" ពី​ម៉ឺនុយ​គ្រប់គ្រង​នៅ​"
+#~ "ពេល​ក្រោយ ។"
+
+#~ msgid "Checking for a new ubuntu release"
+#~ msgstr "ពិនិត្យ​រកមើល​ការ​ចេញ​ផ្សាយ​អ៊ូប៊ុនទូ​ថ្មី"

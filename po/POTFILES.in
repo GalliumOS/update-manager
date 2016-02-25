@@ -1,0 +1,54 @@
+[encoding: UTF-8]
+UpdateManager/backend/InstallBackendAptdaemon.py
+UpdateManager/backend/InstallBackendSynaptic.py
+UpdateManager/ChangelogViewer.py
+UpdateManager/MetaReleaseGObject.py
+UpdateManager/Dialogs.py
+UpdateManager/UpdateManager.py
+UpdateManager/UpdatesAvailable.py
+UpdateManager/UnitySupport.py
+UpdateManagerText/UpdateManagerText.py
+UpdateManager/Core/MyCache.py
+UpdateManager/Core/UpdateList.py
+UpdateManager/Core/MetaRelease.py
+UpdateManager/Core/utils.py
+[type: gettext/glade]data/gtkbuilder/Dialog.ui
+[type: gettext/glade]data/gtkbuilder/UpdateManager.ui
+[type: gettext/glade]data/gtkbuilder/UpdateProgress.ui
+data/update-manager.desktop.in
+data/com.ubuntu.update-manager.gschema.xml.in
+update-manager
+update-manager-text
+ubuntu-support-status
+janitor/plugincore/cruft.py
+janitor/plugincore/docs/__init__.py
+janitor/plugincore/testing/helpers.py
+janitor/plugincore/testing/__init__.py
+janitor/plugincore/exceptions.py
+janitor/plugincore/core/file_cruft.py
+janitor/plugincore/core/missing_package_cruft.py
+janitor/plugincore/core/package_cruft.py
+janitor/plugincore/core/__init__.py
+janitor/plugincore/plugin.py
+janitor/plugincore/__init__.py
+janitor/plugincore/manager.py
+janitor/plugincore/i18n.py
+janitor/plugincore/plugins/langpack_manual_plugin.py
+janitor/plugincore/plugins/kdelibs4to5_plugin.py
+janitor/plugincore/plugins/dpkg_status_plugin.py
+janitor/plugincore/plugins/deb_plugin.py
+janitor/plugincore/plugins/__init__.py
+janitor/plugincore/plugins/remove_lilo_plugin.py
+janitor/plugincore/tests/test_dpkg_status_plugin.py
+janitor/plugincore/tests/test_file_cruft.py
+janitor/plugincore/tests/test_missing_package_cruft.py
+janitor/plugincore/tests/__init__.py
+janitor/plugincore/tests/test_documentation.py
+janitor/plugincore/tests/test_package_cruft.py
+janitor/plugincore/tests/test_manager.py
+janitor/plugincore/tests/test_deb_plugin.py
+janitor/plugincore/tests/data/bravo_plugin.py
+janitor/plugincore/tests/data/__init__.py
+janitor/plugincore/tests/data/alpha_plugin.py
+janitor/plugincore/tests/data/charlie_plugin.py
+janitor/__init__.py

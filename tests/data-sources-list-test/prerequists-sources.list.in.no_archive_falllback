@@ -1,0 +1,4 @@
+# sources.list fragment for pre-requists (mirror from sources.list + fallback)
+# this is safe to remove after the upgrade
+${mirror}
+

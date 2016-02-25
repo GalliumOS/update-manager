@@ -1,0 +1,40 @@
+Package: package-one
+Status: install ok installed
+Priority: optional
+Section: misc
+Installed-Size: 1024
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 0.1
+Description: an example package
+
+Package: package-two
+Status: install ok installed
+Priority: optional
+Section: misc
+Installed-Size: 1024
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 0.1
+Description: an example package
+
+Package: package-three
+Status: install ok installed
+Priority: optional
+Section: misc
+Installed-Size: 1024
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 0.1
+Description: an example package
+
+Package: package-four
+Status: install ok installed
+Priority: optional
+Section: misc
+Installed-Size: 1024
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 0.1
+Description: an example package
+

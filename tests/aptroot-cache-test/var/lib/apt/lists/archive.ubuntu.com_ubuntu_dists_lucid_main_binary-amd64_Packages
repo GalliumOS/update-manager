@@ -1,0 +1,23 @@
+Package: package-two
+Priority: optional
+Section: misc
+Installed-Size: 1024
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 0.2
+Conflicts: package-one
+Replaces: package-one
+Filename: pool/main/p/package-two/package-two_0.2_all.deb
+Description: an example package, now superseding package-one
+
+Package: package-four
+Priority: optional
+Section: misc
+Installed-Size: 1024
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 0.2
+Conflicts: package-three
+Filename: pool/main/p/package-four/package-four_0.2_all.deb
+Description: an example package, now superseding package-three but not enough
+

@@ -1,0 +1,3 @@
+debian/tmp/usr/bin/ubuntu-support-status
+debian/tmp/usr/share/locale
+debian/source_update-manager.py /usr/share/apport/package-hooks/

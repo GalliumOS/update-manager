@@ -1,0 +1,32 @@
+Package: apt
+Status: install ok installed
+Priority: important
+Section: admin
+Installed-Size: 3005
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 0.1
+Description: a example package with no phased updates
+
+Package: zsh
+Status: install ok installed
+Priority: important
+Section: admin
+Installed-Size: 3005
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 0.1
+Phased-Update-Percentage: 10
+Description: a example package with a phased updates percentage of 10%
+
+Package: zsh-dev
+Status: install ok installed
+Priority: important
+Section: admin
+Installed-Size: 3005
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 0.1
+Phased-Update-Percentage: 10
+Description: a second binary example package with a phased updates percentage of 10%
+

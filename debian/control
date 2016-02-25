@@ -1,0 +1,89 @@
+Source: update-manager
+Section: gnome
+Priority: optional
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Build-Depends: debhelper (>= 9),
+               python3-all (>= 3.3.0-2),
+               python3-distutils-extra (>= 2.38),
+               lsb-release,
+               apt-clone (>= 0.2.3~ubuntu1)
+Build-Depends-Indep: libxml-parser-perl, 
+                     intltool
+Standards-Version: 3.8.0
+Vcs-Bzr: http://bazaar.launchpad.net/~ubuntu-core-dev/update-manager/main
+XS-Testsuite: autopkgtest
+X-Python3-Version: >= 3.2
+
+Package: update-manager-core
+Architecture: all
+Section: admin
+Depends: ${python3:Depends},
+         ${misc:Depends}, 
+         python3-update-manager (= ${source:Version}),
+         lsb-release,
+         ubuntu-release-upgrader-core
+Recommends: libpam-modules (>= 1.0.1-9ubuntu3)
+Replaces: update-manager (<< 1:0.146.2)
+Breaks: update-manager (<< 1:0.146.2), 
+        computer-janitor (<= 1.11-0ubuntu1)
+Description: manage release upgrades
+ This is the core of update-manager and the release upgrader
+
+Package: python3-update-manager
+Architecture: all
+Section: python
+Replaces: update-manager-core (<< 1:0.163)
+Breaks: update-manager-core (<< 1:0.163)
+Depends: ${python3:Depends},
+         ${misc:Depends},
+         python3-apt (>= 0.8.5~),
+         python3-distupgrade,
+         lsb-release
+Description: python 3.x module for update-manager
+ Python module for update-manager (UpdateManager).
+ .
+ This package contains the python 3.x version of this module.
+
+Package: update-manager
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}, 
+         update-manager-core (= ${source:Version}),
+         python3-aptdaemon.gtk3widgets (>= 0.40) | synaptic, 
+         policykit-1,
+         python3-dbus,
+         python3-gi (>= 3.8),
+         gir1.2-gtk-3.0,
+         ubuntu-release-upgrader-gtk,
+         update-notifier,
+         policykit-1-gnome | policykit-1-kde | lxpolkit | mate-polkit | razorqt-policykit-agent
+Recommends: software-properties-gtk (>= 0.71.2), 
+Suggests: gir1.2-dbusmenu-glib-0.4,
+          gir1.2-unity-5.0,
+Description: GNOME application that manages apt updates
+ This is the GNOME apt update manager. It checks for updates and lets the user
+ choose which to install.
+
+Package: update-manager-text
+Architecture: all
+Section: admin
+Depends: ${python3:Depends}, 
+         ${misc:Depends}, 
+         update-manager-core, 
+         python3-newt
+Description: Text application that manages apt updates
+ This is the newt apt update manager.  It checks for updates and lets the user
+ choose which to install.
+
+Package: update-manager-kde
+Architecture: all
+Section: kde
+Depends: ${python3:Depends}, 
+         ${misc:Depends}, 
+         update-manager-core, 
+         python3-pykde4, 
+         kdesudo,
+         psmisc,
+         ubuntu-release-upgrader-qt
+Description: Support modules for Muon Notifier and Apper
+ Support modules for Muon Notifier and Apper to check for new distro releases 
+ and download the dist-upgrade tool.

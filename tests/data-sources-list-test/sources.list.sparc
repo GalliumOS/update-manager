@@ -1,0 +1,7 @@
+
+# main repo
+deb http://archive.ubuntu.com/ubuntu/ gutsy main restricted multiverse universe
+deb http://de.archive.ubuntu.com/ubuntu/ gutsy main restricted multiverse
+deb-src http://archive.ubuntu.com/ubuntu/ gutsy main restricted multiverse
+
+deb http://security.ubuntu.com/ubuntu gutsy-security main restricted

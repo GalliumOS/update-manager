@@ -1,0 +1,8 @@
+
+# main repo
+#deb http://ftp.inf.tu-dresden.de/os/linux/dists/ubuntu/ feisty main restricted
+deb http://old-releases.ubuntu.com/ubuntu/ feisty main restricted
+deb-src http://archive.ubuntu.com/ubuntu/ feisty main restricted multiverse
+
+deb http://security.ubuntu.com/ubuntu/ feisty-security main restricted
+

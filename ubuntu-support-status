@@ -1,0 +1,188 @@
+#!/usr/bin/python3
+
+from __future__ import print_function
+
+import apt
+import locale
+import datetime
+import operator
+import os
+import subprocess
+import gettext
+import sys
+
+from apt.utils import (
+    get_maintenance_end_date,
+    get_release_date_from_release_file,
+    get_release_filename_for_pkg,
+    )
+from optparse import OptionParser
+from UpdateManager.Core.utils import twrap
+
+CODENAME = subprocess.Popen(["lsb_release","-c","-s"],
+                            stdout=subprocess.PIPE,
+                            universal_newlines=True).communicate()[0].strip()
+
+def get_maintenance_status(cache, pkgname, supported_tag):
+    if supported_tag.endswith("y"):
+        supported_for_n_month = 12*int(supported_tag.rstrip("y"))
+    elif supported_tag.endswith("m"):
+        supported_for_n_month = int(supported_tag.rstrip("m"))
+    else:
+        raise Exception("Unsupported tag '%s'" % supported_tag)
+
+    # try to figure out the support dates of the release and make
+    # sure to look only for stuff in "Ubuntu" and "distro_codename"
+    # (to exclude stuff in ubuntu-updates for the support time 
+    # calculation because the "Release" file time for that gets
+    # updated regularly)
+    for suite in ["", "-updates", "-proposed", "-security"]:
+        releasef = get_release_filename_for_pkg(cache, pkgname, 
+                                                "Ubuntu", CODENAME+suite)
+        if releasef:
+            break
+    else:
+        raise Exception("No Release file found for %s" % pkgname)
+
+    time_t = get_release_date_from_release_file(releasef)
+    # check the release date and show support information
+    # based on this
+    if not time_t:
+        raise Exception("No date tag found")
+    release_date = datetime.datetime.fromtimestamp(time_t)
+    now = datetime.datetime.now()
+
+    # mvo: we do not define the end date very precisely
+    #      currently this is why it will just display a end
+    #      range
+    (support_end_year, support_end_month) = get_maintenance_end_date(release_date, supported_for_n_month)
+    support_end_month_str = locale.nl_langinfo(getattr(locale,"MON_%d" % support_end_month))
+    # check if the support has ended
+    support_ended = (now.year >= support_end_year and 
+                     now.month > support_end_month)
+
+    # build dict for the argument string
+    d = { 'support_tag' : supported_tag,
+          'support_end_month_str' : support_end_month_str,
+          'support_end_year' : support_end_year }
+
+    if support_ended:
+        (False, "%(support_end_month_str)s %(support_end_year)s (%(support_tag)s)" % d)
+    return (True, "%(support_end_month_str)s %(support_end_year)s (%(support_tag)s)" % d)
+
+if __name__ == "__main__":
+    #FIXME: Workaround a bug in optparser which doesn't handle unicode/str
+    #       correctly, see http://bugs.python.org/issue4391
+    #       Should be resolved by Python3
+    gettext.bindtextdomain("update-manager", "/usr/share/locale")
+    gettext.textdomain("update-manager")
+    translation = gettext.translation("update-manager", fallback=True)
+    if sys.version >= '3':
+        _ = translation.gettext
+    else:
+        _ = translation.ugettext
+
+    try:
+        locale.setlocale(locale.LC_ALL, "")
+    except:
+        pass
+
+    parser = OptionParser()
+    parser.add_option("", "--show-unsupported",
+                      action="store_true", default=False,
+                      help=_("Show unsupported packages on this machine"))
+    parser.add_option("", "--show-supported",
+                      action="store_true", default=False,
+                      help=_("Show supported packages on this machine"))
+    parser.add_option("", "--show-all",
+                      action="store_true", default=False,
+                      help=_("Show all packages with their status"))
+    parser.add_option("", "--list",
+                      action="store_true", default=False,
+                      help=_("Show all packages in a list"))
+
+    (options, args) = parser.parse_args()
+
+    # packages that are not downloadable
+    no_candidate = set()
+
+    # packages that we have no support information
+    unsupported = set()
+
+    # dict with pkgname : support time
+    supported_time_for_pkgname = {}
+
+    # dict with supporttime : set of packagenames
+    supported_by_time = {}
+
+    # total count, for statistics
+    total = 0
+
+    # analyze
+    with apt.Cache() as cache:
+        for pkg in cache:
+            if pkg.is_installed:
+                total += 1
+                if not pkg.candidate or not pkg.candidate.downloadable:
+                    no_candidate.add(pkg.name)
+                    continue
+                if not "Supported" in pkg.candidate.record:
+                    unsupported.add(pkg.name)
+                    continue
+                # get support time
+                support_tag = pkg.candidate.record["Supported"]
+                (still_supported, support_str) = get_maintenance_status(cache,
+                    pkg.name, support_tag)
+                if not still_supported:
+                    unsupported.add(pkg.name)
+                    continue
+                supported_time_for_pkgname[pkg.name] = support_tag
+                if not support_str in supported_by_time:
+                    supported_by_time[support_str] = set()
+                supported_by_time[support_str].add(pkg.name)
+
+    # output
+    print(_("Support status summary of '%s':") % os.uname()[1])
+    print()
+    for (time, tset) in supported_by_time.items():
+        print(_("You have %(num)s packages (%(percent).1f%%) supported until %(time)s") % {
+            'num' : len(tset),
+            'percent' : len(tset) * 100.0 / total,
+            'time' : time})
+    print()
+
+    print(_("You have %(num)s packages (%(percent).1f%%) that can not/no-longer be downloaded") % {
+        'num' : len(no_candidate),
+        'percent' : len(no_candidate) * 100.0 / total})
+    print(_("You have %(num)s packages (%(percent).1f%%) that are unsupported") % {
+        'num' : len(unsupported),
+        'percent' : len(unsupported) * 100.0 / total})
+
+    if not (options.show_unsupported or
+            options.show_supported or
+            options.show_all):
+        print()
+        print(_("Run with --show-unsupported, --show-supported or --show-all to see more details"))
+
+    if options.show_unsupported or options.show_all:
+        print()
+        print(_("No longer downloadable:"))
+        print(twrap(" ".join(sorted(no_candidate))))
+        
+        print(_("Unsupported: "))
+        print(twrap(" ".join(sorted(unsupported))))
+    
+    if options.show_supported or options.show_all:
+        for (time, tset) in supported_by_time.items():
+            print(_("Supported until %s:") % time)
+            print(twrap(" ".join(sorted(tset))))
+
+    if options.list:
+        pkg = max(cache, key=lambda pkg: pkg.is_installed and len(pkg.name))
+        field_width = len(pkg.name)
+        format_str = "%-"+str(field_width)+"s  %s"
+        for pkg in sorted(cache, key=operator.attrgetter("name")):
+            if pkg.is_installed:
+                support =  supported_time_for_pkgname.get(pkg.name, _("Unsupported"))
+                print(format_str % (pkg.name, support))
+                

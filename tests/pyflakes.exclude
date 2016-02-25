@@ -1,0 +1,30 @@
+# Exclude the following from pyflakes failures.
+
+# Property setter.
+../janitor/plugincore/plugin.py:*: redefinition of function 'condition' from line *
+
+# Alternate imports for Python 2/3 compatibility.
+../UpdateManager/Core/utils.py:*: redefinition of unused 'ProxyHandler' from line *
+../UpdateManager/Core/utils.py:*: redefinition of unused 'Request' from line *
+../UpdateManager/Core/utils.py:*: redefinition of unused 'build_opener' from line *
+../UpdateManager/Core/utils.py:*: redefinition of unused 'install_opener' from line *
+../UpdateManager/Core/utils.py:*: redefinition of unused 'urlopen' from line *
+../UpdateManager/Core/utils.py:*: redefinition of unused 'urlsplit' from line *
+../UpdateManager/Core/MetaRelease.py:*: redefinition of unused 'configparser' from line *
+../UpdateManager/Core/MetaRelease.py:*: redefinition of unused 'BadStatusLine' from line *
+../UpdateManager/Core/MetaRelease.py:*: redefinition of unused 'HTTPError' from line *
+../UpdateManager/Core/MetaRelease.py:*: redefinition of unused 'Request' from line *
+../UpdateManager/Core/MetaRelease.py:*: redefinition of unused 'URLError' from line *
+../UpdateManager/Core/MetaRelease.py:*: redefinition of unused 'urlopen' from line *
+../UpdateManager/Core/MyCache.py:*: redefinition of unused 'HTTPError' from line *
+../UpdateManager/Core/MyCache.py:*: redefinition of unused 'urlopen' from line *
+../UpdateManager/Core/MyCache.py:*: redefinition of unused 'urlsplit' from line *
+../UpdateManager/Core/MyCache.py:*: redefinition of unused 'BadStatusLine' from line *
+../tests/test_changelog.py:*: redefinition of unused 'HTTPError' from line *
+../tests/test_meta_release_core.py:*: redefinition of unused 'HTTPError' from line *
+../tests/test_meta_release_core.py:*: redefinition of unused 'urlopen' from line *
+../tests/test_meta_release_core.py:*: redefinition of unused 'BaseHTTPRequestHandler' from line *
+../tests/test_meta_release_core.py:*: redefinition of unused 'TCPServer' from line *
+
+# janitor code is no longer used
+../janitor/plugincore/manager.py:*: undefined name 'basestring'

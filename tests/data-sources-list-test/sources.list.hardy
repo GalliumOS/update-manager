@@ -1,0 +1,10 @@
+
+# main repo
+deb cdrom:[Ubuntu 8.10 _foo]/ hardy main
+deb ftp://uk.archive.ubuntu.com/ubuntu/ hardy main restricted multiverse universe
+deb http://de.archive.ubuntu.com/ubuntu/ hardy main restricted multiverse
+deb-src http://uk.archive.ubuntu.com/ubuntu/ hardy main restricted multiverse
+
+deb http://security.ubuntu.com/ubuntu/ hardy-security main restricted
+deb http://security.ubuntu.com/ubuntu/ hardy-security universe
+

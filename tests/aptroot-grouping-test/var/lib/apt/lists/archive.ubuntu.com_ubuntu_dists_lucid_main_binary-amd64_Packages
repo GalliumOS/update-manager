@@ -1,0 +1,80 @@
+Package: installed-app
+Priority: optional
+Section: admin
+Installed-Size: 1
+Maintainer: Foo <foo@bar.com>
+Architecture: all
+Version: 2
+Size: 1
+Depends: installed-pkg-multiple-deps
+Suggests: installed-pkg-single-dep
+Description: just an app
+Origin: Ubuntu
+
+Package: installed-app-with-subitems
+Priority: optional
+Section: admin
+Installed-Size: 1
+Maintainer: Foo <foo@bar.com>
+Architecture: all
+Version: 2
+Size: 1
+Recommends: intermediate, installed-pkg-multiple-deps
+Description: app with subitems
+Origin: Ubuntu
+
+Package: intermediate
+Priority: optional
+Section: admin
+Installed-Size: 1
+Maintainer: Foo <foo@bar.com>
+Architecture: all
+Version: 0
+Size: 1
+Description: intermediate pkg
+Origin: Ubuntu
+
+Package: installed-pkg
+Priority: optional
+Section: admin
+Installed-Size: 1
+Maintainer: Foo <foo@bar.com>
+Architecture: all
+Version: 2
+Size: 1
+Description: just a pkg
+Origin: Ubuntu
+
+Package: installed-pkg-multiple-deps
+Priority: optional
+Section: admin
+Installed-Size: 1
+Maintainer: Foo <foo@bar.com>
+Architecture: all
+Version: 2
+Size: 1
+Description: pkg with multiple deps
+Origin: Ubuntu
+
+Package: installed-pkg-single-dep
+Priority: optional
+Section: admin
+Installed-Size: 1
+Maintainer: Foo <foo@bar.com>
+Architecture: all
+Version: 2
+Size: 1
+Description: pkg with single dep
+Origin: Ubuntu
+
+Package: ubuntu-minimal
+Priority: optional
+Section: admin
+Installed-Size: 1
+Maintainer: Foo <foo@bar.com>
+Architecture: all
+Version: 2
+Size: 1
+Recommends: base-pkg
+Description: meta package
+Origin: Ubuntu

@@ -1,0 +1,9 @@
+
+# main repo
+deb http://archive.ubuntu.com/ubuntu/ feisty main restricted multiverse universe
+deb http://de.archive.ubuntu.com/ubuntu/ feisty main restricted multiverse
+deb-src http://archive.ubuntu.com/ubuntu/ feisty main restricted multiverse
+
+deb http://security.ubuntu.com/ubuntu/ feisty-security main restricted
+deb http://security.ubuntu.com/ubuntu/ feisty-security universe
+

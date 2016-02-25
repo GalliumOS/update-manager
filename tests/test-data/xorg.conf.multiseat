@@ -1,0 +1,163 @@
+
+Section "Files"
+    FontPath        "/usr/share/X11/fonts/misc"
+    FontPath        "/usr/share/X11/fonts/cyrillic"
+    FontPath        "/usr/share/X11/fonts/100dpi/:unscaled"
+    FontPath        "/usr/share/X11/fonts/75dpi/:unscaled"
+    FontPath        "/usr/share/X11/fonts/Type1"
+    FontPath        "/usr/share/X11/fonts/100dpi"
+    FontPath        "/usr/share/X11/fonts/75dpi"
+    FontPath        "/var/lib/defoma/x-ttcidfont-conf.d/dirs/TrueType"
+EndSection
+
+Section "Module"
+    Load           "i2c"
+    Load           "bitmap"
+    Load           "ddc"
+    Load           "extmod"
+    Load           "freetype"
+    Load           "glx"
+    Load           "int10"
+    Load           "type1"
+    Load           "vbe"
+EndSection
+
+Section "ServerFlags"
+    Option         "DontZap" "true"
+EndSection
+
+#
+#
+
+Section "InputDevice"
+    Identifier     "Keyboard 0"
+    Driver         "evdev"
+    Option         "Device" "/dev/input/event1"
+    Option         "CoreKeyboard"
+    Option         "Protocol" "evdev"
+    Option         "XkbModel" "evdev"
+EndSection
+
+Section "InputDevice"
+    Identifier     "Mouse 0"
+    Driver         "mouse"
+    Option         "CorePointer"
+    Option         "Device" "/dev/input/by-id/usb-A4Tech_Wireless_Battery_Free_Optical_Mouse-mouse"
+    Option         "Protocol" "ExplorerPS/2"
+    Option         "ZAxisMapping" "4 5"
+EndSection
+
+Section "Monitor"
+    Identifier     "Monitor #0"
+    Option         "DPMS"
+EndSection
+
+Section "Device"
+    Identifier     "GeForce 6600 LE #0"
+    Driver         "nvidia"
+    BusID          "PCI:5:0:0"
+    Option         "NoLogo" "1"
+EndSection
+
+Section "Screen"
+    Identifier     "Screen 0"
+    Device         "GeForce 6600 LE #0"
+    Monitor        "Monitor #0"
+    DefaultDepth    24
+    Option         "AddARGBGLXVisuals" "True"
+
+    SubSection     "Display"
+        Depth       24
+        Modes      "1280x1024"
+    EndSubSection
+EndSection
+
+Section "ServerLayout"
+    Identifier     "Layout0"
+    Screen         "Screen 0"
+    InputDevice    "Keyboard 0"
+    InputDevice    "Mouse 0"
+    Option "AutoAddDevices" "off"
+EndSection
+
+#
+#
+#
+
+Section "InputDevice"
+    Identifier     "Keyboard 1"
+    Driver         "evdev"
+    Option         "Device" "/dev/input/event30"
+    Option         "CoreKeyboard"
+    Option         "Protocol" "evdev"
+    Option         "XkbModel" "evdev"
+EndSection
+
+Section "InputDevice"
+    Identifier     "Mouse 1"
+    Driver         "mouse"
+    Option         "CorePointer"
+    Option         "Device" "/dev/input/by-id/usb-Logitech_USB-PS.2_Optical_Mouse-mouse"
+    Option         "Protocol" "ExplorerPS/2"
+    Option         "ZAxisMapping" "4 5"
+EndSection
+
+Section "InputDevice"
+    Identifier     "stylus"
+    Driver         "wacom"
+    Option         "Device" "/dev/input/wacom"
+    Option         "Type" "stylus"
+    Option         "USB" "on"
+EndSection
+
+Section "InputDevice"
+    Identifier     "eraser"
+    Driver         "wacom"
+    Option         "Device" "/dev/input/wacom"
+    Option         "Type" "eraser"
+    Option         "USB" "on"
+EndSection
+
+Section "InputDevice"
+    Identifier     "cursor"
+    Driver         "wacom"
+    Option         "Device" "/dev/input/wacom"
+    Option         "Type" "cursor"
+    Option         "USB" "on"
+EndSection
+
+Section "Monitor"
+    Identifier     "Monitor #1"
+    Option         "DPMS"
+EndSection
+
+Section "Device"
+    Identifier     "GeForce 6600 LE #1"
+    Driver         "nvidia"
+    BusID          "PCI:4:0:0"
+    Option         "NoLogo" "1"
+EndSection
+
+Section "Screen"
+    Identifier     "Screen 1"
+    Device         "GeForce 6600 LE #1"
+    Monitor        "Monitor #1"
+    DefaultDepth    24
+    Option         "AddARGBGLXVisuals" "True"
+
+    SubSection     "Display"
+        Depth       24
+        Modes      "1680x1050" "1280x1024"
+    EndSubSection
+EndSection
+
+Section "ServerLayout"
+    Identifier     "Layout1"
+    Screen         "Screen 1"
+    InputDevice    "Keyboard 1"
+    InputDevice    "Mouse 1"
+    InputDevice    "stylus" "SendCoreEvents"
+    InputDevice    "eraser" "SendCoreEvents"
+    InputDevice    "cursor" "SendCoreEvents"
+    Option "AutoAddDevices" "off"
+EndSection

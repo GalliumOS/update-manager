@@ -1,0 +1,5 @@
+* aptsources.py:
+- when turning off a new sources.list entry for the runing distro 
+  (e.g. multiverse in a full edgy) and it is turned on again, the
+  source code checkbox becomes only half-checked
+- when turning off/on a entry the comments become disordered

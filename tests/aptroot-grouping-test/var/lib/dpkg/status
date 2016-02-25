@@ -1,0 +1,82 @@
+Package: base-pkg
+Status: install ok installed
+Priority: optional
+Section: admin
+Installed-Size: 1
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 0.1
+Description: a base package
+
+Package: installed-app
+Status: install ok installed
+Priority: optional
+Section: admin
+Installed-Size: 1
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 0.1
+Description: an installed app
+
+Package: installed-app-with-subitems
+Status: install ok installed
+Priority: optional
+Section: admin
+Installed-Size: 1
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 0.1
+Description: an installed app with subitems
+
+Package: intermediate
+Status: install ok installed
+Priority: optional
+Section: admin
+Installed-Size: 1
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 0.1
+Depends: installed-pkg-single-dep
+Description: an intermediate pkg
+
+Package: installed-pkg
+Status: install ok installed
+Priority: optional
+Section: admin
+Installed-Size: 1
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 0.1
+Description: an installed package
+
+Package: not-updatable
+Status: install ok installed
+Priority: optional
+Section: admin
+Installed-Size: 1
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 0.1
+Depends: installed-pkg-single-dep
+Description: extra pkg
+ to confirm we only look at updatable pkgs when calculating groupings
+
+Package: installed-pkg-multiple-deps
+Status: install ok installed
+Priority: optional
+Section: admin
+Installed-Size: 1
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 0.1
+Description: an installed package that multiple apps depend on
+
+Package: installed-pkg-single-dep
+Status: install ok installed
+Priority: optional
+Section: admin
+Installed-Size: 1
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 0.1
+Description: an installed package that only one app depends on
