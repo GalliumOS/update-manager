@@ -380,15 +380,36 @@ class UpdateList():
         # that might only be available if we have deb-src lines.  I think we
         # could also generate it by iterating over all the binary package info
         # we have, but that is costly.  These don't change often.
-        return ['linux', 'linux-image', 'linux-headers-generic',
-                'linux-image-generic', 'linux-generic',
-                'linux-headers-generic-pae', 'linux-image-generic-pae',
-                'linux-generic-pae', 'linux-headers-omap', 'linux-image-omap',
-                'linux-omap', 'linux-headers-server', 'linux-image-server',
-                'linux-server', 'linux-signed-image-generic',
-                'linux-signed-generic', 'linux-headers-virtual',
-                'linux-image-virtual', 'linux-virtual',
-                'linux-image-extra-virtual']
+        return ['linux',
+                'linux-cloud-tools-generic',
+                'linux-cloud-tools-lowlatency',
+                'linux-cloud-tools-virtual',
+                'linux-crashdump',
+                'linux-generic',
+                'linux-generic-lpae',
+                'linux-headers-generic',
+                'linux-headers-generic-lpae',
+                'linux-headers-lowlatency',
+                'linux-headers-lowlatency-lpae',
+                'linux-headers-server',
+                'linux-headers-virtual',
+                'linux-image',
+                'linux-image-extra-virtual',
+                'linux-image-generic',
+                'linux-image-generic-lpae',
+                'linux-image-lowlatency',
+                'linux-image-virtual',
+                'linux-lowlatency',
+                'linux-signed-generic',
+                'linux-signed-image-generic',
+                'linux-signed-image-lowlatency',
+                'linux-signed-lowlatency',
+                'linux-source',
+                'linux-tools-generic',
+                'linux-tools-generic-lpae',
+                'linux-tools-lowlatency',
+                'linux-tools-virtual',
+                'linux-virtual']
 
     def _make_groups(self, cache, pkgs, eventloop_callback):
         if not pkgs:

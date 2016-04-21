@@ -10,7 +10,7 @@ from gi.repository import GLib
 
 import os
 
-from UpdateManager.Core.utils import (inhibit_sleep, allow_sleep)
+from UpdateManager.Core.utils import inhibit_sleep
 from UpdateManager.Dialogs import Dialog
 
 
@@ -22,13 +22,12 @@ class InstallBackend(Dialog):
         Dialog.__init__(self, window_main)
         self.action = action
         self.sleep_cookie = None
-        self.sleep_dev = None
 
     def start(self):
         os.environ["APT_LISTCHANGES_FRONTEND"] = "none"
 
         # Do not suspend during the update process
-        (self.sleep_dev, self.sleep_cookie) = inhibit_sleep()
+        self.sleep_cookie = inhibit_sleep()
 
         if self.action == self.ACTION_INSTALL:
             # Get the packages which should be installed and update
@@ -36,7 +35,10 @@ class InstallBackend(Dialog):
             pkgs_upgrade = []
             for pkg in self.window_main.cache:
                 if pkg.marked_install:
-                    pkgs_install.append(pkg.name)
+                    pkgname = pkg.name
+                    if pkg.is_auto_installed:
+                        pkgname += "#auto"
+                    pkgs_install.append(pkgname)
                 elif pkg.marked_upgrade:
                     pkgs_upgrade.append(pkg.name)
             self.commit(pkgs_install, pkgs_upgrade)
@@ -53,10 +55,6 @@ class InstallBackend(Dialog):
 
     def _action_done(self, action, authorized, success, error_string,
                      error_desc):
-        # Allow suspend after update is finished
-        if self.sleep_cookie:
-            allow_sleep(self.sleep_dev, self.sleep_cookie)
-            self.sleep_cookie = self.sleep_dev = None
 
         # If the progress dialog should be closed automatically afterwards
         #settings = Gio.Settings.new("com.ubuntu.update-manager")

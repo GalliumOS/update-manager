@@ -1,17 +1,47 @@
-update-manager (1:15.04.7.1-galliumos1) vivid-galliumos; urgency=medium
+update-manager (1:16.04.3) xenial; urgency=medium
 
-  * Disable the checks for an out of date release and a new one
+  * Quote URL parameters for the Release Announcement. (LP: #1561215)
 
- -- Hugh Greenberg <hugh@galliumos.org>  Wed, 24 Feb 2016 14:51:31 -0700
+ -- Brian Murray <brian@ubuntu.com>  Mon, 11 Apr 2016 18:49:09 -0700
 
-update-manager (1:15.04.7.1) vivid-proposed; urgency=medium
+update-manager (1:16.04.2) xenial; urgency=medium
+
+  [ Tim Lunn ]
+  * UpdateManage/Core/utils.py: Update to use logind inhibitors (LP: #1566141)
+
+ -- Brian Murray <brian@ubuntu.com>  Thu, 07 Apr 2016 11:06:40 -0700
+
+update-manager (1:16.04.1) xenial; urgency=medium
+
+  * Update Build-Depends to resolve ftbfs in xenial.
+
+ -- Brian Murray <brian@ubuntu.com>  Wed, 06 Apr 2016 15:39:00 -0700
+
+update-manager (1:15.10.3) wily; urgency=medium
+
+  * Pass a '#auto' suffix to aptdaemon for packages that are autoinstalled,
+    so that we have enough information to autoremove them later.  Thanks to
+    Michael Vogt <mvo@ubuntu.com> for the patch.  LP: #1439769.
+  * Add versioned dependency on aptdaemon (>= 1.1.1+bzr982-0ubuntu13) for the
+    above.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Tue, 06 Oct 2015 21:26:35 -0700
+
+update-manager (1:15.10.2) wily; urgency=medium
+
+  * UpdateManager/Core/UpdateList.py: update the binary packages made by the
+    linux-meta source package. (LP: #1215114)
+
+ -- Brian Murray <brian@ubuntu.com>  Mon, 05 Oct 2015 14:51:25 -0700
+
+update-manager (1:15.10.1) wily; urgency=medium
 
   * UpdateManager/Core/MetaRelease.py: When not running in development mode,
     if the next release is unsupported do not offer to upgrade to that, but
     the release after it. When running in development mode continue to offer
     upgrading to unsupported release. (LP: #1497024)
 
- -- Brian Murray <brian@ubuntu.com>  Thu, 17 Sep 2015 14:51:31 -0700
+ -- Brian Murray <brian@ubuntu.com>  Thu, 17 Sep 2015 15:10:19 -0700
 
 update-manager (1:15.04.7) vivid; urgency=medium
 

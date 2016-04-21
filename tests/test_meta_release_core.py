@@ -144,12 +144,12 @@ class TestMetaReleaseCore(unittest.TestCase):
                              "download with no proxy failed")
 
     def test_get_uri_query_string(self):
-        # test with fake data
-        d = Dist("oneiric", "11.10", "2011-10-10", True)
+        # test with fake data, use a space to test quoting
+        d = Dist("xenial", "16.04 LTS", "2016-04-21", True)
         meta = MetaReleaseCore()
         q = meta._get_release_notes_uri_query_string(d)
-        self.assertTrue("os=ubuntu" in q)
-        self.assertTrue("ver=11.10" in q)
+        self.assertTrue("os%3Dubuntu" in q)
+        self.assertTrue("ver%3D16.04%20LTS" in q)
 
     def test_html_uri_real(self):
         with EnvironmentVarGuard() as environ:

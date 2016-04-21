@@ -1,1 +1,3 @@
-VERSION = '1:15.04.7.1-galliumos1'
+# This file isn't used except in local checkouts, but one like it is written
+# out in the build directory by setup.py
+VERSION = 'bzr'

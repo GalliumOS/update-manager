@@ -227,7 +227,6 @@ class UpdatesAvailable(InternalDialog):
 
         # Used for inhibiting power management
         self.sleep_cookie = None
-        self.sleep_dev = None
 
         self.settings = Gio.Settings.new("com.ubuntu.update-manager")
 

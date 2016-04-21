@@ -363,30 +363,29 @@ def on_battery():
 
 def inhibit_sleep():
     """
-    Send a dbus signal to power-manager to not suspend
-    the system, using the freedesktop common interface
+    Send a dbus signal to logind to not suspend the system, it will be
+    released when the return value drops out of scope
     """
     try:
-        import dbus
-        bus = dbus.Bus(dbus.Bus.TYPE_SESSION)
-        devobj = bus.get_object('org.freedesktop.PowerManagement',
-                                '/org/freedesktop/PowerManagement/Inhibit')
-        dev = dbus.Interface(devobj, "org.freedesktop.PowerManagement.Inhibit")
-        cookie = dev.Inhibit('UpdateManager', 'Updating system')
-        return (dev, cookie)
+        from gi.repository import Gio, GLib
+        connection = Gio.bus_get_sync(Gio.BusType.SYSTEM)
+
+        var, fdlist = connection.call_with_unix_fd_list_sync('org.freedesktop.login1',
+                                                       '/org/freedesktop/login1',
+                                                       'org.freedesktop.login1.Manager',
+                                                       'Inhibit',
+                                                        GLib.Variant('(ssss)',
+                                                                    ('shutdown:sleep',
+                                                                     'UpdateManager',
+                                                                     'Updating System',
+                                                                     'block')),
+                                                        None, 0, -1, None, None)
+        inhibitor = Gio.UnixInputStream(fd=fdlist.steal_fds()[var[0]])
+
+        return inhibitor
     except Exception:
         #print("could not send the dbus Inhibit signal: %s" % e)
-        return (False, False)
-
-
-def allow_sleep(dev, cookie):
-    """Send a dbus signal to gnome-power-manager to allow a suspending
-    the system"""
-    try:
-        dev.UnInhibit(cookie)
-    except Exception as e:
-        print("could not send the dbus UnInhibit signal: %s" % e)
-
+        return False
 
 def str_to_bool(str):
     if str == "0" or str.upper() == "FALSE":

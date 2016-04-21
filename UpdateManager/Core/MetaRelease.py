@@ -40,10 +40,11 @@ import sys
 import time
 import threading
 try:
+    from urllib.parse import quote
     from urllib.request import Request, urlopen
     from urllib.error import HTTPError, URLError
 except ImportError:
-    from urllib2 import HTTPError, Request, URLError, urlopen
+    from urllib2 import HTTPError, Request, URLError, urlopen, quote
 
 from .utils import (get_lang, get_dist, get_dist_version, get_ubuntu_flavor,
                     get_ubuntu_flavor_name)
@@ -393,7 +394,8 @@ class MetaReleaseCore(object):
         q += "os=%s&" % self.flavor
         # get the version to upgrade to
         q += "ver=%s" % dist.version
-        return q
+        # the archive didn't respond well to ? being %3F
+        return quote(q, '/?')
 
     def _debug(self, msg):
         if self.DEBUG:

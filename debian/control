@@ -5,6 +5,9 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Build-Depends: debhelper (>= 9),
                python3-all (>= 3.3.0-2),
                python3-distutils-extra (>= 2.38),
+               python3-dbus,
+               python3-gi (>= 3.8),
+               gir1.2-gtk-3.0,
                lsb-release,
                apt-clone (>= 0.2.3~ubuntu1)
 Build-Depends-Indep: libxml-parser-perl, 
@@ -48,7 +51,7 @@ Package: update-manager
 Architecture: all
 Depends: ${python3:Depends}, ${misc:Depends}, 
          update-manager-core (= ${source:Version}),
-         python3-aptdaemon.gtk3widgets (>= 0.40) | synaptic, 
+         python3-aptdaemon.gtk3widgets (>= 1.1.1+bzr982-0ubuntu13) | synaptic, 
          policykit-1,
          python3-dbus,
          python3-gi (>= 3.8),
