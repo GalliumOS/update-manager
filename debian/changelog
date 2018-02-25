@@ -1,3 +1,11 @@
+update-manager (1:16.04.12-galliumos1) xenon; urgency=medium
+
+  * re-apply GalliumOS patches
+    - disable release upgrade nag
+    - add debian/galliumos/upstream 
+
+ -- reynhout <reynhout@galliumos.org>  Sun, 25 Feb 2018 01:36:37 +0000
+
 update-manager (1:16.04.12) xenial-security; urgency=medium
 
   * No change rebuild in security pocket (LP: #1748397)
