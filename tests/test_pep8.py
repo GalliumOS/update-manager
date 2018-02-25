@@ -6,7 +6,7 @@ import subprocess
 import unittest
 
 # pep8 is overdoing it a bit IMO
-IGNORE_PEP8 = "E265"
+IGNORE_PEP8 = "E265,E402"
 IGNORE_FILES = (
 )
 

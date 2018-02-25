@@ -194,6 +194,7 @@ class NetworkManagerHelper(object):
             res |= mmhelper.is_cdma_roaming()
         return res
 
+
 if __name__ == "__main__":
 
     # test code

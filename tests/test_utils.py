@@ -31,16 +31,27 @@ class TestUtils(unittest.TestCase):
         self.assertTrue(estimate > 0)
 
     def test_is_child_of_process_name(self):
-        self.assertTrue(utils.is_child_of_process_name("init") or
-                        utils.is_child_of_process_name("systemd"))
-        self.assertFalse(utils.is_child_of_process_name("mvo"))
-        for e in glob.glob("/proc/[0-9]*"):
-            pid = int(e[6:])
-            utils.is_child_of_process_name("gdm", pid)
+        data = "1 (systemd) S 0 1 1 0 -1 4194560 255183 71659081 87 18403 \
+816 737 430168 107409 20 0 1 0 2 218931200 1882 18446744073709551615 1 1 0 0 \
+0 0 671173123 4096 1260 0 0 0 17 3 0 0 469245113 0 258124 0 0 0 0 0 0 0 0"
+        with mock.patch("builtins.open",
+                        mock.mock_open(read_data=data)) as mock_file:
+            assert open("/proc/1/stat").read() == data
+            mock_file.assert_called_with("/proc/1/stat")
+            self.assertTrue(utils.is_child_of_process_name("init") or
+                            utils.is_child_of_process_name("systemd"))
+            self.assertFalse(utils.is_child_of_process_name("mvo"))
 
     def test_is_port_listening(self):
         from UpdateManager.Core.utils import is_port_already_listening
-        self.assertTrue(is_port_already_listening(22))
+        data = "9: 00000000:0016 00000000:0000 0A 00000000:00000000 \
+00:00000000 00000000     0        0 11366514 1 0000000000000000 100 \
+0 0 10 0"
+        with mock.patch("builtins.open",
+                        mock.mock_open(read_data=data)) as mock_file:
+            assert open("/proc/net/tcp").readlines() == [data]
+            mock_file.assert_called_with("/proc/net/tcp")
+            self.assertTrue(is_port_already_listening(22))
 
     def test_strip_auth_from_source_entry(self):
         from aptsources.sourceslist import SourceEntry

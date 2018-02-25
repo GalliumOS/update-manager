@@ -98,9 +98,9 @@ class UpdateGroup(UpdateItem):
             # This shouldn't really happen. If we land here often, it's a sign
             # that something has gone wrong. Unless all pkgs are None it's not
             # a critical issue - a hit to the performance at most.
-            reason = ((not pkg or not pkg.candidate)
-                      and "Package was None or didn't have a candidate."
-                      or "%s already in _deps." % pkg.name)
+            reason = ((not pkg or not pkg.candidate) and
+                      "Package was None or didn't have a candidate." or
+                      "%s already in _deps." % pkg.name)
             logging.debug("Useless call to _add_deps. %s" % reason)
             return
         if len(self._deps) % 200 == 0 and callable(eventloop_callback):
@@ -273,8 +273,8 @@ class UpdateList():
                     desktop_file)
                 application.set_desktop_env(self.current_desktop)
             except Exception as e:
-                print("Error loading .desktop file %s: %s" %
-                      (desktop_file, e))
+                logging.warning("Error loading .desktop file %s: %s" %
+                                (desktop_file, e))
                 continue
             score = self._rate_application_for_package(application, pkg)
             if score > 0:

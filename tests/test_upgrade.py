@@ -42,6 +42,7 @@ class TestUpgrade(unittest.TestCase):
                 "/usr/bin/pkexec /usr/bin/do-release-upgrade "
                 "--frontend=DistUpgradeViewGtk3 -d -p -s")
 
+
 if __name__ == '__main__':
     if len(sys.argv) > 1 and sys.argv[1] == "-v":
         logging.basicConfig(level=logging.DEBUG)

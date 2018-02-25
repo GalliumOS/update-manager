@@ -59,7 +59,9 @@ Depends: ${python3:Depends}, ${misc:Depends},
          ubuntu-release-upgrader-gtk,
          update-notifier,
          policykit-1-gnome | policykit-1-kde | lxpolkit | mate-polkit | razorqt-policykit-agent
-Recommends: software-properties-gtk (>= 0.71.2), 
+Breaks: update-notifier (<< 3.168.4)
+Recommends: software-properties-gtk (>= 0.71.2),
+            libgtk2-perl
 Suggests: gir1.2-dbusmenu-glib-0.4,
           gir1.2-unity-5.0,
 Description: GNOME application that manages apt updates

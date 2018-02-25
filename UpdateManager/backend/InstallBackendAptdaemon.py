@@ -69,7 +69,7 @@ class InstallBackendAptdaemon(InstallBackend, BuilderDialog):
             self._action_done(self.ACTION_UPDATE,
                               authorized=False, success=False,
                               error_string=None, error_desc=None)
-        except:
+        except Exception as e:
             self._action_done(self.ACTION_UPDATE,
                               authorized=True, success=False,
                               error_string=None, error_desc=None)

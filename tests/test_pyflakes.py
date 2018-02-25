@@ -55,6 +55,7 @@ class TestPyflakesClean(unittest.TestCase):
             print(line)
         self.assertEqual(0, len(filtered_contents))
 
+
 if __name__ == "__main__":
     import logging
     logging.basicConfig(level=logging.DEBUG)

@@ -24,10 +24,7 @@ encountered when upgrading Ubuntu from one release to another?")
     if response:
         os.execlp('apport-bug', 'apport-bug', 'ubuntu-release-upgrader')
     else:
-        try:
-            attach_gsettings_package(report, 'update-manager')
-        except:
-            pass
+        attach_gsettings_package(report, 'update-manager')
         attach_file_if_exists(report, '/var/log/apt/history.log',
                               'DpkgHistoryLog.txt')
         attach_file_if_exists(report, '/var/log/apt/term.log',

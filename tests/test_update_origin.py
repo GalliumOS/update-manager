@@ -15,6 +15,12 @@ CURDIR = os.path.dirname(os.path.abspath(__file__))
 class TestOriginMatcher(unittest.TestCase):
 
     def setUp(self):
+        # mangle the arch
+        real_arch = apt.apt_pkg.config.find("APT::Architecture")
+        apt.apt_pkg.config.set("APT::Architecture", "amd64")
+        self.addCleanup(
+            lambda: apt.apt_pkg.config.set("APT::Architecture", real_arch))
+
         self.aptroot = os.path.join(CURDIR,
                                     "aptroot-update-origin")
         self.dpkg_status = open("%s/var/lib/dpkg/status" % self.aptroot, "w")
@@ -45,14 +51,14 @@ class TestOriginMatcher(unittest.TestCase):
         for pkg in self.cache:
             if pkg.candidate and pkg.candidate.origins:
                 if [l.archive for l in pkg.candidate.origins
-                        if l.archive == "lucid-security"]:
+                        if l.archive == "xenial-security"]:
                     test_pkgs.add(pkg.name)
         self.assertTrue(len(test_pkgs) > 0)
-        ul = UpdateList(None, dist="lucid")
+        ul = UpdateList(None, dist="xenial")
         for pkgname in test_pkgs:
             pkg = self.cache[pkgname]
             self.assertTrue(ul._is_security_update(pkg),
-                            "pkg '%s' is not in lucid-security" % pkg.name)
+                            "pkg '%s' is not in xenial-security" % pkg.name)
 
     def testOriginMatcherWithVersionInUpdatesAndSecurity(self):
         # empty dpkg status
@@ -70,14 +76,23 @@ class TestOriginMatcher(unittest.TestCase):
                 # ensure that the origin is not -updates and -security
                 is_in_updates = False
                 is_in_security = False
+                had_security = False
                 for v in pkg.candidate.origins:
                     # test if the package is not in both updates and security
-                    if v.archive == "lucid-updates":
+                    if v.archive == "xenial-updates":
                         is_in_updates = True
-                    elif v.archive == "lucid-security":
+                    elif v.archive == "xenial-security":
                         is_in_security = True
+                # ensure that the package actually has any version in -security
+                for v in pkg.versions:
+                    for (pkgfile, _unused) in v._cand.file_list:
+                        o = apt.package.Origin(pkg, pkgfile)
+                        if o.archive == "xenial-security":
+                            had_security = True
+                            break
                 if (is_in_updates and
                         not is_in_security and
+                        had_security and
                         len(pkg._pkg.version_list) > 2):
                     test_pkgs.add(pkg.name)
         self.assertTrue(len(test_pkgs) > 0,
@@ -86,11 +101,11 @@ class TestOriginMatcher(unittest.TestCase):
                         "newer")
 
         # now test if versions in -security are detected
-        ul = UpdateList(None, dist="lucid")
+        ul = UpdateList(None, dist="xenial")
         for pkgname in test_pkgs:
             pkg = self.cache[pkgname]
             self.assertTrue(ul._is_security_update(pkg),
-                            "package '%s' from lucid-updates contains also a "
+                            "package '%s' from xenial-updates contains also a "
                             "(not yet installed) security updates, but it is "
                             "not labeled as such" % pkg.name)
 
@@ -116,7 +131,7 @@ class TestOriginMatcher(unittest.TestCase):
                                  "no package '%s' installed" % pkg.name)
             candidate_version = getattr(pkg.candidate, "version", None)
             self.assertFalse(ul._is_security_update(pkg),
-                             "package '%s' (%s) from lucid-updates is "
+                             "package '%s' (%s) from xenial-updates is "
                              "labelled as a security update even though we "
                              "have marked this version as installed already" %
                              (pkg.name, candidate_version))

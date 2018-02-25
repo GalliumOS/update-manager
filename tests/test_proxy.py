@@ -34,6 +34,7 @@ class TestInitProxy(unittest.TestCase):
         detected_proxy = init_proxy(settings)
         self.assertEqual(detected_proxy, self.proxy)
 
+
 if __name__ == '__main__':
     if len(sys.argv) > 1 and sys.argv[1] == "-v":
         logging.basicConfig(level=logging.DEBUG)

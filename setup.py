@@ -34,7 +34,7 @@ else:
 class CustomBuild(build_extra.build_extra):
     def run(self):
         with open("UpdateManager/UpdateManagerVersion.py", "w") as f:
-            f.write("VERSION = '%s'" % version)
+            f.write("VERSION = '%s'\n" % version)
         build_extra.build_extra.run(self)
 
 

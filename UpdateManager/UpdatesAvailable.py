@@ -821,25 +821,56 @@ class UpdatesAvailable(InternalDialog):
 
     def on_button_install_clicked(self):
         self.unity.set_install_menuitem_visible(False)
-        #print("on_button_install_clicked")
+        # print("on_button_install_clicked")
         err_sum = _("Not enough free disk space")
-        err_long = _("The upgrade needs a total of %s free space on "
-                     "disk '%s'. "
-                     "Please free at least an additional %s of disk "
-                     "space on '%s'. "
-                     "Empty your trash and remove temporary "
-                     "packages of former installations using "
-                     "'sudo apt-get clean'.")
+        err_msg = _("The upgrade needs a total of %s free space on "
+                    "disk '%s'. "
+                    "Please free at least an additional %s of disk "
+                    "space on '%s'. %s")
+        # specific ways to resolve lack of free space
+        remedy_archivedir = _("Remove temporary packages of former "
+                              "installations using 'sudo apt clean'.")
+        remedy_boot = _("You can remove old kernels using "
+                        "'sudo apt autoremove', and you could also "
+                        "set COMPRESS=xz in "
+                        "/etc/initramfs-tools/initramfs.conf to "
+                        "reduce the size of your initramfs.")
+        remedy_root = _("Empty your trash and remove temporary "
+                        "packages of former installations using "
+                        "'sudo apt clean'.")
+        remedy_tmp = _("Reboot to clean up files in /tmp.")
+        remedy_usr = _("")
         # check free space and error if its not enough
         try:
             self.cache.checkFreeSpace()
         except NotEnoughFreeSpaceError as e:
+            # CheckFreeSpace examines where packages are cached
+            archivedir = apt_pkg.config.find_dir("Dir::Cache::archives")
+            err_long = ""
             for req in e.free_space_required_list:
-                self.window_main.start_error(False, err_sum,
-                                             err_long % (req.size_total,
-                                                         req.dir,
-                                                         req.size_needed,
-                                                         req.dir))
+                if err_long != "":
+                    err_long += " "
+                if req.dir == archivedir:
+                    err_long += err_msg % (req.size_total, req.dir,
+                                           req.size_needed, req.dir,
+                                           remedy_archivedir)
+                elif req.dir == "/boot":
+                    err_long += err_msg % (req.size_total, req.dir,
+                                           req.size_needed, req.dir,
+                                           remedy_boot)
+                elif req.dir == "/":
+                    err_long += err_msg % (req.size_total, req.dir,
+                                           req.size_needed, req.dir,
+                                           remedy_root)
+                elif req.dir == "/tmp":
+                    err_long += err_msg % (req.size_total, req.dir,
+                                           req.size_needed, req.dir,
+                                           remedy_tmp)
+                elif req.dir == "/usr":
+                    err_long += err_msg % (req.size_total, req.dir,
+                                           req.size_needed, req.dir,
+                                           remedy_usr)
+            self.window_main.start_error(False, err_sum, err_long)
             return
         except SystemError as e:
             logging.exception("free space check failed")

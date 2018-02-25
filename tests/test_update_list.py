@@ -183,5 +183,6 @@ class GroupingTestCase(unittest.TestCase):
         self.assertIsNone(group.core_item)
         self.assertListEqual([x.pkg.name for x in group.items], ['base-pkg'])
 
+
 if __name__ == "__main__":
     unittest.main()

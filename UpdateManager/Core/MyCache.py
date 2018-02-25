@@ -175,9 +175,9 @@ class MyCache(DistUpgrade.DistUpgradeCache.MyCache):
 
     def _strip_epoch(self, verstr):
         " strip of the epoch "
-        l = verstr.split(":")
-        if len(l) > 1:
-            verstr = "".join(l[1:])
+        vers_no_epoch = verstr.split(":")
+        if len(vers_no_epoch) > 1:
+            verstr = "".join(vers_no_epoch[1:])
         return verstr
 
     def _get_changelog_or_news(self, name, fname, strict_versioning=False,
@@ -199,9 +199,9 @@ class MyCache(DistUpgrade.DistUpgradeCache.MyCache):
         srcver = self._strip_epoch(srcver_epoch)
         #print("bin: %s" % binver)
 
-        l = section.split("/")
-        if len(l) > 1:
-            src_section = l[0]
+        split_section = section.split("/")
+        if len(split_section) > 1:
+            src_section = split_section[0]
 
         # lib is handled special
         prefix = srcpkg[0]
@@ -302,7 +302,7 @@ class MyCache(DistUpgrade.DistUpgradeCache.MyCache):
         self.get_changelog(name)
         try:
             lock.release()
-        except:
+        except Exception as e:
             pass
 
     def get_news(self, name):

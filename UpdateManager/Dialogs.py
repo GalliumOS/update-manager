@@ -302,7 +302,7 @@ class NeedRestartDialog(InternalDialog):
             iface.RequestReboot()
         except dbus.DBusException:
             self._request_reboot_via_consolekit()
-        except:
+        except Exception as e:
             pass
 
     def _request_reboot_via_consolekit(self):
@@ -315,7 +315,7 @@ class NeedRestartDialog(InternalDialog):
             iface.Restart()
         except dbus.DBusException:
             self._request_reboot_via_logind()
-        except:
+        except Exception as e:
             pass
 
     def _request_reboot_via_logind(self):

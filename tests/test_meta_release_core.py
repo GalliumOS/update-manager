@@ -113,33 +113,33 @@ class TestMetaReleaseCore(unittest.TestCase):
             logging.debug("proxy 1")
             environ["http_proxy"] = "http://localhost:%s/" % self.port
             install_opener(None)
-            self.assertTrue(url_downloadable("http://www.ubuntu.com/desktop",
+            self.assertTrue(url_downloadable("http://archive.ubuntu.com",
                                              logging.debug),
                             "download with proxy %s failed" %
                             environ["http_proxy"])
             logging.debug("proxy 2")
             environ["http_proxy"] = "http://localhost:%s" % self.port
             install_opener(None)
-            self.assertTrue(url_downloadable("http://www.ubuntu.com/desktop",
+            self.assertTrue(url_downloadable("http://archive.ubuntu.com",
                             logging.debug),
                             "download with proxy %s failed" %
                             environ["http_proxy"])
             logging.debug("no proxy")
             del environ["http_proxy"]
             install_opener(None)
-            self.assertTrue(url_downloadable("http://www.ubuntu.com/desktop",
+            self.assertTrue(url_downloadable("http://archive.ubuntu.com",
                             logging.debug),
                             "download with no proxy failed")
 
             logging.debug("no proxy, no valid adress")
-            self.assertFalse(url_downloadable("http://www.ubuntu.com/xxx",
+            self.assertFalse(url_downloadable("http://archive.ubuntu.com/xxx",
                                               logging.debug),
                              "download with no proxy failed")
 
             logging.debug("proxy, no valid adress")
             environ["http_proxy"] = "http://localhost:%s" % self.port
             install_opener(None)
-            self.assertFalse(url_downloadable("http://www.ubuntu.com/xxx",
+            self.assertFalse(url_downloadable("http://archive.ubuntu.com/xxx",
                                               logging.debug),
                              "download with no proxy failed")
 
@@ -152,12 +152,10 @@ class TestMetaReleaseCore(unittest.TestCase):
         self.assertTrue("ver%3D16.04%20LTS" in q)
 
     def test_html_uri_real(self):
+        # test parsing of a meta-releaes file from the server
         with EnvironmentVarGuard() as environ:
             environ["META_RELEASE_FAKE_CODENAME"] = "lucid"
-            # useDevelopmentRelease=True is only needed until precise is
-            # released
-            meta = MetaReleaseCore(forceDownload=True, forceLTS=True,
-                                   useDevelopmentRelease=True)
+            meta = MetaReleaseCore(forceDownload=True)
             while meta.downloading:
                 time.sleep(0.1)
             self.assertIsNotNone(meta.new_dist)
@@ -250,6 +248,7 @@ Version: 2.0
             self.assertEqual(meta.upgradable_to.name, "goo")
             self.assertEqual(meta.upgradable_to.version, "2.0")
             self.assertEqual(meta.upgradable_to.supported, False)
+
 
 if __name__ == '__main__':
     if len(sys.argv) > 1 and sys.argv[1] == "-v":

@@ -76,6 +76,7 @@ class TestChangelogs(unittest.TestCase):
         self.assertEqual(self.cache.all_changes[pkgname].count(error), 1)
         self.cache.CHANGELOG_ORIGIN = real_origin
 
+
 if __name__ == '__main__':
     if len(sys.argv) > 1 and sys.argv[1] == "-v":
         logging.basicConfig(level=logging.DEBUG)

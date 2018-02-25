@@ -76,6 +76,7 @@ class TestCache(unittest.TestCase):
             [self.cache["package-one"]],
             [pkg for pkg in self.cache if pkg.marked_delete])
 
+
 if __name__ == '__main__':
     if len(sys.argv) > 1 and sys.argv[1] == "-v":
         logging.basicConfig(level=logging.DEBUG)

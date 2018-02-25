@@ -105,7 +105,7 @@ def is_unity_running():
         import dbus
         bus = dbus.SessionBus()
         unity_running = bus.name_has_owner("com.canonical.Unity")
-    except:
+    except Exception as e:
         logging.exception("could not check for Unity dbus service")
     return unity_running
 
@@ -370,22 +370,21 @@ def inhibit_sleep():
         from gi.repository import Gio, GLib
         connection = Gio.bus_get_sync(Gio.BusType.SYSTEM)
 
-        var, fdlist = connection.call_with_unix_fd_list_sync('org.freedesktop.login1',
-                                                       '/org/freedesktop/login1',
-                                                       'org.freedesktop.login1.Manager',
-                                                       'Inhibit',
-                                                        GLib.Variant('(ssss)',
-                                                                    ('shutdown:sleep',
-                                                                     'UpdateManager',
-                                                                     'Updating System',
-                                                                     'block')),
-                                                        None, 0, -1, None, None)
+        var, fdlist = connection.call_with_unix_fd_list_sync(
+            'org.freedesktop.login1', '/org/freedesktop/login1',
+            'org.freedesktop.login1.Manager', 'Inhibit',
+            GLib.Variant('(ssss)',
+                         ('shutdown:sleep',
+                          'UpdateManager', 'Updating System',
+                          'block')),
+            None, 0, -1, None, None)
         inhibitor = Gio.UnixInputStream(fd=fdlist.steal_fds()[var[0]])
 
         return inhibitor
     except Exception:
         #print("could not send the dbus Inhibit signal: %s" % e)
         return False
+
 
 def str_to_bool(str):
     if str == "0" or str.upper() == "FALSE":
@@ -502,7 +501,7 @@ def is_port_already_listening(port):
     STATE_LISTENING = '0A'
     # read the data
     with open("/proc/net/tcp") as net_tcp:
-        for line in net_tcp:
+        for line in net_tcp.readlines():
             line = line.strip()
             if not line:
                 continue

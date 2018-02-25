@@ -365,7 +365,7 @@ class UpdateManager(Gtk.Window):
         # listening on dbus
         try:
             bus = dbus.SessionBus()
-        except:
+        except Exception as e:
             print("warning: could not initiate dbus")
             return
         try:
@@ -403,7 +403,7 @@ class UpdateManagerDbusController(dbus.service.Object):
         try:
             self.parent.start_install()
             return True
-        except:
+        except Exception as e:
             return False
 
     def _on_network_alert(self, watcher, state):

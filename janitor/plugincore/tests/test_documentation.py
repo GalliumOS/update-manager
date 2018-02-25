@@ -72,7 +72,7 @@ def teardown(testobj):
 def additional_tests():
     "Run the doc tests (README.rst and docs/*, if any exist)"
     doctest_files = [
-        ## os.path.abspath(resource_filename(WHOAMI, 'README.rst')),
+        # os.path.abspath(resource_filename(WHOAMI, 'README.rst')),
     ]
     if resource_exists(WHOAMI, 'docs'):
         for name in resource_listdir(WHOAMI, 'docs'):

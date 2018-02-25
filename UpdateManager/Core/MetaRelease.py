@@ -236,42 +236,46 @@ class MetaReleaseCore(object):
 
         # parse the metarelease_information file
         index_tag = apt_pkg.TagFile(self.metarelease_information)
-        while index_tag.step():
-            for required_key in ("Dist", "Version", "Supported", "Date"):
-                if required_key not in index_tag.section:
-                    raise MetaReleaseParseError(
-                        "Required key '%s' missing" % required_key)
-            name = index_tag.section["Dist"]
-            self._debug("found distro name: '%s'" % name)
-            rawdate = index_tag.section["Date"]
-            parseddate = list(email.utils.parsedate(rawdate))
-            parseddate[8] = 0  # assume no DST
-            date = time.mktime(tuple(parseddate))
-            supported = int(index_tag.section["Supported"])
-            version = index_tag.section["Version"]
-            # add the information to a new date object
-            dist = Dist(name, version, date, supported)
-            if "ReleaseNotes" in index_tag.section:
-                dist.releaseNotesURI = index_tag.section["ReleaseNotes"]
-                lang = get_lang()
-                if lang:
-                    dist.releaseNotesURI += "?lang=%s" % lang
-            if "ReleaseNotesHtml" in index_tag.section:
-                dist.releaseNotesHtmlUri = index_tag.section[
-                    "ReleaseNotesHtml"]
-                query = self._get_release_notes_uri_query_string(dist)
-                if query:
-                    dist.releaseNotesHtmlUri += query
-            if "UpgradeTool" in index_tag.section:
-                dist.upgradeTool = index_tag.section["UpgradeTool"]
-            if "UpgradeToolSignature" in index_tag.section:
-                dist.upgradeToolSig = index_tag.section[
-                    "UpgradeToolSignature"]
-            if "UpgradeBroken" in index_tag.section:
-                dist.upgrade_broken = index_tag.section["UpgradeBroken"]
-            dists.append(dist)
-            if name == current_dist_name:
-                current_dist = dist
+        try:
+            while index_tag.step():
+                for required_key in ("Dist", "Version", "Supported", "Date"):
+                    if required_key not in index_tag.section:
+                        raise MetaReleaseParseError(
+                            "Required key '%s' missing" % required_key)
+                name = index_tag.section["Dist"]
+                self._debug("found distro name: '%s'" % name)
+                rawdate = index_tag.section["Date"]
+                parseddate = list(email.utils.parsedate(rawdate))
+                parseddate[8] = 0  # assume no DST
+                date = time.mktime(tuple(parseddate))
+                supported = int(index_tag.section["Supported"])
+                version = index_tag.section["Version"]
+                # add the information to a new date object
+                dist = Dist(name, version, date, supported)
+                if "ReleaseNotes" in index_tag.section:
+                    dist.releaseNotesURI = index_tag.section["ReleaseNotes"]
+                    lang = get_lang()
+                    if lang:
+                        dist.releaseNotesURI += "?lang=%s" % lang
+                if "ReleaseNotesHtml" in index_tag.section:
+                    dist.releaseNotesHtmlUri = index_tag.section[
+                        "ReleaseNotesHtml"]
+                    query = self._get_release_notes_uri_query_string(dist)
+                    if query:
+                        dist.releaseNotesHtmlUri += query
+                if "UpgradeTool" in index_tag.section:
+                    dist.upgradeTool = index_tag.section["UpgradeTool"]
+                if "UpgradeToolSignature" in index_tag.section:
+                    dist.upgradeToolSig = index_tag.section[
+                        "UpgradeToolSignature"]
+                if "UpgradeBroken" in index_tag.section:
+                    dist.upgrade_broken = index_tag.section["UpgradeBroken"]
+                dists.append(dist)
+                if name == current_dist_name:
+                    current_dist = dist
+        except SystemError:
+            raise MetaReleaseParseError("Unable to parse %s" %
+                                        self.METARELEASE_URI)
 
         self.metarelease_information.close()
         self.metarelease_information = None
@@ -366,7 +370,7 @@ class MetaReleaseCore(object):
             self._debug("have self.metarelease_information")
             try:
                 self.parse()
-            except:
+            except Exception as e:
                 logging.exception("parse failed for '%s'" %
                                   self.METARELEASE_FILE)
                 # no use keeping a broken file around

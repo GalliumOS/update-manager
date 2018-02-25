@@ -213,10 +213,15 @@ class ChangelogViewer(Gtk.TextView):
         # get the iter at the mouse position
         (x, y) = self.window_to_buffer_coords(Gtk.TextWindowType.WIDGET,
                                               int(event.x), int(event.y))
-        iter = self.get_iter_at_location(x, y)
-
         # call open_url or menu.popup if an URL is assigned to the iter
-        tags = iter.get_tags()
+        try:
+            iter = self.get_iter_at_location(x, y)
+            tags = iter.get_tags()
+        except AttributeError:
+            # GTK > 3.20 added a return type to this function
+            (over_text, iter) = self.get_iter_at_location(x, y)
+            tags = iter.get_tags()
+
         for tag in tags:
             if hasattr(tag, "url"):
                 if event.button == 1:
@@ -253,10 +258,15 @@ class ChangelogViewer(Gtk.TextView):
            a hand cursor"""
         _hovering = False
         # get the iter at the mouse position
-        iter = self.get_iter_at_location(x, y)
+        try:
+            iter = self.get_iter_at_location(x, y)
+            tags = iter.get_tags()
+        except AttributeError:
+            # GTK > 3.20 added a return type to this function
+            (over_text, iter) = self.get_iter_at_location(x, y)
+            tags = iter.get_tags()
 
         # set _hovering if the iter has the tag "url"
-        tags = iter.get_tags()
         for tag in tags:
             if hasattr(tag, "url"):
                 _hovering = True

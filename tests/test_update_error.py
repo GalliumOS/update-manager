@@ -65,6 +65,7 @@ class TestBackendError(unittest.TestCase):
         update_backend.start()
         main.start_error.assert_called_once_with(True, "string", "desc")
 
+
 if __name__ == '__main__':
     if len(sys.argv) > 1 and sys.argv[1] == "-v":
         logging.basicConfig(level=logging.DEBUG)

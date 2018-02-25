@@ -45,7 +45,7 @@
       <summary>make check-new-release-gtk ignore a given new release</summary>
       <description>This will permanently hide the new release prompt from  check-new-release-gtk. Note that the small button in the main update-manager UI will still be there.</description>
     </key>
-    <key name="launch-time" type="i">
+    <key name="launch-time" type="x">
       <default>0</default>
       <summary>Time when update-manager got launched last</summary>
       <description>The last time update-manager was run.</description>

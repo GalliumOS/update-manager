@@ -47,6 +47,7 @@ class TestStopUpdate(unittest.TestCase):
         self.assertIsInstance(p, UpdatesAvailable)
         self.assertIsNone(p.custom_header)
 
+
 if __name__ == '__main__':
     if len(sys.argv) > 1 and sys.argv[1] == "-v":
         logging.basicConfig(level=logging.DEBUG)

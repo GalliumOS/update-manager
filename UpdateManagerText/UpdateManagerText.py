@@ -185,6 +185,7 @@ This can be caused by:
             res = self.cache.commit(apt.progress.text.AcquireProgress(),
                                     apt.progress.base.InstallProgress())
 
+
 if __name__ == "__main__":
 
     umt = UpdateManagerText()
