@@ -54,11 +54,6 @@ def get_component(origin_tag, filename_tag):
 
     return None
 
-def support_tag_override(support_tag, component):
-    if component in ["main", "restricted"]:
-        return ("5y")
-    return support_tag
-
 def get_maintenance_status(supported_tag, component, release_date):
     if supported_tag.endswith("y"):
         supported_for_n_month = 12*int(supported_tag.rstrip("y"))
@@ -167,11 +162,6 @@ if __name__ == "__main__":
                 if not component:
                     unsupported.add(pkg.name)
                     continue
-
-                # Override the support tag because of inaccurate Packages
-                # files (LP: #1574670)
-                support_tag = support_tag_override(support_tag, component)
-
                 (still_supported, details) = get_maintenance_status(
                     support_tag, component, release_date)
                 if not still_supported:
@@ -202,6 +192,11 @@ if __name__ == "__main__":
     print(_("You have %(num)s packages (%(percent).1f%%) that are unsupported") % {
         'num' : len(unsupported),
         'percent' : len(unsupported) * 100.0 / total})
+
+    # provide the HWE support status info as well
+    if os.path.exists("/usr/bin/hwe-support-status"):
+        print("")
+        subprocess.call(["/usr/bin/hwe-support-status"])
 
     if not (options.show_unsupported or
             options.show_supported or

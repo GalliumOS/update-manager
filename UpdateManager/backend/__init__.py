@@ -33,6 +33,7 @@ class InstallBackend(Dialog):
             # Get the packages which should be installed and update
             pkgs_install = []
             pkgs_upgrade = []
+            pkgs_remove = []
             for pkg in self.window_main.cache:
                 if pkg.marked_install:
                     pkgname = pkg.name
@@ -41,7 +42,9 @@ class InstallBackend(Dialog):
                     pkgs_install.append(pkgname)
                 elif pkg.marked_upgrade:
                     pkgs_upgrade.append(pkg.name)
-            self.commit(pkgs_install, pkgs_upgrade)
+                elif pkg.marked_delete:
+                    pkgs_remove.append(pkg.name)
+            self.commit(pkgs_install, pkgs_upgrade, pkgs_remove)
         else:
             self.update()
 
@@ -49,7 +52,7 @@ class InstallBackend(Dialog):
         """Run a update to refresh the package list"""
         raise NotImplemented
 
-    def commit(self, pkgs_install, pkgs_upgrade):
+    def commit(self, pkgs_install, pkgs_upgrade, pkgs_remove):
         """Commit the cache changes """
         raise NotImplemented
 

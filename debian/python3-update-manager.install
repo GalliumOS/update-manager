@@ -3,4 +3,5 @@ debian/tmp/usr/lib/python3*/dist-packages/UpdateManager/UpdateManagerVersion.py
 debian/tmp/usr/lib/python3*/dist-packages/UpdateManager/UnitySupport.py
 debian/tmp/usr/lib/python3*/dist-packages/UpdateManager/__init__.py
 debian/tmp/usr/lib/python3*/dist-packages/UpdateManager/backend
+debian/tmp/usr/lib/python3*/dist-packages/HweSupportStatus
 debian/tmp/usr/lib/python3*/dist-packages/janitor

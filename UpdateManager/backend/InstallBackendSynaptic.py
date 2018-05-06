@@ -7,6 +7,8 @@ import os
 import tempfile
 from gettext import gettext as _
 
+import gi
+gi.require_version("Gtk", "3.0")
 from gi.repository import GObject
 # Extra GdkX11 import for pygobject bug #673396
 # https://bugzilla.gnome.org/show_bug.cgi?id=673396
@@ -24,7 +26,8 @@ class InstallBackendSynaptic(InstallBackend):
         tempf = None
         self._run_synaptic(self.ACTION_UPDATE, opt, tempf)
 
-    def commit(self, pkgs_install, pkgs_upgrade, close_on_done=False):
+    def commit(self, pkgs_install, pkgs_upgrade, pkgs_remove,
+               close_on_done=False):
         # close when update was successful (its ok to use a Synaptic::
         # option here, it will not get auto-saved, because synaptic does
         # not save options in non-interactive mode)
@@ -40,6 +43,8 @@ class InstallBackendSynaptic(InstallBackend):
         tempf = tempfile.NamedTemporaryFile(mode="w+")
         for pkg_name in pkgs_install + pkgs_upgrade:
             tempf.write("%s\tinstall\n" % pkg_name)
+        for pkg_name in pkgs_remove:
+            tempf.write("%s\tdeinstall\n" % pkg_name)
         opt.append("--set-selections-file")
         opt.append("%s" % tempf.name)
         tempf.flush()

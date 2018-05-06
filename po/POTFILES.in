@@ -7,7 +7,6 @@ UpdateManager/Dialogs.py
 UpdateManager/UpdateManager.py
 UpdateManager/UpdatesAvailable.py
 UpdateManager/UnitySupport.py
-UpdateManagerText/UpdateManagerText.py
 UpdateManager/Core/MyCache.py
 UpdateManager/Core/UpdateList.py
 UpdateManager/Core/MetaRelease.py
@@ -16,9 +15,9 @@ UpdateManager/Core/utils.py
 [type: gettext/glade]data/gtkbuilder/UpdateManager.ui
 [type: gettext/glade]data/gtkbuilder/UpdateProgress.ui
 data/update-manager.desktop.in
+data/update-manager.appdata.xml.in
 data/com.ubuntu.update-manager.gschema.xml.in
 update-manager
-update-manager-text
 ubuntu-support-status
 janitor/plugincore/cruft.py
 janitor/plugincore/docs/__init__.py

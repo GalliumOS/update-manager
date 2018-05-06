@@ -76,16 +76,16 @@ class InstallBackendAptdaemon(InstallBackend, BuilderDialog):
             raise
 
     @inline_callbacks
-    def commit(self, pkgs_install, pkgs_upgrade):
+    def commit(self, pkgs_install, pkgs_upgrade, pkgs_remove):
         """Commit a list of package adds and removes"""
         try:
             apt.apt_pkg.pkgsystem_unlock()
         except SystemError:
             pass
         try:
-            reinstall = remove = purge = downgrade = []
+            reinstall = purge = downgrade = []
             trans = yield self.client.commit_packages(
-                pkgs_install, reinstall, remove, purge, pkgs_upgrade,
+                pkgs_install, reinstall, pkgs_remove, purge, pkgs_upgrade,
                 downgrade, defer=True)
             trans.connect("progress-changed", self._on_progress_changed)
             yield self._show_transaction(trans, self.ACTION_INSTALL,
@@ -243,5 +243,5 @@ if __name__ == "__main__":
     app = UpdateManager(data_dir, options)
 
     b = InstallBackendAptdaemon(app, None)
-    b.commit(["2vcard"], [])
+    b.commit(["2vcard"], [], [])
     Gtk.main()

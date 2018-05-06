@@ -31,6 +31,8 @@
 
 from __future__ import absolute_import, print_function
 
+import gi
+gi.require_version("Gtk", "3.0")
 from gi.repository import GLib
 from gi.repository import Gtk
 from gi.repository import Gdk
@@ -280,7 +282,7 @@ class UpdatesAvailable(InternalDialog):
         self.pkg_cell_area = CellAreaPackage(False)
         pkg_column = Gtk.TreeViewColumn.new_with_area(self.pkg_cell_area)
         self.pkg_cell_area.column = pkg_column
-        pkg_column.set_title(_("Install"))
+        pkg_column.set_title(_("Install or remove"))
         pkg_column.set_property("spacing", 4)
         pkg_column.set_expand(True)
         self.treeview_update.append_column(pkg_column)
@@ -953,7 +955,10 @@ class UpdatesAvailable(InternalDialog):
                 if keep_packages:
                     item.pkg.mark_keep()
                 elif item.pkg.name not in self.list.held_back:
-                    item.pkg.mark_install()
+                    if not item.to_remove:
+                        item.pkg.mark_install()
+                    else:
+                        item.pkg.mark_delete()
             except SystemError:
                 pass
 
@@ -1049,11 +1054,20 @@ class UpdatesAvailable(InternalDialog):
             self._add_groups(self.list.security_groups)
         if self.list.security_groups and self.list.update_groups:
             self._add_header(_("Other updates"), self.list.update_groups)
+        elif self.list.update_groups and self.list.kernel_autoremove_groups:
+            self._add_header(_("Updates"), self.list.update_groups)
         if self.list.update_groups:
             self._add_groups(self.list.update_groups)
+        if self.list.kernel_autoremove_groups:
+            self._add_header(
+                _("Unused kernel updates to be removed"),
+                self.list.kernel_autoremove_groups)
+            self._add_groups(self.list.kernel_autoremove_groups)
 
         self.treeview_update.set_model(self.store)
-        self.pkg_cell_area.indent_toplevel = bool(self.list.security_groups)
+        self.pkg_cell_area.indent_toplevel = (
+            bool(self.list.security_groups) or
+            bool(self.list.kernel_autoremove_groups))
         self.update_close_button()
         self.update_count()
         self.setBusy(False)

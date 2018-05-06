@@ -36,7 +36,6 @@ import locale
 import logging
 import re
 import os
-import glob
 import subprocess
 import sys
 import time
@@ -87,15 +86,6 @@ def get_string_with_no_auth_from_source_entry(entry):
     if url_parts.password:
         tmp.uri = tmp.uri.replace(url_parts.password, "hidden-p")
     return str(tmp)
-
-
-def estimate_kernel_size_in_boot():
-    """ estimate the amount of space that the current kernel takes in /boot """
-    size = 0
-    kver = os.uname()[2]
-    for f in glob.glob("/boot/*%s*" % kver):
-        size += os.path.getsize(f)
-    return size
 
 
 def is_unity_running():
@@ -456,6 +446,8 @@ def get_ubuntu_flavor_name(cache=None):
 
 # Unused by update-manager, but still used by ubuntu-release-upgrader
 def error(parent, summary, message):
+    import gi
+    gi.require_version("Gtk", "3.0")
     from gi.repository import Gtk, Gdk
     d = Gtk.MessageDialog(parent=parent,
                           flags=Gtk.DialogFlags.MODAL,

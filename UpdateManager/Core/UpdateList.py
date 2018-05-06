@@ -43,25 +43,29 @@ from UpdateManager.Core import utils
 
 
 class UpdateItem():
-    def __init__(self, pkg, name, icon):
+    def __init__(self, pkg, name, icon, to_remove):
         self.icon = icon
         self.name = name
         self.pkg = pkg
+        self.to_remove = to_remove
 
     def is_selected(self):
-        return self.pkg.marked_install or self.pkg.marked_upgrade
+        if not self.to_remove:
+            return self.pkg.marked_install or self.pkg.marked_upgrade
+        else:
+            return self.pkg.marked_delete
 
 
 class UpdateGroup(UpdateItem):
     _depcache = {}
 
-    def __init__(self, pkg, name, icon):
-        UpdateItem.__init__(self, pkg, name, icon)
+    def __init__(self, pkg, name, icon, to_remove):
+        UpdateItem.__init__(self, pkg, name, icon, to_remove)
         self._items = set()
         self._deps = set()
         self.core_item = None
         if pkg is not None:
-            self.core_item = UpdateItem(pkg, name, icon)
+            self.core_item = UpdateItem(pkg, name, icon, to_remove)
             self._items.add(self.core_item)
 
     @property
@@ -70,10 +74,10 @@ class UpdateGroup(UpdateItem):
         all_items.extend(self._items)
         return sorted(all_items, key=lambda a: a.name.lower())
 
-    def add(self, pkg, cache=None, eventloop_callback=None):
+    def add(self, pkg, cache=None, eventloop_callback=None, to_remove=False):
         name = utils.get_package_label(pkg)
         icon = Gio.ThemedIcon.new("package")
-        self._items.add(UpdateItem(pkg, name, icon))
+        self._items.add(UpdateItem(pkg, name, icon, to_remove))
         # If the pkg is in self._deps, stop here. We have already calculated
         # the recursive dependencies for this package, no need to do it again.
         if cache and pkg.name in cache and pkg.name not in self._deps:
@@ -140,6 +144,8 @@ class UpdateGroup(UpdateItem):
                 len(pkgs_installing) < len(self.items))
 
     def get_total_size(self):
+        if self.to_remove:
+            return 0
         size = 0
         for item in self.items:
             size += getattr(item.pkg.candidate, "size", 0)
@@ -147,26 +153,27 @@ class UpdateGroup(UpdateItem):
 
 
 class UpdateApplicationGroup(UpdateGroup):
-    def __init__(self, pkg, application):
+    def __init__(self, pkg, application, to_remove):
         name = application.get_display_name()
         icon = application.get_icon()
-        super(UpdateApplicationGroup, self).__init__(pkg, name, icon)
+        super(UpdateApplicationGroup, self).__init__(pkg, name, icon,
+                                                     to_remove)
 
 
 class UpdatePackageGroup(UpdateGroup):
-    def __init__(self, pkg):
+    def __init__(self, pkg, to_remove):
         name = utils.get_package_label(pkg)
         icon = Gio.ThemedIcon.new("package")
-        super(UpdatePackageGroup, self).__init__(pkg, name, icon)
+        super(UpdatePackageGroup, self).__init__(pkg, name, icon, to_remove)
 
 
 class UpdateSystemGroup(UpdateGroup):
-    def __init__(self, cache):
+    def __init__(self, cache, to_remove):
         # Translators: the %s is a distro name, like 'Ubuntu' and 'base' as in
         # the core components and packages.
         name = _("%s base") % utils.get_ubuntu_flavor_name(cache=cache)
         icon = Gio.ThemedIcon.new("distributor-logo")
-        super(UpdateSystemGroup, self).__init__(None, name, icon)
+        super(UpdateSystemGroup, self).__init__(None, name, icon, to_remove)
 
 
 class UpdateOrigin():
@@ -205,6 +212,7 @@ class UpdateList():
         self.distUpgradeWouldDelete = 0
         self.update_groups = []
         self.security_groups = []
+        self.kernel_autoremove_groups = []
         self.num_updates = 0
         self.random = random.Random()
         self.ignored_phased_updates = []
@@ -411,7 +419,7 @@ class UpdateList():
                 'linux-tools-virtual',
                 'linux-virtual']
 
-    def _make_groups(self, cache, pkgs, eventloop_callback):
+    def _make_groups(self, cache, pkgs, eventloop_callback, to_remove=False):
         if not pkgs:
             return []
         ungrouped_pkgs = []
@@ -421,7 +429,7 @@ class UpdateList():
         for pkg in pkgs:
             app = self._get_application_for_package(pkg)
             if app is not None:
-                app_group = UpdateApplicationGroup(pkg, app)
+                app_group = UpdateApplicationGroup(pkg, app, to_remove)
                 app_groups.append(app_group)
             else:
                 ungrouped_pkgs.append(pkg)
@@ -435,14 +443,14 @@ class UpdateList():
                     if len(dep_groups) > 1:
                         break
             if len(dep_groups) == 1:
-                dep_groups[0].add(pkg, cache, eventloop_callback)
+                dep_groups[0].add(pkg, cache, eventloop_callback, to_remove)
                 ungrouped_pkgs.remove(pkg)
 
         system_group = None
         if ungrouped_pkgs:
             # Separate out system base packages. If we have already found an
             # application for all updates, don't bother.
-            meta_group = UpdateGroup(None, None, None)
+            meta_group = UpdateGroup(None, None, None, to_remove)
             flavor_package = utils.get_ubuntu_flavor_package(cache=cache)
             meta_pkgs = [flavor_package, "ubuntu-standard", "ubuntu-minimal"]
             meta_pkgs.extend(self._get_linux_packages())
@@ -452,10 +460,10 @@ class UpdateList():
             for pkg in ungrouped_pkgs:
                 if meta_group.is_dependency(pkg, cache, eventloop_callback):
                     if system_group is None:
-                        system_group = UpdateSystemGroup(cache)
+                        system_group = UpdateSystemGroup(cache, to_remove)
                     system_group.add(pkg)
                 else:
-                    pkg_groups.append(UpdatePackageGroup(pkg))
+                    pkg_groups.append(UpdatePackageGroup(pkg, to_remove))
 
         app_groups.sort(key=lambda a: a.name.lower())
         pkg_groups.sort(key=lambda a: a.name.lower())
@@ -472,6 +480,7 @@ class UpdateList():
 
         security_pkgs = []
         upgrade_pkgs = []
+        kernel_autoremove_pkgs = []
 
         # Find all upgradable packages
         for pkg in cache:
@@ -502,12 +511,22 @@ class UpdateList():
             if pkg.is_upgradable and not (pkg.marked_upgrade or
                                           pkg.marked_install):
                 self.held_back.append(pkg.name)
+                continue
+            if (pkg.is_auto_removable and
+                (cache.versioned_kernel_pkgs_regexp and
+                 cache.versioned_kernel_pkgs_regexp.match(pkg.name) and
+                 not cache.running_kernel_pkgs_regexp.match(pkg.name))):
+                kernel_autoremove_pkgs.append(pkg)
+                pkg.mark_delete()
 
         if security_pkgs or upgrade_pkgs:
             # There's updates available. Initiate the desktop file cache.
-            pkg_names = [p.name for p in security_pkgs + upgrade_pkgs]
+            pkg_names = [p.name for p in
+                         security_pkgs + upgrade_pkgs + kernel_autoremove_pkgs]
             self._populate_desktop_cache(pkg_names)
         self.update_groups = self._make_groups(cache, upgrade_pkgs,
                                                eventloop_callback)
         self.security_groups = self._make_groups(cache, security_pkgs,
                                                  eventloop_callback)
+        self.kernel_autoremove_groups = self._make_groups(
+            cache, kernel_autoremove_pkgs, eventloop_callback, True)

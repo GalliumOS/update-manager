@@ -25,10 +25,10 @@
 
 from __future__ import print_function
 
-from gi.repository import Gtk
-from gi.repository import Gio, GLib
 import gi
 gi.require_version("Gtk", "3.0")
+from gi.repository import Gtk
+from gi.repository import Gio
 
 import logging
 import os
@@ -92,10 +92,6 @@ if __name__ == "__main__":
   parser.add_option ("--no-update", action="store_true",
                      dest="no_update", default=False,
                      help=_("Do not check for updates when starting"))
-  parser.add_option ("-s","--sandbox", action="store_true", default=False,
-                     # TRANSLATORS: aufs is the name of the filesystem
-                     # that is used to create the overlay
-                     help=_("Test upgrade with a sandbox aufs overlay"))
   parser.add_option ("", "--debug", action="store_true", default=False,
                      help=_("Show debug messages"))
 
@@ -114,8 +110,7 @@ if __name__ == "__main__":
 
   # keep track when we run (for update-notifier)
   settings =  Gio.Settings.new("com.ubuntu.update-manager")
-  launch_time = GLib.Variant('x', time.time())
-  settings.set_value("launch-time", launch_time)
+  settings.set_int64("launch-time", int(time.time()))
   init_proxy(settings)
 
   app = UpdateManager(data_dir, options)

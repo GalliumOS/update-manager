@@ -2,7 +2,6 @@
 # -*- Mode: Python; indent-tabs-mode: nil; tab-width: 4; coding: utf-8 -*-
 
 import logging
-import glob
 import mock
 import sys
 import unittest
@@ -24,11 +23,6 @@ class TestUtils(unittest.TestCase):
         # and we don't go to Gb  just yet (as its not really needed
         # in a upgrade context most of the time
         self.assertEqual(utils.humanize_size(1000 * 1000 * 1000), "1000.0 MB")
-
-    @unittest.skipIf(not glob.glob("/boot/*"), "inside chroot")
-    def test_estimate_kernel_size(self):
-        estimate = utils.estimate_kernel_size_in_boot()
-        self.assertTrue(estimate > 0)
 
     def test_is_child_of_process_name(self):
         data = "1 (systemd) S 0 1 1 0 -1 4194560 255183 71659081 87 18403 \

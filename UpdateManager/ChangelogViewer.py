@@ -29,6 +29,8 @@
 
 from __future__ import absolute_import
 
+import gi
+gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
 from gi.repository import Gdk
 from gi.repository import GObject
@@ -53,6 +55,8 @@ class ChangelogViewer(Gtk.TextView):
         self.set_right_margin(4)
         self.set_left_margin(4)
         self.set_pixels_above_lines(4)
+        # fill the area
+        self.set_vexpand(True)
         self.buffer = Gtk.TextBuffer()
         self.set_buffer(self.buffer)
         self.connect("button-press-event", self.button_press_event)
