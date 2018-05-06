@@ -24,6 +24,7 @@ class TestUpdateManagerError(unittest.TestCase):
         self.addCleanup(patcher.stop)
         self.manager = patcher.start()
         self.manager._check_meta_release.return_value = False
+        self.manager.hwe_replacement_packages = None
         self.manager.datadir = os.path.join(CURDIR, '..', 'data')
 
     def test_error_no_updates(self):

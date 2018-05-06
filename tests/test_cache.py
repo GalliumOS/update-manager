@@ -46,7 +46,8 @@ class TestCache(unittest.TestCase):
         mock_source.return_value = uri
         self.cache._guess_third_party_changelogs_uri_by_source = mock_source
         self.cache.all_changes[pkgname] = "header\n"
-        self.cache._fetch_changelog_for_third_party_package(pkgname)
+        self.cache._fetch_changelog_for_third_party_package(pkgname,
+                                                            origins=[])
         self.assertEqual(
             self.cache.all_changes[pkgname],
             "header\n"

@@ -33,14 +33,13 @@ class TestUpgrade(unittest.TestCase):
         window_main, meta_release = self.make_dialog_args()
         window_main.options.devel_release = True
         window_main.options.use_proposed = True
-        window_main.options.sandbox = True
         dlg = DistUpgradeDialog(window_main, meta_release)
         with mock.patch("os.execl") as execl:
             dlg.upgrade()
             execl.assert_called_once_with(
                 "/bin/sh", "/bin/sh", "-c",
-                "/usr/bin/pkexec /usr/bin/do-release-upgrade "
-                "--frontend=DistUpgradeViewGtk3 -d -p -s")
+                "/usr/bin/do-release-upgrade "
+                "--frontend=DistUpgradeViewGtk3 -d -p")
 
 
 if __name__ == '__main__':

@@ -26,9 +26,12 @@ from gettext import gettext as _
 
 HAVE_UNITY_SUPPORT = False
 try:
+    import gi
+    gi.require_version('Dbusmenu', '0.4')
+    gi.require_version('Unity', '7.0')
     from gi.repository import Dbusmenu, Unity
     HAVE_UNITY_SUPPORT = True
-except ImportError as e:
+except (ValueError, ImportError) as e:
     logging.warning("can not import unity GI %s" % e)
 
 

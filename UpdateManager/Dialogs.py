@@ -22,18 +22,25 @@
 
 from __future__ import absolute_import, print_function
 
+import gi
+gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
 from gi.repository import Gdk
-
 import warnings
 warnings.filterwarnings(
     "ignore", "Accessed deprecated property", DeprecationWarning)
 
 import logging
+import datetime
 import dbus
 import os
+import subprocess
+
+import HweSupportStatus.consts
+from .Core.LivePatchSocket import LivePatchSocket
 
 from gettext import gettext as _
+from gettext import ngettext
 
 
 class Dialog(object):
@@ -137,6 +144,49 @@ class InternalDialog(BuilderDialog):
             self.main_container.add(content_widget)
         self.main_container.set_visible(bool(content_widget))
 
+    def on_livepatch_status_ready(self, active, cs, ps, fixes):
+        self.set_desc(None)
+
+        if not active:
+            return
+
+        needs_reschedule = False
+
+        if cs == "needs-check":
+            needs_reschedule = True
+        elif cs == "check-failed":
+            pass
+        elif cs == "checked":
+            if ps == "unapplied" or ps == "applying":
+                needs_reschedule = True
+            elif ps == "applied":
+                fixes = [fix for fix in fixes if fix.patched]
+                d = ngettext("%d Livepatch update applied since the last "
+                             "restart.",
+                             "%d Livepatch updates applied since the last "
+                             "restart.",
+                             len(fixes)) % len(fixes)
+                self.set_desc(d)
+            elif ps == "applied-with-bug" or ps == "apply-failed":
+                fixes = [fix for fix in fixes if fix.patched]
+                d = ngettext("%d Livepatch update failed to apply since the "
+                             "last restart.",
+                             "%d Livepatch updates failed to apply since the "
+                             "last restart.",
+                             len(fixes)) % len(fixes)
+                self.set_desc(d)
+            elif ps == "nothing-to-apply":
+                pass
+            elif ps == "unknown":
+                pass
+
+        if needs_reschedule:
+            self.lp_socket.get_status(self.on_livepatch_status_ready)
+
+    def check_livepatch_status(self):
+        self.lp_socket = LivePatchSocket()
+        self.lp_socket.get_status(self.on_livepatch_status_ready)
+
 
 class StoppedUpdatesDialog(InternalDialog):
     def __init__(self, window_main):
@@ -161,6 +211,7 @@ class NoUpdatesDialog(InternalDialog):
         self.add_settings_button()
         self.focus_button = self.add_button(Gtk.STOCK_OK,
                                             self.window_main.close)
+        self.check_livepatch_status()
 
 
 class DistUpgradeDialog(InternalDialog):
@@ -186,11 +237,28 @@ class DistUpgradeDialog(InternalDialog):
                 extra_args = extra_args + " -d"
             if self.window_main.options.use_proposed:
                 extra_args = extra_args + " -p"
-            if self.window_main.options.sandbox:
-                extra_args = extra_args + " -s"
         os.execl("/bin/sh", "/bin/sh", "-c",
-                 "/usr/bin/pkexec /usr/bin/do-release-upgrade "
+                 "/usr/bin/do-release-upgrade "
                  "--frontend=DistUpgradeViewGtk3%s" % extra_args)
+
+
+class HWEUpgradeDialog(InternalDialog):
+    def __init__(self, window_main):
+        InternalDialog.__init__(self, window_main)
+        self.set_header(_("New important security and hardware support "
+                          "update."))
+        if datetime.date.today() < HweSupportStatus.consts.HWE_EOL_DATE:
+            self.set_desc(_(HweSupportStatus.consts.Messages.HWE_SUPPORT_ENDS))
+        else:
+            self.set_desc(
+                _(HweSupportStatus.consts.Messages.HWE_SUPPORT_HAS_ENDED))
+        self.add_settings_button()
+        self.add_button(_("_Install…"), self.install)
+        self.focus_button = self.add_button(Gtk.STOCK_OK,
+                                            self.window_main.close)
+
+    def install(self):
+        self.window_main.start_install(hwe_upgrade=True)
 
 
 class UnsupportedDialog(DistUpgradeDialog):
@@ -229,7 +297,6 @@ class PartialUpgradeDialog(InternalDialog):
 
     def upgrade(self):
         os.execl("/bin/sh", "/bin/sh", "-c",
-                 "/usr/bin/pkexec "
                  "/usr/lib/ubuntu-release-upgrader/do-partial-upgrade "
                  "--frontend=DistUpgradeViewGtk3")
 
@@ -280,7 +347,7 @@ class NeedRestartDialog(InternalDialog):
         self.add_settings_button()
         self.focus_button = self.add_button(_("Restart _Later"),
                                             self.window_main.close)
-        self.add_button(_("_Restart Now…"), self.restart)
+        self.add_button(_("_Restart Now"), self.restart)
 
     def start(self):
         Dialog.start(self)

@@ -40,12 +40,17 @@ try:
 except ImportError:
     from httplib import BadStatusLine
 import socket
+import subprocess
 import re
 import DistUpgrade.DistUpgradeCache
 from gettext import gettext as _
+try:
+    from launchpadlib.launchpad import Launchpad
+except ImportError:
+    Launchpad = None
 
 SYNAPTIC_PINFILE = "/var/lib/synaptic/preferences"
-CHANGELOGS_POOL = "http://changelogs.ubuntu.com/changelogs/pool/"
+CHANGELOGS_POOL = "https://changelogs.ubuntu.com/changelogs/pool/"
 CHANGELOGS_URI = CHANGELOGS_POOL + "%s/%s/%s/%s_%s/%s"
 
 
@@ -79,6 +84,22 @@ class MyCache(DistUpgrade.DistUpgradeCache.MyCache):
             self.saveDistUpgrade()
         assert (self._depcache.broken_count == 0 and
                 self._depcache.del_count == 0)
+        self.launchpad = None
+        # generate versioned_kernel_pkgs_regexp for later use
+        apt_versioned_kernel_pkgs = apt_pkg.config.value_list(
+            "APT::VersionedKernelPackages")
+        if apt_versioned_kernel_pkgs:
+            self.versioned_kernel_pkgs_regexp = re.compile("(" + "|".join(
+                ["^" + p for p in apt_versioned_kernel_pkgs]) + ")")
+            running_kernel_version = subprocess.check_output(
+                ["uname", "-r"], universal_newlines=True).rstrip()
+            self.running_kernel_pkgs_regexp = re.compile("(" + "|".join(
+                [("^" + p + ".*" + running_kernel_version)
+                 if not p.startswith(".*") else (running_kernel_version + p)
+                 for p in apt_versioned_kernel_pkgs]) + ")")
+        else:
+            self.versioned_kernel_pkgs_regexp = None
+            self.running_kernel_pkgs_regexp = None
 
     def _dpkgJournalDirty(self):
         """
@@ -222,7 +243,7 @@ class MyCache(DistUpgrade.DistUpgradeCache.MyCache):
         # and so its possible to do a man-in-the-middle attack to steal the
         # credentials
         res = urlsplit(uri)
-        if res.scheme == "https" and res.username != "":
+        if res.scheme == "https" and res.username:
             raise HttpsChangelogsUnsupportedError(
                 "https locations with username/password are not"
                 "supported to fetch changelogs")
@@ -267,6 +288,52 @@ class MyCache(DistUpgrade.DistUpgradeCache.MyCache):
                         break
             alllines = alllines + line
         return alllines
+
+    def _extract_ppa_changelog_uri(self, name):
+        """Return the changelog URI from the Launchpad API
+
+        Return None in case of an error.
+        """
+        if not Launchpad:
+            logging.warning("Launchpadlib not available, cannot retrieve PPA "
+                            "changelog")
+            return None
+
+        cdt = self[name].candidate
+        for uri in cdt.uris:
+            if urlsplit(uri).hostname != 'ppa.launchpad.net':
+                continue
+            match = re.search('http.*/(.*)/(.*)/ubuntu/.*', uri)
+            if match is not None:
+                user, ppa = match.group(1), match.group(2)
+                break
+        else:
+            logging.error("Unable to find a valid PPA candidate URL.")
+            return
+
+        # Login on launchpad if we are not already
+        if self.launchpad is None:
+            self.launchpad = Launchpad.login_anonymously('update-manager',
+                                                         'production',
+                                                         version='devel')
+
+        archive = self.launchpad.archives.getByReference(
+            reference='~%s/ubuntu/%s' % (user, ppa)
+        )
+        if archive is None:
+            logging.error("Unable to retrieve the archive from the Launchpad "
+                          "API.")
+            return
+
+        spphs = archive.getPublishedSources(source_name=cdt.source_name,
+                                            exact_match=True,
+                                            version=cdt.version)
+        if not spphs:
+            logging.error("No published sources were retrieved from the "
+                          "Launchpad API.")
+            return
+
+        return spphs[0].changelogUrl()
 
     def _guess_third_party_changelogs_uri_by_source(self, name):
         pkg = self[name]
@@ -314,14 +381,26 @@ class MyCache(DistUpgrade.DistUpgradeCache.MyCache):
         if news:
             self.all_news[name] = news
 
-    def _fetch_changelog_for_third_party_package(self, name):
+    def _fetch_changelog_for_third_party_package(self, name, origins):
+        # Special case for PPAs
+        changelogs_uri_ppa = None
+        for origin in origins:
+            if origin.origin.startswith('LP-PPA-'):
+                try:
+                    changelogs_uri_ppa = self._extract_ppa_changelog_uri(name)
+                    break
+                except Exception:
+                    logging.exception("Unable to connect to the Launchpad "
+                                      "API.")
         # Try non official changelog location
         changelogs_uri_binary = \
             self._guess_third_party_changelogs_uri_by_binary(name)
         changelogs_uri_source = \
             self._guess_third_party_changelogs_uri_by_source(name)
         error_message = ""
-        for changelogs_uri in [changelogs_uri_binary, changelogs_uri_source]:
+        for changelogs_uri in [changelogs_uri_ppa,
+                               changelogs_uri_binary,
+                               changelogs_uri_source]:
             if changelogs_uri:
                 try:
                     changelog = self._get_changelog_or_news(
@@ -349,7 +428,7 @@ class MyCache(DistUpgrade.DistUpgradeCache.MyCache):
             (name, getattr(self[name].installed, "version", None),
              self[name].candidate.version)
         if self.CHANGELOG_ORIGIN not in [o.origin for o in origins]:
-            self._fetch_changelog_for_third_party_package(name)
+            self._fetch_changelog_for_third_party_package(name, origins)
             return
         # fixup epoch handling version
         srcpkg = self[name].candidate.source_name

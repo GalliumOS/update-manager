@@ -29,7 +29,7 @@ Date: Thu, 01 Jun 2006 9:00:00 UTC
 Supported: 1
 Description: This is the Dapper Drake release
 Release-File: http://archive.ubuntu.com/ubuntu/dists/dapper/Release
-ReleaseNotes: http://changelogs.ubuntu.com/DapperReleaseAnnouncement
+ReleaseNotes: https://changelogs.ubuntu.com/DapperReleaseAnnouncement
 UpgradeTool: http://archive.ubuntu.com/ubuntu/dists/dapper/main/dist-upgrader-all/current/dapper.tar.gz
 UpgradeToolSignature: http://archive.ubuntu.com/ubuntu/dists/dapper/main/dist-upgrader-all/current/dapper.tar.gz.gpg
 
@@ -40,7 +40,7 @@ Date: Thu, 26 Oct 2006 12:00:00 UTC
 Supported: 0
 Description: This is the Edgy Eft release
 Release-File: http://archive.ubuntu.com/ubuntu/dists/edgy/Release
-ReleaseNotes: http://changelogs.ubuntu.com/EdgyReleaseAnnouncement
+ReleaseNotes: https://changelogs.ubuntu.com/EdgyReleaseAnnouncement
 UpgradeTool: http://archive.ubuntu.com/ubuntu/dists/edgy-updates/main/dist-upgrader-all/current/edgy.tar.gz
 UpgradeToolSignature: http://archive.ubuntu.com/ubuntu/dists/edgy-updates/main/dist-upgrader-all/current/edgy.tar.gz.gpg
 

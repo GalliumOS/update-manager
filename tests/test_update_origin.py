@@ -73,7 +73,7 @@ class TestOriginMatcher(unittest.TestCase):
             # check if the candidate origin is -updates (but not also
             # -security, often packages are available in both)
             if pkg.candidate is not None:
-                # ensure that the origin is not -updates and -security
+                # ensure that the origin is not in -updates and -security
                 is_in_updates = False
                 is_in_security = False
                 had_security = False
@@ -106,14 +106,14 @@ class TestOriginMatcher(unittest.TestCase):
             pkg = self.cache[pkgname]
             self.assertTrue(ul._is_security_update(pkg),
                             "package '%s' from xenial-updates contains also a "
-                            "(not yet installed) security updates, but it is "
+                            "(not yet installed) security update, but it is "
                             "not labeled as such" % pkg.name)
 
         # now check if it marks the version with -update if the -security
         # version is installed
         for pkgname in test_pkgs:
             pkg = self.cache[pkgname]
-            # FIXME: make this more inteligent (picking the versin from
+            # FIXME: make this more inteligent (picking the version from
             #        -security
             sec_ver = pkg._pkg.version_list[1]
             self.dpkg_status.write("Package: %s\n"

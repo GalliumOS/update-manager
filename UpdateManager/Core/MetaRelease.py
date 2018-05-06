@@ -104,7 +104,7 @@ class MetaReleaseCore(object):
         self.no_longer_supported = None
 
         # default (if the conf file is missing)
-        base_uri = "http://changelogs.ubuntu.com/"
+        base_uri = "https://changelogs.ubuntu.com/"
         self.METARELEASE_URI = base_uri + "meta-release"
         self.METARELEASE_URI_LTS = base_uri + "meta-release-lts"
         self.METARELEASE_URI_UNSTABLE_POSTFIX = "-development"
@@ -273,7 +273,7 @@ class MetaReleaseCore(object):
                 dists.append(dist)
                 if name == current_dist_name:
                     current_dist = dist
-        except SystemError:
+        except apt_pkg.Error:
             raise MetaReleaseParseError("Unable to parse %s" %
                                         self.METARELEASE_URI)
 
@@ -365,6 +365,8 @@ class MetaReleaseCore(object):
         # generic network error
         except (URLError, BadStatusLine, socket.timeout) as e:
             self._debug("result of meta-release download: '%s'" % e)
+            print("Failed to connect to %s. Check your Internet connection "
+                  "or proxy settings" % self.METARELEASE_URI)
         # now check the information we have
         if self.metarelease_information is not None:
             self._debug("have self.metarelease_information")

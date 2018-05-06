@@ -3,12 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#: ../UpdateManager/UpdatesAvailable.py:844
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-05-20 10:14-0700\n"
+"POT-Creation-Date: 2018-04-12 14:05-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,77 +19,99 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: ../UpdateManager/backend/InstallBackendAptdaemon.py:68
+#: ../UpdateManager/backend/InstallBackendAptdaemon.py:67
 msgid "Checking for updates…"
 msgstr ""
 
-#: ../UpdateManager/backend/InstallBackendAptdaemon.py:93
+#: ../UpdateManager/backend/InstallBackendAptdaemon.py:92
 msgid "Installing updates…"
 msgstr ""
 
-#: ../UpdateManager/backend/InstallBackendSynaptic.py:37
+#: ../UpdateManager/backend/InstallBackendSynaptic.py:40
 msgid "Please wait, this can take some time."
 msgstr ""
 
-#: ../UpdateManager/backend/InstallBackendSynaptic.py:39
+#: ../UpdateManager/backend/InstallBackendSynaptic.py:42
 msgid "Update is complete"
 msgstr ""
 
-#: ../UpdateManager/ChangelogViewer.py:79
+#: ../UpdateManager/ChangelogViewer.py:83
 msgid "Open Link in Browser"
 msgstr ""
 
-#: ../UpdateManager/ChangelogViewer.py:83
+#: ../UpdateManager/ChangelogViewer.py:87
 msgid "Copy Link to Clipboard"
 msgstr ""
 
-#: ../UpdateManager/Dialogs.py:120
+#: ../UpdateManager/Dialogs.py:122
 msgid "Settings…"
 msgstr ""
 
-#: ../UpdateManager/Dialogs.py:148 ../UpdateManager/UpdateManager.py:244
+#: ../UpdateManager/Dialogs.py:164
+#, python-format
+msgid "%d Livepatch update applied since the last restart."
+msgid_plural "%d Livepatch updates applied since the last restart."
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../UpdateManager/Dialogs.py:172
+#, python-format
+msgid "%d Livepatch update failed to apply since the last restart."
+msgid_plural "%d Livepatch updates failed to apply since the last restart."
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../UpdateManager/Dialogs.py:194 ../UpdateManager/UpdateManager.py:262
 msgid "You stopped the check for updates."
 msgstr ""
 
-#: ../UpdateManager/Dialogs.py:150
+#: ../UpdateManager/Dialogs.py:196
 msgid "_Check Again"
 msgstr ""
 
-#: ../UpdateManager/Dialogs.py:161
+#: ../UpdateManager/Dialogs.py:208
 msgid "No software updates are available."
 msgstr ""
 
-#: ../UpdateManager/Dialogs.py:163 ../UpdateManager/Dialogs.py:172
+#: ../UpdateManager/Dialogs.py:210 ../UpdateManager/Dialogs.py:221
 msgid "The software on this computer is up to date."
 msgstr ""
 
 #. Translators: these are Ubuntu version names like "Ubuntu 12.04"
-#: ../UpdateManager/Dialogs.py:174
+#: ../UpdateManager/Dialogs.py:223
 #, python-format
 msgid "However, %s %s is now available (you have %s)."
 msgstr ""
 
-#: ../UpdateManager/Dialogs.py:179
+#: ../UpdateManager/Dialogs.py:228
 msgid "Upgrade…"
 msgstr ""
 
+#: ../UpdateManager/Dialogs.py:248
+msgid "New important security and hardware support update."
+msgstr ""
+
+#: ../UpdateManager/Dialogs.py:256
+msgid "_Install…"
+msgstr ""
+
 #. Translators: this is an Ubuntu version name like "Ubuntu 12.04"
-#: ../UpdateManager/Dialogs.py:201
+#: ../UpdateManager/Dialogs.py:268
 #, python-format
 msgid "Software updates are no longer provided for %s %s."
 msgstr ""
 
 #. Translators: this is an Ubuntu version name like "Ubuntu 12.04"
-#: ../UpdateManager/Dialogs.py:205
+#: ../UpdateManager/Dialogs.py:272
 #, python-format
 msgid "To stay secure, you should upgrade to %s %s."
 msgstr ""
 
-#: ../UpdateManager/Dialogs.py:218
+#: ../UpdateManager/Dialogs.py:285
 msgid "Not all updates can be installed"
 msgstr ""
 
-#: ../UpdateManager/Dialogs.py:220
+#: ../UpdateManager/Dialogs.py:287
 msgid ""
 "Run a partial upgrade, to install as many updates as possible.\n"
 "\n"
@@ -99,56 +122,61 @@ msgid ""
 "     * Normal changes of a pre-release version of Ubuntu"
 msgstr ""
 
-#: ../UpdateManager/Dialogs.py:228
+#: ../UpdateManager/Dialogs.py:295
 msgid "_Partial Upgrade"
 msgstr ""
 
-#: ../UpdateManager/Dialogs.py:229
+#: ../UpdateManager/Dialogs.py:296
 msgid "_Continue"
 msgstr ""
 
-#: ../UpdateManager/Dialogs.py:265
+#: ../UpdateManager/Dialogs.py:332
 msgid "_Try Again"
 msgstr ""
 
-#: ../UpdateManager/Dialogs.py:279
+#: ../UpdateManager/Dialogs.py:346
 msgid "The computer needs to restart to finish installing updates."
 msgstr ""
 
-#: ../UpdateManager/Dialogs.py:280
-msgid "_Restart"
+#: ../UpdateManager/Dialogs.py:348
+msgid "Restart _Later"
+msgstr ""
+
+#: ../UpdateManager/Dialogs.py:350
+msgid "_Restart Now"
 msgstr ""
 
 #. Basic GTK+ parameters
-#: ../UpdateManager/UpdateManager.py:85 ../data/update-manager.desktop.in.h:1
+#: ../UpdateManager/UpdateManager.py:91 ../data/update-manager.desktop.in.h:1
+#: ../data/update-manager.appdata.xml.in.h:1
 msgid "Software Updater"
 msgstr ""
 
-#: ../UpdateManager/UpdateManager.py:242
+#: ../UpdateManager/UpdateManager.py:260
 msgid "Some software couldn’t be checked for updates."
 msgstr ""
 
-#: ../UpdateManager/UpdateManager.py:245
+#: ../UpdateManager/UpdateManager.py:263
 msgid "Updated software is available from a previous check."
 msgstr ""
 
 #. we assert a clean cache
-#: ../UpdateManager/UpdateManager.py:323
+#: ../UpdateManager/UpdateManager.py:373
 msgid "Software index is broken"
 msgstr ""
 
-#: ../UpdateManager/UpdateManager.py:324
+#: ../UpdateManager/UpdateManager.py:374
 msgid ""
 "It is impossible to install or remove any software. Please use the package "
 "manager \"Synaptic\" or run \"sudo apt-get install -f\" in a terminal to fix "
 "this issue at first."
 msgstr ""
 
-#: ../UpdateManager/UpdateManager.py:330
+#: ../UpdateManager/UpdateManager.py:380
 msgid "Could not initialize the package information"
 msgstr ""
 
-#: ../UpdateManager/UpdateManager.py:331
+#: ../UpdateManager/UpdateManager.py:381
 msgid ""
 "An unresolvable problem occurred while initializing the package "
 "information.\n"
@@ -157,11 +185,11 @@ msgid ""
 "following error message:\n"
 msgstr ""
 
-#: ../UpdateManager/UpdateManager.py:348
+#: ../UpdateManager/UpdateManager.py:398
 msgid "Could not calculate the upgrade"
 msgstr ""
 
-#: ../UpdateManager/UpdateManager.py:349
+#: ../UpdateManager/UpdateManager.py:399
 msgid ""
 "An unresolvable problem occurred while calculating the upgrade.\n"
 "\n"
@@ -169,156 +197,156 @@ msgid ""
 "following error message:\n"
 msgstr ""
 
-#: ../UpdateManager/UpdatesAvailable.py:248
+#: ../UpdateManager/UpdatesAvailable.py:252
 msgid "Install Now"
 msgstr ""
 
-#: ../UpdateManager/UpdatesAvailable.py:278
-#: ../UpdateManagerText/UpdateManagerText.py:36
-msgid "Install"
+#: ../UpdateManager/UpdatesAvailable.py:285
+msgid "Install or remove"
 msgstr ""
 
-#: ../UpdateManager/UpdatesAvailable.py:312
+#: ../UpdateManager/UpdatesAvailable.py:319
 msgid "Download"
 msgstr ""
 
-#: ../UpdateManager/UpdatesAvailable.py:372
+#: ../UpdateManager/UpdatesAvailable.py:378
 msgid "_Remind Me Later"
 msgstr ""
 
 #. upload_archive = version_match.group(2).strip()
-#: ../UpdateManager/UpdatesAvailable.py:506
+#: ../UpdateManager/UpdatesAvailable.py:515
 #, python-format
 msgid "Version %s: \n"
 msgstr ""
 
-#: ../UpdateManager/UpdatesAvailable.py:569
+#: ../UpdateManager/UpdatesAvailable.py:578
 msgid ""
 "No network connection detected, you can not download changelog information."
 msgstr ""
 
-#: ../UpdateManager/UpdatesAvailable.py:579
+#: ../UpdateManager/UpdatesAvailable.py:588
 msgid "Downloading list of changes..."
 msgstr ""
 
-#: ../UpdateManager/UpdatesAvailable.py:623
+#: ../UpdateManager/UpdatesAvailable.py:632
 msgid "_Deselect All"
 msgstr ""
 
-#: ../UpdateManager/UpdatesAvailable.py:629
+#: ../UpdateManager/UpdatesAvailable.py:638
 msgid "Select _All"
 msgstr ""
 
-#: ../UpdateManager/UpdatesAvailable.py:704
+#: ../UpdateManager/UpdatesAvailable.py:733
 #, python-format
 msgid "%s will be downloaded."
 msgstr ""
 
-#: ../UpdateManager/UpdatesAvailable.py:718
+#: ../UpdateManager/UpdatesAvailable.py:747
 msgid "The update has already been downloaded."
 msgid_plural "The updates have already been downloaded."
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../UpdateManager/UpdatesAvailable.py:724
+#: ../UpdateManager/UpdatesAvailable.py:753
 msgid "There are no updates to install."
 msgstr ""
 
-#: ../UpdateManager/UpdatesAvailable.py:733
+#: ../UpdateManager/UpdatesAvailable.py:762
 msgid "Unknown download size."
 msgstr ""
 
-#: ../UpdateManager/UpdatesAvailable.py:759
+#: ../UpdateManager/UpdatesAvailable.py:789
 #, python-format
 msgid ""
 "Updated software has been issued since %s %s was released. Do you want to "
 "install it now?"
 msgstr ""
 
-#: ../UpdateManager/UpdatesAvailable.py:764
+#: ../UpdateManager/UpdatesAvailable.py:794
 msgid ""
 "Updated software is available for this computer. Do you want to install it "
 "now?"
 msgstr ""
 
+#: ../UpdateManager/UpdatesAvailable.py:797
+msgid ""
+"The computer also needs to restart to finish installing previous updates."
+msgstr ""
+
 #. print("on_button_install_clicked")
-#: ../UpdateManager/UpdatesAvailable.py:794
+#: ../UpdateManager/UpdatesAvailable.py:827
 msgid "Not enough free disk space"
 msgstr ""
 
-#: ../UpdateManager/UpdatesAvailable.py:795
+#: ../UpdateManager/UpdatesAvailable.py:828
 #, python-format
 msgid ""
 "The upgrade needs a total of %s free space on disk '%s'. Please free at "
-"least an additional %s of disk space on '%s'. Empty your trash and remove "
-"temporary packages of former installations using 'sudo apt-get clean'."
+"least an additional %s of disk space on '%s'. %s"
 msgstr ""
 
-#: ../UpdateManager/UpdatesAvailable.py:821
+#. specific ways to resolve lack of free space
+#: ../UpdateManager/UpdatesAvailable.py:833
+msgid ""
+"Remove temporary packages of former installations using 'sudo apt clean'."
+msgstr ""
+
+#: ../UpdateManager/UpdatesAvailable.py:835
+msgid ""
+"You can remove old kernels using 'sudo apt autoremove', and you could also "
+"set COMPRESS=xz in /etc/initramfs-tools/initramfs.conf to reduce the size of "
+"your initramfs."
+msgstr ""
+
+#: ../UpdateManager/UpdatesAvailable.py:840
+msgid ""
+"Empty your trash and remove temporary packages of former installations using "
+"'sudo apt clean'."
+msgstr ""
+
+#: ../UpdateManager/UpdatesAvailable.py:843
+msgid "Reboot to clean up files in /tmp."
+msgstr ""
+
+#: ../UpdateManager/UpdatesAvailable.py:885
 msgid "Connecting..."
 msgstr ""
 
-#: ../UpdateManager/UpdatesAvailable.py:837
+#: ../UpdateManager/UpdatesAvailable.py:901
 msgid "You may not be able to check for updates or download new updates."
 msgstr ""
 
-#: ../UpdateManager/UpdatesAvailable.py:986
+#: ../UpdateManager/UpdatesAvailable.py:1053
 msgid "Security updates"
 msgstr ""
 
-#: ../UpdateManager/UpdatesAvailable.py:989
+#: ../UpdateManager/UpdatesAvailable.py:1056
 msgid "Other updates"
 msgstr ""
 
-#: ../UpdateManager/UnitySupport.py:67
-msgid "Install All Available Updates"
-msgstr ""
-
-#: ../UpdateManagerText/UpdateManagerText.py:35
-msgid "Cancel"
-msgstr ""
-
-#: ../UpdateManagerText/UpdateManagerText.py:38
-msgid "Changelog"
-msgstr ""
-
-#: ../UpdateManagerText/UpdateManagerText.py:41
+#: ../UpdateManager/UpdatesAvailable.py:1058
 msgid "Updates"
 msgstr ""
 
-#: ../UpdateManagerText/UpdateManagerText.py:54
-msgid "Building Updates List"
+#: ../UpdateManager/UpdatesAvailable.py:1063
+msgid "Unused kernel updates to be removed"
 msgstr ""
 
-#: ../UpdateManagerText/UpdateManagerText.py:57
-msgid ""
-"\n"
-"A normal upgrade can not be calculated, please run:\n"
-"  sudo apt-get dist-upgrade\n"
-"\n"
-"\n"
-"This can be caused by:\n"
-" * A previous upgrade which didn't complete\n"
-" * Problems with some of the installed software\n"
-" * Unofficial software packages not provided by Ubuntu\n"
-" * Normal changes of a pre-release version of Ubuntu"
+#: ../UpdateManager/UnitySupport.py:70
+msgid "Install All Available Updates"
 msgstr ""
 
-#: ../UpdateManagerText/UpdateManagerText.py:127
-msgid "Downloading changelog"
-msgstr ""
-
-#: ../UpdateManager/Core/MyCache.py:333
+#: ../UpdateManager/Core/MyCache.py:412
 msgid "This update does not come from a source that supports changelogs."
 msgstr ""
 
-#: ../UpdateManager/Core/MyCache.py:339 ../UpdateManager/Core/MyCache.py:376
+#: ../UpdateManager/Core/MyCache.py:418 ../UpdateManager/Core/MyCache.py:453
 msgid ""
 "Failed to download the list of changes. \n"
 "Please check your Internet connection."
 msgstr ""
 
-#: ../UpdateManager/Core/MyCache.py:346
+#: ../UpdateManager/Core/MyCache.py:425
 #, python-format
 msgid ""
 "Changes for %s versions:\n"
@@ -327,7 +355,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: ../UpdateManager/Core/MyCache.py:362
+#: ../UpdateManager/Core/MyCache.py:439
 #, python-format
 msgid ""
 "The changelog does not contain any relevant changes.\n"
@@ -336,7 +364,7 @@ msgid ""
 "until the changes become available or try again later."
 msgstr ""
 
-#: ../UpdateManager/Core/MyCache.py:369
+#: ../UpdateManager/Core/MyCache.py:446
 #, python-format
 msgid ""
 "The list of changes is not available yet.\n"
@@ -347,13 +375,13 @@ msgstr ""
 
 #. Translators: the %s is a distro name, like 'Ubuntu' and 'base' as in
 #. the core components and packages.
-#: ../UpdateManager/Core/UpdateList.py:167
+#: ../UpdateManager/Core/UpdateList.py:174
 #, python-format
 msgid "%s base"
 msgstr ""
 
 #. TRANSLATORS: download size of small updates, e.g. "250 kB"
-#: ../UpdateManager/Core/utils.py:485
+#: ../UpdateManager/Core/utils.py:475
 #, python-format
 msgid "%(size).0f kB"
 msgid_plural "%(size).0f kB"
@@ -361,7 +389,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #. TRANSLATORS: download size of updates, e.g. "2.3 MB"
-#: ../UpdateManager/Core/utils.py:489
+#: ../UpdateManager/Core/utils.py:479
 #, python-format
 msgid "%.1f MB"
 msgstr ""
@@ -387,17 +415,21 @@ msgid "Details of updates"
 msgstr ""
 
 #: ../data/gtkbuilder/UpdateManager.ui.h:6
+msgid "The computer will need to restart."
+msgstr ""
+
+#: ../data/gtkbuilder/UpdateManager.ui.h:7
 msgid ""
 "You are connected via roaming and may be charged for the data consumed by "
 "this update."
 msgstr ""
 
-#: ../data/gtkbuilder/UpdateManager.ui.h:7
+#: ../data/gtkbuilder/UpdateManager.ui.h:8
 msgid ""
 "You may want to wait until you’re not using a mobile broadband connection."
 msgstr ""
 
-#: ../data/gtkbuilder/UpdateManager.ui.h:8
+#: ../data/gtkbuilder/UpdateManager.ui.h:9
 msgid "It’s safer to connect the computer to AC power before updating."
 msgstr ""
 
@@ -406,100 +438,108 @@ msgid "Software Updates"
 msgstr ""
 
 #: ../data/update-manager.desktop.in.h:3
+#: ../data/update-manager.appdata.xml.in.h:2
 msgid "Show and install available updates"
 msgstr ""
 
-#: ../update-manager:70 ../update-manager-text:55
+#: ../data/update-manager.appdata.xml.in.h:3
+msgid ""
+"Software Updater checks for updates using apt and let you choose which "
+"updates to install."
+msgstr ""
+
+#: ../update-manager:71
 msgid "Show version and exit"
 msgstr ""
 
-#: ../update-manager:73
+#: ../update-manager:74
 msgid "Directory that contains the data files"
 msgstr ""
 
-#: ../update-manager:76
+#: ../update-manager:77
 msgid "Check if a new Ubuntu release is available"
 msgstr ""
 
-#: ../update-manager:79
-msgid "Check if upgrading to the latest devel release is possible"
+#: ../update-manager:80
+msgid ""
+"If using the latest supported release, upgrade to the development release"
 msgstr ""
 
-#: ../update-manager:83
+#: ../update-manager:84
 msgid "Upgrade using the latest proposed version of the release upgrader"
 msgstr ""
 
-#: ../update-manager:90
+#: ../update-manager:91
 msgid "Do not focus on map when starting"
 msgstr ""
 
-#: ../update-manager:93
+#: ../update-manager:94
 msgid "Do not check for updates when starting"
 msgstr ""
 
-#: ../update-manager:97
-msgid "Test upgrade with a sandbox aufs overlay"
+#: ../update-manager:96
+msgid "Show debug messages"
 msgstr ""
 
-#: ../update-manager-text:59
-msgid "Show description of the package instead of the changelog"
+#: ../ubuntu-support-status:68
+msgid "Community"
 msgstr ""
 
-#: ../ubuntu-support-status:91
+#: ../ubuntu-support-status:109
 msgid "Show unsupported packages on this machine"
 msgstr ""
 
-#: ../ubuntu-support-status:94
+#: ../ubuntu-support-status:112
 msgid "Show supported packages on this machine"
 msgstr ""
 
-#: ../ubuntu-support-status:97
+#: ../ubuntu-support-status:115
 msgid "Show all packages with their status"
 msgstr ""
 
-#: ../ubuntu-support-status:100
+#: ../ubuntu-support-status:118
 msgid "Show all packages in a list"
 msgstr ""
 
-#: ../ubuntu-support-status:142
+#: ../ubuntu-support-status:180
 #, c-format
 msgid "Support status summary of '%s':"
 msgstr ""
 
-#: ../ubuntu-support-status:145
+#: ../ubuntu-support-status:183
 msgid "You have %(num)s packages (%(percent).1f%%) supported until %(time)s"
 msgstr ""
 
-#: ../ubuntu-support-status:151
+#: ../ubuntu-support-status:189
 msgid ""
 "You have %(num)s packages (%(percent).1f%%) that can not/no-longer be "
 "downloaded"
 msgstr ""
 
-#: ../ubuntu-support-status:154
+#: ../ubuntu-support-status:192
 msgid "You have %(num)s packages (%(percent).1f%%) that are unsupported"
 msgstr ""
 
-#: ../ubuntu-support-status:162
+#: ../ubuntu-support-status:205
 msgid ""
 "Run with --show-unsupported, --show-supported or --show-all to see more "
 "details"
 msgstr ""
 
-#: ../ubuntu-support-status:166
+#: ../ubuntu-support-status:209
 msgid "No longer downloadable:"
 msgstr ""
 
-#: ../ubuntu-support-status:169
+#: ../ubuntu-support-status:212
 msgid "Unsupported: "
 msgstr ""
 
-#: ../ubuntu-support-status:174
+#: ../ubuntu-support-status:217
 #, c-format
 msgid "Supported until %s:"
 msgstr ""
 
-#: ../ubuntu-support-status:183
+#: ../ubuntu-support-status:226
 msgid "Unsupported"
 msgstr ""
 

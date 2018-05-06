@@ -1,10 +1,169 @@
-update-manager (1:16.04.12) xenial-security; urgency=medium
+update-manager (1:18.04.11) bionic; urgency=medium
 
-  * No change rebuild in security pocket (LP: #1748397)
+  * Add Appstream metadata with compulsory_for_desktop fields to prevent
+    the accidental uninstallation of ubuntu-desktop in GNOME Software.
+    ubuntu-desktop depends on update-manager.
+  * Build-Depend on dh-python
+  * Update translation template
 
- -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Mon, 12 Feb 2018 07:29:03 -0500
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Thu, 12 Apr 2018 14:07:04 -0400
 
-update-manager (1:16.04.11) xenial; urgency=medium
+update-manager (1:18.04.10) bionic; urgency=medium
+
+  * Support package removals in install backends and really remove packages
+    (LP: #1624644, #1675079)
+
+ -- Balint Reczey <rbalint@ubuntu.com>  Mon, 26 Mar 2018 12:20:30 +0100
+
+update-manager (1:18.04.9) bionic; urgency=medium
+
+  * Keep PEP 8 checks happy
+
+ -- Balint Reczey <rbalint@ubuntu.com>  Wed, 21 Mar 2018 17:53:59 +0000
+
+update-manager (1:18.04.8) bionic; urgency=medium
+
+  * Offer removal of unused autoremovable kernel packages
+    (LP: #1624644, #1675079)
+
+ -- Balint Reczey <rbalint@ubuntu.com>  Wed, 21 Mar 2018 14:34:05 +0000
+
+update-manager (1:18.04.7) bionic; urgency=medium
+
+  * Comment out the KDE frontend in debian/control so we can remove pykde4
+    from the archive (LP: #1745741).
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Fri, 16 Mar 2018 20:40:17 -0500
+
+update-manager (1:18.04.6) bionic; urgency=medium
+
+  * Use HTTPS for changelogs.ubuntu.com (LP: #1744318)
+
+ -- Julian Andres Klode <juliank@ubuntu.com>  Thu, 15 Mar 2018 14:19:24 +0100
+
+update-manager (1:18.04.5) bionic; urgency=medium
+
+  * Drop the update-manager-text package and code as it has been broken for a
+    long time and it wasn't used by many people. (LP: #1385524)
+
+ -- Brian Murray <brian@ubuntu.com>  Mon, 05 Mar 2018 16:41:24 -0800
+
+update-manager (1:18.04.4) bionic; urgency=medium
+
+  [ Balint Reczey ]
+  * Place .keep files in empty directories to keep them when converting the
+    repo to git
+  * Call do-release-upgrade without pkexec and depend on a version which
+    raises privileges itself (LP: #1748509)
+
+  [ Jeremy Bicha ]
+  * update-manager: Depend on libgtk3-perl for debconf's GNOME backend.
+    Drop previous Recommends on libgtk2-perl. (LP: #1607929)
+
+ -- Balint Reczey <rbalint@ubuntu.com>  Fri, 02 Mar 2018 10:44:01 +0700
+
+update-manager (1:18.04.3) bionic; urgency=medium
+
+  * ubuntu-support-status: use component to differentiate packages
+    supported by the community and packages supported by Canonical.
+    (LP: #1574670)
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Fri, 02 Feb 2018 08:07:04 -0500
+
+update-manager (1:18.04.2) bionic; urgency=medium
+
+  * Build from bazaar repository to keep empty dirs in the source package
+  * Break long comment to keep PEP 8 test happy
+
+ -- Balint Reczey <rbalint@ubuntu.com>  Fri, 12 Jan 2018 01:12:32 +0100
+
+update-manager (1:18.04.1) bionic; urgency=medium
+
+  [ Jean-Baptiste Lallement ]
+  * UpdateManager/Dialogs.py: Workaround restricted access to GUI applications
+    by user root under wayland to start do-release-upgrade in graphical mode
+    (LP: #1732185)
+
+ -- Balint Reczey <rbalint@ubuntu.com>  Thu, 11 Jan 2018 13:56:07 +0100
+
+update-manager (1:17.10.11) artful; urgency=medium
+
+  * UpdateManager/UpdatesAvailable.py: Also mention using COMPRESS=xz in
+    intramfs.conf to free more space in /boot.
+
+ -- Brian Murray <brian@ubuntu.com>  Thu, 05 Oct 2017 16:03:26 -0700
+
+update-manager (1:17.10.10) artful; urgency=medium
+
+  * UpdateManager/UpdatesAvailable.py: Provide instructions when mount points
+    have insufficient free space for the upgrade to complete. (LP: #1477455)
+
+ -- Brian Murray <brian@ubuntu.com>  Wed, 20 Sep 2017 12:28:03 -0700
+
+update-manager (1:17.10.9) artful; urgency=medium
+
+  [ Łukasz 'sil2100' Zemczak ]
+  * test_update_origin.py: fix the extended origin matcher test as it was
+    making wrong assumptions, not checking if packages actually had ANY package
+    in -security. This should fix the current autopkgtest failures.
+
+  [ Brian Murray ]
+  * test_update_origin.py: fix some typos.
+
+ -- Łukasz 'sil2100' Zemczak <lukasz.zemczak@ubuntu.com>  Mon, 11 Sep 2017 12:32:29 +0200
+
+update-manager (1:17.10.8) artful; urgency=medium
+
+  * UpdateManager/Dialogs.py: use a variable instead of hard coding 1 to
+    allow the translation of the message, thanks to Andrea Azzarone.
+    (LP: #1714489)
+
+ -- Brian Murray <brian@ubuntu.com>  Tue, 05 Sep 2017 14:17:16 -0700
+
+update-manager (1:17.10.7) artful; urgency=medium
+
+  * Show status of Canonical's Livepatch service in update-manager dialog
+    window, thanks to Andrea Azzarone. (LP: #1712591)
+
+ -- Brian Murray <brian@ubuntu.com>  Thu, 31 Aug 2017 09:25:37 -0700
+
+update-manager (1:17.10.6) artful; urgency=medium
+
+  *  UpdateManager.py: Workaround a crash when calling software-properties-gtk
+     by not using --toplevel under wayland (LP: #1703365)
+
+ -- Jean-Baptiste Lallement <jean-baptiste.lallement@canonical.com>  Mon, 21 Aug 2017 13:00:27 +0200
+
+update-manager (1:17.10.5) artful; urgency=medium
+
+  * test_update_origin.py: This does not need to be architecture specific so
+    just set the arch to amd64 like test_update_list.py.
+  * test_utils.py: mock /proc/net/tcp and processes in proc so that we are
+    testing the code and not the system under test.
+
+ -- Brian Murray <brian@ubuntu.com>  Wed, 09 Aug 2017 16:44:44 -0700
+
+update-manager (1:17.10.4) artful; urgency=medium
+
+  * UpdateManager/Core/UpdateList.py: Instead of trying to print an error
+    when trying to find the desktop file log it. (LP: #1428297)
+
+ -- Brian Murray <brian@ubuntu.com>  Mon, 07 Aug 2017 16:19:53 -0700
+
+update-manager (1:17.10.3) artful; urgency=medium
+
+  * Resolve a multitude of test failures, pep8 and pyflakes issues.
+
+ -- Brian Murray <brian@ubuntu.com>  Mon, 07 Aug 2017 14:30:59 -0700
+
+update-manager (1:17.10.2) artful; urgency=medium
+
+  * Recommend libgtk2-perl be installed so we have a working debconf frontend.
+    (LP: #1607929)
+
+ -- Brian Murray <brian@ubuntu.com>  Tue, 18 Jul 2017 15:32:54 -0700
+
+update-manager (1:17.10.1) artful; urgency=medium
 
   [ Steve Langasek ]
   * ubuntu-support-status: instead of checking the Release timestamp in
@@ -12,81 +171,132 @@ update-manager (1:16.04.11) xenial; urgency=medium
     release date from distro-info-data because it will always be the same.
     This speeds up the script by > 50% in testing.
 
-  [ Marc Deslauriers ]
-  * ubuntu-support-status: use component to differentiate packages
-    supported by the community and packages supported by Canonical, and
-    override the Supported tag for main and restricted to work around the
-    inaccurate Packages files. (LP: #1574670)
-
- -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Fri, 02 Feb 2018 09:02:45 -0500
-
-update-manager (1:16.04.10) xenial; urgency=medium
-
-  * UpdateManager/UpdatesAvailable.py: Provide instructions when mount points
-    have insufficient free space for the upgrade to complete. (LP: #1477455)
-  * test_update_origin.py: fix the extended origin matcher test as it was
-    making wrong assumptions, not checking if packages actually had ANY package
-    in -security. This should fix the current autopkgtest failures.
-    (LP: #1717360)
-
- -- Brian Murray <brian@ubuntu.com>  Wed, 20 Sep 2017 14:39:17 -0700
-
-update-manager (1:16.04.9) xenial; urgency=medium
-
-  * UpdateManager/Core/UpdateList.py: Instead of trying to print an error
-    when trying to find the desktop file log it. (LP: #1428297)
-  * tests/test_update_origin.py: This does not need to be architecture
-    specific so just set the arch to amd64 like test_update_list.py. Replace
-    references to lucid with xenial as lucid is no longer on the archive.
-  * tests/test_utils.py: mock /proc/net/tcp and processes in proc so that we
-    are testing the code and not the system under test.
-  * tests/test_cache.py: pass an empty list when getting a changelog for 3rd
-    party packages.
-  * tests/test_hwe_support_status.py: port to python3.
-  * tests/test_meta_release_core.py: switch to a site that works with no proxy
-    in the autopkgtest environment.
-  * Resolve pep8 and pyflakes issues.
-
- -- Brian Murray <brian@ubuntu.com>  Thu, 10 Aug 2017 15:08:15 -0700
-
-update-manager (1:16.04.8) xenial; urgency=medium
-
-  * Recommend libgtk2-perl be installed so we have a working debconf frontend.
-    (LP: #1607929)
-
- -- Brian Murray <brian@ubuntu.com>  Mon, 24 Jul 2017 17:40:35 -0700
-
-update-manager (1:16.04.7) xenial; urgency=medium
-
+  [ Brian Murray ]
   * update-manager: Clarify that the "-d" switch is only for upgrading from
     the latest supported release to the development release, not any release.
     (LP: #1700829)
+  * Remove --sandbox (aufs support) as it has been broken for some time and
+    was rather unused. (LP: #1605259)
 
- -- Brian Murray <brian@ubuntu.com>  Mon, 17 Jul 2017 09:31:17 -0700
+ -- Brian Murray <brian@ubuntu.com>  Wed, 12 Jul 2017 15:03:18 -0700
 
-update-manager (1:16.04.6) xenial; urgency=medium
+update-manager (1:17.04.3) zesty; urgency=medium
 
   * Use a 64 bit integer for launch-time instead of a 32 bit one which won't
     work someday. (LP: #1654008)
 
- -- Brian Murray <brian@ubuntu.com>  Mon, 20 Mar 2017 15:03:58 -0700
+ -- Brian Murray <brian@ubuntu.com>  Tue, 14 Mar 2017 14:51:04 -0700
 
-update-manager (1:16.04.5) xenial; urgency=medium
+update-manager (1:17.04.2) zesty; urgency=medium
 
-  [ Iain Lane ]
+  [ Jeremy Bicha ]
+  * Update alternate dependencies for policykit-1-gnome:
+    - Add virtual polkit-1-auth-agent
+    - Replace non-existant policykit-1-kde with polkit-kde-agent-1
+    - Replace razorqt-policykit-agent with lxqt-policykit
+      (since lxqt is the replacement for razorqt)
+
+  [ Manzur Mukhitdinov ]
+  * UpdateManager/Core/MetaRelease.py:
+    - Add a clearer error message when a network failure occurs
+
+  [ Brian Murray ]
+  * UpdateManager/Dialogs.py:
+    - Remove misleading ellipsis in “Restart Now” action button. Thanks to
+      Adolfo Jayme for the change.  (LP: #1568368)
+
+  [ Steve Langasek ]
+  * Drop estimate_kernel_size_in_boot() from UpdateManager/Core/utils.py; this
+    was only used in ubuntu-release-upgrader so the code has now moved there
+    (with code fixes).  Ensure upgrade ordering with Breaks: on older
+    python3-distupgrade.  LP: #1646222.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Wed, 08 Mar 2017 10:01:30 -0800
+
+update-manager (1:17.04.1) zesty; urgency=medium
+
+  * tests/test_hwe_support_status.py: Resolve issues with the test.
+  * data/gtkbuilder/UpdateManager.ui: Set a minimum content height of 80px for
+    the technical description scrolled window. This was the default height
+    gtk3widgets used in GTK versions prior to 3.20. Thanks to Martin Wimpress
+    for the fix. (LP: #1623856)
+
+ -- Brian Murray <brian@ubuntu.com>  Wed, 02 Nov 2016 12:05:25 -0700
+
+update-manager (1:16.10.7) yakkety; urgency=medium
+
+  * UpdateManager/Core/MyCache.py: Gracefully handle absence of Launchpadlib
+    module.
+  * Lower python3-launchpadlib Depends: to a Suggests:, to avoid pulling it
+    into "standard" priority. Retrieving PPA changelogs is more of a niche
+    feature which is relevant for desktops, but shoud not drag the entire
+    python3-launchpadlib stack into small installations. Add it as Recommends
+    to the GUI frontends instead, to retain current behaviour on desktops.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Tue, 11 Oct 2016 12:13:46 +0200
+
+update-manager (1:16.10.6) yakkety; urgency=medium
+
+  * UpdateManager/UnitySupport.py: Handle ValueError traceback when checking
+    for Unity and Dbusmenu support.  Thanks to Launchpad user flocculant for
+    the patch.  (LP: #1629900)
+
+ -- Brian Murray <brian@ubuntu.com>  Mon, 03 Oct 2016 15:18:31 -0700
+
+update-manager (1:16.10.5) yakkety; urgency=medium
+
+  [ Brian Murray ]
+  * UpdateManager/UpdateManager.py: when marking HWE packages for install pass
+    on a SystemError and let the problem resolver sort it out.
+  * HweSupportStatus/consts.py: Improve wording of the messages.
+  * hwe-support-status:
+    - decode output when checking for foreign architectures so that the result
+      is unicode not bytes.
+    - add libwayland-egl1-mesa to the list of metapackages.
+    - utilize a virtualbox metapackage set.
+    - Do not show replacements that are already installed on
+      the system.  (LP: #1607983)
+  * source_update-manager.py: collect information about the state of HWE
+    support on the system. (LP: #1617080)
+  * source_update-manager.py: only collect HWE information if it exists.
+
+  [ Jeremy Bicha ]
+  * Add gi.require_version in a few more places to reduce the annoying
+    warnings. (LP: #1573177)
+
+ -- Brian Murray <brian@ubuntu.com>  Thu, 08 Sep 2016 16:01:13 -0700
+
+update-manager (1:16.10.4) yakkety; urgency=medium
+
   * ChangelogViewer: Fix an API call to work with GTK < and ≥ 3.20. Upstream
     gave gtk_text_view_get_iter_at_location a gboolean return type, which
     makes gobject-introspection return (return value, out parameter). (LP:
     #1548425)
+  * ChangelogViewer: Set vexpand so that the changelog TextView takes up all
+    the remaining vertical space.
 
- -- Brian Murray <brian@ubuntu.com>  Mon, 19 Dec 2016 13:46:30 -0800
+ -- Iain Lane <iain.lane@canonical.com>  Fri, 29 Jul 2016 11:15:54 +0100
 
-update-manager (1:16.04.4) xenial; urgency=medium
+update-manager (1:16.10.3) yakkety; urgency=medium
+
+  [Nicolas Delvaux]
+  * Attempt to retrieve Changelogs from PPA sources (LP: #253119)
+  * Correctly detect the usage of a username in changelog URIs
+
+ -- Brian Murray <brian@ubuntu.com>  Wed, 27 Jul 2016 11:14:53 -0700
+
+update-manager (1:16.10.2) yakkety; urgency=medium
+
+  * Include HWE support tools and information. (LP: #1498059)
+
+ -- Brian Murray <brian@ubuntu.com>  Thu, 21 Jul 2016 14:29:10 -0700
+
+update-manager (1:16.10.1) yakkety; urgency=medium
 
   * Correctly calculate the end of support, and return correctly when support
-    has ended. Patch from Andrew Gaul, with thanks. (LP: #1574193)
+    has ended. Patch from Andrew Gaul, with thanks.
 
- -- Brian Murray <brian@ubuntu.com>  Fri, 30 Sep 2016 09:16:37 -0700
+ -- Iain Lane <iain@orangesquash.org.uk>  Tue, 10 May 2016 15:32:40 +0100
 
 update-manager (1:16.04.3) xenial; urgency=medium
 
